@@ -841,11 +841,12 @@ simple roots. Using the same notation, we keep $a_0 = -a_2 = 1$ and set $a_1 =
   G(x) = (1-x^2)(1+2mA x)\qquad \mbox{and} \qquad F(y) = -G(-y).
 \end{align}
 It is important to stress that the constants $m$ and $A$ used here are not the
-\todoruth{I am curious, how different are they?}same as those in the KW form of the metric. To relate the two metrics, one can
-simply apply the set of transformations from \cref{eq:cmet-transf}, and use the
-relations in \cref{eq:cmet-transf-coefficients} between the coefficients to
-find, writing KW parameters with a tilde (\~{}):\todoopt{some of the variables
-  here may be confusing, $p,q,n$ are transf parameters, not sure if necess.}
+\todoruth{I am curious, how different are they?}same as those in the KW form of
+the metric. To relate the two metrics, one can simply apply the set of
+transformations from \cref{eq:cmet-transf}, and use the relations in
+\cref{eq:cmet-transf-coefficients} between the coefficients to find, writing KW
+parameters with a tilde (\~{}):\todoopt{some of the variables here may be
+  confusing, $p,q,n$ are transf parameters, not sure if necess.}
 \begin{align}
   q &= 1- n^2 - 2\tilde{\mu} \equiv \frac{A^2}{\tilde{A}^2}, \nn\\
   p &= q^{-\frac12}(1 + 6\tilde{\mu} n)^{-\frac12}, \nn\\
@@ -896,6 +897,329 @@ The rough outline is this:
 \end{itemize}
 
 
+\subsection{The Slowly Accelerating C-metric}
+
+In this subsection we briefly review the ``slowly accelerating'' C-metric.  The
+general C-metric
+\cite{Kinnersley:1970zw,Plebanski:1976gy,Dias:2002mi,Griffiths:2005qp}
+represents either one or two accelerating black holes with unequal conical
+deficits extending from each pole of the black hole either to the boundary or an
+acceleration horizon. Although the C-metric is well-known among relativists,
+there are features of the specific form we will be using that are worth
+highlighting, discussing how they depend on the parameters of the solution.
+
+For this paper, we will neglect rotation, hence the general charged,
+accelerating AdS black hole is represented by the metric and gauge potential
+\cite{Griffiths:2005qp}:
+\begin{equation}
+\begin{aligned}
+ds^2&=\frac{1}{\Omega^2}\Biggl\{ 
+f(r) dt^2
+-\frac{dr^2}{f(r)} - r^2 \left[ \frac{d\theta^2}{g(\theta)} 
++ g(\theta)\sin^2\theta \frac{d\phi^2}{K^2}\right]\Biggr\}
+\; , \qquad
+{B}= -\frac{e}{r} dt,
+\end{aligned}
+\label{dimlessmtrc}
+\end{equation}
+where
+\begin{equation}
+\Omega=1+A r \cos\theta\;,
+\end{equation}
+is the conformal factor that will determine the location of the AdS
+boundary (which is {\it not} at ``$r=\infty$'') in terms of the 
+$\{r,\theta\}$ coordinates, and the functions $f(r), g(\theta)$ are
+\begin{equation}
+\begin{aligned}
+f(r)&=(1-A^2r^2)\Bigl(1-\frac{2 m}{r}+\frac{e^2}{r^2}\Bigr)
++\frac{r^2}{\ell^2} \;,\\
+g(\theta)&=1+2mA \cos\theta+ e^2A^2 \cos^2\theta\,.
+\end{aligned}
+\label{fandg}
+\end{equation}
+Note we are using the Hong-Teo \cite{Hong:2003gx} style coordinates
+that have a direct relation to the usual Boyer-Lindquist coordinates
+for the Kerr metric.
+
+This spacetime has potential conical singularities on the axes $\theta_+=0$
+and $\theta_-=\pi$. As before, we associate these conical singularities
+to cosmic strings with tensions $\mu_\pm = \delta_\pm/8\pi$, 
+where $\delta_\pm$ are the conical deficit angles at each pole,
+found by expanding near $\theta=\theta_\pm$:
+\begin{equation}
+4\mu_\pm =  1 - \frac{g(\theta_\pm)}{K}
+= 1 - \frac1K \left (1 \pm 2mA + e^2A^2 \right)
+\label{tensions}
+\end{equation}
+Clearly, $\mu_+ \leq \mu_- \leq 1/4$, and in order to avoid negative tension
+defects, we require $\mu_+ \geq 0$. For the majority of the paper, 
+we fix $K$ by demanding that one axis be regular ($\mu_+=0$), and the 
+other to have a positive tension cosmic string, i.e.
+\begin{equation}
+K = g(\theta_+) = 1 + 2mA + e^2A^2\quad \Rightarrow \qquad
+\mu_-= \frac{mA}{K}
+\end{equation}
+however in the interests of generality we will keep $\mu_+$ and $\mu_-$ as
+independent variables.
+
+The metric has horizons governed by the zeros of $f(r)$,
+given by rather unhelpful algebraic expressions for the roots of this
+quartic. One can however see qualitatively that there are various
+key limits. Looking at the large $r$ behaviour of $f$, we notice
+\begin{equation}
+f \sim \frac{r^2}{\ell^2} (1- A^2 \ell^2)
+\end{equation}
+Thus, this black hole will have an acceleration horizon if $A\ell>1$,
+and no acceleration horizon if $A\ell<1$, the case $A\ell=1$ is special and
+was considered in \cite{Emparan:1999wa}. 
+Typically, in holographic applications, the conical deficit of the C-metric
+is desired to be cloaked by a horizon \cite{Hubeny:2009kz},
+however, in our case we are interested in thermodynamics, so to
+keep our thermodynamic variables unambiguous, we will take 
+$A\ell<1$ so that we have a single horizon, that of the black hole,
+and thus a well-defined temperature corresponding to the periodicity
+of Euclidean time at the regular Euclidean black hole horizon.
+
+In order to understand the structure of this accelerating black hole, 
+it is useful to consider the effects of the various parameters. 
+Although we suspect $m$ and $e$ play the roles of mass and charge
+for the black hole, the original form of the C-metric has these variables
+defined slightly differently. In order to check this, consider the Komar 
+integral for the mass using the
+method described in \cite{Magnon:1985sc}
+\begin{equation}
+M_K = \frac{1}{8\pi} \int_{S^2} \star d\xi - \frac{1}{4\pi}
+\int n_a R^a_b \xi^b \sqrt{h} d^3x = \frac{m}{K}
+\label{komar}
+\end{equation}
+where $\xi = \partial_t$ is a timelike Killing vector field, the first integral
+is performed over a $\{\theta,\phi\}$ surface of topology $S^2$ considered to be
+near infinity, and the second integral is performed throughout the interior of
+this surface at constant `time' (as defined by $\xi$).  Note this integral is
+actually independent of $A$, hence we can associate $m$ with the bare mass of
+the black hole, whether accelerating or not.  Similarly, $e$ is related to the
+charge of the black hole:
+\begin{equation}
+Q = \frac{1}{4\pi} \int_{S^2} \star dB = \frac{e}{K}
+\label{Qdef}
+\end{equation}
+
+We have already seen how the parameter $K$ is related to the conical
+deficits, thus the only remaining parameter to explore is $A$. In order
+to understand the structure of the spacetime and the relevance of $A$,
+first consider the Rindler space found by
+setting $m=e=0$ in \eqref{dimlessmtrc}:
+\begin{equation}
+ds^2=\frac{1}{\Omega^2}\Biggl[ 
+\left ( 1 + \frac{r^2}{\ell^2} (1-A^2 \ell^2) \right) dt^2
+-\frac{dr^2}{1 + \frac{r^2}{\ell^2}(1-A^2\ell^2)} - r^2 \left ( d\theta^2
++ \sin^2 \theta d\phi^2\right)\Biggr]\\
+\end{equation}
+This spacetime no longer has a conical singularity and is locally pure AdS,
+however in these coordinates the boundary of AdS is not at $r=\infty$, but at
+$r = -1/(A\cos\theta)$. For $\theta$ in the southern hemisphere, this occurs at
+{\it finite} $r$, but in the northern hemisphere $r=\infty$ actually lies within
+the AdS spacetime (see figure \ref{fig:accbh}). To transform to global AdS
+coordinates $\{R,\Theta\}$, one takes \cite{Podolsky:2002nk}
+\begin{equation}
+1 + \frac{R^2}{\ell^2} = \frac{1 + (1-A^2\ell^2)r^2/\ell^2}{(1-A^2\ell^2)\Omega^2}
+\qquad;\qquad
+R \sin\Theta = \frac{r\sin\theta}{\Omega}
+\end{equation}
+
+the boundary, $R\to\infty$ now clearly corresponds to $\Omega\to 0$, 
+and the origin of Rindler coordinates corresponds to
+$R_0 = A \ell^2/\sqrt{1-A^2\ell^2}$, i.e.\ the Rindler coordinates represent
+those of an observer displaced from the origin of AdS.
+\begin{figure}
+\includegraphics[scale=0.3]{slowaccrind.pdf}
+\includegraphics[scale=0.5]{accbh.pdf}
+\caption{{\bf Left}: The slowly accelerating Rindler spacetime shown here with
+  $A\ell = 1/4$, and $\ell=1$ for simplicity. The spatial sections of AdS have
+  been compactified to a Poincar\'e disc, with the constant $r$ Rindler
+  coordinate indicated in black and constant $\theta$ in blue. The origin of the
+  Rindler coordinates is clearly visible as being displaced from the centre of
+  the disc, with the limit of the $r-$coordinate being the thick dashed black
+  line.  {\bf Right}: The black hole distorts the Poincar\'e disc with a conical
+  deficit, and is displaced from the origin of AdS. The spacetime is again
+  static, and a cross section is shown. }
+\label{fig:accbh}
+\end{figure}
+A comprehensive exploration of the structure of AdS C-metric spacetimes, 
+including their distortion of the boundary, was given in \cite{Krtous:2005ej}.
+
+\section{The rotating C-metric}
+The gravitational solution that describes an accelerating black hole is known as
+the C-metric\todoopt{cites}. We begin by introducing the generalised
+asymptotically AdS C-metric solution as derived from the Pleba\' nski--Demia\'
+nski \cite{Plebanski:1976gy} metric to include rotation and charge, and the
+corresponding gauge potential,
+\begin{align}
+  ds^2 &= \frac{1}{\Omega^2}\bigg\{ -\frac{f(r)}{\Sigma}\Big[dt - a\sin^2\theta
+         \frac{d\phi}{K} \Big]^2 + \frac{\Sigma}{f(r)}dr^2 + \frac{\Sigma
+         r^2}{g(\theta)}d\theta^2 \nn\\
+  &\hspace{20em} + \frac{g(\theta) \sin^2\theta}{\Sigma r^2} \Big[adt-(r^2+a^2)
+    \frac{d\phi}{K}\Big]^2\bigg\},\nn\\ 
+  F&=dB,\qquad B=-\frac{e}{\Sigma r}\Big[dt-a\sin^2\theta \frac{d\phi}{K}\Big].
+\label{eq:metric}
+\end{align}
+\todoopt{Discuss more about the origin of the C-metric and its
+  significance. Also write about the origin of this form, PB/RT and hong teo.} 
+Ordinarily, when discussing the C-metric, the azimuthal angular coordinate
+$\phi$ is given an arbitrary periodicity, usually determined such that one pole
+is regularised. In \cref{eq:metric}, $\phi$ has a $2\pi$-periodicity
+and any conical defect is tuned through the parameter $K$. The conformal
+factor
+\begin{align}\label{eq:conf}
+\Omega=1+Ar\cos\theta
+\end{align}
+sets the location of the boundary at $r_\bd=-1/A\cos\theta$. The other metric
+functions are given as
+\begin{gather}
+f(r)=(1-A^2r^2)\bigg[1-\frac{2m}{r}+\frac{a^2+e^2}{r^2}\bigg]+\frac{r^2+a^2}{\ell^2},\nn\\
+g(\theta) =
+1+2mA\cos\theta+\bigg[A^2(a^2+e^2)-\frac{a^2}{\ell^2}\bigg]\cos^2\theta,\nn\\ 
+\Sigma=1+\frac{a^2}{r^2}\cos^2\theta. 
+\label{eq:metricfg}
+\end{gather}
+The remaining parameters, $a$, $e$, $m$, $A\geqslant 0$ are related to the
+angular momentum, charge, mass and acceleration of the black hole. In this
+section we will review various restrictions this spacetime imposes to the metric
+parameters. We will then also briefly discuss the existence of conical defects
+in the spacetime.
+
+\subsection{Coordinate ranges and parametric restrictions}
+\label{sec:parameters}
+To explore what restrictions might apply to the parameters in this metric, we
+must require the spacetime to not admit closed timelike curves. This is achieved
+by requiring that the signature of the metric is preserved (up to an overall
+sign flip due to the conformal factor when $r$ crosses $\infty$) throughout the
+patch covered by this set of coordinates. We have
+\begin{gather}
+t\in\mathbb{R}, \qquad 0\leqslant\theta\leqslant\pi, \qquad 0\leqslant \phi<2\pi.
+\end{gather}
+Missing above is a domain for the $r$-coordinate, which is given by requiring
+that $r$ cover the range over which $f(r)$ is positive, delimited by the outer
+horizon radius at one end and either the acceleration horizon radius, or in the
+case there is no such horizon, the location of the boundary ($\theta>\pi/2$) or
+infinity ($\theta\leqslant\pi/2$) at the other. We can also harmlessly extend
+the spacetime beyond infinity for $\theta<\pi/2$ by including values of
+$r<r_\bd$ which are largely negative. Whether there is or isn't an acceleration
+horizon depends on the other parameters, and is viewed as a phenomenological
+consequence of this choice. Finally, it might also be possible to extend this
+spacetime beyond the horizons, which would allow one to consider further values
+of $r$, however this is not covered in this paper.
+
+While the above deals with any possible sign flips from $f(r)$, there are also
+negative regions for $\Omega^2 g_{\theta\theta}$ and $\Omega^2 g_{\phi\phi}$
+that we must exclude. This amounts to requiring that $g(\theta)>0$, or,
+equivalently, requiring that there be no roots of
+\begin{align}\label{eq:gx}
+P(\xi) = 1+ 2mA\xi+\left(A^2(a^2+e^2)-\frac{a^2}{\ell^2}\right)\xi^2
+\end{align}
+over $-1<\xi<1$. This leads to the following set of conditions for the black
+hole parameters: 
+\begin{align}\label{eq:conditions}
+a^2\bigg[\frac{1}{\ell^2}-A^2\bigg] \leqslant 1-2mA+e^2A^2 \quad \mbox{and}
+  \quad mA\leqslant 1. 
+\end{align}
+For small parameter values, the first constraint may be interpreted as a general
+upper bound on acceleration, charge and rotation, however we will explore its
+implications further below. The second is a necessary condition for small
+acceleration (more specifically, when $P^{\prime\prime}(0)$ is positive yet
+small enough to allow for the existence of real roots), without which the first
+condition is not possible. Dropping charge\footnote{ The inlusion of charge
+  does not drastically change the characteristics of the diagrams in
+  \cref{fig:aA}, as long as the conditions in \cref{eq:conditions} are
+  satisfied.}, \cref{fig:aA} serves as a visual aid to the constraints. For
+small acceleration (rotation), we see the ``upper bound" behaviour, highlighted
+above, to the rotation (acceleration) parameter. For larger values, a lower
+bound must be respected to preserve the geometry. \Cref{sec:critC} concerns
+black holes that lie along this constraint line (blue), which occur when
+$P(\xi)$ in \cref{eq:gx} has a root at $\xi = -1$, or when $g(\theta_- =\pi)=0$.
+
+\begin{figure}
+\centering
+\begin{subfigure}[b]{0.45\textwidth}
+\includegraphics[width=\textwidth]{aA-smallm}
+\caption{\label{fig:aA-smallm}}
+\end{subfigure}\quad
+\begin{subfigure}[b]{0.45\textwidth}
+\includegraphics[width=\textwidth]{aA-largem}
+\caption{\label{fig:aA-largem}}
+\end{subfigure}% \\
+% \begin{subfigure}[b]{0.45\textwidth}
+% \includegraphics[width=\textwidth]{aA-m3p0e0}
+% \caption{\label{fig:aA-m3p0e0}}
+% \end{subfigure}
+\caption{\label{fig:aA}Allowed values of $a$ and $A$ (in units of $\ell$ and
+  $\ell^{-1}$ respectively) according to \cref{eq:conditions} (uncharged) are
+  contained within the white regions. (a) $m=0.38\ell$, (b) $m=0.585\ell$ % , (c)
+  % $m=3.0\ell$
+  . % {\bf not necessarily all in final version}
+}
+\end{figure}
+
+% \begin{figure}
+% \centering
+% \includegraphics[width=0.7\textwidth]{3D-region_m0p38.png}
+% \caption{\label{fig:3D-region_m0p38}A 3-dimensional representation of the
+%   uncharged parameter space, with a slice at $m=0.38\ell$. The red and black
+%   surfaces repre sents the parametric boundaries imposed by
+%   \cref{eq:conditions}. {\bf Not necessarily in final}}
+% \end{figure}
+
+\subsection{The conical defect}
+The conical defect inherent to the C-metric is controlled through the parameter
+$K$. A conical deficit is associated to the presence of a cosmic string attached
+to the black hole with tension $\mu = \delta/8\pi$. One may introduce such
+defects to simpler spacetimes. For example, one may write the Schwarzschild
+metric in this fashion, by having with $g^{\mathrm{Sch}}_{\phi\phi}\sim
+K^{-1}$. For $K>1$, the result is a black hole with a string running through its
+core. The defect along both the $\theta = 0$ and $\theta= \pi$ axes is the
+same. The C-metric has unequal deficits, and the resulting string tension
+imbalance is what physically drives the acceleration.
+
+The angular part of the metric in \cref{eq:metric} near the poles is
+\begin{align}
+ds^2 \sim \frac{1}{\Omega^2}\frac{\Sigma r^2}{g(\theta_{\pm})}\bigg[d\rho^2 +
+  \frac{g^2(\theta_{\pm}) \rho^{2}}{K^2}d\phi^2\bigg]. 
+\end{align}
+where $\theta = \theta_{\pm} \pm \rho$ with $\theta_+=0$ and $\theta_-=\pi$. The
+conical deficits along each axis are given by 
+\begin{align}\label{eq:deficits}
+\delta_\pm=2\pi\bigg[1-\frac{g(\theta_\pm)}{K}\bigg] = 2\pi\bigg[1-\frac{1\pm
+  2mA + A^2(a^2+e^2)-a^2/\ell^2}{K}\bigg]. 
+\end{align} 
+The tensions of cosmic strings connecting the event horizon to the boundary are
+related to the deficits, and given by $\mu_\pm=\delta_\pm/8\pi$. It is now
+evident how our choice of $K$ will impact the geometry of the spacetime,
+specifically it will regulate the distribution of tensions along either axis. It
+is also worth mentioning that a negative deficit (corresponding to an excess) is
+possible, however this would be sourced by a negative energy object. We can
+remove one of the deficits for the C-metric by defining $K=L_\pm$ where
+\begin{align}
+L_\pm=1\pm 2mA + \bigg[A^2(a^2+e^2)-\frac{a^2}{\ell^2}\bigg].
+\end{align}
+Since having $K=L_-$ induces an excess at the other pole, it is generally the
+custom to have $K=L_+$, regularising the north pole, and only having a string at
+the south pole. In \cref{fig:embed3D} we illustrate how changing $K$ affects an
+embedding of the horizon in $\mathbb{E}^3$. 
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.2\textwidth}
+    \includegraphics[width=\textwidth]{embed3D-smooth}
+    \caption{\label{fig:embed3D-smooth}}
+  \end{subfigure}\qquad
+  \begin{subfigure}[b]{0.2\textwidth}
+    \includegraphics[width=\textwidth]{embed3D-Kbig}
+    \caption{\label{fig:embed3D-Kbig}}
+  \end{subfigure}
+  \caption{\label{fig:embed3D}Embeddings of the non-rotating C-metric in
+    $\mathbb{E}^3$, for the black hole with $A=0.01\ell$, $m=9\ell$ and (a) $K=
+    L_+$, (b) $K= 1.2 L_+$.}
+\end{figure}
 
 
 \chapter{Thermodynamics of Black Holes with Conical Defects}
@@ -1114,158 +1438,8 @@ simplicity we wish to restrict ourselves to having only the black hole horizon,
 in order that we have a well-defined temperature for the space-time. Such a
 geometry is called the {\it slowly accelerating C-metric}
 \cite{Podolsky:2002nk}, and we first review this geometry before turning to its
-thermodynamics.
+thermodynamics.\todoopt{removed review here}
 
-\subsection{The Slowly Accelerating C-metric}
-
-In this subsection we briefly review the ``slowly accelerating'' C-metric.  The
-general C-metric
-\cite{Kinnersley:1970zw,Plebanski:1976gy,Dias:2002mi,Griffiths:2005qp}
-represents either one or two accelerating black holes with unequal conical
-deficits extending from each pole of the black hole either to the boundary or an
-acceleration horizon. Although the C-metric is well-known among relativists,
-there are features of the specific form we will be using that are worth
-highlighting, discussing how they depend on the parameters of the solution.
-
-For this paper, we will neglect rotation, hence the general charged,
-accelerating AdS black hole is represented by the metric and gauge potential
-\cite{Griffiths:2005qp}:
-\begin{equation}
-\begin{aligned}
-ds^2&=\frac{1}{\Omega^2}\Biggl\{ 
-f(r) dt^2
--\frac{dr^2}{f(r)} - r^2 \left[ \frac{d\theta^2}{g(\theta)} 
-+ g(\theta)\sin^2\theta \frac{d\phi^2}{K^2}\right]\Biggr\}
-\; , \qquad
-{B}= -\frac{e}{r} dt,
-\end{aligned}
-\label{dimlessmtrc}
-\end{equation}
-where
-\begin{equation}
-\Omega=1+A r \cos\theta\;,
-\end{equation}
-is the conformal factor that will determine the location of the AdS
-boundary (which is {\it not} at ``$r=\infty$'') in terms of the 
-$\{r,\theta\}$ coordinates, and the functions $f(r), g(\theta)$ are
-\begin{equation}
-\begin{aligned}
-f(r)&=(1-A^2r^2)\Bigl(1-\frac{2 m}{r}+\frac{e^2}{r^2}\Bigr)
-+\frac{r^2}{\ell^2} \;,\\
-g(\theta)&=1+2mA \cos\theta+ e^2A^2 \cos^2\theta\,.
-\end{aligned}
-\label{fandg}
-\end{equation}
-Note we are using the Hong-Teo \cite{Hong:2003gx} style coordinates
-that have a direct relation to the usual Boyer-Lindquist coordinates
-for the Kerr metric.
-
-This spacetime has potential conical singularities on the axes $\theta_+=0$
-and $\theta_-=\pi$. As before, we associate these conical singularities
-to cosmic strings with tensions $\mu_\pm = \delta_\pm/8\pi$, 
-where $\delta_\pm$ are the conical deficit angles at each pole,
-found by expanding near $\theta=\theta_\pm$:
-\begin{equation}
-4\mu_\pm =  1 - \frac{g(\theta_\pm)}{K}
-= 1 - \frac1K \left (1 \pm 2mA + e^2A^2 \right)
-\label{tensions}
-\end{equation}
-Clearly, $\mu_+ \leq \mu_- \leq 1/4$, and in order to avoid negative tension
-defects, we require $\mu_+ \geq 0$. For the majority of the paper, 
-we fix $K$ by demanding that one axis be regular ($\mu_+=0$), and the 
-other to have a positive tension cosmic string, i.e.
-\begin{equation}
-K = g(\theta_+) = 1 + 2mA + e^2A^2\quad \Rightarrow \qquad
-\mu_-= \frac{mA}{K}
-\end{equation}
-however in the interests of generality we will keep $\mu_+$ and $\mu_-$ as
-independent variables.
-
-The metric has horizons governed by the zeros of $f(r)$,
-given by rather unhelpful algebraic expressions for the roots of this
-quartic. One can however see qualitatively that there are various
-key limits. Looking at the large $r$ behaviour of $f$, we notice
-\begin{equation}
-f \sim \frac{r^2}{\ell^2} (1- A^2 \ell^2)
-\end{equation}
-Thus, this black hole will have an acceleration horizon if $A\ell>1$,
-and no acceleration horizon if $A\ell<1$, the case $A\ell=1$ is special and
-was considered in \cite{Emparan:1999wa}. 
-Typically, in holographic applications, the conical deficit of the C-metric
-is desired to be cloaked by a horizon \cite{Hubeny:2009kz},
-however, in our case we are interested in thermodynamics, so to
-keep our thermodynamic variables unambiguous, we will take 
-$A\ell<1$ so that we have a single horizon, that of the black hole,
-and thus a well-defined temperature corresponding to the periodicity
-of Euclidean time at the regular Euclidean black hole horizon.
-
-In order to understand the structure of this accelerating black hole, 
-it is useful to consider the effects of the various parameters. 
-Although we suspect $m$ and $e$ play the roles of mass and charge
-for the black hole, the original form of the C-metric has these variables
-defined slightly differently. In order to check this, consider the Komar 
-integral for the mass using the
-method described in \cite{Magnon:1985sc}
-\begin{equation}
-M_K = \frac{1}{8\pi} \int_{S^2} \star d\xi - \frac{1}{4\pi}
-\int n_a R^a_b \xi^b \sqrt{h} d^3x = \frac{m}{K}
-\label{komar}
-\end{equation}
-where $\xi = \partial_t$ is a timelike Killing vector field, the first integral
-is performed over a $\{\theta,\phi\}$ surface of topology $S^2$ considered to be
-near infinity, and the second integral is performed throughout the interior of
-this surface at constant `time' (as defined by $\xi$).  Note this integral is
-actually independent of $A$, hence we can associate $m$ with the bare mass of
-the black hole, whether accelerating or not.  Similarly, $e$ is related to the
-charge of the black hole:
-\begin{equation}
-Q = \frac{1}{4\pi} \int_{S^2} \star dB = \frac{e}{K}
-\label{Qdef}
-\end{equation}
-
-We have already seen how the parameter $K$ is related to the conical
-deficits, thus the only remaining parameter to explore is $A$. In order
-to understand the structure of the spacetime and the relevance of $A$,
-first consider the Rindler space found by
-setting $m=e=0$ in \eqref{dimlessmtrc}:
-\begin{equation}
-ds^2=\frac{1}{\Omega^2}\Biggl[ 
-\left ( 1 + \frac{r^2}{\ell^2} (1-A^2 \ell^2) \right) dt^2
--\frac{dr^2}{1 + \frac{r^2}{\ell^2}(1-A^2\ell^2)} - r^2 \left ( d\theta^2
-+ \sin^2 \theta d\phi^2\right)\Biggr]\\
-\end{equation}
-This spacetime no longer has a conical singularity and is locally pure AdS,
-however in these coordinates the boundary of AdS is not at $r=\infty$, but at
-$r = -1/(A\cos\theta)$. For $\theta$ in the southern hemisphere, this occurs at
-{\it finite} $r$, but in the northern hemisphere $r=\infty$ actually lies within
-the AdS spacetime (see figure \ref{fig:accbh}). To transform to global AdS
-coordinates $\{R,\Theta\}$, one takes \cite{Podolsky:2002nk}
-\begin{equation}
-1 + \frac{R^2}{\ell^2} = \frac{1 + (1-A^2\ell^2)r^2/\ell^2}{(1-A^2\ell^2)\Omega^2}
-\qquad;\qquad
-R \sin\Theta = \frac{r\sin\theta}{\Omega}
-\end{equation}
-
-the boundary, $R\to\infty$ now clearly corresponds to $\Omega\to 0$, 
-and the origin of Rindler coordinates corresponds to
-$R_0 = A \ell^2/\sqrt{1-A^2\ell^2}$, i.e.\ the Rindler coordinates represent
-those of an observer displaced from the origin of AdS.
-\begin{figure}
-\includegraphics[scale=0.3]{slowaccrind.pdf}
-\includegraphics[scale=0.5]{accbh.pdf}
-\caption{{\bf Left}: The slowly accelerating Rindler spacetime shown here with
-  $A\ell = 1/4$, and $\ell=1$ for simplicity. The spatial sections of AdS have
-  been compactified to a Poincar\'e disc, with the constant $r$ Rindler
-  coordinate indicated in black and constant $\theta$ in blue. The origin of the
-  Rindler coordinates is clearly visible as being displaced from the centre of
-  the disc, with the limit of the $r-$coordinate being the thick dashed black
-  line.  {\bf Right}: The black hole distorts the Poincar\'e disc with a conical
-  deficit, and is displaced from the origin of AdS. The spacetime is again
-  static, and a cross section is shown. }
-\label{fig:accbh}
-\end{figure}
-A comprehensive exploration of the structure of AdS C-metric spacetimes, 
-including their distortion of the boundary, was given in \cite{Krtous:2005ej}.
 
 \subsection{Thermodynamics of the Slowly Accelerating C-metric}
 
@@ -1994,138 +2168,7 @@ angular momentum, charge, mass and acceleration of the black hole. In this
 section we will review various restrictions this spacetime imposes to the metric
 parameters. We will then also briefly discuss the existence of conical defects
 in the spacetime.
-\subsection{Coordinate ranges and parametric restrictions}
-\label{sec:parameters}
-To explore what restrictions might apply to the parameters in this metric, we
-must require the spacetime to not admit closed timelike curves. This is achieved
-by requiring that the signature of the metric is preserved (up to an overall
-sign flip due to the conformal factor when $r$ crosses $\infty$) throughout the
-patch covered by this set of coordinates. We have
-\begin{gather}
-t\in\mathbb{R}, \qquad 0\leqslant\theta\leqslant\pi, \qquad 0\leqslant \phi<2\pi.
-\end{gather}
-Missing above is a domain for the $r$-coordinate, which is given by requiring
-that $r$ cover the range over which $f(r)$ is positive, delimited by the outer
-horizon radius at one end and either the acceleration horizon radius, or in the
-case there is no such horizon, the location of the boundary ($\theta>\pi/2$) or
-infinity ($\theta\leqslant\pi/2$) at the other. We can also harmlessly extend
-the spacetime beyond infinity for $\theta<\pi/2$ by including values of
-$r<r_\bd$ which are largely negative. Whether there is or isn't an acceleration
-horizon depends on the other parameters, and is viewed as a phenomenological
-consequence of this choice. Finally, it might also be possible to extend this
-spacetime beyond the horizons, which would allow one to consider further values
-of $r$, however this is not covered in this paper.
-
-While the above deals with any possible sign flips from $f(r)$, there are also
-negative regions for $\Omega^2 g_{\theta\theta}$ and $\Omega^2 g_{\phi\phi}$
-that we must exclude. This amounts to requiring that $g(\theta)>0$, or,
-equivalently, requiring that there be no roots of
-\begin{align}\label{eq:gx}
-P(\xi) = 1+ 2mA\xi+\left(A^2(a^2+e^2)-\frac{a^2}{\ell^2}\right)\xi^2
-\end{align}
-over $-1<\xi<1$. This leads to the following set of conditions for the black
-hole parameters: 
-\begin{align}\label{eq:conditions}
-a^2\bigg[\frac{1}{\ell^2}-A^2\bigg] \leqslant 1-2mA+e^2A^2 \quad \mbox{and}
-  \quad mA\leqslant 1. 
-\end{align}
-For small parameter values, the first constraint may be interpreted as a general
-upper bound on acceleration, charge and rotation, however we will explore its
-implications further below. The second is a necessary condition for small
-acceleration (more specifically, when $P^{\prime\prime}(0)$ is positive yet
-small enough to allow for the existence of real roots), without which the first
-condition is not possible. Dropping charge\footnote{ The inlusion of charge
-  does not drastically change the characteristics of the diagrams in
-  \cref{fig:aA}, as long as the conditions in \cref{eq:conditions} are
-  satisfied.}, \cref{fig:aA} serves as a visual aid to the constraints. For
-small acceleration (rotation), we see the ``upper bound" behaviour, highlighted
-above, to the rotation (acceleration) parameter. For larger values, a lower
-bound must be respected to preserve the geometry. \Cref{sec:critC} concerns
-black holes that lie along this constraint line (blue), which occur when
-$P(\xi)$ in \cref{eq:gx} has a root at $\xi = -1$, or when $g(\theta_- =\pi)=0$.
-
-\begin{figure}
-\centering
-\begin{subfigure}[b]{0.45\textwidth}
-\includegraphics[width=\textwidth]{aA-smallm}
-\caption{\label{fig:aA-smallm}}
-\end{subfigure}\quad
-\begin{subfigure}[b]{0.45\textwidth}
-\includegraphics[width=\textwidth]{aA-largem}
-\caption{\label{fig:aA-largem}}
-\end{subfigure}% \\
-% \begin{subfigure}[b]{0.45\textwidth}
-% \includegraphics[width=\textwidth]{aA-m3p0e0}
-% \caption{\label{fig:aA-m3p0e0}}
-% \end{subfigure}
-\caption{\label{fig:aA}Allowed values of $a$ and $A$ (in units of $\ell$ and
-  $\ell^{-1}$ respectively) according to \cref{eq:conditions} (uncharged) are
-  contained within the white regions. (a) $m=0.38\ell$, (b) $m=0.585\ell$ % , (c)
-  % $m=3.0\ell$
-  . % {\bf not necessarily all in final version}
-}
-\end{figure}
-
-% \begin{figure}
-% \centering
-% \includegraphics[width=0.7\textwidth]{3D-region_m0p38.png}
-% \caption{\label{fig:3D-region_m0p38}A 3-dimensional representation of the
-%   uncharged parameter space, with a slice at $m=0.38\ell$. The red and black
-%   surfaces repre sents the parametric boundaries imposed by
-%   \cref{eq:conditions}. {\bf Not necessarily in final}}
-% \end{figure}
-
-\subsection{The conical defect}
-The conical defect inherent to the C-metric is controlled through the parameter
-$K$. A conical deficit is associated to the presence of a cosmic string attached
-to the black hole with tension $\mu = \delta/8\pi$. One may introduce such
-defects to simpler spacetimes. For example, one may write the Schwarzschild
-metric in this fashion, by having with $g^{\mathrm{Sch}}_{\phi\phi}\sim
-K^{-1}$. For $K>1$, the result is a black hole with a string running through its
-core. The defect along both the $\theta = 0$ and $\theta= \pi$ axes is the
-same. The C-metric has unequal deficits, and the resulting string tension
-imbalance is what physically drives the acceleration.
-
-The angular part of the metric in \cref{eq:metric} near the poles is
-\begin{align}
-ds^2 \sim \frac{1}{\Omega^2}\frac{\Sigma r^2}{g(\theta_{\pm})}\bigg[d\rho^2 +
-  \frac{g^2(\theta_{\pm}) \rho^{2}}{K^2}d\phi^2\bigg]. 
-\end{align}
-where $\theta = \theta_{\pm} \pm \rho$ with $\theta_+=0$ and $\theta_-=\pi$. The
-conical deficits along each axis are given by 
-\begin{align}\label{eq:deficits}
-\delta_\pm=2\pi\bigg[1-\frac{g(\theta_\pm)}{K}\bigg] = 2\pi\bigg[1-\frac{1\pm
-  2mA + A^2(a^2+e^2)-a^2/\ell^2}{K}\bigg]. 
-\end{align} 
-The tensions of cosmic strings connecting the event horizon to the boundary are
-related to the deficits, and given by $\mu_\pm=\delta_\pm/8\pi$. It is now
-evident how our choice of $K$ will impact the geometry of the spacetime,
-specifically it will regulate the distribution of tensions along either axis. It
-is also worth mentioning that a negative deficit (corresponding to an excess) is
-possible, however this would be sourced by a negative energy object. We can
-remove one of the deficits for the C-metric by defining $K=L_\pm$ where
-\begin{align}
-L_\pm=1\pm 2mA + \bigg[A^2(a^2+e^2)-\frac{a^2}{\ell^2}\bigg].
-\end{align}
-Since having $K=L_-$ induces an excess at the other pole, it is generally the
-custom to have $K=L_+$, regularising the north pole, and only having a string at
-the south pole. In \cref{fig:embed3D} we illustrate how changing $K$ affects an
-embedding of the horizon in $\mathbb{E}^3$. 
-
-\begin{figure}
-  \centering
-  \begin{subfigure}[b]{0.2\textwidth}
-    \includegraphics[width=\textwidth]{embed3D-smooth}
-    \caption{\label{fig:embed3D-smooth}}
-  \end{subfigure}\qquad
-  \begin{subfigure}[b]{0.2\textwidth}
-    \includegraphics[width=\textwidth]{embed3D-Kbig}
-    \caption{\label{fig:embed3D-Kbig}}
-  \end{subfigure}
-  \caption{\label{fig:embed3D}Embeddings of the non-rotating C-metric in
-    $\mathbb{E}^3$, for the black hole with $A=0.01\ell$, $m=9\ell$ and (a) $K=
-    L_+$, (b) $K= 1.2 L_+$.}
-\end{figure}
+\todoopt{removed sections here}
 
 \subsection{The critical limit for the generalised C-metric}
 \label{sec:critC}
