@@ -10,6 +10,8 @@ frontopenright
 \doublespacing
 \usepackage{todonotes}
 \usepackage{cleveref}
+\usepackage{bibentry}
+\nobibliography*
 
 \newcommand{\nn}{\nonumber}
 \newcommand{\dr}{\mathrm{dr}}
@@ -25,7 +27,6 @@ frontopenright
 \newcommand{\tcr}{\textcolor{red}}
 \newcommand{\tcg}{\textcolor{green}}
 \newcommand{\tcm}{\textcolor{magenta}}
-
 
 \begin{document}
 \title{Thermodynamics of Accelerating Black Holes}
@@ -44,8 +45,16 @@ frontopenright
 \begin{declaration*}
 %
   The work in this thesis is based on research carried out in the Department of
-  Mathematical Sciences at Durham University. No part of this thesis has been
-  submitted elsewhere for any degree or qualification.
+  Mathematical Sciences at Durham University. The results presented have in part
+  already appeared in the following publications:
+  \begin{itemize}
+  \item \bibentry{Appels:2016uha}
+  \item \bibentry{Appels:2017xoe}
+  \end{itemize}
+  Any section reproduced from these articles has been done so with the full
+  consent and permission from the relevant collaborators. No part of this thesis
+  has been submitted elsewhere for any degree or qualification.
+
 %
 \end{declaration*}
 
@@ -71,7 +80,7 @@ frontopenright
 
 \disableprotrusion
 \tableofcontents*
-\listoffigures
+% \listoffigures
 % \listoftables
 % \listoftodos
 \enableprotrusion
@@ -1024,7 +1033,7 @@ Euclidean time at the regular Euclidean black hole horizon.
 While the above deals with possible sign flips from $f(r)$, there are also
 negative regions for $g_{\theta\theta}$ and $g_{\phi\phi}$ that we must
 consider. To preserve the signature, one must require that $g(\theta)>0$, which,
-upon inspection of \cref{eq:fg11} or, equivalently, requiring that there
+upon inspection of \cref{eq:fgNR} or, equivalently, requiring that there
 be no roots of
 \begin{align}\label{eq:gx}
 P(\xi) = 1+ 2mA\xi+e^2A^2\xi^2
@@ -1048,22 +1057,11 @@ hold.
 
 \begin{figure}
   \centering
-  \begin{subfigure}[b]{0.45\textwidth}
-  \centering
-    \includegraphics{eA-m1p2a0p6-small}
-    \caption{\label{helloa}}
-  \end{subfigure}\qquad
-  \begin{subfigure}[b]{0.45\textwidth}
-  \centering
-    \includegraphics[width=\textwidth]{eA-m1p2a0p6-large}
-    \caption{\label{hellob}}
-  \end{subfigure}\\
-  \begin{subfigure}[b]{\textwidth}
-  \centering
-    \includegraphics{eA-m1p2a0p6-large}
-    \caption{\label{helloc}}
-  \end{subfigure}
-  \caption{\label{hello}}
+  \includegraphics{eA-m1p5a0p0-large}
+  \caption{\label{fig:eA-m1p5a0p0}Parametric space for the non-rotating
+    C-metric. The blue hatched region corresponds to solutions excluded by
+    \cref{eq:conditionsNR}. The grey hatched region is excluded via cosmic
+    censorship.}
 \end{figure}
 
 
@@ -1183,26 +1181,38 @@ inclusion of charge allows one to access higher values of acceleration.
 % $P(\xi)$ in \cref{eq:gx} has a root at $\xi = -1$, or when $g(\theta_- =\pi)=0$.
 
 \begin{figure}
-\centering
-\begin{subfigure}[b]{0.45\textwidth}
-\includegraphics[width=\textwidth]{aA-smallm}
-\caption{\label{fig:aA-smallm}}
-\end{subfigure}\quad
-\begin{subfigure}[b]{0.45\textwidth}
-\includegraphics[width=\textwidth]{aA-largem}
-\caption{\label{fig:aA-largem}}
-\end{subfigure}% \\
-% \begin{subfigure}[b]{0.45\textwidth}
-% \includegraphics[width=\textwidth]{aA-m3p0e0}
-% \caption{\label{fig:aA-m3p0e0}}
-% \end{subfigure}
-\caption{\label{fig:param-regions}Allowed values of $a$ and $A$ (in units of $\ell$ and $\ell^{-1}$ respectively) according to \cref{eq:conditions} (uncharged) are
-  contained within the white regions. (a) $m=0.38\ell$, (b) $m=0.585\ell$% , (c)
-  % $m=3.0\ell$
-  . % {\bf not necessarily all in final version}
-}
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{aA-m0p5e0p3-small}
+    \caption{\label{fig:aA-m0p5e0p3}$m=0.5\ell$, $e=0.3\ell$.}
+  \end{subfigure}\qquad
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{aA-m0p9e0p3-small}
+    \caption{\label{fig:aA-m0p9e0p3}$m=0.9\ell$, $e=0.3\ell$.}
+  \end{subfigure} \\
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{eA-m1p5a0p8-small}
+    \caption{\label{fig:eA-m1p5a0p8}$m=1.5\ell$, $a=0.8\ell$.}
+  \end{subfigure}\qquad
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{eA-m1p5a2p0-small}
+    \caption{\label{fig:eA-m1p5a2p0}$m=1.5\ell$, $a=2.0\ell$.}
+  \end{subfigure} \\
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{ae-m0p6A0p5-small}
+    \caption{\label{fig:ae-m0p6A0p5}$m=0.6\ell$, $A=0.5\ell^{-1}$.}
+  \end{subfigure}\qquad
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{ae-m1p6A1p3-small}
+    \caption{\label{fig:ae-m1p6A1p3}$m=1.6\ell$, $A=1.3\ell^{-1}$.}
+  \end{subfigure}
+  \caption{\label{fig:param-regions}Allowed parametric regions for the
+    C-metric. The regions marked out with blue hatching correspond to those
+    forbidden by \cref{eq:conditions}, and those marked out in grey are excluded
+    by cosmic censorship.
+  }
 \end{figure}
-
+ 
 \placehold{plot regions here}
 
 We may also determine the conical deficits by looking at the region near each
