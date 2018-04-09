@@ -10,10 +10,13 @@ frontopenright
 \doublespacing
 \usepackage{todonotes}
 \usepackage{cleveref}
+\usepackage[numbers,sort&compress]{natbib}
 \usepackage{bibentry}
 \nobibliography*
 
 \newcommand{\nn}{\nonumber}
+\newcommand{\PD}{Pleba\'nski-Demia\'nski}
+
 \newcommand{\dr}{\mathrm{dr}}
 \newcommand{\bd}{\mathrm{bd}}
 \newcommand{\ta}{\tilde{a}}
@@ -74,7 +77,7 @@ frontopenright
 %\dedicationtext{This thesis is dedicated to}
 \begin{dedication*}
 %
-  My family.
+  The Appels/Allan family.
 %
 \end{dedication*}
 
@@ -82,7 +85,7 @@ frontopenright
 \tableofcontents*
 % \listoffigures
 % \listoftables
-% \listoftodos
+\listoftodos
 \enableprotrusion
 
 \cleardoublepage
@@ -367,6 +370,7 @@ In 1972, Larry Smarr pointed out, using this relation, that if one expressed
 mass as a function $M=M(\mathcal{A},J,Q)$ of area, angular momentum and charge,
 the exact differential
 \begin{align}
+  \label{eq:exactdiff}
 dM = \mathcal{T}d\mathcal{A} + \Omega dJ + \Phi dQ
 \end{align}
 could be used to obtain the invariant quantities
@@ -383,7 +387,12 @@ could be rewritten nicely as
 In fact, this result follows immediately from Euler's theorem on homogeneous
 functions, given that $M(\lambda\mathcal{A}, \lambda J, \lambda^\frac12 Q) =
 \lambda^\frac12 M(\mathcal{A},J,Q)$.
-\todoopt{mention Bekenstein}
+
+It is in fact quite common to use the exact differential in \cref{eq:exactdiff}
+to establish the first law itself. This was the method Bekenstein used
+in~\cite{Bekenstein:1973ur} to hypothesise a black hole temperature, and this
+will also be how we will ultimately establish a first law for accelerating black
+holes, the object of this thesis. 
 
 We began this section by pointing out that the origin of the interpretations of
 mass and angular momentum as $M = m$ and $J = ma$ was a term-by-term comparison
@@ -418,8 +427,10 @@ Bardeen, Carter and Hawking were able to prove Smarr's relation, for the
 uncharged case in a more general setting in~\cite{Bardeen:1973gs} and Carter
 provided the proof for the charged case
 in~\cite{Carter:1973rla,Carter2010}. Both methods use this as an intermediary
-step to deriving the first law. We will now briefly review this calculation,
-omitting technical steps which can certainly all be found in the original works.
+step to deriving the first law, showing how the aforementioned exact
+differential expression \eqref{eq:exactdiff} is in fact fully
+self-consistent. We will now briefly review this calculation, omitting technical
+steps which can certainly all be found in the original works.
 
 Let us consider the Komar integrals for both killing vectors, evaluated over a
 surface $\mathcal{S}$ which now extends from the boundary
@@ -502,8 +513,16 @@ fluid angular momentum ($J_\mathrm{M}$), entropy ($S$) or particle number
 the relation initially presented in \cref{eq:firstlawBHM} when all external
 fields and sources are turned off.
 
-\placehold{concluding remark about using differential formulae in practice and
-  verification by other means}
+This derivation shows why the first law holds, at least for asymtotically-flat
+rotating black holes, from first principles. Starting with the definition of
+mass as a Komar integral, we are able to show why variations of this quantity
+are related to all the other variations present in the first law in the way that
+they are. Previously, it had been known that one could express variations in the
+mass in this way, as the exact differential \eqref{eq:exactdiff}, however this
+was seen as more of an observation based on final expressions obtained using
+independent definitions for mass, area, surface gravity and other
+quantities. This elegant derivation shows not merely how all of these
+expressions are related, but how their \emph{definitions} are related.
 
 \section{The Euclidean Approach to Black Hole Thermodynamics}
 \label{sec:euclidean}
@@ -686,21 +705,6 @@ The corresponding gauge potential is given by
 \placehold{Go over the Hawking-Page phase transition, Van der Waals PT and
   then different ensemble, so papers by emparan et al.}
 
-
-Things that need to be covered are:
-\begin{itemize}
-\item Start with physical interpretation of BH solutions, ie conserved
-quantities.
-\item Cover the timeline of Bekenstein Entropy, Hawking radiation and the laws
-of Back hole mechanics
-\item Discuss methods of recovering the first law/thermodynamic quantities:
-perturbing the system, Euclideanising the metric/computing the partition
-function
-\item Smarr relation
-\item phase transitions (HP, VdW)
-\item further extensions (pressure/volume, BH chemistry, Geometrothermodynamics)
-\end{itemize}
-
 \chapter{Acceleration and the C-metric}
 \label{chap:cmet}
 
@@ -708,55 +712,44 @@ function
 \label{sec:cmet-history}
 
 The first non-trivial solution to the Einstein field equations of General
-Relativity appeared within a month or two of their publication\todoruth{do you
-  know the dates? Maybe a bit less specific?}. It was Karl Schwarszchild who in
-1915 (published in 1916) initially discovered the spacetime and presented it as
+Relativity appeared in January 1916, little over a month of their initial
+publication in late November 1915~\cite{Einstein:1915aa,Einstein:1916aa}. It was
+Karl Schwarszchild who initially discovered the spacetime and presented it as
 the most general solution to describe a spherically-symmetric solution to the
 vacuum field equations~\cite{Schwarzschild:1916ab, Schwarzschild:1916aa,
   Schwarzschild:1916ea}. This solution went largely misunderstood for the next
 few decades as various attempts were made to understand the singularities the
 metric contains. It wasn't until 1958 that David Finkelstein, using a set of
-coordinates earlier published by Arthur Eddington that smoothly
-\todoruth{patched through? extended across?}patched the coordinate singularity,
-provided the interpretation of this singularity as a surface which could only be
-traversed in one direction~\cite{Finkelstein:1958aa}. The spacetime eventually
-went on to become known as the Schwarszchild black hole, however it is easy to
-forget how much time elapsed between the discovery of the solution and for a
-widely accepted interpretation to be presented.
+coordinates earlier discovered by Arthur Eddington that smoothly patched over the
+coordinate singularity, provided the interpretation of this singularity as a
+surface which could only be traversed in one
+direction~\cite{Finkelstein:1958aa}. The spacetime eventually went on to become
+known as the Schwarszchild black hole, however it is easy to forget how much
+time elapsed between the discovery of the solution and for a widely accepted
+interpretation to be presented.
 
 Within the first few years of the field equations being known, other solutions
 were found. These were mostly mathematical solutions whose physical meanings
 were unknown, much like the Schwarzschild metric. Of particular interest to this
 thesis is a metric belonging to a larger class of solutions discovered by
-Levi-Civita \todoruth{cite}in 1918.\todoopt{KW refers to a ``soluzioni
-  oblique''} The class of metrics he describes are those spacetimes which admit
-a \textit{``timelike Killing vector $\xi^a$ orthogonal to a three-space whose
-  Ricci curvature tensor is of the form:''}\todoopt{literally copied wording
-  from KW - fix}
-\begin{align}
-  R^a_{~b}=\alpha \eta^a \eta_b + \beta \delta^a_{~b}.
-\end{align}
+Levi-Civita in 1918~\cite{Levi-Civita:1918aa}.
 
 This metric would then be rediscovered in the early 1960s, in a wave of research
-presumably inspired by the aforementioned \todoruth{understanding}advent of
-black holes, by Newman and Tamburino~\cite{Newman:1961aa}, Robinson and
+presumably inspired by the aforementioned understanding of black holes, by
+Newman and Tamburino~\cite{Newman:1961aa}, Robinson and
 Trautman~\cite{Robinson:1962zz} and then again by Ehlers and
 Kundt~\cite{Ehlers:1962aa}. In particular, Ehlers and Kundt explicitly take the
 initial body of work laid out by Levi-Civita, cited above, and, in their own
 words, ``follow his line of thought'' and ``simplified and completed his
 derivations''. They continue on to present an invariant classification of
-degenerate static vacuum fields\todoopt{provide explanation of
-  clarification?}. It is this classification of ``A'', ``B'' and ``C''-type
-metrics which gives its name, to this day, to the \emph{C-metric}, the
-axisymmetric vacuum solution describing an accelerating black
-hole. \todoopt[inline]{``C''-metrics are metrics for which the hypersurface
-  $T_\tau$ --- which contain the orbits of the complete isometry group of a
-  degenrate static vacuum field --- contain neither the spacelike nor the
-  timelike eigensurfaces belonging to the Riemann tensor's special eigenscalar
-  $\alpha$...} \todoruth{At what point? Now? 60s?}At this point, the C-metric is
-not yet fully understood, but it is seen as a metric that bridges the gap
-between the Schwarzschild metric and its charged counterpart
-(Reissner-Nordstrom), and the Weyl and Robinson-Trautman
+degenerate static vacuum fields. Without delving into the details, it is this
+classification of ``A'', ``B'' and ``C''-type metrics which gives its name, to
+this day, to the \emph{C-metric}, the axisymmetric vacuum solution describing an
+accelerating black hole.
+
+At that point in time, the C-metric was not yet fully understood, but it was
+seen as a metric that bridges the gap between the Schwarzschild metric and its
+charged counterpart (Reissner-Nordstrom), and the Weyl and Robinson-Trautman
 solutions~\cite{Kinnersley:1970zw}.
 
 Eventually, in 1970, Kinnersley and Walker (KW)~\cite{Kinnersley:1970zw} picked
@@ -773,7 +766,7 @@ where
   G(x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3 \qquad \mbox{and} \qquad F(y) = -G(-y),
 \end{align}
 with $a_0\ldots a_3$ some a set of parametrising constants. The metric admits
-a \todoruth{is it really?}conformal transformation given by
+a conformal transformation given by
 \begin{gather}
   \label{eq:cmet-transf}
   x\to pq x + n, \quad y \to pq y - n, \quad t \to p t \quad \mbox{and} \quad
@@ -793,8 +786,8 @@ This symmetry allows us to remove two degrees of freedom from the initial
 solution, and it is this freedom of parametrisation which has led to some
 confusion as to its interpretation. The final setup that KW present involves
 setting $a_1 = 0$, $a_0 = -a_2 = 1$ and then labelling $q = A^2$ and
-$a_3 = -2 m A$. The final form \todoopt{add charged version here too} of the
-C-metric, as written by Kinnersley and Walker is therefore given by
+$a_3 = -2 m A$. The final form (including a charged term, introduced later) of
+the C-metric, as written by Kinnersley and Walker is therefore given by
 \begin{align}
   \label{eq:kinnersley-walker-metric}
   ds^2 = \frac{1}{A^2(x+y)^2} \left(-F(y)dt^2 + \frac{dy^2}{F(y)} +
@@ -806,57 +799,241 @@ where
 \end{align}
 This paper was published around the time Kinnersley published his doctoral
 thesis, in which he also shows that the charged C-metric is simply obtained by
-adding in the quartic term above, along with the potential\todoopt{find
-  potential and cite - also rotating version in thesis?}. For now the parameters
-$m$ and $A$ can just be interpreted as the two remaining degrees of freedom for
-this solution, however it will become apparent that these can be thought of as
-(being related to) the mass and the acceleration of a massive particle/black
-hole respectively. The Schwarszchild and Reissner-Nordstrum spacetimes are then
-recovered by first changing $y = 1/Ar$ and $t\to At$, taking the limit as
-$A \to 0$ and then identifying $x = \cos\theta$ and $z = \phi$. We may also
-recover the flat-space limit by setting $m=e=0$ while keeping $A>0$, and then
-using the same identifications as before for $x$ and
-$z$.
+adding in the quartic term above, along with the gauge potential $B = -eAydt$.
+For now the parameters $m$ and $A$ can just be interpreted as the two remaining
+degrees of freedom for this solution, however it will become apparent that these
+can be thought of as (being related to) the mass and the acceleration of a
+massive particle/black hole respectively. The Schwarzschild and
+Reissner-Nordstrum spacetimes are then recovered by first changing $y = 1/Ar$
+and $t\to At$, taking the limit as $A \to 0$ and then identifying
+$x = \cos\theta$ and $z = \phi$.
 
-\placehold{Rindler Analysis, mention other work that deals with
-  deficit and change to pairs of bh}
-
-The Pleba\'nski-Demia\'nski family of solutions~\cite{Plebanski:1976gy} was
-published in 1976, and was described as a new class of stationary and
-axisymmetric solutions to the Einstein-Maxwell-$\Lambda$ field equations which
-would describe rotating, charged and accelerating black holes, and also
-contain a further parameter which in certain limits was identified as the NUT
-charge. \todoopt{mention Petrov type D?} The Pleba\'nski-Demia\'nski metric is
+In order to understand the accelerating nature of this solution, it will be
+useful to first briefly review Rindler coordinates, which are simply set of
+coordinates well-suited to uniformly accelerating trajectories. To see what this
+means, let's consider the path of an uniformly accelerating object in flat
+1+1-dimensional space. The accelerations as measured locally by the object,
+$\alpha$, and as measured in a static lab frame, $a$, are related by
+\begin{equation}
+  \alpha = \gamma^3a,
+\end{equation}
+where $\gamma = (1-v^2)^{-1/2}$ is the usual Lorentz factor, with $v$ the
+instant velocity of the object as measured by the static observer. Solving this
+equation for its position, denoted by $x$, reveals that the path taken by an
+accelerating observer satisfies 
+\begin{equation}
+  -t^2+x^2=\frac{1}{\alpha^2}.
+\end{equation}
+This is known as hyperbolic motion, and we have the following parametrisation:
 \begin{align}
-  ds^2 &= \frac{1}{(p + q)^2} \left( \frac{1+(pq)^2}{P(p)}dp^2 +
-         \frac{P(p)}{1+(pq)^2}(d\sigma + q^2 d\tau)^2\right. \nn\\
-       & \hspace{10em}\left.+ \frac{1+(pq)^2}{Q(q)}dq^2 - \frac{Q(q)}{1+(pq)^2}(d\tau - p^2
-         d\sigma)^2\right), 
+  \label{eq:trajectory}
+  x &= \frac{1}{\alpha} \cosh \alpha \tau,\nn\\
+  t &= \frac{1}{\alpha} \sinh \alpha \tau.
+\end{align}
+We may use this parametrisation to obtain a set of coordinates which is centred
+on the idea of accelerated objects, in other words, coordinates for which paths
+at constant coordinate are these hyperbolic trajectories. Such a transformation
+is given by:
+\begin{align}
+  x = \frac{\xi}{\alpha} \cosh \alpha \tau,\qquad t = \frac{\xi}{\alpha} \sinh
+  \alpha \tau.
+\end{align}
+This transformation gives rise to what is known as the \emph{Rindler metric},
+\begin{align}
+   ds^2 = -\xi^2 d\tau^2 + \frac{d\xi^2}{\alpha^2}.
+\end{align}
+These coordinates cover the region $t^2<x^2$. This is due to the presence of an
+\emph{acceleration horizon} at $t = \pm x$, or $\xi = 0$. The analytic
+continuation over the horizon is simply done by reverting back to the original
+cartesian coordinates.
+
+Let us now return to the C-metric and its interpretation. To see the
+accelerating nature of the metric, we will work from its flat-space limit, which
+we obtain from \cref{eq:kinnersley-walker-metric} by setting $m=e=0$. The metric
+is now
+\begin{align}
+  \label{eq:flatlimit}
+  ds^2=\frac{1}{A^2(x+y)^2}\left(-(y^2-1)A^2dt^2+\frac{dy^2}{y^2-1} +
+  \frac{dx^2}{1-x^2} + (1-x^2)dz^2\right).
+\end{align}
+Using the following nontrivial coordinate transformation:
+\begin{align}
+  \xi = \frac{\sqrt{y^2-1}}{x + y}, \qquad \rho =
+  \frac{1}{A}\frac{\sqrt{1-x^2}}{x+y}, \qquad t=A\tau, \qquad z=\varphi,
+\end{align}
+we are able to recover the Rindler metric in 3+1 dimsensional cylindrical
+coordinates:
+\begin{align}
+  \label{eq:rindler}
+  ds^2 = -\xi^2 d\tau^2 + \frac{d\xi^2}{A^2} + d\rho^2 + \rho^2 d\varphi^2.
+\end{align}
+This reinforces the interpretation of $A$ as the acceleration parameter. The
+acceleration horizon, $\xi = 0$ is therefore located, in the original
+coordinates, at y = 1. As mentioned above, it is possible too to write the
+C-metric in a pseudo-spherical coordinate system with a radial coordinate $r$,
+related to y through the substitution $y = 1/Ar$, and we find that the
+acceleration horizon is located at $r = 1/A$. Intuitively, therefore, it makes
+sense that the acceleration horizon be located farther away with vanishing
+acceleration. Similarly, we also have that the origin of this spherical system,
+$r = 0$, which corresponds to $\xi = 1$, follows the trajectory
+\eqref{eq:trajectory} that our initial accelerating object did.
+
+
+\section{The Pleba\'nski-Demia\'nski Metric}
+\label{sec:PD}
+
+The Pleba\'nski-Demia\'nski (PD) family of solutions~\cite{Plebanski:1976gy} was
+published in 1976, and was described as a new class of stationary and
+axisymmetric solutions to the Einstein-Maxwell-$\Lambda$ field equations. In
+their paper, PD show how through a series of different coordinate
+transformations, one could obtain from their metric most of the known black hole
+solutions, including, as we shall see below, the accelerating C-metric as well
+as the rotating Kerr metric. Additionally, the solution also accounted for
+electromagnetic fields, a cosmological constant $\Lambda$ and even contains a
+parameter which in certain limits can be identified as the NUT charge. In the
+sections below, we will demonstrate how one recovers the C-metric from this
+solution, how the Kerr metric is also obtained from this parent solution, and
+finally, we shall present modern modifications to the metric that have vastly
+simplified calculations involving the generalised (rotating, charged)
+C-metric. Before that however, let us give the the Pleba\'nski-Demia\'nski
+metric\footnote{compared to the original text, we have taken $p$, $q$ and
+  $\sigma$ to have opposite signs, for consistency}:
+\begin{align}
+  \label{eq:PD}
+  ds^2 &= \frac{1}{(p + q)^2} \left( - \frac{Q(q)}{1+(pq)^2}(d\tau + p^2
+         d\sigma)^2 + \frac{1+(pq)^2}{Q(q)}dq^2 \right.\nn\\
+  &\hspace{10em}\left.+ \frac{1+(pq)^2}{P(p)}dp^2 +
+         \frac{P(p)}{1+(pq)^2}(d\sigma - q^2 d\tau)^2 \right), 
 \end{align}
 where
 \begin{align}
-  P &= \left(-\frac{\lambda}{6} - g_0^2 + \gamma\right) + 2np - \epsilon p^2 +
-      2mp^3 + \left(-\frac{\lambda}{6}-e_0^2-\gamma)p^4\right), \nn\\
-  Q &= \left(-\frac{\lambda}{6} + g_0^2 - \gamma\right) + 2np + \epsilon p^2 +
-      2mp^3 + \left(-\frac{\lambda}{6}+e_0^2+\gamma)p^4\right),
+  Q &= -\frac{\Lambda}{6} + g^2 - \gamma - 2nq + \epsilon q^2 -
+      2mq^3 + \left(-\frac{\Lambda}{6}+e^2+\gamma\right)q^4,\nn\\
+  P &= -\frac{\Lambda}{6} - g^2 + \gamma - 2np - \epsilon p^2 -
+      2mp^3 + \left(-\frac{\Lambda}{6}-e^2-\gamma\right)p^4,
 \end{align}
-with $\lambda$, $g_0$, $\gamma$, $n$, $\epsilon$, $m$ and $e_0$ real parameters
-of the solution.
-\placehold{show how one recovers C-metric and Kerr from PD}
+where $m$, $n$, $e$, $g$, $\epsilon$ and $\gamma$ are real parameters of the
+solution. Additionally, it is worth drawing attention to the presence of a
+cosmological constant term, as this term can be carried through the derivation of
+the C-metric, yielding an accelerating black hole with a nonzero
+$\Lambda$. While unfamiliar, the naming choice for these coordinates facilitates
+an agnostic treatment of this solution. To simplify the derivations below, we
+perform the parametric shift $\gamma\to \gamma + g^2 +\frac{\Lambda}{6}$. The
+metric functions are now given by
+\begin{align}
+  \label{eq:PDfn}
+  Q &= -\frac{\Lambda}{3} - \gamma + 2nq + \epsilon q^2 +
+      2mq^3 + \left(\gamma + e^2 + g^2\right)q^4,\nn\\
+  P &=  \gamma + 2np - \epsilon p^2 +
+      2mp^3 - \left(\gamma+e^2+g^2+\frac{\Lambda}{3}\right)p^4.
+\end{align}
+Since the work presented in this thesis focusses on asymptotically AdS
+spacetimes, we shall write
+\begin{align*}
+  \Lambda=-\frac{3}{\ell^2}.
+\end{align*}
 
-The interpretation at this time of the metric as describing a spacetime with all
-the properties above is somewhat misleading at this point, as what is really
-shown in this paper is that both the C-metric, and the Kerr (rotating) and
-Kerr-Newman (rotating, charged) black holes can be obtained from this metric
-through various coordinate reparametrisations. \todoopt{should reorganise this
-  bit}
+\subsection{From \PD{} to the C-metric}
+\label{sec:PDtoC}
 
-The Pleba\'nski-Demia\'nski solution marks the first appearance at this point of
-a rotating, or spinning C-metric. In the years that followed, various papers
-appeared describing certain properties of this
-geometry~\cite{Pravda:2002kj,Letelier:1998rx,Bicak:1999sa,Farhoosh:1980zz}, but
-it was in 2003 that the next significant advance was made. Hong and
-Teo (HT)~\cite{Hong:2003gx} realised that they could use the symmetry in
+In order to show how the \PD{} metric contracts to the C-metric, we must first
+perform the following rescaling of our coordinates:
+\begin{align}
+  p\to\sqrt{aA}p, \qquad q\to\sqrt{aA} q, \qquad
+  \tau\to\sqrt{\frac{a}{A^3}}\tau, \qquad \sigma\to\sqrt{\frac{a}{A^3}}\sigma,
+\end{align}
+where we have introduced new nonzero parameters $a$ and $A$ in anticipation of
+what follows. To compensate for this rescaling, we may simplify the metric with
+the following parameter/function rescalings~\cite{Plebanski:1976gy,Pravda:2002kj}:
+\begin{gather}
+  m\to \left(\frac{A}{a}\right)^\frac32 m, \qquad n\to
+  \left(\frac{A}{a}\right)^\frac12 n, \qquad e\to\frac{A}{a}e, \qquad
+  g\to\frac{A}{a}g,\nn\\
+  \epsilon\to \frac{A}{a}\epsilon, \qquad \gamma\to A^2\gamma, \qquad P\to A^2P,
+  \qquad Q\to A^2 Q.
+\end{gather}
+The resulting metric is given by
+\begin{align}
+  \label{eq:PDrescaled}
+  ds^2 &= \frac{1}{A^2(p + q)^2} \left( - \frac{Q(q)}{1+(aApq)^2}(d\tau - aAp^2
+         d\sigma)^2 + \frac{1+(aApq)^2}{Q(q)}dq^2 \right.\nn\\
+  &\hspace{8em}\left. + \frac{1+(aApq)^2}{P(p)}dp^2 +
+         \frac{P(p)}{1+(aApq)^2}(d\sigma + aAq^2 d\tau)^2 \right),
+\end{align}
+with
+\begin{align}
+  \label{eq:PDfn}
+  Q &= \frac{1}{A^2\ell^2} - \gamma + \frac{2nq}{A} + \epsilon q^2 +
+      2mAq^3 + A^2\left(\gamma a^2 + e^2 + g^2\right)q^4,\nn\\
+  P &=  \gamma + \frac{2np}{A} - \epsilon p^2 +
+      2mAp^3 + \left(\frac{a^2}{\ell^2} - A^2(\gamma a^2+e^2+g^2)\right)p^4.
+\end{align}
+Now, according to~\cite{Plebanski:1976gy}, the curvature invariants of this
+spacetime do not depend on the parameters $\epsilon$, $n$ and $\gamma$. This
+tells us that these parameters are simple gauge choices, and we may fix them
+without affecting the geometry. To recover the C-metric, we first take the limit
+$a\to0$, after which we are free to set $\epsilon=\gamma=1$ and $n=0$. The
+C-metric, as written in \cref{eq:kinnersley-walker-metric}, is then simply
+obtained by identifying $\tau=t$, $q=y$, $p=x$ and $\sigma=z$. The metric
+\eqref{eq:PDrescaled} is actually known as the spinning C-metric (SC-metric),
+as further
+work~\cite{Farhoosh:1980zz,Bicak:1999sa,Letelier:1998rx,Pravda:2002kj} showed
+that while not analytically pleasant, this metric displays characteristics of a
+rotating black hole while preserving its acceleratng nature.
+
+\subsection{From \PD{} to the Kerr-Newman Metric}
+\label{sec:PDtoKN}
+
+The rotating nature of the metric \eqref{eq:PDrescaled} becomes apparent when we
+switch to Boyer-Lindquist-type, or pseudo-spherical, coordinates. The following
+transformation:
+\begin{gather}
+  \tau\to A\left(\tau-\frac{a\sigma}{\Xi}\right), \qquad q \to \frac{1}{Ar},
+  \qquad \sigma \to \frac{\sigma}{\Xi}\\
+  \mbox{with} \quad Q\to
+  \frac{Q}{A^2r^4}, \quad \mbox{and} \quad \Xi=1-\frac{a^2}{\ell^2}+\mathcal{O}(A)
+\end{gather}
+produces the following metric:
+\begin{align}
+  ds^2 &= \frac{1}{(1+Arp)^2}\left( -\frac{Q(r)}{r^2+a^2p^2}\Big(d\tau -
+         a(1-p^2) \frac{d\sigma}{\Xi} \Big)^2 + \frac{r^2+a^2p^2}{Q(r)}dr^2
+         \right.\nn\\
+  &\hspace{8em} \left. + \frac{r^2+a^2p^2}{P(p)}dp^2
+  + \frac{P(p)}{r^2+a^2p^2} \Big(ad\tau-(r^2+a^2)
+    \frac{d\sigma}{\Xi}\Big)^2\right),
+\end{align}
+with
+\begin{align}
+  \label{eq:PDfn}
+  Q &= (\gamma a^2+e^2 + g^2) - 2mr + \epsilon r^2 - 2nr^3 + r^4\left(\frac{1}{\ell^2} 
+      - A^2\gamma\right),\nn\\ 
+  P &=  \gamma + \frac{2np}{A} - \epsilon p^2 +
+      2mAp^3 + \left(\frac{a^2}{\ell^2} - A^2(\gamma a^2+e^2+g^2)\right)p^4.
+\end{align}
+The physical parameters of this solution are $m$, $n$, $e$ and $g$, with
+$\gamma$ and $\epsilon$ absent from curvature invariants. Unfortunately, this
+metric does not present a convenient way of writing $p=p(\theta)$ unless we set
+$A=0$. The reason for this is that ordinarily, one would write $p=\cos{\theta}$,
+however for terms to cancel out neatly, we would expect to be able to factorise
+$P$ such that a $\sin^2\theta$ piece could be pulled out. For $A=0$, we are able
+to do this, provided we are able to set $n=0$ and $\gamma=1$ as before, and this
+time $\epsilon=1 + a^2/\ell^2$, which gives the Kerr-Newman-AdS metric.
+
+\subsection{The Factorised C-metric}
+\label{sec:factorised}
+
+The issue that prevented us in the previous section from expressing the C-metric
+in pseudo-spherical coordinates was that we are unable to factorise the metric
+functions for the transformation to be convincing. This was an ugly, but
+well-known, symptom in C-metric calculations that results from the high order
+polynomials which make up its components. Most computations with this metric and
+its functions require knowledge of the latter's roots. An immediate example is
+the range of the azimuthal coordinate --- covered in \cref{sec:conical} ---
+which, if a regularity condition at one of the poles is imposed, depends on one
+of the roots of $P$($\equiv G$).
+
+Inspired by~\cite{Dowker:2001dg}, in 2003, Hong and Teo
+(HT)~\cite{Hong:2003gx} realised that they could use the symmetry in
 \cref{eq:cmet-transf} to re-express the metric in a way that simplified
 calculations. A generic analysis of the C-metric will generically revolve around
 the coordinate ranges, which are dictated by the metric functions and their root
@@ -864,8 +1041,8 @@ configuration. As these are at the very least cubic functions, these roots are
 described by nasty expressions and are usually left untouched. HT realised that
 by re-tuning the particular set of function coefficients to those of Kinnersley
 and Walker, they could express these polynomials in a factorised form with
-simple roots. Using the same notation, we keep $a_0 = -a_2 = 1$ and set $a_1 =
--a_3 = 2 m A$. The C-metric in Hong-Teo form is then still given by
+simple roots. Using the same notation, we keep $a_0 = -a_2 = 1$ and set
+$a_1 = -a_3 = 2 m A$. The C-metric in Hong-Teo form is then still given by
 \cref{eq:kinnersley-walker-metric}, however the metric functions are now
 \begin{align}
   \label{eq:HTFandG}
@@ -896,36 +1073,6 @@ multiple roots), $q$, $p$ and $\mu$ are positive.
 In this section we review the history of the C-metric and the various papers
 that have contributed to its understanding and led to the metric we will be
 utilising throughout this thesis.
-
-
-The rough outline is this:
-\begin{itemize}
-\item Einstein field equations
-\item Levi-Civita solution
-\item Weyl Solution
-\item Way later, Newman/tamburino and Robinson/Trautman put out solutions that
-  revolve around this topic and include the C-metric, but no further
-  understanding is provided
-\item Around the same time (c. early 60s) Ehlers \& Kundt publish classification
-  of solutions, among others is a class of ``C''-metrics.
-\item Kinnersley and Walker (1970) revive the solution and give it its first
-  interpretation as an ``accelerating'' black hole.
-\item Plebanski-Demianski publish family of solutions covering all sorts of
-  charges including acceleration, rotation and NUT. First mention of rotating
-  accelerating black hole (There is a reference somewhere to a kinnersley paper,
-  but couldn't find it in the paper...), by setting a bunch of parameters to 0
-  and rescaling coordinates. referred to as ``spinning'' C-metric or
-  ``SC-metric''.
-\item Several papers discuss properties of SC-metric --- FZ '80, BP '99, LO '01
-  and PP '02
-\item Hong and Teo enter the scene and propose new form of C-metric where metric
-  functions appear factorised, making certain computations involving roots
-  simpler. Simple C-metric in 2003, rotating C-metric in 2005
-\item Griffiths and Podolsky '05 publish neew form of PD metric and present an
-  overview of the various limits of this metric.
-\item Then need to look at various developments since, including further
-  Hong/Teo stuff, and papers from CZ including Krtous and Podolski
-\end{itemize}
 
 \section{Reviewing the C-metric and its Features}
 \label{sec:cmet-review}
@@ -1066,6 +1213,7 @@ hold.
 
 
 \subsection{The Conical Defect}
+\label{sec:conical}
 The conical defect inherent to the C-metric is controlled through the parameter
 $K$. A conical deficit is associated to the presence of a cosmic string attached
 to the black hole with tension $\mu = \delta/8\pi$. One may introduce such
@@ -1119,7 +1267,7 @@ embedding of the horizon in $\mathbb{E}^3$.
     L_+$, (b) $K= 1.2 L_+$.}
 \end{figure}
 
-\section{The Rotating C-metric}
+\subsection{The Rotating C-metric}
 It will be of interest to extend the observations made in the previous section
 to the rotating C-metric. The approaches used in this section will be very
 similar to what is presented above, and the results obtained below follow
