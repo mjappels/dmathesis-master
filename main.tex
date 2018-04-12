@@ -1,8 +1,8 @@
 \documentclass[
 % thesisdraft,
-twoside,
-openright,
-frontopenright
+% twoside,
+% openright,
+% frontopenright
 ]{dmathesis}
 \input{preamble}
 
@@ -20,6 +20,9 @@ frontopenright
 \newcommand{\dr}{\mathrm{dr}}
 \newcommand{\bd}{\mathrm{bd}}
 \newcommand{\ta}{\tilde{a}}
+\newcommand{\tm}{\tilde{m}}
+\newcommand{\tA}{\tilde{A}}
+
 \newcommand{\todoopt}[2][]{\todo[color=blue!20,size=\footnotesize,#1]{#2}}
 \newcommand{\placehold}[2][]{\todo[color=green!20,size=\small,inline,#1]{#2}}
 \newcommand{\todoruth}[2][]{\todo[color=magenta!20,size=\footnotesize,#1]{#2}}
@@ -63,7 +66,19 @@ frontopenright
 
 \begin{acknowledgements*}
 %
-  I would like to thank\ldots
+  \begin{itemize}
+  \item Ruth
+  \item Collaborators, David
+  \item Seb Franco, Nigel Glover,
+  \item Aristos, Simon and Paul
+  \item word about SWH?
+  \item family
+  \item Office mates, Leo Akash and Omar
+  \item Friends back home, Undergrad, Durham
+  \item Lara
+  \item Administrative and support staff in durham, at PI
+  \item STFC
+  \end{itemize}
 %
 \end{acknowledgements*}
 
@@ -101,6 +116,12 @@ frontopenright
   thermo tension. How do we know what M is? Then turn to holographic work. Last
   bit the tedious solution stuff! Remember: Done is better than perfect!} 
 
+\begin{itemize}
+\item General contention of the thesis
+\item brief overview of research that was carried out
+\item outline of thesis.
+\end{itemize}
+
 \section*{Conventions}
 When a coordinate transformation is used, or any general transformation or
 relabelling, it will be represented in either one of the following manners. In
@@ -125,6 +146,10 @@ where we have introduced a commonly used shorthand in the second expression
 signifying simply that ``$\to$'' is to be interpreted as meaning
 ``$\to x'^i =$''.
 
+\begin{itemize}
+\item signatures, units
+\end{itemize}
+
 \chapter{Black Hole Thermodynamics/ Mechanics}
 \label{chap:BHTD}
 
@@ -147,11 +172,9 @@ This theorem has an important role in the history of black hole thermodynamics
 as it is responsible for much of the reasoning that was applied to this analogy,
 in that it is clearly reminiscent of the second law of thermodynamics, and we
 shall explore these parallels in greater depth below. Along with the area
-theorem, in~\cite{Hawking:1971vc}, SWH also shows that under a gravitationally
-collapsing body of matter will not only form a black hole, but that the event
-horizon of the black hole formed will have a spherical topology and the black
-hole itself will be stationary and axisymmetric, a result which we will
-reference back to in\todoopt{section ultraspinning}.
+theorem, in~\cite{Hawking:1971vc}, SWH also famously proves that under gravitational
+collapse, a body of matter will not only form a black hole, but that the event
+horizon of the black hole formed will have spherical topology, be stationary and axisymmetric.
 
 During the summer of 1972, Bardeen, Carter and Hawking (BCH) pursued the
 aforementioned analogy between the macroscopic properties of black holes and
@@ -428,7 +451,7 @@ uncharged case in a more general setting in~\cite{Bardeen:1973gs} and Carter
 provided the proof for the charged case
 in~\cite{Carter:1973rla,Carter2010}. Both methods use this as an intermediary
 step to deriving the first law, showing how the aforementioned exact
-differential expression \eqref{eq:exactdiff} is in fact fully
+differential expression~\eqref{eq:exactdiff} is in fact fully
 self-consistent. We will now briefly review this calculation, omitting technical
 steps which can certainly all be found in the original works.
 
@@ -518,7 +541,7 @@ rotating black holes, from first principles. Starting with the definition of
 mass as a Komar integral, we are able to show why variations of this quantity
 are related to all the other variations present in the first law in the way that
 they are. Previously, it had been known that one could express variations in the
-mass in this way, as the exact differential \eqref{eq:exactdiff}, however this
+mass in this way, as the exact differential~\eqref{eq:exactdiff}, however this
 was seen as more of an observation based on final expressions obtained using
 independent definitions for mass, area, surface gravity and other
 quantities. This elegant derivation shows not merely how all of these
@@ -666,29 +689,75 @@ Sitter background, which we will review below.
 While the Kerr-AdS metric has been known since the late
 1960s~\cite{Carter:1968ks}, its thermodynamics were only discussed near the turn
 of the century, when interest in asymptotically-AdS solutions boomed due to the
-aforementioned AdS/CFT
-conjecture~\cite{Hawking:1998kw,Caldarelli:1999xj,Silva:2002jq,Gibbons:2004ai}. The
-metric, in Boyer-Lindquist coordinates, is given by
-\begin{align}
-  ds^2 &= -\frac{f(r)}{\Sigma}\Big(dt - a \sin^2 \theta \frac{d\phi}{\Xi}\Big)^2 +
-         \frac{\Sigma}{f(r)}dr^2 + \frac{\Sigma r^2}{g(\theta)} d\theta^2 \nn\\
-  &\hspace{15em}+ \frac{g(\theta)\sin^2\theta}{\Sigma r^2}\Big(adt -
-    (r^2+a^2)\frac{d\phi}{\Xi}\Big)^2,
-    \label{eq:kerrAdS}
-\end{align}
-where
-\begin{gather}
-f(r) = \Big(1 + \frac{a^2}{r^2}\Big) \Big(1 + \frac{r^2}{\ell^2}\Big) -
-\frac{2m}{r}+\frac{e^2}{r^2}, \qquad g(\theta) = 1 -
-\frac{a^2}{\ell^2}\cos^2\theta, \nn\\ 
-\Sigma = 1+\frac{a^2}{r^2}\cos^2\theta,\qquad \Xi = 1-\frac{a^2}{\ell^2}.
-\end{gather}
+aforementioned AdS/CFT conjecture~\cite{Hawking:1998kw, Caldarelli:1999xj,
+  Silva:2002jq, Gibbons:2004ai}. The metric, in Boyer-Lindquist coordinates, is
+given by
+\begin{subequations}
+  \label{eq:kerrAdS}
+  \begin{align}
+    \label{eq:kerrAdS-metric}
+    ds^2 &= -\frac{f(r)}{\Sigma}\Big(dt - a \sin^2 \theta \frac{d\phi}{\Xi}\Big)^2 +
+           \frac{\Sigma}{f(r)}dr^2 + \frac{\Sigma r^2}{g(\theta)} d\theta^2 \nn\\
+         &\hspace{10em}+ \frac{g(\theta)\sin^2\theta}{\Sigma r^2}\Big(adt -
+           (r^2+a^2)\frac{d\phi}{\Xi}\Big)^2,
+  \end{align}
+  where
+  \begin{gather}
+    f(r) = \Big(1 + \frac{a^2}{r^2}\Big) \Big(1 + \frac{r^2}{\ell^2}\Big) -
+    \frac{2m}{r}+\frac{e^2}{r^2}, \qquad g(\theta) = 1 -
+    \frac{a^2}{\ell^2}\cos^2\theta, \nn\\ 
+    \Sigma = 1+\frac{a^2}{r^2}\cos^2\theta,\qquad \Xi = 1-\frac{a^2}{\ell^2}.
+    \label{eq:kerrAdS-fn}
+  \end{gather}
+\end{subequations}
 The corresponding gauge potential is given by
 \begin{align}
   B&=-\frac{e}{\Sigma r}\Big(dt-a\sin^2\theta \frac{d\phi}{\Xi}\Big).
 \end{align}
 
-\placehold{review the thermodynamics of Kerr-AdS}
+Hawking, Hunter and Taylor-Robinson (HHT)~\cite{Hawking:1998kw} were the first to
+present a set of thermodynamic quantities for the uncharged rotating black hole
+in AdS. By computing the thermodynamics of rotating bulk spacetimes such as the
+Kerr-AdS metric, they were able to reconcile the bulk partition function with
+the partition function of a scalar field coupled to a
+three-dimensional\footnote{They also perform this computation in a number of
+  other dimensions; we single out this case for its relevance.} rotating
+Einstein universe, which forms the boundary of Kerr-AdS. 
+
+Computing the temperature from the metric \cref{eq:kerrAdS} in its Euclidean
+form (for rotation one must simultaneously take $\tau=it, \alpha=-ia$), and its
+entropy as a quarter the horizon area, they find:
+\begin{align}
+  \label{eq:KerrAdSTS}
+  T&=\frac{r_+^2f'(r_+)}{4\pi(r_+^2+a^2)} = \frac{r_+}{4\pi(r_+^2+a^2)} \left[1 +
+  \frac{3r_+^2}{\ell^2} + \frac{a^2}{\ell^2} - \frac{a^2}{r_+^2}\right],\nn\\
+  S&=\frac{\pi(r_+^2+a^2)}{\Xi},
+\end{align}
+where $r_+$ denotes the location of the outer event horizon. They compute the
+mass $M$ and angular momentum $J$ using the timelike and angular killing vectors
+with corresponding Komar integrals, noting that a background $m=0$ subtraction
+is needed for regularisation, and find:
+\begin{align}
+  \label{eq:KerrAdSMJ-HTT}
+  M=\frac{m}{\Xi}, \qquad J=\frac{am}{\Xi^2}.
+\end{align}
+Finally, the thermodynamic conjugate to the angular momentum, the angular
+velocity $\Omega$ is given as
+\begin{align}
+  \label{eq:KerrAdSO-HTT}
+  \Omega = -\frac{g_{t\phi}}{g_{\phi\phi}}\Big|_{r_+} = \frac{a\Xi}{r_+^2+a^2},
+\end{align}
+and with all of these quantities, they were able to show that the partition
+function for this spacetime corresponded to the partition of a scalar field
+theory coupled to a three-dimensional Einstein universe rotating with angular
+velocity $\Omega + a/\ell^2$.
+
+HHT didn't, however, discuss the first law of thermodynamics, and one can check
+that \cref{eq:firstlaw} does not in fact hold with
+\cref{eq:KerrAdSTS,eq:KerrAdSMJ-HTT,eq:KerrAdSO-HTT}. The following year,
+wanting to present a thorough thermodynamic description of Kerr-Newman-AdS black
+holes, Caldarelli, Cognola and Klemm~\cite{Caldarelli:1999xj} addressed this
+issue. 
 
 \placehold{there are several prescriptions for computing the mass in AdS:
   Komar/Magnon, Ashtekar/Das, Abbott/Deser, holography?}
@@ -769,23 +838,25 @@ with $a_0\ldots a_3$ some a set of parametrising constants. The metric admits
 a conformal transformation given by
 \begin{gather}
   \label{eq:cmet-transf}
-  x\to pq x + n, \quad y \to pq y - n, \quad t \to p t \quad \mbox{and} \quad
-  z\to p z
+  x\to \eta\beta x + \varepsilon, \quad y \to \eta\beta y - \varepsilon, \quad t \to \eta t \quad \mbox{and} \quad
+  z\to \eta z
 \end{gather}
 as long as $G(x) \to q G(x)$, which imposes the following relations between the
-coefficients of $G$ before (denoted by a tilde $\{\ta_i\}$) and after the
+coefficients of $G$ before (denoted by a tilde $\tilde{}~$) and after the
 transformation:
-\begin{align}
-  qa_0 &= \ta_0 + \ta_1 n+ \ta_ 2 n^2 + \ta_3 n^3, \nn\\
-  a_1 &= p \ta_1 + 2p\ta_2 n + 3 p\ta_3 n^2, \nn\\
-  a_2 &= p^2q\ta_2 + 3 p^2q\ta_3, \nn\\
-  a_3 &= p^3q^2\ta_3.
-  \label{eq:cmet-transf-coefficients}
-\end{align}
+\begin{subequations}
+  \label{eq:cmet-coef}
+  \begin{align}
+    \beta a_0 &= \ta_0 + \ta_1 \varepsilon+ \ta_ 2 \delta^2 + \ta_3 \varepsilon^3, \label{eq:cmet-coef1}\\
+    a_1 &= \eta \ta_1 + 2\eta\ta_2 \varepsilon + 3 \eta\ta_3 \varepsilon^2, \label{eq:cmet-coef2}\\
+    a_2 &= \eta^2\beta\ta_2 + 3 \eta^2\beta\ta_3\varepsilon, \label{eq:cmet-coef3}\\
+    a_3 &= \eta^3\beta^2\ta_3.\label{eq:cmet-coef4}
+  \end{align}
+\end{subequations}
 This symmetry allows us to remove two degrees of freedom from the initial
 solution, and it is this freedom of parametrisation which has led to some
 confusion as to its interpretation. The final setup that KW present involves
-setting $a_1 = 0$, $a_0 = -a_2 = 1$ and then labelling $q = A^2$ and
+setting $a_1 = 0$, $a_0 = -a_2 = 1$ and then labelling $\beta = A^2$ and
 $a_3 = -2 m A$. The final form (including a charged term, introduced later) of
 the C-metric, as written by Kinnersley and Walker is therefore given by
 \begin{align}
@@ -896,8 +967,8 @@ solution, how the Kerr metric is also obtained from this parent solution, and
 finally, we shall present modern modifications to the metric that have vastly
 simplified calculations involving the generalised (rotating, charged)
 C-metric. Before that however, let us give the the Pleba\'nski-Demia\'nski
-metric\footnote{compared to the original text, we have taken $p$, $q$ and
-  $\sigma$ to have opposite signs, for consistency}:
+metric\footnote{Compared to the original text, we have taken $p$, $q$ and
+  $\sigma$ to have opposite signs, for consistency.}:
 \begin{align}
   \label{eq:PD}
   ds^2 &= \frac{1}{(p + q)^2} \left( - \frac{Q(q)}{1+(pq)^2}(d\tau + p^2
@@ -922,9 +993,9 @@ perform the parametric shift $\gamma\to \gamma + g^2 +\frac{\Lambda}{6}$. The
 metric functions are now given by
 \begin{align}
   \label{eq:PDfn}
-  Q &= -\frac{\Lambda}{3} - \gamma + 2nq + \epsilon q^2 +
+  Q &= -\frac{\Lambda}{3} - \gamma - 2nq + \epsilon q^2 -
       2mq^3 + \left(\gamma + e^2 + g^2\right)q^4,\nn\\
-  P &=  \gamma + 2np - \epsilon p^2 +
+  P &=  \gamma - 2np - \epsilon p^2 -
       2mp^3 - \left(\gamma+e^2+g^2+\frac{\Lambda}{3}\right)p^4.
 \end{align}
 Since the work presented in this thesis focusses on asymptotically AdS
@@ -955,24 +1026,24 @@ the following parameter/function rescalings~\cite{Plebanski:1976gy,Pravda:2002kj
 The resulting metric is given by
 \begin{align}
   \label{eq:PDrescaled}
-  ds^2 &= \frac{1}{A^2(p + q)^2} \left( - \frac{Q(q)}{1+(aApq)^2}(d\tau - aAp^2
+  ds^2 &= \frac{1}{A^2(p + q)^2} \left( - \frac{Q(q)}{1+(aApq)^2}(d\tau + aAp^2
          d\sigma)^2 + \frac{1+(aApq)^2}{Q(q)}dq^2 \right.\nn\\
   &\hspace{8em}\left. + \frac{1+(aApq)^2}{P(p)}dp^2 +
-         \frac{P(p)}{1+(aApq)^2}(d\sigma + aAq^2 d\tau)^2 \right),
+         \frac{P(p)}{1+(aApq)^2}(d\sigma - aAq^2 d\tau)^2 \right),
 \end{align}
 with
 \begin{align}
-  \label{eq:PDfn}
-  Q &= \frac{1}{A^2\ell^2} - \gamma + \frac{2nq}{A} + \epsilon q^2 +
+  \label{eq:PDfnrescaled}
+  Q &= \frac{1}{A^2\ell^2} - \gamma - \frac{2nq}{A} + \epsilon q^2 -
       2mAq^3 + A^2\left(\gamma a^2 + e^2 + g^2\right)q^4,\nn\\
-  P &=  \gamma + \frac{2np}{A} - \epsilon p^2 +
+  P &=  \gamma - \frac{2np}{A} - \epsilon p^2 -
       2mAp^3 + \left(\frac{a^2}{\ell^2} - A^2(\gamma a^2+e^2+g^2)\right)p^4.
 \end{align}
 Now, according to~\cite{Plebanski:1976gy}, the curvature invariants of this
 spacetime do not depend on the parameters $\epsilon$, $n$ and $\gamma$. This
 tells us that these parameters are simple gauge choices, and we may fix them
 without affecting the geometry. To recover the C-metric, we first take the limit
-$a\to0$, after which we are free to set $\epsilon=\gamma=1$ and $n=0$. The
+$a\to 0$, after which we are free to set $\epsilon=\gamma=1$ and $n=0$. The
 C-metric, as written in \cref{eq:kinnersley-walker-metric}, is then simply
 obtained by identifying $\tau=t$, $q=y$, $p=x$ and $\sigma=z$. The metric
 \eqref{eq:PDrescaled} is actually known as the spinning C-metric (SC-metric),
@@ -984,14 +1055,16 @@ rotating black hole while preserving its acceleratng nature.
 \subsection{From \PD{} to the Kerr-Newman Metric}
 \label{sec:PDtoKN}
 
-The rotating nature of the metric \eqref{eq:PDrescaled} becomes apparent when we
+The rotating nature of the metric~\eqref{eq:PDrescaled} becomes apparent when we
 switch to Boyer-Lindquist-type, or pseudo-spherical, coordinates. The following
 transformation:
 \begin{gather}
   \tau\to A\left(\tau-\frac{a\sigma}{\Xi}\right), \qquad q \to \frac{1}{Ar},
   \qquad \sigma \to \frac{\sigma}{\Xi}\\
   \mbox{with} \quad Q\to
-  \frac{Q}{A^2r^4}, \quad \mbox{and} \quad \Xi=1-\frac{a^2}{\ell^2}+\mathcal{O}(A)
+  \frac{Q}{A^2r^4}, \quad \mbox{and} \quad
+  \Xi=1-\frac{a^2}{\ell^2}+\mathcal{O}(A)
+  \label{eq:PDtoBL}
 \end{gather}
 produces the following metric:
 \begin{align}
@@ -1004,10 +1077,10 @@ produces the following metric:
 \end{align}
 with
 \begin{align}
-  \label{eq:PDfn}
+  \label{eq:PDfnrescaledKN}
   Q &= (\gamma a^2+e^2 + g^2) - 2mr + \epsilon r^2 - 2nr^3 + r^4\left(\frac{1}{\ell^2} 
       - A^2\gamma\right),\nn\\ 
-  P &=  \gamma + \frac{2np}{A} - \epsilon p^2 +
+  P &=  \gamma - \frac{2np}{A} - \epsilon p^2 -
       2mAp^3 + \left(\frac{a^2}{\ell^2} - A^2(\gamma a^2+e^2+g^2)\right)p^4.
 \end{align}
 The physical parameters of this solution are $m$, $n$, $e$ and $g$, with
@@ -1017,7 +1090,9 @@ $A=0$. The reason for this is that ordinarily, one would write $p=\cos{\theta}$,
 however for terms to cancel out neatly, we would expect to be able to factorise
 $P$ such that a $\sin^2\theta$ piece could be pulled out. For $A=0$, we are able
 to do this, provided we are able to set $n=0$ and $\gamma=1$ as before, and this
-time $\epsilon=1 + a^2/\ell^2$, which gives the Kerr-Newman-AdS metric.
+time $\epsilon=1 + a^2/\ell^2$, which gives the Kerr-Newman-AdS metric. In fact,
+in this limit, the parameter $n$ was identified in~\cite{Plebanski:1976gy} as
+the NUT charge.
 
 \subsection{The Factorised C-metric}
 \label{sec:factorised}
@@ -1026,95 +1101,193 @@ The issue that prevented us in the previous section from expressing the C-metric
 in pseudo-spherical coordinates was that we are unable to factorise the metric
 functions for the transformation to be convincing. This was an ugly, but
 well-known, symptom in C-metric calculations that results from the high order
-polynomials which make up its components. Most computations with this metric and
-its functions require knowledge of the latter's roots. An immediate example is
-the range of the azimuthal coordinate --- covered in \cref{sec:conical} ---
-which, if a regularity condition at one of the poles is imposed, depends on one
-of the roots of $P$($\equiv G$).
+polynomials which make up its components. Most computations with this metric
+will generically revolve around the coordinate ranges, which are dictated by the
+metric functions and their root configuration. An immediate example is the range
+of the azimuthal coordinate --- covered in \cref{sec:conical} --- which, if a
+regularity condition at one of the poles is imposed, depends on one of the roots
+of $P$($\equiv G$).
 
-Inspired by~\cite{Dowker:2001dg}, in 2003, Hong and Teo
-(HT)~\cite{Hong:2003gx} realised that they could use the symmetry in
-\cref{eq:cmet-transf} to re-express the metric in a way that simplified
-calculations. A generic analysis of the C-metric will generically revolve around
-the coordinate ranges, which are dictated by the metric functions and their root
-configuration. As these are at the very least cubic functions, these roots are
-described by nasty expressions and are usually left untouched. HT realised that
-by re-tuning the particular set of function coefficients to those of Kinnersley
-and Walker, they could express these polynomials in a factorised form with
-simple roots. Using the same notation, we keep $a_0 = -a_2 = 1$ and set
-$a_1 = -a_3 = 2 m A$. The C-metric in Hong-Teo form is then still given by
-\cref{eq:kinnersley-walker-metric}, however the metric functions are now
+\subsubsection{Without rotation}
+Inspired by~\cite{Dowker:2001dg}, in 2003, Hong and Teo (HT) realised that they
+could use the symmetry in \cref{eq:cmet-transf,eq:cmet-coef} to re-express the
+metric in a way that simplified calculations~\cite{Hong:2003gx}. HT realised
+that by re-tuning this set of function coefficients --- those that Kinnersley
+and Walker picked to provide the original interpretation, they could express
+these polynomials in a factorised form with simple roots. In the uncharged case,
+and using the same notation, this was achieved by setting $a_0 = -a_2 = 1$ as
+before and $a_1 = -a_3 = 2 m A$. The C-metric in Hong-Teo form is then still
+given by \cref{eq:kinnersley-walker-metric}, however the metric functions now
+factorise nicely:
 \begin{align}
   \label{eq:HTFandG}
   G(x) = (1-x^2)(1+2mA x)\qquad \mbox{and} \qquad F(y) = -G(-y).
 \end{align}
 It is important to stress that the constants $m$ and $A$ used here are not the
-\todoruth{I am curious, how different are they?}same as those in the KW form of
-the metric. To relate the two metrics, one can simply apply the set of
-transformations from \cref{eq:cmet-transf}, and use the relations in
-\cref{eq:cmet-transf-coefficients} between the coefficients to find, writing KW
-parameters with a tilde (\~{}):\todoopt{some of the variables here may be
-  confusing, $p,q,n$ are transf parameters, not sure if necess.}
-\begin{align}
-  q &= 1- n^2 - 2\tilde{\mu} \equiv \frac{A^2}{\tilde{A}^2}, \nn\\
-  p &= q^{-\frac12}(1 + 6\tilde{\mu} n)^{-\frac12}, \nn\\
-  \mu &= -p n (1-3\tilde{\mu}n) \equiv mA,
+same as those in the KW form of the metric. The relation between the two metrics
+and their parameters can be found by simply applying the coordinate
+transformation~\eqref{eq:cmet-transf} between the two parameter spaces. For the
+original metric, we had $\ta_0 = -\ta_2 = 1$, $\ta_1=0$ and
+$\ta_3=-2\tm\tA$. To preserve the metric
+\eqref{eq:kinnersley-walker-metric}, we see that the parameter $\beta$ of the
+transformation must be
+$\beta=A^2/\tA^2$. \Cref{eq:cmet-coef1,eq:cmet-coef2,eq:cmet-coef3} provide an
+initial set of relations:
+\begin{subequations}
   \label{eq:cmet-KW-to-HT}
-\end{align}
-where $n$ is the solution to
-\begin{align}
-  \tilde{\mu} + n + 8\tilde{\mu}n^2 + 16\tilde{\mu}^2 n^3 = 0,
-\end{align}
-such that for small $\tilde{\mu}\equiv \tilde{m} \tilde{A}$ ($0\leqslant
-\tilde{\mu}\leqslant3^{-3/2}$ --- will be explained at a later time but can
-simply be understood as the condition which ensures $\tilde{G}(\tilde{x})$ has
-multiple roots), $q$, $p$ and $\mu$ are positive. 
+  \begin{align}
+    \beta &= 1- \varepsilon^2 - 2\tm \tA = \frac{A^2}{\tA^2}, \\
+    mA&= -\eta \varepsilon (1+3\tm\tA \varepsilon),\\
+    \eta &= \beta^{-\frac12}(1 + 6\tm\tA \varepsilon)^{-\frac12},
+  \end{align}
+  and \cref{eq:cmet-coef4} imposes the following condition on $n$:
+  \begin{align}
+    \tm\tA + \varepsilon + 8\tm\tA \varepsilon^2 + 16\tm^2\tA^2 \varepsilon^3 = 0. \label{eq:KWtoHT4}
+  \end{align}
+\end{subequations}
+As we show in \cref{sec:parameters}, there is an upper bound on $m A$ for this
+spacetime. In the Kinnersley-Walker parametrisation of the C-metric,
+$0\leqslant\tm\tA\leqslant 1/(3\sqrt{3})$ and in this regime, the above
+constraint~\eqref{eq:KWtoHT4} is only satisfied for one value of $\varepsilon$,
+which can in turn be used to resolve the remainder of the transformation. As it
+is unpleasantly apparent, there is a sense in which the complicated root
+structure of the KW parametrisation has been shifted and swept into the
+parameters themselves.
 
-In this section we review the history of the C-metric and the various papers
-that have contributed to its understanding and led to the metric we will be
-utilising throughout this thesis.
+\subsubsection{With rotation}
+Following on from their work on the non-rotating C-metric, a year later, Hong
+and Teo published a similarly factorised version of the C-metric which contained
+a rotation parameter~\cite{Hong:2004dm}. Unlike the spinning C-metric, however,
+due to the factorised nature of this new metric, not only is it more pleasant to
+work with, but it may also be fully written in Boyer-Lindquist-type coordinates,
+in such a way that either the non-rotating (charged, AdS) C-metric or the
+Kerr-Newman-AdS metric may be obtained simply by turning off their respective
+parameters.
+
+In order to obtain such a metric, the starting point is different to the
+non-rotating case. Rather than search for a convenient coordinate
+transformation, HT utilised a top-down approach starting from the \PD{}
+metric~\eqref{eq:PD}. In fact, the derivation requires making the same rescaling
+as we did earlier, therefore we will pick up from \cref{eq:PDrescaled}, the
+metric, and \cref{eq:PDfnrescaled}, its functions. For convenience, the latter
+are given by
+\begin{align}
+  Q &= \frac{1}{A^2\ell^2} - \gamma - \frac{2nq}{A} + \epsilon q^2 -
+      2mAq^3 + A^2\left(\gamma a^2 + e^2 + g^2\right)q^4,\nn\\
+  P &=  \gamma - \frac{2np}{A} - \epsilon p^2 -
+      2mAp^3 + \left(\frac{a^2}{\ell^2} - A^2(\gamma a^2+e^2+g^2)\right)p^4.
+\end{align}
+
+The gauge freedom in this solution is such that we are free to pick $\gamma$ and
+$\epsilon$ without affecting the physical geometry of the spacetime. Indeed,
+earlier this was used to recover the non-rotating C-metric in the KW
+parametrisation. Additionally, the parameter $n$ can be related to the NUT
+charge $l$~\cite{Griffiths:2006tk,Griffiths:2005qp}. The factorised metric is
+obtained by the requirement that the NUT charge vanish, which sets $n =
+-mA^2$. We then use the aforementioned gauge freedom to set
+\begin{align*}
+  \gamma = 1, \qquad \epsilon = 1+\frac{a^2}{\ell^2}-A^2(a^2+e^2+g^2).
+\end{align*}
+With these choices, we have the following factorised metric functions,
+all the while preserving the form of the rescaled \PD{} metric~\eqref{eq:PDrescaled}:
+\begin{align}
+  \label{eq:PDfnfactorised}
+  Q &= \frac{1}{A^2\ell^2} (1 + a^2A^2q^2) + (q^2 - 1)(1 - 2mAq + A^2(a^2 + e^2
+      + g^2) q^2),\nn\\
+  P &= (1 - p^2) \left(1 + 2mAp + \left(A^2 (a^2 + e^2 + g^2) -
+      \frac{a^2}{\ell^2}\right) p^2\right).
+\end{align}
+The non-rotating C-metric that HT first presented is recovered here for
+$\Lambda = a = 0$. The factorised nature of this solution allows us to write it
+in Boyer-Lindquist coordinates with the following similar transformation to the
+one we used to derive the Kerr-AdS metric~\eqref{eq:PDtoBL}:
+\begin{gather}
+  \tau\to A\left(t-\frac{a\phi}{K}\right), \qquad q \to \frac{1}{Ar}, \qquad p
+  \to \cos\theta, \qquad \sigma \to \frac{\phi}{K}.
+\end{gather}
+The resulting metric is what we shall henceforth refer to as the
+\emph{generalised C-metric}, which we will use in future chapters. It is given
+by
+\begin{subequations}
+  \label{eq:PDfactrth}
+  \begin{align}
+    \label{eq:PDfactrth-metric}
+    ds^2 &= \frac{1}{\Omega^2}\bigg\{ -\frac{f(r)}{\Sigma}\Big[dt - a\sin^2\theta
+           \frac{d\phi}{K} \Big]^2 + \frac{\Sigma}{f(r)}dr^2 + \frac{\Sigma
+           r^2}{g(\theta)}d\theta^2 \nn\\
+         &\hspace{12em} + \frac{g(\theta) \sin^2\theta}{\Sigma r^2} \Big[adt-(r^2+a^2)
+           \frac{d\phi}{K}\Big]^2\bigg\},
+  \end{align}
+  and the metric functions are 
+  \begin{gather}
+    f(r) = (1 - A^2r^2) \bigg[1 - \frac{2m}{r} + \frac{a^2 + e^2+g^2}{r^2}\bigg] +
+    \frac{r^2 + a^2}{\ell^2}, \nn\\
+    g(\theta) = 1 + 2mA\cos\theta + \bigg[A^2 (a^2 + e^2+g^2) - \frac{a^2}{\ell^2}\bigg]
+    \cos^2\theta, \nn\\ 
+    \Sigma=1+\frac{a^2}{r^2}\cos^2\theta, \qquad \Omega = 1+Ar\cos\theta.
+    \label{eq:PDfactrth-fn}
+  \end{gather}
+\end{subequations}
+The parameter $K$ that we have introduced allows us to define $\phi$ such that
+it has a $2\pi$-periodicity. We will discuss its role extensively in further
+sections; let it therefore simply be said for now that it affects the
+distribution of conical defects in the spacetime.
+
 
 \section{Reviewing the C-metric and its Features}
 \label{sec:cmet-review}
 
-So far we have seen how the C-metric and its interpretation have evolved. We
-will now dive in a little deeper and present some subtle aspects of the
-solution. We will begin with the non-rotating form for simplicity, before
-covering the generalised C-metric.
+So far, we have seen how the C-metric and its interpretation were developed and
+understood better. We will now dive in a little deeper and present some subtle
+aspects of the solution, such as horizon structure, coordinate and parameter
+ranges as well as clarifying this idea of having a conical defect along one
+axis. We will begin with the non-rotating form for simplicity, before covering
+the generalised C-metric.
 
 \subsection{The Non-Rotating C-metric}
-
 We begin with the asymptotically AdS form of the C-metric. In
-asymptotically-flat space, the C-metric describes a configuration of two black
+asymptotically flat space, the C-metric describes a configuration of two black
 holes accelerating in opposite directions. Each black hole has unequal conical
 deficits extending from the north and south poles of each event horizon to
 either the boundary or an acceleration horizon that separates the two. The
-introduction of a cosmological constant,as we shall see, alters the picture if
+introduction of a cosmological constant, as we shall see, alters the picture if
 it is large enough. In that case, the solution describes only one such black
 hole without an acceleration horizon, and both deficits extend out to the
-boundary~\cite{Kinnersley:1970zw, Plebanski:1976gy, Dias:2002mi,
-  Griffiths:2005qp}. Although the C-metric is well-known among relativists,
+boundary. Although the C-metric is well-known among relativists,
 there are features of the specific form we will be using that are worth
 highlighting, discussing how they depend on the parameters of the solution.
 
-Ignoring rotation for now, the general charged accelerating AdS black hole is
-represented by the metric and gauge potential~\cite{Hong:2003gx}:
+For convenience we rewrite the non-rotating charged AdS
+C-metric~\cite{Hong:2003gx,Hong:2004dm}:
+\begin{subequations}
+  \label{eq:NRyx}
+  \begin{align}
+    \label{eq:NRyx-metric}
+    ds^2 = \frac{1}{A^2(x+y)^2} \left(-F(y)dt^2 + \frac{dy^2}{F(y)} +
+    \frac{dx^2}{G(x)} + G(x) dz^2\right),
+  \end{align}
+  and its metric functions
+  \begin{align}
+    \label{eq:NRyx-fn}
+    F(y)&=\frac{1}{A^2 \ell^2} + (y^2 - 1)(1-2mAy^+e^2A^2y^2),\nn\\
+    G(x)&=(1-x^2)(1+2mAx+e^2A^2x^2).
+  \end{align}
+\end{subequations}
+The factorised metric functions allow us to write this metric also in
+pseudo-spherical coordinates given by
+\begin{gather}
+  t \to At, \qquad y \to \frac{1}{Ar}, \qquad x \to \cos\theta, \qquad z \to
+  \frac{\phi}{K}.
+\end{gather}
+The resulting metric is:
 \begin{align}
+\label{eq:NRrth-metric}
 ds^2=\frac{1}{\Omega^2}\left[ 
 f(r) dt^2
 -\frac{dr^2}{f(r)} - r^2 \Big( \frac{d\theta^2}{g(\theta)} 
-+ g(\theta)\sin^2\theta \frac{d\phi^2}{K^2}\Big)\right], \qquad
-{B}= -\frac{e}{r} dt,
-\label{eq:cmetric1}
++ g(\theta)\sin^2\theta \frac{d\phi^2}{K^2}\Big)\right].
 \end{align}
-which is none other than \cref{eq:kinnersley-walker-metric} expressed using Hong
-and Teo's parametrisation from \cref{eq:HTFandG} and written in spherical-like
-coordinates\footnote{Explicitly: $t\to At$, $y\to1/Ar$, $x\to \cos\theta$ and
-  $z\to \phi/K$}. Ordinarily, when discussing the C-metric, the azimuthal
-angular coordinate $\phi$ is given an arbitrary periodicity, usually determined
-such that one pole is regularised. In \cref{eq:cmetric1}, $\phi$ has a
-$2\pi$-periodicity and any conical defect is tuned through the parameter
-$K$. The conformal factor
+The conformal factor
 \begin{align}\label{eq:conf}
 \Omega=1+Ar\cos\theta
 \end{align}
@@ -1124,107 +1297,124 @@ functions are given as
 f(r)&=(1-A^2r^2)\Bigl(1-\frac{2 m}{r}+\frac{e^2}{r^2}\Bigr)
 +\frac{r^2}{\ell^2},\nn\\
 g(\theta)&=1+2mA \cos\theta+ e^2A^2 \cos^2\theta.
-\label{eq:fgNR}
+\label{eq:NRrth-metric}
 \end{align}
 The remaining parameters, $e$, $m$, $A\geqslant 0$ are related to the charge,
 mass and acceleration of the black hole. In the following sections we will
-review various constraints this spacetime imposes to the metric parameters. We
-will then also briefly discuss the existence of conical defects in the
-spacetime.
+discuss these coordinates and their ranges and review various constraints we
+must impose on these parameters. We will then also briefly discuss the existence
+of conical defects in the spacetime before tackling the rotating solution.
 
 \subsection{Coordinate Ranges and Parametric Restrictions}
 \label{sec:parameters}
 
-To explore what restrictions might apply to the parameters in this metric, we
-must require the spacetime to not admit closed timelike curves. This is achieved
-by requiring that the signature of the metric is preserved (up to an overall
-sign flip due to the conformal factor when $r$ crosses $\infty$) throughout the
-patch covered by this set of coordinates. We have
-\begin{gather}
-t\in\mathbb{R}, \qquad 0\leqslant\theta\leqslant\pi, \qquad 0\leqslant \phi<2\pi.
-\end{gather}
-Missing above is a domain for the $r$-coordinate, which is given by requiring
-that $r$ cover the range over which $f(r)$ is positive, delimited by the outer
-horizon radius at one end and either the acceleration horizon radius, or in the
-case there is no such horizon, the location of the boundary ($\theta>\pi/2$) or
-infinity ($\theta\leqslant\pi/2$) at the other. We can also harmlessly extend
-the spacetime beyond infinity for $\theta<\pi/2$ by including values of
-$r<r_\bd$ which are largely negative. Whether there is or is not an acceleration
-horizon depends on the other parameters, and is viewed as a phenomenological
-consequence of this choice. Finally, it is also be possible to extend this
-spacetime beyond the horizons, which would allow one to consider further values
-of $r$. Such a maximal extension of the C-metric in asymptotically AdS space was
-provided by Krtou\v s~\cite{Krtous:2005ej}.
+While easier to interpret, Boyer-Lindquist coordinates are not the best suited
+for the parametric analysis we will present. This is due to the location of the
+boundary which is shifted from its usual location at infinity. The
+interpretation is that for certain values of $\theta$ the boundary is closer
+than infinity, and that for others it is in fact \emph{beyond} infinity, in the
+sense that we must glue together the regions $0<r<\infty$ and
+$-\infty < r < r_\mathrm{bd}$. Rather, it is more appropriate to be using the
+$(t,y,x,z)$ coordinate system.
 
-The metric has horizons governed by the zeros of $f(r)$,
-given by rather unhelpful algebraic expressions for the roots of this
-quartic. One can however see qualitatively that there are various
-key limits. Looking at the large $r$ behaviour of $f$, we notice
-\begin{equation}
-f \sim \frac{r^2}{\ell^2} (1- A^2 \ell^2)
-\end{equation}
-Thus, this black hole will have an acceleration horizon if
-$A > A_\mathrm{crit}$\footnote{Reverting back to a Kinnersley-Walker style
-  parametrisation, where
-  $f(r) = 1 - \frac{2m}{r} + \frac{e^2}{r^2} + r^2(\frac{1}{\ell^2}-A^2)$, this
-  critical value is simply $A_\mathrm{crit} = 1/\ell$.} and no acceleration
-horizon if $A<A_\mathrm{crit}$, the case $A=A_\mathrm{crit}$ is special and was
-considered in \cite{Emparan:1999wa}.  Typically, in holographic applications,
-the conical deficit of the C-metric is desired to be cloaked by a horizon
-\cite{Hubeny:2009kz}, however, in what follows we will be interested in
-thermodynamics, so to keep our thermodynamic variables unambiguous, we will take
-$A<A_\mathrm{crit}$ so that we have a single horizon, that of the black hole,
-and thus a well-defined temperature corresponding to the periodicity of
-Euclidean time at the regular Euclidean black hole horizon.
-
-While the above deals with possible sign flips from $f(r)$, there are also
-negative regions for $g_{\theta\theta}$ and $g_{\phi\phi}$ that we must
-consider. To preserve the signature, one must require that $g(\theta)>0$, which,
-upon inspection of \cref{eq:fgNR} or, equivalently, requiring that there
-be no roots of
-\begin{align}\label{eq:gx}
-P(\xi) = 1+ 2mA\xi+e^2A^2\xi^2
+The premise we will be basing our analysis on is that we will require the
+signature of the metric be preserved over the coordinate ranges allowed. Since
+the metric depends on neither $t$ nor $z$, it follows that we simply require
+they be real. We have also encountered the fact that $z$ behaves like a special
+angular coordinate, and therefore should have some periodicity $\Delta z$
+attributed to it. This will be the subject of the next section. The Kretschmann
+scalar
+\begin{align}
+  R_{\alpha\beta\gamma\delta}R^{\alpha\beta\gamma\delta} = \frac{24}{\ell^4} +
+  (x+y)^6\left(48A^6m^2+\mathcal{O}(e^2)\right)
 \end{align}
-over $-1<\xi<1$. To satisfy this condition we must require that 
+reveals curvature singularities at $|x|,|y|\to\infty$. We have also seen that
+the Hong-Teo~\cite{Hong:2003gx} factorisation allows us to map
+$x=\cos\theta$. It therefore makes sense that $x \in [-1,1]$, and we must
+require that $G(x)$ be positive over this range. This condition will be
+satisfied provided
 \begin{align}
   \label{eq:conditionsNR}
   e^2A^2 >
   \begin{cases}
-    2mA - 1 \qquad &\mbox{if} \quad mA \leqslant 1\\
-    m^2A^2 \qquad &\mbox{if} \quad mA > 1
+    2mA - 1 \qquad &\mbox{if} \quad mA \leqslant 1,\\
+    m^2A^2 \qquad &\mbox{if} \quad mA > 1.
   \end{cases}
 \end{align}
-
-\todoopt{edit this para}
-For small charge, this is equivalent to imposing an upper bound on the
-acceleration parameter, while solutions with larger charge have no such
-constraint; though these will be suppressed via cosmic censorship. It should
-also be noted that larger values require nonzero charge for these conditions to
-hold.
+In the absence of charge, this reduces to the simple requirement that
+$2mA\leqslant 1$. It is for this reason that one may view this condition as an
+upper bound on acceleration, however this is not so for larger values of charge
+$e$. The set of parameters excluded by \cref{eq:conditionsNR} is reproduced as
+blue hatching in \cref{fig:param-regionsNR}. By this condition, configurations
+with larger values of $A$ would need to be charged.
 
 \begin{figure}
   \centering
   \includegraphics{eA-m1p5a0p0-large}
-  \caption{\label{fig:eA-m1p5a0p0}Parametric space for the non-rotating
-    C-metric. The blue hatched region corresponds to solutions excluded by
-    \cref{eq:conditionsNR}. The grey hatched region is excluded via cosmic
-    censorship.}
+  \caption{\label{fig:param-regionsNR}Parametric space for the non-rotating C-metric
+    at $m=1.5\ell$. The blue hatched region corresponds to solutions excluded by
+    \cref{eq:conditionsNR}. The region above the solid black line is excluded
+    via cosmic censorship. The dashed black line corresponds to
+    $A_\mathrm{crit}$, and separates solutions which have an acceleration
+    horizon to the left, and those that don't to the right. The red lines
+    delimit parametric regions corresponding to spacetimes with additional
+    horizons that intersect the boundary.}
 \end{figure}
 
+We have also seen that $y$ behaves like an inverse radial coordinate, and the
+zeros of $F(y)$ therefore correspond to horizons. From the
+metric~\eqref{eq:NRyx-metric}, the boundary is located at $y_\mathrm{bd} =
+-x$. This distinguishes two possible regions for $y$, however, for the positive
+parameter configurations we are restricting ourselves to, the region $y<-x$ will
+always have a naked singularity at $y \to -\infty$. With charge, generic
+configurations will always have 0, 2, or 4 distinct horizons. Physically, we
+have a pair of inner and outer horizons similar to those that characterise the
+regular Reissner-Nordstr\"om (RN) solution which typically approach one another
+and vanish with larger charge. We also have an acceleration horizon inherent to
+these accelerating spacetimes. When an acceleration horizon is present, there is
+a second ``outer'' acceleration horizon, and both of these intersect with the
+boundary. Pairs of horizons divide the spacetime into regions which share the
+same signature; a region (i) within the innermost RN horizon which is excluded
+through cosmic censorship, a region (ii) between the outer RN horizon and the
+regular acceleration horizon, which we are most interested in, and finally a
+region (iii) beyond the outermost acceleration horizon which is of little
+interest to the work we shall be presenting. In \cref{fig:param-regionsNR}, each
+line (other than the blue line) delimits configurations with different numbers
+of horizons. First, the dashed line corresponds to values of $A$ beyond which
+there is an acceleration horizon, the solid black line corresponds to the
+extremal limit above which we have a naked singularity in region (ii). The space
+between the red lines also has four horizons; another pair of inner and outer
+horizons forms in region (ii), however they too intersect the boundary. This
+pair further subdivides region (ii), however neither region is of interest as in
+one we have a curvature singularity visible to the boundary and the other is
+similar to region (iii). At the uppermost red line in
+\cref{fig:param-regionsNR}, the new intermediary region is ``absorbed'' by the
+two horizons that bound it, and we are left with two horizons. These nuances
+were explored in~\cite{Hubeny:2009kz}, where many of these horizons were sorted
+into two categories of horizons: black \emph{funnels} --- these are the bulk
+duals of black holes strongly coupled to a field theori plasma, and black
+\emph{droplets}, which are dual to weakly coupled black holes.
 
 \subsection{The Conical Defect}
 \label{sec:conical}
-The conical defect inherent to the C-metric is controlled through the parameter
-$K$. A conical deficit is associated to the presence of a cosmic string attached
-to the black hole with tension $\mu = \delta/8\pi$. One may introduce such
-defects to simpler spacetimes. For example, one may write the Schwarzschild
-metric in this fashion, and having $g^{\mathrm{Sch}}_{\phi\phi}\sim K^{-1}$. For
-$K>1$, the result is a black hole with a string running through its core. The
-defect along both the $\theta = 0$ and $\theta= \pi$ axes is the same. The
-C-metric has unequal deficits, and the resulting string tension imbalance is
-what physically drives the acceleration.
 
-The angular part of the metric in \cref{eq:cmetric1} near the poles is
+A conical deficit $\delta = 2\pi - \Delta \varphi$ (here $\varphi$ is a generic
+azimuthal coordinate) is associated to the presence of a cosmic string with
+tension $\mu = \delta/8\pi$. One may introduce such defects to familiar
+spacetimes. For example, one may write the Schwarzschild metric, only this time
+with $g^{\mathrm{Sch}}_{\phi\phi}= r^2\sin^2\theta K^{-1}$. For $K>1$, the
+result is a black hole with a string running through its
+core~\cite{Aryal:1986sz}. The deficit along both the $\theta = 0$ and
+$\theta= \pi$ axes is the same, and the tension of the string is
+$\mu=\frac14(1-K^{-1})$. The C-metric has unequal deficits, and the resulting
+string tension imbalance is what physically drives the acceleration.
+
+The conical defect inherent to the C-metric is controlled through the
+periodicity of $z$. For simplicity, we pick a new coordinate $\phi = K z$ such
+that its periodicity $\Delta\phi=2\pi$, and the choice of $K$ replaces the
+choice of $\Delta z$. We choose to do this (a) for familiarity and (b) so that
+this apparent degree of freedom is explicit in computations. The angular part of
+the metric in \cref{eq:NRrth-metric} near the poles is
 \begin{align}
 ds^2 \sim \frac{1}{\Omega^2}\frac{r^2}{g(\theta_{\pm})}\bigg[d\rho^2 +
   \frac{g^2(\theta_{\pm}) \rho^{2}}{K^2}d\phi^2\bigg]. 
@@ -1272,28 +1462,31 @@ It will be of interest to extend the observations made in the previous section
 to the rotating C-metric. The approaches used in this section will be very
 similar to what is presented above, and the results obtained below follow
 accordingly. The metric we will be using is the solution we derived earlier from
-the Pleba\'nski-Demia\'nski metric,
-\begin{align}
-  ds^2 &= \frac{1}{\Omega^2}\bigg\{ -\frac{f(r)}{\Sigma}\Big[dt - a\sin^2\theta
-         \frac{d\phi}{K} \Big]^2 + \frac{\Sigma}{f(r)}dr^2 + \frac{\Sigma
-         r^2}{g(\theta)}d\theta^2 \nn\\
-  &\hspace{15em} + \frac{g(\theta) \sin^2\theta}{\Sigma r^2} \Big[adt-(r^2+a^2)
-    \frac{d\phi}{K}\Big]^2\bigg\},\nn\\ 
-  B&=-\frac{e}{\Sigma r}\Big[dt-a\sin^2\theta \frac{d\phi}{K}\Big].
-\label{eq:cmetric2}
-\end{align}
-The conformal factor $\Omega^{-2}$ is still given by \cref{eq:conf}, and we have
-the following metric functions:
-\begin{gather}
-f(r)=(1-A^2r^2)\bigg[1-\frac{2m}{r}+\frac{a^2+e^2}{r^2}\bigg]+\frac{r^2+a^2}{\ell^2},\nn\\
-g(\theta) =
-1+2mA\cos\theta+\bigg[A^2(a^2+e^2)-\frac{a^2}{\ell^2}\bigg]\cos^2\theta,\nn\\ 
-\Sigma=1+\frac{a^2}{r^2}\cos^2\theta. 
-\label{eq:fg2}
-\end{gather}
+the Pleba\'nski-Demia\'nski metric~\eqref{eq:PDfactrth},
+\begin{subequations}
+  \label{eq:cmetrth}
+  \begin{align}
+    \label{eq:rth-metric}
+    ds^2 &= \frac{1}{\Omega^2}\bigg\{ -\frac{f(r)}{\Sigma}\Big[dt - a\sin^2\theta
+           \frac{d\phi}{K} \Big]^2 + \frac{\Sigma}{f(r)}dr^2 + \frac{\Sigma
+           r^2}{g(\theta)}d\theta^2 \nn\\
+         &\hspace{15em} + \frac{g(\theta) \sin^2\theta}{\Sigma r^2} \Big[adt-(r^2+a^2)
+           \frac{d\phi}{K}\Big]^2\bigg\},
+  \end{align}
+  The conformal factor $\Omega^{-2}$ is still given by \cref{eq:conf}, and we have
+  the following metric functions:
+  \begin{gather}
+    f(r)= (1-A^2r^2)\bigg[1-\frac{2m}{r} + \frac{a^2+e^2}{r^2}\bigg] +
+    \frac{r^2+a^2}{\ell^2},\nn\\  
+    g(\theta) = 1+2mA\cos\theta+\bigg[A^2(a^2+e^2) - \frac{a^2}{\ell^2}\bigg]
+    \cos^2\theta,\nn\\  
+    \Sigma= 1+\frac{a^2}{r^2}\cos^2\theta. 
+    \label{eq:rth-fn}
+  \end{gather}
+\end{subequations}
 It is worth noting that this form of the rotating C-metric, with $A=0$, reduces
 to the familiar Kerr-AdS metric written in Boyer-Lindquist coordinates ---
-assuming $K$ is picked so as to regularise the poles, which allows us to
+assuming $K$ is picked so as to regularise the poles --- which allows us to
 identify $a$ as being a rotation parameter.
 
 With the inclusion of rotation, we have the following parametric restrictions:
@@ -1306,27 +1499,23 @@ With the inclusion of rotation, we have the following parametric restrictions:
   \end{cases}
 \end{align}
 once again, obtained by requiring that the metric function $g(\theta)$ be
-positive over $0\leqslant\theta<\pi$. As these expressions are not particularly
-transparent, we have plotted the corresponding regions in
-\cref{fig:param-regions}. As previously stated, we see that for smaller
-parameter values, there are upper bounds on the rotation and/or the
-acceleration. Additionally, the inclusion of rotation, somewhat similarly to the
-inclusion of charge allows one to access higher values of acceleration.
-
-% For small parameter values, the first constraint may be interpreted as a general
-% upper bound on acceleration, charge and rotation, however we will explore its
-% implications further below. The second is a necessary condition for small
-% acceleration (more specifically, when $P^{\prime\prime}(0)$ is positive yet
-% small enough to allow for the existence of real roots), without which the first
-% condition is not possible. Dropping charge\footnote{ The inlusion of charge
-%   does not drastically change the characteristics of the diagrams in
-%   \cref{fig:aA}, as long as the conditions in \cref{eq:conditions} are
-%   satisfied.}, \cref{fig:aA} serves as a visual aid to the constraints. For
-% small acceleration (rotation), we see the ``upper bound" behaviour, highlighted
-% above, to the rotation (acceleration) parameter. For larger values, a lower
-% bound must be respected to preserve the geometry. \Cref{sec:critC} concerns
-% black holes that lie along this constraint line (blue), which occur when
-% $P(\xi)$ in \cref{eq:gx} has a root at $\xi = -1$, or when $g(\theta_- =\pi)=0$.
+positive over $0\leqslant\theta<\pi$. We reproduce different parametric spaces
+in \cref{fig:param-regions} and indicate once again with blue hatching the
+regions excluded by \cref{eq:conditions}. As previously stated, we see that for
+smaller parameter values, this condition acts as an upper bound on the rotation
+and/or the acceleration. We have also included lines delimiting regions which
+correspond to solutions with different numbers of horizons. As in the charged
+non-rotating case, horizons come in pairs, and a generic configuration will have
+0, 2 or 4. The meaning of each of these lines is the same as earlier, with the
+dashed line indicating an acceleration horizon and the solid black line
+indicating extremal black holes, with grey hatching indicating configurations
+ruled out by cosmic censorship. For completion, we have also traced the red
+lines which correspond to further horizon pairs coming in, however these do not
+concern us. It is worth noting that we have found configurations similar to
+\cref{fig:aA-m0p5e0p3} in which the upper bound on rotation is due to
+\cref{eq:conditions} and not censorship. Interestingly, for larger mass and
+acceleration, these two conditions combine to exclude all possibilities, as in
+\cref{fig:ae-m1p6A1p3}. 
 
 \begin{figure}
   \centering
@@ -1351,20 +1540,19 @@ inclusion of charge allows one to access higher values of acceleration.
     \caption{\label{fig:ae-m0p6A0p5}$m=0.6\ell$, $A=0.5\ell^{-1}$.}
   \end{subfigure}\qquad
   \begin{subfigure}[b]{0.45\textwidth}
-    \includegraphics[width=\textwidth]{ae-m1p6A1p3-small}
-    \caption{\label{fig:ae-m1p6A1p3}$m=1.6\ell$, $A=1.3\ell^{-1}$.}
+    \includegraphics[width=\textwidth]{ae-m0p7A1p1-small}
+    \caption{\label{fig:ae-m1p6A1p3}$m=0.7\ell$, $A=1.1\ell^{-1}$.}
   \end{subfigure}
   \caption{\label{fig:param-regions}Allowed parametric regions for the
     C-metric. The regions marked out with blue hatching correspond to those
     forbidden by \cref{eq:conditions}, and those marked out in grey are excluded
-    by cosmic censorship.
-  }
+    by cosmic censorship. The dashed lines correspond to acceleration horizons
+    coming in and the red lines outline regions where an extra pair of
+    boundary-intersecting horizons are formed.}
 \end{figure}
- 
-\placehold{plot regions here}
 
-We may also determine the conical deficits by looking at the region near each
-pole. The string tensions for the rotating C-metric are given by
+Finally, we may also determine the conical deficits by looking at the region
+near each pole. The string tensions for the rotating C-metric are given by
 \begin{align}
 \mu_\pm = \frac{\delta_\pm}{8\pi}=\frac14\bigg[1-\frac{g(\theta_\pm)}{K}\bigg] =
   \frac14\bigg[1-\frac{1\pm 2mA + A^2(a^2+e^2)-a^2/\ell^2}{K}\bigg], 
@@ -1374,12 +1562,25 @@ and the expressions needed to regularise either pole are
 L_\pm=1\pm 2mA + \bigg[A^2(a^2+e^2)-\frac{a^2}{\ell^2}\bigg].
 \end{align}
 
+This brings our analysis of the C-metric to an end. See Dias and Lemos for
+analyses of the coordinate ranges/parameter restrictions on the C-metric in AdS
+space~\cite{Dias:2002mi}, dS space~\cite{Dias:2003xp} and in special limiting
+cases~\cite{Dias:2003up}; Krtou\v s~\cite{Krtous:2005ej} for an analysis of the
+maximal extension of the charged AdS C-metric; Hubeny, Rangamani and
+Marolf~\cite{Hubeny:2009kz} for a complete overview of the various spacetime
+solutions contained in the non-rotating uncharged AdS C-metric for different
+choices of coordinate ranges and different parameter values; and Chen, Ng and
+Teo~\cite{Chen:2016rjt,Chen:2016jxv} for a recent exhaustive analysis of the
+parametric space of the rotating C-metric.
+
+
 \chapter{Thermodynamics of Black Holes with Conical Defects}
 \label{chap:td-conical}
 
 \todoruth[inline]{Although our understanding of the thermo has evolved, we
   present here a historical derivation of the results to indicate the key stages
   in development of understanding}
+
 
 Having reviewed the fundamental concepts of black hole thermodynamics and
 metrics that describe accelerated black holes, we will now present the research
@@ -1405,7 +1606,7 @@ that the entropy of the black hole remained at one quarter of its area, now
 containing a factor of $K$: $S = \pi r_+^2/K$. The thermodynamics of a black
 hole with a string was also considered in greater thoroughness by Martinez and
 York \cite{Martinez:1990sd}, although the `tension' of the cosmic string,
-(defined later in \eqref{afvtension}) was held fixed. The only context in which
+(defined later in~\eqref{afvtension}) was held fixed. The only context in which
 a `varying' tension was considered was in \cite{Bonjour:1998rf}, where the
 varying tension was produced by the capture of a moving cosmic string by a black
 hole, and it was argued that in the collision of a black hole and cosmic string,
@@ -1413,7 +1614,7 @@ the black hole would retain a portion of the string thus increasing its mass.
 
 We will revisit this static system first, as a means of exploring the impact of
 varying tension on black hole thermodynamics. We will consider
-a charged black hole represented by the metric \eqref{afv}, with
+a charged black hole represented by the metric~\eqref{afv}, with
 \begin{equation}
 f(r) = 1-\frac{2m}{r} + \frac{e^{2}}{r^{2}} + \frac{r^{2}}{\ell^2}\;, \qquad
 \text{and} \quad {B} = - \frac{e}{r} dt\;.
@@ -1422,7 +1623,7 @@ The parameters $m$ and $e$ are related to the black hole's mass,
 and charge respectively, $B$ is the Maxwell potential, and we allow 
 for a negative cosmological constant via $\ell = \sqrt{-\Lambda/3}$.
 
-In order to treat varying tension we leave the parameter $K$ in \eqref{afv}
+In order to treat varying tension we leave the parameter $K$ in~\eqref{afv}
 unspecified.  Typically, this parameter would simply be unity (or a function of
 rotation in the Kerr-AdS case), however, by keeping $K$ explicitly in the metric
 we can study conical defects through a well-behaved system in a straightforward
@@ -1486,8 +1687,8 @@ $m, e, \ell$ with the variation of the corresponding thermodynamic charges
 $M,Q,P$, and the variation of $r_+$ with that of entropy,
 with the important proviso that we must allow for the variation
 of tension through $K$. Thus $\delta m = K \delta M + M \delta K$ etc.\
-and $\delta K = 4K^2\delta \mu$ from \eqref{afvtension}.
-After some rearrangement, \eqref{simplevary} gives our  
+and $\delta K = 4K^2\delta \mu$ from~\eqref{afvtension}.
+After some rearrangement,~\eqref{simplevary} gives our  
 first law of Thermodynamics with varying tension:
 \begin{equation}
 \delta M = T \delta S + V \delta P + \Phi_H \delta Q
@@ -1590,7 +1791,7 @@ C-metrics have both black hole and acceleration horizons, however, for
 simplicity we wish to restrict ourselves to having only the black hole horizon,
 in order that we have a well-defined temperature for the space-time. Such a
 geometry is called the \emph{slowly accelerating C-metric}
-\cite{Podolsky:2002nk}. For convenience, we shall rewrite the metric here and
+\cite{Podolsky:2002nk}. For convenience, we shall rewrite the metric and
 corresponding gauge potential here:
 \begin{align}
 ds^2=\frac{1}{\Omega^2}\left[ 
@@ -1897,7 +2098,7 @@ in black hole spacetimes, the first law of thermodynamics becomes
 \delta M = T \delta S + V\delta P + \Phi \delta Q - \lambda_+ \delta \mu_+
 - \lambda_- \delta \mu_-
 \end{align}
-where the relevant thermodynamical variables are given in \eqref{TDparams}.
+where the relevant thermodynamical variables are given in~\eqref{TDparams}.
 In order to accommodate varying 
 tension, we have to define a {\it thermodynamic length},
 \begin{align}
@@ -2191,7 +2392,7 @@ $|\Phi_\mathrm{RN}|<1$ there is no possibility of extremality. In our case, for
 the charged accelerating black hole, the algebraic relations for extremality at
 fixed potential are considerably more complicated partly due to the extra
 acceleration parameter, but mostly because of the complicated expression for
-$\Phi$ \eqref{grandcanphi}. However, the same principle applies, and we also
+$\Phi$~\eqref{grandcanphi}. However, the same principle applies, and we also
 observe a similar phase transition from small to large $\Phi$, where the
 critical value of $\Phi$ is now tension dependent. \Cref{fig:grand}
 demonstrates this behaviour showing the analogous plot to \cite{Chamblin:1999tk}
@@ -3153,7 +3354,7 @@ and Smarr relation held for this geometry in the form:
 - \lambda_+ \delta \mu_+ - \lambda_- \delta \mu_-,
 \label{firstsmarr}
 \end{align}
-where $T_\mathrm{H}$ is the Hawking temperature computed from \eqref{AdSC} with
+where $T_\mathrm{H}$ is the Hawking temperature computed from~\eqref{AdSC} with
 the time $t$, $S$ is the standard Bekenstein-Hawking entropy,
 $P = 3/8\pi \ell^2$ is the thermodynamic pressure, and $V_\mathrm{H}$ the
 thermodynamic volume of the black hole. $\lambda_\pm$ were the new variables
@@ -3169,7 +3370,7 @@ changing tension deficit in the presence of charge was to consider that the
 thermodynamic mass might be a multiple of $m/K$ with $V$ and $\lambda_\pm$
 adjusting as appropriate, however, the standard definitions of entropy and
 temperature were assumed.  Interestingly, if we allow for a scaling of the
-temperature simultaneously, we find that this first law, \eqref{firstsmarr}
+temperature simultaneously, we find that this first law,~\eqref{firstsmarr}
 holds for an arbitrary rescaling of mass, $M=\gamma(A\ell)m/K$, provided
 $T=T_H (\gamma-A\gamma_{,A})$.  While interesting, there is no physical reason
 to rescale the temperature, unless the time coordinate natural to the C-metric
@@ -3198,7 +3399,7 @@ dt^2+\frac{dR^2}{1+\frac{R^2}{\ell^2}}  +R^2\Big(d\vartheta^2+\sin^2\vartheta
 \frac{d\phi^2}{K^2}\Big)
 \end{align}
 with $\alpha = \sqrt{1-A^2 \ell^2}$. This suggests that the correct asymptotic
-time therefore is not $t$ in the original C-metric \eqref{AdSC}, but rather
+time therefore is not $t$ in the original C-metric~\eqref{AdSC}, but rather
 $\tau$, leading to a rescaling of the temperature:
 \begin{align}
 T =\frac{f'(r_+)}{4\pi\alpha}
@@ -3255,7 +3456,7 @@ It is now straightforward to verify the first law and Smarr relation
 -\lambda_{-}\delta \mu _{-}\,,  \nn \\
 M &=2TS-2PV
 \end{align}
-using \eqref{temp}, \eqref{entropy}, and \eqref{confmass},
+using~\eqref{temp},~\eqref{entropy}, and~\eqref{confmass},
 provided
 \begin{align}
 V &=\frac{4}{3}\frac{\pi}{K \alpha}\left[\frac{r_+^3}{1-A^2r_+^2}
@@ -3361,7 +3562,7 @@ and its integral yields the mass
 M=\frac{1}{\kappa }\int \rho _{E}\sqrt{-\det \Sigma }~dxd\phi
 =\frac{\alpha m}{K}~,
 \end{align}
-in agreement with \eqref{confmass}.  Note that this calculation is independent
+in agreement with~\eqref{confmass}.  Note that this calculation is independent
 of the conformal frame. The non-trivial shear tensor implies that the dual fluid
 is anisotropic, as expected from the strongly distorted boundary.
 
@@ -3387,7 +3588,7 @@ the case at hand, $\omega _{2}=4\pi /K$, and we find
 which, given that $Ar_+, A\ell \in [0,1]$, satisfies the inequality; it is
 saturated for $A = 0$, the Schwarzschild-AdS solution.  }
 
-Finally, let us return to the computation of the action \eqref{Caction}. Using
+Finally, let us return to the computation of the action~\eqref{Caction}. Using
 the correct time coordinate $\tau$ rescales the action by $1/\alpha$, and some
 simple algebra then yields the expected result $F=I/\beta=M-TS$.  We plot this
 quantity in figure \ref{fig:FE}.
@@ -3417,9 +3618,9 @@ proportional to the acceleration parameter and vanishes for $A=0$.
 
 We note that proper identification of the normalization of the timelike Killing
 vector was crucial in obtaining these results.  To see this, suppose we relate
-the temporal coordinates of the metrics \eqref{AdSC} and \eqref{gAdS} via
+the temporal coordinates of the metrics~\eqref{AdSC} and~\eqref{gAdS} via
 $\tau=C t$ where $C=C(A,\ell)$ is some (unknown) function.  Proceeding as
-before, we obtain \eqref{temp} with $\alpha\to C$ and \eqref{confmass} replaced
+before, we obtain~\eqref{temp} with $\alpha\to C$ and~\eqref{confmass} replaced
 with
 \begin{equation}
   \label{mass}
