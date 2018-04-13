@@ -712,10 +712,11 @@ given by
 \end{subequations}
 The corresponding gauge potential is given by
 \begin{align}
+  \label{eq:kerrAdS-gauge}
   B&=-\frac{e}{\Sigma r}\Big(dt-a\sin^2\theta \frac{d\phi}{\Xi}\Big).
 \end{align}
 
-Hawking, Hunter and Taylor-Robinson (HHT)~\cite{Hawking:1998kw} were the first to
+Hawking, Hunter and Taylor-Robinson~\cite{Hawking:1998kw} were the first to
 present a set of thermodynamic quantities for the uncharged rotating black hole
 in AdS. By computing the thermodynamics of rotating bulk spacetimes such as the
 Kerr-AdS metric, they were able to reconcile the bulk partition function with
@@ -728,7 +729,7 @@ Computing the temperature from the metric \cref{eq:kerrAdS} in its Euclidean
 form (for rotation one must simultaneously take $\tau=it, \alpha=-ia$), and its
 entropy as a quarter the horizon area, they find:
 \begin{align}
-  \label{eq:KerrAdSTS}
+  \label{eq:kerrAdSTS}
   T&=\frac{r_+^2f'(r_+)}{4\pi(r_+^2+a^2)} = \frac{r_+}{4\pi(r_+^2+a^2)} \left[1 +
   \frac{3r_+^2}{\ell^2} + \frac{a^2}{\ell^2} - \frac{a^2}{r_+^2}\right],\nn\\
   S&=\frac{\pi(r_+^2+a^2)}{\Xi},
@@ -736,37 +737,119 @@ entropy as a quarter the horizon area, they find:
 where $r_+$ denotes the location of the outer event horizon. They compute the
 mass $M$ and angular momentum $J$ using the timelike and angular killing vectors
 with corresponding Komar integrals, noting that a background $m=0$ subtraction
-is needed for regularisation, and find:
+is needed for regularisation (see Magnon~\cite{Magnon:1985sc}), and find:
 \begin{align}
-  \label{eq:KerrAdSMJ-HTT}
+  \label{eq:kerrAdSMJ-HTT}
   M=\frac{m}{\Xi}, \qquad J=\frac{am}{\Xi^2}.
 \end{align}
 Finally, the thermodynamic conjugate to the angular momentum, the angular
 velocity $\Omega$ is given as
 \begin{align}
-  \label{eq:KerrAdSO-HTT}
-  \Omega = -\frac{g_{t\phi}}{g_{\phi\phi}}\Big|_{r_+} = \frac{a\Xi}{r_+^2+a^2},
+  \label{eq:kerrAdSO-HTT}
+  \Omega_\mathrm{H} = -\frac{g_{t\phi}}{g_{\phi\phi}}\Big|_{r_+} = \frac{a\Xi}{r_+^2+a^2},
 \end{align}
 and with all of these quantities, they were able to show that the partition
 function for this spacetime corresponded to the partition of a scalar field
 theory coupled to a three-dimensional Einstein universe rotating with angular
-velocity $\Omega + a/\ell^2$.
+velocity $\Omega_\mathrm{H} + a/\ell^2$.
 
-HHT didn't, however, discuss the first law of thermodynamics, and one can check
-that \cref{eq:firstlaw} does not in fact hold with
-\cref{eq:KerrAdSTS,eq:KerrAdSMJ-HTT,eq:KerrAdSO-HTT}. The following year,
+The authors of~\cite{Hawking:1998kw} didn't, however, discuss the first law of
+thermodynamics, and one can check that \cref{eq:firstlaw} does not in fact hold
+with \cref{eq:kerrAdSTS,eq:kerrAdSMJ-HTT,eq:kerrAdSO-HTT}. The following year,
 wanting to present a thorough thermodynamic description of Kerr-Newman-AdS black
 holes, Caldarelli, Cognola and Klemm~\cite{Caldarelli:1999xj} addressed this
-issue. 
+issue. When one computes the mass using a Komar integral, there lies an
+ambiguity in the normalisation of the timelike killing vector used. In
+~\cite{Hawking:1998kw}, the mass is computed with the killing vector
+$\partial_t$, however the authors of~\cite{Caldarelli:1999xj} compute it using
+the killing vector $\partial_t/\Xi$, while the angular momentum is still
+computed with $\partial_\phi$. This leads to the following expressions for
+the mass and angular momentum:
+\begin{align}
+  \label{eq:kerrAdSMJ-CCK}
+  M=\frac{m}{\Xi^2} \qquad J=\frac{am}{\Xi^2}.
+\end{align}
+The justification for this choice of normalisation is that the resulting
+conserved quantities above agree with expressions obtained using a Hamiltonian
+approach that had been presented by Henneaux and
+Teitelboim~\cite{Henneaux:1985tv} in 1985 for the uncharged case and by
+Kostelecky and Perry~\cite{Kostelecky:1995ei} a decade later for the charged
+case. They also show that the same expressions can be obtained using the
+Brown-York method~\cite{Brown:1992br}.
 
-\placehold{there are several prescriptions for computing the mass in AdS:
-  Komar/Magnon, Ashtekar/Das, Abbott/Deser, holography?}
+Caldarelli \emph{et al.} then derived a Christodoulou-Ruffini-like formula for the
+mass, expressing it as a function $M=M(S, J, Q)$. They then reverse engineer the
+first law to verify the quantities conjugate to the entropy, angular momentum
+and charge by computing the relevant partial derivatives. The temperature is
+found to agree with the charged version of \cref{eq:kerrAdSTS}, and the
+electrostatic potential is found to agree with
+\begin{align}
+  \label{eq:kerrAdSP-CCK}
+  \Phi = B_\mu\chi^\mu\Big|^\infty_{r_+}=\frac{er_+}{r_+^2+a^2},
+\end{align}
+where $B$ is the electric gauge potential from \cref{eq:kerrAdS-gauge} and
+$\chi=\partial_t+\Omega_\mathrm{H}\partial_\phi$ is the null generator of the
+horizon. Most significantly, however, they found that $\Omega = (\partial
+M/\partial J)_{S,Q}\neq \Omega_\mathrm{H}$ but rather that
+\begin{align}
+  \label{eq:kerrAdSO-CCK}
+  \Omega = \frac{a(1+r_+^2/\ell^2)}{r_+^2+a^2}=\Omega_\mathrm{H}+\frac{a}{\ell^2},
+\end{align}
+This happens to coincide precisely with the difference between the angular
+velocity at the horizon~\eqref{eq:kerrAdSO-HTT} and the angular velocity at
+infinity. It therefore makes sense that the physical quantity relevant to
+thermodynamics be the agnostic quantity $\Omega =
+\Omega_\mathrm{H}-\Omega_\infty$ measuring the angular velocity of the black
+hole relative to the boundary.
+
+Finally, we would expect to be able to establish the Euler scaling relation that
+we encountered earlier as Smarr's formula in \cref{eq:smarrrelation}. The
+statement as it stands does not hold, despite the new quantities satisfying the
+first law. Instead, the authors of~\cite{Caldarelli:1999xj} propose treating the
+cosmological constant $\Lambda$ itself as a thermodynamical variable, complete
+with a conjugate quantity $\Theta = (\partial M/ \partial
+\Lambda)_{S,J,Q}$, and we have the first law
+\begin{align}
+  \delta M = T\delta S + \Omega \delta J + \Phi \delta Q + \Theta \delta \Lambda.
+\end{align}
+This also allows us to rewrite the Christodoulou-Ruffini formula as
+\begin{align}
+  \frac12 M= TS + \Omega J + \frac12 \Phi Q - \Theta \Lambda,
+\end{align}
+which agrees with mass being a homogeneous function of $S$, $J$, $Q$ and now
+$\Lambda$, after Euler's theorem is applied. We leave the discussion of
+$\Lambda$ as a varying quantity to the next section.
+
+Finally, both~\cite{Hawking:1998kw,Caldarelli:1999xj} find that the relation
+between their respective free energy potentials agree with the euclidean action
+according to \cref{eq:freeenergy1}:
+\begin{align}
+  F = M- TS - \Omega J-\Phi Q = \frac{S_\mathrm{E}}{\beta}.
+\end{align}
+The fact that this relation is satisfied when using either
+\cref{eq:kerrAdSMJ-HTT,eq:kerrAdSO-HTT}, or
+\cref{eq:kerrAdSMJ-CCK,eq:kerrAdSO-CCK} is merely a consequence of the relation
+\begin{align*}
+  \frac{m}{\Xi^2}+\Omega_\infty J = \frac{m}{\Xi}.
+\end{align*}
+
+Silva~\cite{Silva:2002jq} then showed that the entropy obtained from this
+thermodynamic prescription agreed with the Cardy
+entropy~\cite{Cardy:1986ie,Bloete:1986qm} by computing central charges of a
+sub-algebra deduced from the metric \cref{eq:kerrAdS}; Gibbons, Perry and
+Pope~\cite{Gibbons:2004ai} extend this description to higher dimensional black
+holes, clarifying similar subtleties as the one presented above. They also point
+out that the mass as expressed in \cref{eq:kerrAdSMJ-CCK} agrees with masses
+computed according to Abbott-Deser~\cite{Abbott:1981ff} and
+Ashtekar-Das-Magnon~\cite{Ashtekar:1984zz,Ashtekar:1999jx}.
 
 \subsection{Pressure and Volume of Black Hole Spacetimes}
 
 \placehold{review work on variations of $\Lambda$, thermodynamic volume}
 
 \placehold{present the reverse isoperimetric inequality}
+
+
 
 \subsection{Phase Transitions for Gravitational Systems}
 \label{sec:hawkingpage}
@@ -2589,7 +2672,7 @@ reverse isoperimetric inequality is satisfied for the C-metric.
 
 We begin by considering the rotating black hole in asymptotically AdS space,
 described by the Kerr-AdS metric. In Boyer-Lindquist coordinates, it is, 
-\begin{align} \label{eq:KerrAdS}
+\begin{align} \label{eq:kerrAdS}
 ds^2 = -\frac{f(r)}{\Sigma}\Big[dt-a\sin^2\theta \frac{d\phi}{K} \Big]^2 +
   \frac{\Sigma}{f(r)}dr^2 + \frac{\Sigma r^2}{g(\theta)}d\theta^2 +
   \frac{g(\theta) \sin^2\theta}{\Sigma r^2} \Big[adt-(r^2+a^2)
