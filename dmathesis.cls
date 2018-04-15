@@ -306,7 +306,7 @@
 % -------------------------------------------- %
 % ---- Add to TOC automatically commands ----- %
 
-\renewcommand\@dotsep{8}
+\renewcommand\@dotsep{2}
 % define starred version of various commands, which will add/not add
 % them automatically to the table of contents
 \let\@durham@dma@tableofcontents\tableofcontents
