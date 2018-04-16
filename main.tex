@@ -1,8 +1,8 @@
 \documentclass[
 % thesisdraft,
-% twoside,
-% openright,
-% frontopenright
+twoside,
+openright,
+frontopenright
 ]{dmathesis}
 \input{preamble}
 
@@ -652,6 +652,7 @@ however it could equally be used to verify the converse.
 \section{Incorporating $\Lambda$}
 \label{sec:BHTDlambda}
 
+
 \placehold{Generic intro to AdS and interest in it since Maldacena. remember AdS acronym}
 
 Early research concerning gravitational solutions which included a cosmological
@@ -753,7 +754,7 @@ function for this spacetime corresponded to the partition of a scalar field
 theory coupled to a three-dimensional Einstein universe rotating with angular
 velocity $\Omega_\mathrm{H} + a/\ell^2$.
 
-The authors of~\cite{Hawking:1998kw} didn't, however, discuss the first law of
+The authors of~\cite{Hawking:1998kw} did not, however, discuss the first law of
 thermodynamics, and one can check that \cref{eq:firstlaw} does not in fact hold
 with \cref{eq:kerrAdSTS,eq:kerrAdSMJ-HTT,eq:kerrAdSO-HTT}. The following year,
 wanting to present a thorough thermodynamic description of Kerr-Newman-AdS black
@@ -805,15 +806,16 @@ hole relative to the boundary.
 Finally, we would expect to be able to establish the Euler scaling relation that
 we encountered earlier as Smarr's formula in \cref{eq:smarrrelation}. The
 statement as it stands does not hold, despite the new quantities satisfying the
-first law. Instead, the authors of~\cite{Caldarelli:1999xj} propose treating the
-cosmological constant $\Lambda$ itself as a thermodynamical variable, complete
-with a conjugate quantity $\Theta = (\partial M/ \partial
-\Lambda)_{S,J,Q}$, and we have the first law
+first law. Instead, the authors of~\cite{Caldarelli:1999xj} show that one may
+treat the cosmological constant $\Lambda$ itself as a thermodynamical variable,
+complete with a conjugate quantity
+$\Theta = (\partial M/ \partial \Lambda)_{S,J,Q}$, and we have the first law
 \begin{align}
   \delta M = T\delta S + \Omega \delta J + \Phi \delta Q + \Theta \delta \Lambda.
 \end{align}
 This also allows us to rewrite the Christodoulou-Ruffini formula as
 \begin{align}
+  \label{eq:smarrAdS1}
   \frac12 M= TS + \Omega J + \frac12 \Phi Q - \Theta \Lambda,
 \end{align}
 which agrees with mass being a homogeneous function of $S$, $J$, $Q$ and now
@@ -845,11 +847,128 @@ Ashtekar-Das-Magnon~\cite{Ashtekar:1984zz,Ashtekar:1999jx}.
 
 \subsection{Pressure and Volume of Black Hole Spacetimes}
 
-\placehold{review work on variations of $\Lambda$, thermodynamic volume}
+The scaling relation~\eqref{eq:smarrAdS1} suggests, as we mentioned above, that
+the cosmological constant should be treated as a thermodynamical variable. After
+the work above by Caldarelli \emph{et al.}~\cite{Caldarelli:1999xj}, this
+concept was revisited a few times
+in~\cite{Wang:2006eb,Sekiwa:2006qj,Wang:2006bn,LarranagaRubio:2007fly}, leading
+to a 2009 paper by Kastor, Ray and Traschen~\cite{Kastor:2009wy} in which some
+of the computations above were put on much firmer mathematical ground, and a
+new thermodynamic interpretation was presented, in an aim to reconnect with
+traditional statistical mechanics.
 
-\placehold{present the reverse isoperimetric inequality}
+While the entire discussion concerning having a dynamical cosmological constant
+may be somewhat controversial to some, the argument can be made that whether
+physical mechanisms allowing for $\Lambda$ to change exist or not, does not
+preclude us from considering neighbouring configurations in parametric
+(incl. $\Lambda$) space. Nonetheless, the idea of doing so was initially
+proposed in the mid 1980s, where, in a series of papers~\cite{Henneaux:1984ji,
+  Teitelboim:1985dp, Henneaux:1985tv, Brown:1987dd, Brown:1988kg,
+  Henneaux:1989zc}, Brown, Henneaux and Teitelboim introduce the cosmological
+constant as an integration constant from a theory which has a 3-form gauge
+potential coupled to the gravitational field. In this theory, there is a bubble
+radiation process which is reduces the cosmological
+constant. In~\cite{Kastor:2009wy}, it is argued that a change in the
+cosmological constant in the bulk is equivalent via the AdS/CFT correspondence
+to a change in the number of colors in the non-abelian field theory on the
+boundary. Finally, in recent work, Gregory, Kastor and
+Traschen~\cite{Gregory:2017sor,Gregory:2018ghc} studied the thermodynamics of a
+black hole system in a background cosmology undergoing slow-roll inflation and
+confirmed that it changes according to a first law with variable $\Lambda$.
 
+In order to prove the Smarr relation, the authors of~\cite{Kastor:2009wy} were
+able to provide a derivation similar to the one we presented in
+\cref{sec:firstlaw}, making use of the killing potential, first introduced
+in~\cite{Bazanski:1990qd,Kastor:2008xb} to construct properly defined Komar
+integrals in asymptotically $\Lambda\neq 0$ geometries. The outcome of this
+derivation is that they obtained definition of the conjugate quantity
+$\Theta = (\partial M/\partial \Lambda)_{S,J,Q}$ that we introduced in
+\cref{eq:smarrAdS1}. The cosmological constant can be interpreted as a pressure
+\begin{align}
+  P = -\frac{\Lambda}{8\pi}
+\end{align}
+exerted on the spacetime, and in classical thermodynamics, the conjugate of a
+pressure is the system's volume. Indeed, $\Theta$ has units of volume and we
+introduce the following quantity:
+\begin{align}
+  \label{eq:thermovol}
+  V=-8\pi\Theta,
+\end{align}
+known as the \emph{thermodynamic volume} of a black hole. The definition
+obtained in terms of killing potentials that was found in~\cite{Kastor:2009wy}
+reveals that this quantity \eqref{eq:thermovol} may be interpreted as the volume
+excluded from the full spacetime by the event horizon.
 
+A consequence of the interpretation of the cosmological constant as pressure is
+that the first law for an uncharged non-rotating black hole now takes the form:
+\begin{align}
+  \delta M = T\delta S + V\delta P.
+\end{align}
+Classical thermodynamics teaches us that the mass of the black hole should
+therefore not be thought of as the internal energy, but as the
+\emph{enthalpy}~\cite{Kastor:2009wy}. The enthalpy is related to the internal
+energy via the Legendre transform $U(S,V) = H(S,P) - PV$. It turns out that
+because $H$ is linear with respect to $P$ in black hole systems, this
+transformation is generally non-invertible (see~\cite{Baldiotti:2017ywq} for a
+recent more formal treatment and discussion of the relation between the enthalpy
+and internal energy in black hole
+thermodynamics). Dolan~\cite{Dolan:2010ha,Dolan:2011xt} has since investigated
+the thermodynamical consequences of this interpretation in terms of pressure,
+volume and enthalpy. In particular, he notes that the heat capacities, whose
+sign determines local thermodynamic stability, must be computed at constant
+pressure rather than constant volume, and the free energy which is computed from
+the action coincides with the Gibbs free energy
+\begin{align}
+  G(T,\Omega,\Phi,P) &= U(S,J,Q,V) - TS - \Omega J - \Phi Q + PV\nn\\
+                     &= H(S,J,Q,P) - TS -\Omega J -\Phi Q\nn\\
+                     &= M - TS - \Omega J - \Phi Q = \frac{S_\mathrm{E}}{\beta}.
+\end{align}
+
+More recently, Cveti\v c \emph{et al.}~\cite{Cvetic:2010jb} computed the
+thermodynamic volume in a number of asymptotically-AdS black hole spacetimes,
+comparing it to the ``na\" ive'' geometric volume, as they refer to it, given by
+the integral
+\begin{align}
+  V' = \int_{r_0}^{r_+}dr\int d\Omega \sqrt{-g},
+\end{align}
+from the singularity at $r_0$ to the outer horizon at $r_+$. In general, they
+find that these quantities agree for static geometries, however differ by a term
+proportional to the angular momentum, when it is nonzero. This lead them to
+conjecture the \emph{reverse isoperimetric inequality}.
+
+The traditional isoperimetric inequality is the general statement of Euclidean
+geometry which says that the $D$-dimensional volume enclosed within a
+$(D-1)$-dimensional closed surface is maximised when that surface is spherical,
+or, if $V'$ is the volume enclosed and $\mathcal{A}$ is the area of
+the surface that encloses it, then
+\begin{align}\label{eq:euclidiso}
+\left(\frac{D V'}{\omega_{D-1}}\right)^{\frac{1}{D}} \leqslant
+  \left(\frac{\mathcal{A}}{\omega_{D-1}}\right)^{\frac{1}{D-1}},
+\end{align}
+where $\omega_{D-1}$ is the area of a unit $D$-dimensional sphere. Cveti\v c
+\emph{et al.} examined the applicability of this relation to black hole
+spacetimes using the geometric volume $V'$ and found the relation to be
+satisfied for uncharged black holes, however charged black holes were found to
+violate this statement. When the volume they used was the thermodynamic volume
+$V$, they found that \emph{all} black hole spacetimes violated the inequality,
+with the Schwarzschild-AdS geometry saturating the bound. This lead to the
+conjecture that all black holes satisfy the reverse isoperimetric inequality,
+which is usually re-expressed as the ratio (increasing the number of
+  dimensions by one relative to \cref{eq:euclidiso})
+\begin{align}
+  \mathcal{R} =
+  \left(\frac{(D-1)V}{\omega_{D-2}}\right)^{\frac{1}{D-1}}
+  \left(\frac{\omega_{D-2}}{\mathcal{A}}\right)^{\frac{1}{D-2}} 
+  \leqslant 1,
+\end{align}
+which is smaller than unity when the conjecture is valid.
+
+Physically, this conjecture is often interpreted to state that for a given
+thermodynamic volume, the black hole entropy is maximised in a Schwarzschild
+geometry. The inequality has been shown to hold for a plethora of asymptotically
+AdS and dS geometries~\cite{Cvetic:2010jb,Dolan:2013ft}, though notable
+exceptions have also been
+found~\cite{Hennigar:2014cfa,Hennigar:2015cja,Brenna:2015pqa}.
 
 \subsection{Phase Transitions for Gravitational Systems}
 \label{sec:hawkingpage}
@@ -3372,354 +3491,398 @@ Within this framework, accelerating black holes have presented a unique
 challenge.  The idealized solution is described by the
 \emph{C-metric}~\cite{Kinnersley:1970zw,
   Plebanski:1976gy,Dias:2002mi,Griffiths:2005qp}, whose spacetime has a
-string-like singularity along one polar axis attached to the black hole.  This
-conical singularity can can be replaced by a finite width cosmic string
-core~\cite{Gregory:1995hd} or a magnetic flux tube~\cite{Dowker:1993bt},
-providing the force driving the acceleration.  The thermodynamics of these
-objects has been the subject of recent studies with conflicting results.
+string-like singularity along one polar axis attached to the black hole.  We can
+think of this conical singularity as a cosmic string (indeed, the conical
+singularity can be replaced by a finite width topological
+defect~\cite{Gregory:1995hd}, or a magnetic flux tube~\cite{Dowker:1993bt}) with
+the tension providing the force driving the acceleration.  Surprisingly, even
+though these black holes are not isolated because of the ``cosmic strings'' it
+is possible to derive sensible looking thermodynamics, although recent studies
+have apparently conflicting results
+\cite{Appels:2016uha,Appels:2017xoe,Gregory:2017ogk,Astorino:2016ybm}.
 
-On the one hand, a subset of us in \cite{Appels:2016uha,Appels:2017xoe}
-presented a consistent set of thermodynamic variables for charged accelerating
-black holes, but without rotation. The thermodynamic mass was found to be such
-that the tension differential of the conical deficits on each axis satisfied
-$\mu = MA$, dovetailing beautifully with the intuition of Newton's First Law and
-the nett force on the black hole, however, this thermodynamic mass became
-somewhat less intuitive in the presence of charge, and we were unable to use the
-same method to get a satisfactory expression of $M$ for a rotating accelerating
-black hole.  In addition, computing the action of the solution gives
-\begin{align}
-I = \frac{\beta}{2K} \left( m - 2mA^2\ell^2 
-- \frac{r_+^3}{\ell^2(1-A^2r_+^2)^2} \right). 
-\label{Caction}
-\end{align}
-that, while finite, gives a free energy inconsistent with the expressions found. 
+We consider in this paper the thermodynamics of accelerating black holes in
+anti-de Sitter (AdS) spacetime, with a focus on a holographic interpretation of
+the exact solutions.  We resolve conflicting issues that exist in the
+literature, obtain a distinct set of thermodynamic variables that are now
+consistent with the gravitational action, and agree with both the conformal and
+holographic methods for computing conserved charges.  To this end, we restrict
+our attention to black holes with no acceleration horizon
+\cite{Podolsky:2002nk}, so that the temperature of the black hole is uniquely
+defined, and the holographic computation and interpretation are
+straightforward. We also comment on the cases when the acceleration horizons
+appear and we provide a novel interpretation of the boundary geometry.
 
-On the other hand, in \cite{Astorino:2016ybm}, an alternate expression for mass
-and temperature were found, however, the tension of the deficits was held fixed,
-and it is unclear that the over-constrained system is fully
-self-consistent.\todomike{A bit more here?}
-
-We consider again here the thermodynamics of accelerating black holes in anti-de
-Sitter spacetime, but with a fresh perspective based on a holographic
-interpretation of the exact solutions. We address the above issues, finding a
-distinct set of thermodynamic variables that are now consistent with the
-gravitational action, and agree with both the conformal and holographic methods
-of computing conserved charges. We therefore consider black holes with no
-acceleration horizon, so that the temperature of the black hole is uniquely
-defined, and the holographic computation and interpretation is clear.
-
-An accelerating black hole in AdS has the geometry
-\begin{align}
-  \label{AdSC}
-ds^2=\frac{1}{\Omega^2}\bigg[ -f(r)dt^2+\frac{dr^2}{f(r)}+r^2\Big(\frac{d\theta^2
-}{g(\theta)}+g\theta\sin^2\theta\frac{d\phi^2}{K^2}\Big)\bigg],
+An accelerating black hole in AdS can be described by the metric
+\cite{Hong:2003gx}
+%\begin{equation}\label{AdSC}
+%ds^2=\frac{1}{\Omega^2}\bigg[ -fdt^2+\frac{dr^2}{f}+r^2\Big(\frac{d\theta^2
+%}{g}+g\sin^2\theta\frac{d\phi^2}{K^2}\Big)\bigg]\,,
+%\end{equation}
+\begin{align}\label{AdSC}
+ds^2=\frac{1}{\Omega^2}\bigg[ -fdt^2+\frac{dr^2}{f}+r^2\Big(\frac{d\theta^2
+}{\Sigma}+\Sigma\sin^2\!\theta\frac{d\phi^2}{K^2}\Big)\bigg]\,,
 \end{align}
 where
 \begin{align}
-  f(r)&=(1-A^2r^2)\bigg(1-\frac{2m}{r}\bigg)+\frac{r^2}{\ell^2},\nn\\
-g(\theta)&= 1+2mA\cos\theta, \qquad \Omega=1+Ar\cos\theta,
+\Omega&=1+Ar\cos\theta\,, \qquad  \Sigma= 1+2mA\cos\theta\,, \nn\\
+f(r)&=(1-A^2r^2)\bigg(1-\frac{2m}{r}\bigg)+\frac{r^2}{\ell^2}\,,
 \end{align}
 show clearly the black hole nature of the solution, with the $(1-2m/r)$ term in
-the gravitational potential. $K$ encodes information about the conical deficits
-on the north and south poles that have tensions given by~\cite{Appels:2017xoe}
-\begin{align}
+the gravitational potential.  The parameter $K$ encodes information about the
+conical deficits on the north and south poles that have tensions given
+by~\cite{Appels:2017xoe}
+\begin{equation}
 \label{mueq}
 \mu_{\pm}=\frac{\delta_\pm}{8\pi}
-=\frac{1}{4}\Big(1-\frac{g(\theta_\pm)}{K}
-\Big)=\frac{1}{4}\Big(1-\frac{1\pm 2mA}{K}\Big).
-\end{align}
+=\frac{1}{4}\Big(1-\frac{\Sigma(\theta_\pm)}{K}%
+\Big)=\frac{1}{4}\Big(1-\frac{1\pm 2mA}{K}\Big)\,,
+\end{equation}
+and $A$ is related to the acceleration, with $2mA<1$ to preserve the metric
+signature.  The absence of an acceleration horizon yields the constraint
+$f(-1/A\cos\theta) > 0$, in turn constraining the parameter space $(m,\ell)$ to
+the white region bounded by the blue and red lines in figure \ref{fig:f1}.  It
+is straightforward to show via a linear transformation \cite{Hong:2003gx} on the
+coordinates $(x=\cos\theta,y=-1/r)$ that the latter bound is equivalent to the
+absence of black droplets \cite{Hubeny:2009kz}.
 
-In \cite{Appels:2016uha,Appels:2017xoe} it was demonstrated that a ``First Law''
-and Smarr relation held for this geometry in the form:
-\begin{align}
-\frac{m}{K} &= 2 T_\mathrm{H} S - 2 P V_\mathrm{H},\\
-\delta (\frac{m}{K})  &= T_\mathrm{H} \delta S + V_\mathrm{H} \delta P 
-- \lambda_+ \delta \mu_+ - \lambda_- \delta \mu_-,
-\label{firstsmarr}
-\end{align}
-where $T_\mathrm{H}$ is the Hawking temperature computed from~\eqref{AdSC} with
-the time $t$, $S$ is the standard Bekenstein-Hawking entropy,
-$P = 3/8\pi \ell^2$ is the thermodynamic pressure, and $V_\mathrm{H}$ the
-thermodynamic volume of the black hole. $\lambda_\pm$ were the new variables
-identified, conjugate to the tensions of the strings along each axis, and had a
-natural interpretation in terms of the length from each pole to the origin plus
-a correction.
+In what follows we include the possibility of changing these string
+tensions. The corresponding first law of black hole thermodynamics then picks up
+an extra term, where the conjugate quantity to $\mu_\pm$ is interpreted as
+thermodynamic length \cite{Appels:2017xoe,Gregory:2017ogk}.
 
-\section{Computing the Mass}
-\label{sec:mass-comput}
 
-The original strategy in finding the thermodynamic variables appropriate to a
-changing tension deficit in the presence of charge was to consider that the
-thermodynamic mass might be a multiple of $m/K$ with $V$ and $\lambda_\pm$
-adjusting as appropriate, however, the standard definitions of entropy and
-temperature were assumed.  Interestingly, if we allow for a scaling of the
-temperature simultaneously, we find that this first law,~\eqref{firstsmarr}
-holds for an arbitrary rescaling of mass, $M=\gamma(A\ell)m/K$, provided
-$T=T_H (\gamma-A\gamma_{,A})$.  While interesting, there is no physical reason
-to rescale the temperature, unless the time coordinate natural to the C-metric
-is in fact not the correct time coordinate to consider. The appropriate time
-coordinate is usually defined with respect to an observer at infinity, but since
-we are in anti-de Sitter space our metric is divergent at the boundary, however,
-we do have a natural procedure -- the Fefferman-Graham expansion -- with which
-to explore the natural time coordinate. Before presenting this holographic
-argument, we first give a .... \todomike{finish off this thought}
-
-\subsection{The Ashtekar-Das Method}
-\label{sec:ashtekar-das}
-
-Setting $m=0$ removes the black hole, and leaves us with a Rindler solution. For
-$A<A_\mathrm{crit}\leqslant \ell^{-1}$, there is no Rindler horizon, and
-performing the coordinate transformation~\cite{Podolsky:2002nk}:
-\begin{align}
-1+\frac{R^2}{\ell^2}=\frac{1+(1-A^2\ell^2)r^2/\ell^2}{(1-A^2\ell^2)\Omega^2} \quad
-R\sin\vartheta=\frac{r\sin\theta}{\Omega}
-\end{align}
-gives AdS in global coordinates, up to a rescaling of time:
-\begin{align}
+Setting $m=0$ removes the black hole, and leaves us with AdS spacetime in
+Rindler-type coordinates.  Performing the coordinate
+transformation~\cite{Podolsky:2002nk}:
+\begin{equation}
+1+\frac{R^2}{\ell^2}=\frac{1+(1-A^2\ell^2)r^2/\ell^2}{(1-A^2\ell^2)\Omega^2}\,, \quad
+R\sin\vartheta=\frac{r\sin\theta}{\Omega}\,,
+\end{equation}
+gives AdS in global coordinates
+\begin{equation}
 \label{gAdS}
-ds_{AdS}^2= \Big(1+\frac{R^2}{\ell^2}\Big) \alpha^2
+ ds^2_{AdS}= -\Big(1+\frac{R^2}{\ell^2}\Big) \alpha^2
 dt^2+\frac{dR^2}{1+\frac{R^2}{\ell^2}}  +R^2\Big(d\vartheta^2+\sin^2\vartheta
-\frac{d\phi^2}{K^2}\Big)
-\end{align}
-with $\alpha = \sqrt{1-A^2 \ell^2}$. This suggests that the correct asymptotic
-time therefore is not $t$ in the original C-metric~\eqref{AdSC}, but rather
-$\tau$, leading to a rescaling of the temperature:
+\frac{d\phi^2}{K^2}\Big)\,,
+\end{equation}
+up to a rescaling of time with $\alpha = \sqrt{1-A^2 \ell^2}$. This suggests
+that the correct asymptotic time therefore is not $t$ in the original C-metric
+\eqref{AdSC}, but rather $\tau=\alpha t$. Consequently the temperature
+associated with \eqref{AdSC} is
 \begin{align}
 T =\frac{f'(r_+)}{4\pi\alpha}
-=\frac{1 + 3\frac{r_+^2}{\ell^2} 
-- A^2r_+^2 \left (2+\frac{r_+^2}{\ell^2}-A^2r_+^2\right)}
-{4\pi \alpha r_+(1-A^2r_+^2)}
+=\frac{1 + 3\frac{r_+^2}{\ell^2}
+  - A^2r_+^2 \left (2+\frac{r_+^2}{\ell^2}-A^2r_+^2\right)}
+{4\pi \alpha r_+(1-A^2r_+^2)}\,,
 \label{temp}
 \end{align}
-
-and as usual, entropy is one quarter of the horizon area:
+ where $f(r_+)=0$. As usual the entropy
 \begin{align}
-S=\frac{\mathcal{A}}{4}=\frac{\pi r_+^2}{K(1-A^2r_+^2)}\;.
+S=\frac{\mathcal{A}}{4}=\frac{\pi r_+^2}{K(1-A^2r_+^2)}
 \label{entropy}
 \end{align}
+is one quarter of the horizon area.  The remaining task is to correctly identify
+the black holes mass, often the biggest challenge in studying thermodynamics of
+black holes with non-trivial asymptotics.  In what follows we provide three
+independent arguments for the correct value of the mass of the C-metric
+\eqref{AdSC}.
 
-This gives a very specific rescaling of the temperature, that would correspond
-to a thermodynamic mass of $M = \alpha m/K$.  We will now provide three
-arguments that this is indeed the correct value of the mass of the black hole.
 
-The first argument uses the Ashtekar-Das definition of conformal mass
-\cite{Ashtekar:1999jx,Das:2000cu}, which extracts the mass via conformal
-regularisation of the AdS C-metric near the boundary through a conserved charge:
+The first argument uses the Ashtekar-Das definition of conformal
+mass \cite{Ashtekar:1999jx,Das:2000cu}, which extracts the mass
+via conformal regularisation of the AdS C-metric near the boundary
+through a conserved charge:
 \begin{align}
-Q(\xi )=\frac{\ell}{8\pi}\lim_{\bar{\Omega} \rightarrow 0}\int_\mathcal{M}
+Q(\xi )=\frac{\ell}{8\pi}\lim_{\bar{\Omega} \rightarrow 0}\oint
 \frac{\ell^{2}}{\bar{\Omega}}N^{\alpha }N^{\beta }
 \bar{C}^{\nu}{}_{\alpha \mu \beta }
-\xi _{\nu }d\bar{S}^{\mu }
+\xi _{\nu }d\bar{S}^{\mu }\,,
 \end{align}
 where $\bar{C}^{\mu }{}_{\alpha \nu \beta }$ is the Weyl tensor of the
 unphysical conformally transformed metric
-$\bar{g}_{\mu\nu} = {\bar{\Omega}}^{2}g_{\mu\nu}$, $\xi $ is a Killing vector,
-and $N_{\mu }=\partial _{\mu }{\bar{\Omega}}$.  We pick
-$\bar{\Omega}=\ell\Omega r^{-1} $, which provides a smooth conformal completion
-in the limit $A=0$. The spacelike surface element tangent to $ \bar{\Omega}=0$
-is \todomike{This was wrong - index down}
-\begin{align}
-  \label{surfel}
-d\bar{S}_{\mu }=\delta^{\tau }_{\mu }\frac{\ell^{2}d\cos\theta d\phi}{\alpha K}
-\end{align}
-obtained by inserting $Ar\cos\theta=-1$ into the metric $\bar{g}$ and computing
-the relevant determinant.  This yields
-\begin{align}
-  \label{confmass}
+$\bar{g}_{\mu\nu} = {\bar{\Omega}}^{2}g_{\mu\nu}$,
+$\xi $ is a Killing vector, and $N_{\mu }=\partial _{\mu }{\bar{\Omega}}$.
+We pick $\bar{\Omega}=\ell\Omega r^{-1} $, which provides a smooth
+conformal completion in the limit $A=0$. The spacelike surface element
+tangent to $ \bar{\Omega}=0$ is
+\begin{equation}\label{surfel}
+d\bar{S}_{\mu }=\delta^{\tau }_{\mu }\frac{\ell^{2} (d\cos\theta) d\phi}{\alpha K}\,,
+\end{equation}%
+%\tcr{{\bf I don't like this stupid notation with $\delta$'s, but I don't know which alternative here would be best}}
+obtained by inserting $Ar\cos\theta=-1$ into the metric $\bar{g}_{\mu\nu}$ and
+computing the relevant determinant.  This yields
+\begin{equation}\label{confmass}
 M = Q(\partial _{\tau})=\alpha \frac{m}{K}
-\end{align}
-for the mass, in agreement with the rescaled temperature, but in contrast to
-previous results~\cite{Appels:2016uha,Astorino:2016ybm}\footnote{In
+\end{equation}
+for the mass, in agreement with the temperature \eqref{temp}, but in contrast to
+previous results~\cite{Appels:2016uha,Astorino:2016ybm}.\footnote{In
   \cite{Appels:2016uha}, a calculational error in the conformal method had
-  indicated that $M=m/K$}. Note that $M$ vanishes for $A\ell\to 1$.
+  indicated that $M=m/K$.}  The absence of acceleration horizons ensures that
+$M$ vanishes in the limit $A\ell\to 1$ only for $m=0$ and is positive otherwise.
+
 
 It is now straightforward to verify the first law and Smarr relation
 \begin{align}
 \delta M &=T\delta S+V\delta P-\lambda _{+}\delta \mu _{+}
 -\lambda_{-}\delta \mu _{-}\,,  \nn \\
-M &=2TS-2PV
+M &=2TS-2PV\,,
 \end{align}
-using~\eqref{temp},~\eqref{entropy}, and~\eqref{confmass},
+using \eqref{temp}, \eqref{entropy}, and \eqref{confmass},
 provided
-\begin{align}
-V &=\frac{4}{3}\frac{\pi}{K \alpha}\left[\frac{r_+^3}{1-A^2r_+^2}
-+mA^2l^4(1-A^2r_+^2)\right],\nn\\
+\begin{align} \label{vol}
+V &= \frac{4}{3}\frac{\pi}{K \alpha}\left[\frac{r_+^3}{(1-A^2r_+^2)^2}
++mA^2\ell^4\right]\,, \nn\\
 \lambda_\pm &= \frac{1}{\alpha}\left[\frac{r_+}{1-A^2r_+^2}
--m\left(1\pm\frac{2A\ell^2}{r_+}\right)\right].
+-m\left(1\pm\frac{2A\ell^2}{r_+}\right)\right]\,,
 \end{align}
+where $P = 3/8\pi \ell^2$ is the thermodynamic pressure associated with the
+cosmological constant \cite{Kubiznak:2016qmn}, and $\lambda_\pm$ are the
+thermodynamic lengths introduced in \cite{Appels:2017xoe,Gregory:2017ogk}.  The
+isoperimetric ratio is given by $ \mathcal{R}=\left( \frac{3{V}}{\omega
+_{2}}\right) ^{\frac{1}{3}}\left( \frac{\omega _{2}}{{\cal A}}\right)
+^{\frac{1}{2}}$, where for the case at hand $\omega_2=4\pi/K$.  Using
+\eqref{entropy} and \eqref{vol} we find $\mathcal{R}\leq 1$, indicating it
+satisfies the standard {\em reverse isoperimetric inequality}
+\cite{Cvetic:2010jb}, not adding to the notable exceptions
+\cite{Hennigar:2014cfa,Hennigar:2015cja,Brenna:2015pqa}.
+
+
+We now turn to another method for deriving the thermodynamic mass,
+by computing the holographic stress tensor. This provides an alternate
+and completely independent method of computation, and will reveal
+the dual interpretation of this system.  The action, including boundary
+counterterms \cite{Balasubramanian:1999re, Mann:1999pc}, is
+\begin{align}
+I[g]=&\frac{1}{2}\int_{M}d^{4}x\sqrt{-g}\left[ R+\frac{6}{\ell^{2}}\right]
++ \int_{\partial M}d^{3}x\sqrt{-h}\mathcal{K} \nn\\
+&- \int_{\partial M}d^{3}x\sqrt{-h
+}\left[ \frac{2}{\ell}+\frac{\ell}{2}\mathcal{R}\left( h\right) \right]\,,
+\label{action}
+\end{align}
+where $\mathcal{K}_{ab}$ is the extrinsic curvature of the boundary
+metric, evaluated asymptotically in an appropriate coordinate system,
+defined presently. $h_{ab}$ is the intrinsic metric on
+$\partial {\cal M}$, and ${\cal R}$ its Ricci curvature. Computing
+the variation of this action gives
+\begin{align}
+\delta I=-\frac12\int_{\partial M}\mathcal{T}_{ab}\delta h^{ab}\sqrt{-h}%
+~d^{3}x\,,
+\end{align}
+where
+\begin{equation}
+\mathcal{T}_{ab} = \ell \mathcal{G}_{ab}\left(h\right)
+-\frac{2}{\ell}h_{ab}-\mathcal{K}_{ab}+h_{ab}\mathcal{K}\,.
+\end{equation}%
+
+
+\begin{figure}[tbp]
+\centering
+%\begin{tabular}{c}
+\includegraphics{regions.pdf}
+%\end{tabular}
+\caption{ \textbf{Parameter space.}  The blue and red lines denote the
+  boundaries in the parameter space $(mA,A\ell)$ for which the holographic
+  computation is valid.  The hashed red region is where acceleration horizons
+  are present and the hashed blue region is where the metric signature is not
+  preserved since {$\Sigma(\theta)$ can flip} sign, leaving the white region as
+  the physical parameter space.}
+\label{fig:f1}
+\end{figure}
+The holographic renormalization procedure requires new coordinates
+near the boundary of AdS, typically parametrised by Fefferman--Graham
+coordinates, in which
+\begin{align}
+ds^2= \frac{\ell^2}{\rho^2} d\rho^2 +
+\rho^2 \left ( \gamma_{ab}^{(0)} + \frac1{\rho^2} \gamma^{(2)}_{ab}
++ ...\right )  dx^a dx^b\,,
+\label{FGmetric}
+\end{align}
+where, with $x^a = (\tau,x,\phi)$, we find it sufficient to expand the
+transformation asymptotically as
+\begin{equation}\label{FGt}
+\frac{1}{Ar}= -x-\sum_{n=1}^{4}F_{n}\left( x\right) \rho ^{-n}\,, \quad
+\cos \theta = x+\sum_{n=1}^{4}G_{n}\left( x\right) \rho ^{-n}\, .
+\end{equation}
+The functions $F_n$ and $G_n$ are fixed by the required fall-off properties
+of \eqref{FGmetric}
+ in the boundary metric
+\begin{align}\label{bndymet}
+&\gamma^{(0)}_{ab} dx^a dx^b =-\frac{\omega^{2}}{\ell^{2}}d\tau^2+ \sigma_{i j}dx^i dx^j \nn\\
+&\qquad = -\frac{\omega^{2}}{\ell^{2}}d\tau^2+ \frac{X\omega^2\alpha^2}{1-A^2\ell^2X}\Bigl(\frac{d\phi^2}{K^2}+\frac{dx^2}{X^2(1-A^2\ell^2X)}\Bigr)\,,
+\end{align}
+apart from $F_1$
+\begin{equation}\label{F1}
+F_{1}(x) = - \frac{\left( 1-A^{2}\ell^{2}X\right) ^{3/2}}{A\omega \alpha}\,,
+\end{equation}
+which is related to an overall arbitrary conformal factor $\omega=\omega(x)$,
+with $ X = (1-x^{2})\left( 1+2mAx\right)$. The transformation \eqref{FGt} is
+valid only when $A^{2}\ell^{2}X<1$, which can be shown to correspond to the
+constraint that acceleration horizons are absent.  Indeed, one can pick a
+special conformal frame where this constraint is absent, allowing the norm of
+the timelike Killing vector to change along the boundary; we shall comment on
+this below.
+
+The expectation value of the energy momentum of the CFT$_{3}$
+can then be calculated,
+\begin{equation}
+\left\langle \mathcal{T}_{ab}\right\rangle =\lim_{\rho \longrightarrow
+\infty }\frac{\rho }{\ell}\mathcal{T}_{ab}\,,
+\end{equation}
+yielding a relativistic fluid with a non-trivial viscous-shear tensor
+\begin{equation}
+\left\langle \mathcal{T}_{ab}\right\rangle =\left( {p}+\rho _{E}\right)
+U_{a}U_{b}+{p}\ell^{2} \gamma^{(0)} _{ab}+\pi _{ab}\,,
+\end{equation}
+with  $U=\omega^{-1}\partial_\tau$, ${p}=\rho _{E}/2$ and boundary indices
+raised/lowered by $\ell^{2}\gamma^{(0)}_{ab}$.
+The energy density is
+\begin{equation}
+\rho _{E}= \frac{2m}{2K\alpha\omega \sqrt{\det {\ell^2 \sigma} }}\left(
+2-3A^{2}\ell^{2}X\right)\,,
+\end{equation}
+yielding the mass
+\begin{equation}
+M= \int \rho _{E} \omega {\sqrt{\det {\ell^2\sigma}}}~dxd\phi
+=\frac{\alpha m}{K}\,,
+\end{equation}
+% \tcb{AA: Note that here I modified the equation for the energy density and the
+% Mass, because there were some typos in the change of notation of the different
+% versions. Now is fine. Note that the energy density must be multiplied by the
+% lapse function to get the right mass and the integral is over the boundary
+% metric which has a $\ell^2$ in front of $\sigma$.}
+in agreement with \eqref{confmass}. Note that this calculation is independent
+of the conformal frame (the choice of $\omega$).
+
+
+
+The shear tensor is given by
+\begin{equation}
+\pi^x_x= \frac{3mA^{2}X}{2\alpha^3\omega^{3}}\left(
+1-A^{2}\ell^{2}X\right) ^{\frac32}=-\pi^\phi_\phi\,,
+\end{equation}
+with all other components vanishing. The equation of state is that of a thermal
+gas of massless particles $\rho _{E}= 2p$, and implies that the dual fluid is
+anisotropic, as expected from the strongly distorted boundary.
+
+Finally, let us return to the computation of the action \eqref{Caction}.  We find
+\begin{equation}
+I = \frac{\beta}{2\alpha K} \left( m - 2mA^2\ell^2
+- \frac{r_+^3}{\ell^2(1-A^2r_+^2)^2} \right)\,,
+\label{Caction}
+\end{equation}
+using the time coordinate $\tau$. Some simple algebra then yields the expected
+result $F=I/\beta=M-TS$ for the free energy, which we plot in figure
+\ref{fig:FE}.
+\begin{figure}[tbp]
+\centering
+%\begin{tabular}{c}
+\includegraphics{free-energy.pdf}
+%\end{tabular}
+\caption{\textbf{Free energy.}  The red curve is the Schwarzschild-AdS case,
+  illustrating the well-known Hawking--Page transition, situated at a
+  temperature given by the intersection of the red curve with $F=0$. We do not
+  know of any such interpretation for all other curves with $\mu\neq 0$.  The
+  upper parts of these curves do not continue to arbitrarily large $M$ but
+  terminate at the boundary given in figure \ref{fig:f1}; this is visible in the
+  above plot only for $4\mu_- =0.9$.  }
+\label{fig:FE}
+\end{figure}
+
+Although similar in form, the behavior of the free energy no longer indicates
+the presence of a standard Hawking--Page transition \cite{Hawking:1982dh}. As
+the string tension is fixed for the curves in the plot, no transition to pure
+radiation (with zero tension) is possible. One may, however, speculate that a
+transition to a different type of spacetime (for example an
+Aichelburg--Sexl-like solution \cite{Aichelburg:1970dh} with an attached string
+of given tension) may still be possible---such an investigation, however,
+remains to be carried out.
+%\tcr{\bf If people are not comfortable with the () speculation, please delete it!}
+
+
+Our full and consistent description of the thermodynamics of an accelerating
+black hole, reconciles discrepancies and conflicts that have appeared in
+previous investigations of this system~\cite{Appels:2016uha,
+  Appels:2017xoe,Astorino:2016ybm}.  For example, while a consistent set of
+thermodynamic variables for charged accelerating black holes was obtained
+\cite{Appels:2016uha,Appels:2017xoe,Gregory:2017ogk} the resultant free energy
+was not consistent with this set.  Alternate expressions for mass and
+temperature have been posited \cite{Astorino:2016ybm}, with the tension of one
+deficit held fixed to zero.  The other tension, while allowed to vary, was not
+included in the first law, which was derived by assuming integrability of a
+scaling of mass and temperature.  However no physical interpretation was given
+either for this scaling or for why the energy content of the tension was
+thermodynamically irrelevant.  Furthermore, the vacuum accelerating black hole
+has an acceleration horizon, akin to a Rindler horizon, and the full structure
+of the spacetime is that of two accelerating black holes in two Rindler
+regions. Whether one should be considering a single thermodynamic mass and first
+law with an additional horizon and black hole, or whether, as suggested in
+\cite{Dutta:2005iy}, this should be considered as a single system with a mass
+dipole is an open question.
+
+We also found that the dual stress energy tensor for the accelerating black hole
+corresponds to a relativistic fluid with a non-trivial viscous shear tensor.
+The shear is proportional to the acceleration parameter and vanishes for $A=0$.
+Our computation is independent of the conformal frame; by choosing
+$\omega^2 = (1-A^{2}\ell^{2}X)\alpha^{-2} \bar{\omega}^2$ with $\bar{\omega}=1$
+we recover the form of the boundary metric employed in \cite{Hubeny:2009kz} and
+we eliminate the square root of the asymptotic change of coordinates
+\eqref{FGt}, allowing the spacetime to explore all values of the coordinate $x$.
+If the condition $ A^{2}\ell^{2} X <1$ is violated then a black droplet/black
+funnel is present. However the boundary geometry corresponds to a black hole in
+a spatially compact universe, and so there is no spatial asymptotic region
+\cite{Hubeny:2009kz}.  This situation can be remedied by choosing $\bar{\omega}$
+accordingly. For example if $\bar{\omega}=\frac{1}{\sqrt{1-x}}$ then there is an
+$AdS_{2}\times S^{1}$ asymptotic region at $x=1$ with the $AdS_{2}$ and $S^{1}$
+radius being equal. If $\bar{\omega}=\frac{1}{\sqrt{1-x^2}}$ there are actually
+two $AdS_{2}\times S^{1}$ asymptotic regions at $x=\pm1$ and $\gamma^{(0)}_{ab}$
+yields the geometry of a wormhole when there are no horizons at the boundary.
+The $AdS_{2}\times S^{1}$ asymptotic geometry is supersymmetric and to our
+knowledge has been unnoticed so far in the literature.  \tcr{\bf do we want to
+  somehow cite here 1804.00491, or mention here the importance of wormhole for
+  holographic complexity?}
+
+{We emphasize that proper identification of the normalization of the timelike
+  Killing vector is crucial in obtaining these results.  To see this, consider
+  the choice $\tau=C t$ where $C=C(A,\ell)$ is some (unknown) function.
+  Proceeding as before}, we obtain \eqref{temp} with $\alpha\to C$ and
+\eqref{confmass} replaced with $M=\frac{\alpha^2 m}{C K}$; all remaining
+equations are unchanged.  Fixing $\ell$ and $\mu_\pm$, we find that the first
+law $\delta M=T\delta S$ holds only if $C=\alpha s(\ell)$, where $s(\ell)$ is an
+arbitrary function.  By varying $\ell$ together and enforcing the Smarr relation
+we find that $s(\ell)$ must be constant; we can choose it to be unity without
+loss of generality.
+
+Note also that with the identification $\tau=\alpha t$, the new thermodynamic
+mass \eqref{confmass} is found to be such that the tension differential of the
+conical deficits on each axis satisfies $\mu = M\tilde A$, where
+$\tilde A=A/\alpha$ denotes the magnitude of the black hole four-acceleration
+with respect to the correctly normalized time coordinate $\tau$, dovetailing
+beautifully with the intuition of Newton's First Law and the net force on the
+black hole, similar previous observations
+\cite{Appels:2016uha,Appels:2017xoe,Gregory:2017ogk}. \tcr{\bf please check if
+  you believe this statement!}
+
+Future work will involve investigating accelerating black holes with rotation,
+scalar fields~\cite{Anabalon:2009qt, Anabalon:2012ta}, and charge. The latter
+system will be a challenge due to the asymptotic structure of the gauge field.
+A further interesting subject is to study  black hole spacetimes  for which an
+acceleration horizon exists, where in some sense the black holes represent
+a mass dipole, rather than a true localized thermodynamic mass
+\cite{Dutta:2005iy}.
+
+\section{Computing the Mass}
+\label{sec:mass-comput}
+
+\subsection{The Ashtekar-Das Method}
+\label{sec:ashtekar-das}
 
 \subsection{The Holographic Approach}
 \label{sec:holo}
 
-We now turn to another method for deriving the thermodynamic mass, by computing
-the holographic stress tensor. This provides an alternate and completely
-independent method of computation, and will reveal the dual interpretation of
-this system.  The action, including boundary counterterms
-\cite{Balasubramanian:1999zv, Mann:1999pc}, is
-\begin{align}
-I[g]&=\frac{1}{16\pi}\int_{\mathcal{M}}d^{4}x\sqrt{-g}\left[ R+\frac{6}{\ell^{2}}\right]
-+\frac{1}{8\pi}\int_{\partial \mathcal{M}}d^{3}x\sqrt{-h}\mathcal{K} \nn\\
-&\hspace{10em}-\frac{1}{8\pi}\int_{\partial M}d^{3}x\sqrt{-h
-}\left[ \frac{2}{\ell}+\frac{\ell}{2}\mathcal{R}\left( h\right) \right]
-\label{action}
-\end{align}
-where $\mathcal{K}_{ab}$ is the extrinsic curvature of the boundary metric,
-evaluated asymptotically in an appropriate coordinate system, defined
-presently. $h_{ab}$ is the intrinsic metric on $\partial \mathcal{M}$, and
-$\mathcal{R}$ its Ricci curvature. Computing the variation of this action gives
-\begin{align}
-\delta I=-\frac12\int_{\partial M}\mathcal{T}_{ab}\delta h^{ab}\sqrt{-h}%
-~d^{3}x,
-\end{align}
-
-where
-\begin{align}
-\kappa \mathcal{T}_{ab} = \ell \mathcal{G}_{ab}\left(h\right) 
--\frac{2}{\ell}h_{ab}-\mathcal{K}_{ab}+h_{ab}\mathcal{K},
-\end{align}%
-
-The holographic renormalization procedure requires new coordinates near the
-boundary of AdS, typically parametrised by Fefferman-Graham coordinates, in
-which
-\begin{align}
-ds^2 = \frac{\ell^2}{\rho^2} d\rho^2 +
-\rho^2 \left ( \gamma_{ab}^{(0)} + \frac1{\rho^2} \gamma^{(2)}_{ab}
-+ ...\right )  dx^a dx^b
-\label{FGmetric}
-\end{align}
-
-We find that it is sufficient to expand the transformation asymptotically as
-\begin{align}
-\frac{1}{Ar}= -x-\sum_{n=1}^{4}F_{n}\left( x\right) \rho ^{-n} \quad
-\cos \theta = x+\sum_{n=1}^{3}G_{n}\left( x\right) \rho ^{-n}
-\end{align}
-The $F_n$ and $G_n$ are fixed by the required fall-off properties of
-\eqref{FGmetric}, apart from $F_1$ that feeds in to an overall arbitrary
-conformal factor in the boundary metric:
-\begin{align}
-\gamma _{\tau \tau }& =-\omega (x)^{2} \ell^{-2}, \nn\\
-\gamma _{\phi \phi }& =\frac{\omega (x)^{2}X(x)\alpha^{2}}{\left(
-1-A^{2}\ell^{2}X(x)\right) K^{2}}~, \nn\\
-\gamma _{xx}& =\frac{\omega (x)^{2}\alpha^{2}}{\left( 1-A^{2}\ell^{2}X(x)\right)
-^{2}X(x)}~,
-\end{align}
-where $X(x) = (1-x^{2})\left( 1+2mAx\right)=\sin^2\theta g(\theta)$ and
-\begin{align}
-F_{1}(x) = -\frac{\left( 1-A^{2}\ell^{2}X(x)\right) ^{3/2}}{A\omega (x) \alpha}~.  \quad
-\end{align}
-
-\tcr{What are we trying to say here?}\tcb{Picking a $I$ between $x=-1$ and
-  $x=1$, which yields
-\begin{align}
-\delta I=\frac{1}{\kappa }\int dtd\phi \frac{2m}{K^{2}\alpha}\left(
-1-2A^{2} \ell^{2}\right) \delta K+O(\rho ^{-2}),
-\end{align}
-where to cancel the finite term one can set $\delta K=0$.}
-
-The expectation value of the energy momentum of the CFT$_{3}$ can then be
-calculated,
-\begin{align}
-\left\langle \mathcal{T}_{ab}\right\rangle =\lim_{\rho \longrightarrow
-\infty }\frac{\rho }{\ell}\mathcal{T}_{ab},
-\end{align}
-yielding a relativistic fluid with a non-trivial viscous-shear tensor
-\begin{align}
-\left\langle \mathcal{T}_{ab}\right\rangle =\left( P+\rho _{E}\right)
-U_{a}U_{b}+P\ell^{2}\gamma _{ab}+\pi _{ab},
-\end{align}
-with $U^{a}=\omega (x)^{-1}\delta _{\tau}^{a}$, $P=\rho _{E}/2$, and
-\begin{align}
-\pi _{a}^{b}=\frac{1}{\kappa }\frac{3mA^{2}X}{2\alpha^3\omega^{3}}\left(
-1-A^{2}\ell^{2}X\right) ^{\frac32}
-\left( \delta _{x}^{b}\delta _{a}^{x}-\delta _{\phi
-}^{b}\delta _{a}^{\phi }\right)
-\end{align}
-
-The energy density is
-\begin{align}
-\rho _{E}=\frac{1}{\kappa }\frac{2m}{2K\alpha \sqrt{-\det \Sigma }}\left(
-2-3A^{2}\ell^{2}X(x)\right),
-\end{align}
-and its integral yields the mass
-\begin{align}
-M=\frac{1}{\kappa }\int \rho _{E}\sqrt{-\det \Sigma }~dxd\phi
-=\frac{\alpha m}{K}~,
-\end{align}
-in agreement with~\eqref{confmass}.  Note that this calculation is independent
-of the conformal frame. The non-trivial shear tensor implies that the dual fluid
-is anisotropic, as expected from the strongly distorted boundary.
-
 \section{Thermodynamic Phenomena}
 \label{sec:phenomena}
 
-\tcb{ An interesting thermodynamic quantity of physical interest is the
-  isoperimetric ratio \todomike{Not sure about this bit}
-\begin{align}
-\mathcal{R}=\left( \frac{3V}{\omega _{2}}\right) ^{\frac13}\left(
-\frac{\omega _{2}}{\mathcal{A}}\right) ^{\frac12}
-\end{align}
-where $V$ and $\mathcal{A}$ are the thermodynamic volume and horizon area of the
-black hole. Most black holes satisify the \emph{reverse isoperimetric
-  inequality} $\mathcal{R} \geqslant 1$~\cite{Cvetic:2010jb}, though notable
-exceptions exist~\cite{Hennigar:2014cfa,Hennigar:2015cja,Brenna:2015pqa}.  For
-the case at hand, $\omega _{2}=4\pi /K$, and we find
-\begin{align}
-\label{isoR}
-\mathcal{R}^6=\frac{\left[1+\frac{A^2}{2}(1-A^2r_+^2) 
-\big(1 + \frac{\ell^2}{r_+^2}(1 - A^2r_+^2)\big)\right]^2}{(1-A^2r_+^2)(1-A^2\ell^2)}, 
-\end{align}
-which, given that $Ar_+, A\ell \in [0,1]$, satisfies the inequality; it is
-saturated for $A = 0$, the Schwarzschild-AdS solution.  }
-
-Finally, let us return to the computation of the action~\eqref{Caction}. Using
-the correct time coordinate $\tau$ rescales the action by $1/\alpha$, and some
-simple algebra then yields the expected result $F=I/\beta=M-TS$.  We plot this
-quantity in figure \ref{fig:FE}.
-\begin{figure}
-  \centering
-  \includegraphics[width=0.7\textwidth]{free-energy.pdf}
-  \caption{\label{fig:FE}The red curve is the Schwarzschild-AdS case, illustrating
-    the well-known Hawking-Page transition.  We see that this transition vanishes
-    for sufficiently large $\mu$. \tcm{\bf[ I am not sure about those entirely
-      negative curves...are they still in our approximation of small
-      accelerations?]}}
-\end{figure}
-We see that for sufficiently small $\mu$ there is a Hawking-Page
-transition. \tcm{\bf [More commentary here!  How can we understand this to be an
-  HP transition, if indeed it is.  I could see a black hole plus string
-  dissolving into radiation, but not the other way around.  Perhaps we should
-  put in some speculations?]}
-
-
-We have given a full and consistent description of the thermodynamics of an
-accelerating black hole, reconciling discrepancies and conflicts that have
-appeared in previous investigations of this system~\cite{Appels:2016uha,
-  Appels:2017xoe,Astorino:2016ybm}.  We have also obtained the dual stress
-energy tensor for the accelerating black hole, which corresponds to a
-relativistic fluid with a non-trivial viscous shear tensor.  The shear is
-proportional to the acceleration parameter and vanishes for $A=0$.
-
-We note that proper identification of the normalization of the timelike Killing
-vector was crucial in obtaining these results.  To see this, suppose we relate
-the temporal coordinates of the metrics~\eqref{AdSC} and~\eqref{gAdS} via
-$\tau=C t$ where $C=C(A,\ell)$ is some (unknown) function.  Proceeding as
-before, we obtain~\eqref{temp} with $\alpha\to C$ and~\eqref{confmass} replaced
-with
-\begin{equation}
-  \label{mass}
-M=\frac{\alpha^2 m}{C K}
-\end{equation}
-and the remaining equations unchanged.  Fixing $\ell$ and $\mu_\pm$, we find
-that the first law $\delta M=T\delta S$ holds only if $C=\alpha s(\ell)$, where
-$s(\ell)$ is an arbitary function.  By varying $l$ together and enforcing the
-Smarr relation we find that $s(\ell)$ must be constant; we can choose it to be
-unity without loss of generality.
-
-Future work will involve investigating accelerating black holes with rotation,
-scalar fields~\cite{Anabalon:2009qt, Anabalon:2012ta} and charge. The latter
-system will be a challenge due to the asymptotic structure of the gauge field.
-A further interesting subject is to study $A \ell > 1$ black holes, for which an
-acceleration horizon exists.  We leave these problems for future work.
 
 \chapter{Concluding Remarks}
 
