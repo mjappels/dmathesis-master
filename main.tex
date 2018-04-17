@@ -970,12 +970,184 @@ AdS and dS geometries~\cite{Cvetic:2010jb,Dolan:2013ft}, though notable
 exceptions have also been
 found~\cite{Hennigar:2014cfa,Hennigar:2015cja,Brenna:2015pqa}.
 
-\subsection{Phase Transitions for Gravitational Systems}
+\subsection{Thermodynamic Stability and Phase Transitions}
 \label{sec:hawkingpage}
 
-\placehold{Go over the Hawking-Page phase transition, Van der Waals PT and
-  then different ensemble, so papers by emparan et al.}
+The laws of thermodynamics require the existence of a state of equilibrium. In
+flat space, one could envisage a system in a box which contains a black hole at
+equilibrium with a thermal bath of radiation. If this radiation bath is held at
+a fixed temperature, the equilibrium would be unstable: if a small excess of
+mass fell into the black hole, its temperature would decrease and would not be
+able to sustain the rate of radiation necessary to recover equilibrium and the
+bath would eventually collapse into the black hole; if it were to radiate too
+much at equilibrium, its temperature would rise and the rate of radiation would
+exceed the rate of absoption and the black hole would evaporate. In de Sitter
+(dS) space, the presence of a second, cosmological, horizon implies that
+equilibrium may only be truly achieved in the special Nariai
+limit~\cite{Nariai:1950aa,Nariai:1951aa} of asymptotically dS black holes where
+the two horizons coincide.
 
+On the other hand, the negative curvature inherent to anti-de Sitter (AdS)
+geometries allows the entire spacetime to act as the box we used above. Only
+massless states are able to escape to infinity and one can have boundary
+conditions such than the incoming and outgoing states cancel to maintain a
+thermal bath. In 1982, Hawking and Page~\cite{Hawking:1982dh} studied the
+physical implications of such a system and made several observations.
+
+Parametrising the cosmological constant as $\Lambda = -3/\ell^2$, the
+Schwarzschild-AdS line element is
+\begin{gather}
+  ds^2 = -f(r)dt^2 + \frac{dr^2}{f(r)} + r^2 d\Omega_{\mathrm{II}}^2, \qquad
+  f(r) = 1-\frac{2M}{r}+\frac{r^2}{\ell^2},
+  \label{eq:schwAdS}
+\end{gather}
+where $d\Omega_\mathrm{II}^2$ is the volume element on the two-sphere, and $M$
+is the mass of the black hole. If we then identify the temperature as the period
+of imaginary time required to regularise the euclidean section and the entropy
+as a quarter of the area, we find
+\begin{align}
+  T = \frac{f'(r_+)}{4\pi} = \frac{1}{4\pi
+    r_+}\left(1+\frac{3r_+^2}{\ell^2}\right), \qquad S = \pi r_+^2,
+\end{align}
+where $r_+$ is the location of the event horizon and we have used $f(r_+)=0$ to
+cast the mass in terms of this parameter, though it should be noted that mass
+monotonically increases with respect to $r_+$.
+
+Local stability in thermodynamics requires positivity of the specific heat,
+which is given by
+\begin{align}
+  C_P = T \left(\frac{\partial S}{\partial T}\right)_P =
+  -\frac{2\pi r_+^2(1+3r_+^2/\ell^2)}{1-3r_+^2/\ell^2} .
+\end{align}
+We notice therefore that black holes larger than $r_+ = \ell/\sqrt{3}$ may be in
+a locally stable equilibrium, whereas for smaller black holes, equilibrium is
+unstable. This stable equilibrium is achieved for larger black holes as gaining
+mass increases temperature, thereby providing a higher rate of radiation for the
+horizon which may then lead back to equilibrium. This turning point actually
+corresponds to a minimal black hole temperature
+$T_\mathrm{c} = \sqrt{3}/2\pi\ell$.
+
+Another criteria for stability of a thermodynamical system is that its
+configuration be that of lowest free energy for the fixed intensive
+quantities. If more than one configuration is possible, then those of higher
+free energy will have a tendancy to decay to the state of lowest free
+energy. The previous section tells us that the quantity we are interested in is
+the Gibbs free energy potential given by
+\begin{align}
+  G = M - TS = \frac{r_+}{4}\left(1-\frac{r_+^2}{\ell^2}\right),
+\end{align}
+for the Schwarzschild-AdS black hole. There is, however, another possible
+thermal configuration that we may consider which is vacuum AdS filled with a
+thermal bath, which has negligible free energy, however is not able to sustain
+itself against gravitational collapse beyond some temperature $T_\mathrm{u} \sim
+s^{-\frac14} \ell^{-\frac12}$ where $s$ is the effective number of spin states
+of the radiation~\cite{Hawking:1982dh}. 
+
+\Cref{fig:hawkingpage} illustrates the situation we have described. For
+temperatures lower than $T_\mathrm{c}$, the only possible configuration is
+vacuum radiation. Above this temperature, there are two branches corresponding
+to the larger stable black holes (lower branch) and the smaller unstable black
+holes (upper branch). We see that for the lower branch, there is a temperature
+$T_\mathrm{HP} = 1/\pi\ell$ above which large black holes on the stable branch
+have negative free energy, lower than the corresponding radiation in pure
+AdS. There is therefore a first order phase transition at $T_\mathrm{HP}$, known
+as the \emph{Hawking-Page phase transition}. Between
+$T_\mathrm{c}<T<T_\mathrm{HP}$, there are three configurations possible, however
+the vacuum radiation is still the most thermodynamically favoured and one would
+expect black holes at this temperature to decay to radiation. For comparison, an
+asymptotically flat black hole always has positive free energy and is therefore
+never stable against decay to radiation. Via the AdS/CFT correspondence, it has
+been shown that in the dual boundary conformal field theory, this phase
+transition may be interpreted as a confinement/deconfinement phase
+transition~\cite{Witten:1998zw}.
+
+\begin{figure}
+  \centering
+  \includegraphics{hawkingpage}
+  \caption{\label{fig:hawkingpage}\emph{The Hawking-Page phase transition}. The
+    black line represents the Gibbs free energy of Schwarzschild-AdS black holes
+    at different temperatures. The critical temperature $T_\mathrm{c}$ separates
+    the upper and lower branches of this plot, corresponding to unstable smaller
+    black holes and stable larger black holes respectively. In blue, we have
+    vacuum radiation, which is unstable for temperatures higher than
+    $T_\mathrm{u}$ (which has been arbitrarily chosen here). The red dashed line
+    corresponds to asymptotically flat black holes and is plotted for
+    comparison. These curves have been produced for a
+    geometry which has $\ell=1$ in planck units.}
+\end{figure}
+
+This analysis may be extended to charged black holes. This was done by Chamblin
+\emph{et al.}~\cite{Chamblin:1999tk} in the early days of holography. The
+inclusion of charge allows us to consider either the canonical ensemble, where
+we fix charge itself or the grand canonical ensemble, where we fix the
+electrostatic potential $\Phi$ and allow charge to vary. In the latter case, the free
+energy potential we will be interested is given by
+\begin{align}
+  G' = M - TS - \Phi Q.
+\end{align}
+
+In the canonical ensemble we may no longer compare black hole solutions at fixed
+charge to pure AdS as the vacuum on-shell field equations do not allow for a
+charged radiation bath in AdS. Referring to \cref{fig:charge-fe}, we observe two
+different regimes. For $Q<Q_\mathrm{c}$, there are three branches; a first
+branch of stable black holes with $M<M_1$, a second intermediary branch of
+unstable black holes with $M_1<M<M_2$, and a third branch $M>M_2$. In the free
+energy diagram, the first and third branches intersect for some temperature
+$T_*$ at which there is a first order phase transition between large and small
+black holes. These curves display what has been referred to as a ``swallow
+tail'' behaviour, referring to the region enclosed by the three branches. As the
+charge increases towards $Q_\mathrm{c}$, this region shrinks and beyond it, in
+the second regime, the intersection disappears and the phase transition becomes
+continuous. It has been noted that this characteristic is very reminiscent of
+the liquid/gas phase transition of a Van-der-Waals fluid.
+
+In the grand canonical ensemble we may still compare our solutions to a
+background of vacuum radiation in AdS with a correspondingly fixed electrostatic
+potential. From \cref{fig:grand}, we see there is a critical value for this
+potential which we denote $\Phi_\mathrm{c}$. Configurations with a potential
+smaller than this are similar to the uncharged scenario, with the existence of a
+Hawking-Page-like phase transition for the lower, stable, of two branches, and
+no black hole solutions existing below a certain temperature. For larger
+potentials, the free energy is always negative and the black hole solution is
+always preferred.
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{chargeplot}
+    \caption{\label{fig:charge-fe}}
+  \end{subfigure}\qquad
+  \begin{subfigure}[b]{0.45\textwidth}
+    \includegraphics[width=\textwidth]{grand}
+    \caption{\label{fig:grand}}
+  \end{subfigure}
+  \caption{\label{fig:chargeplots}The free energy diagrams for the canonical
+    (left) and grand canonical (right) ensembles are reproduced. For the
+    canonical ensemble, three curves at different charges ($e = 0.05\ell$,
+    $e=0.12\ell$ and $e = 0.2\ell$) are displayed over the uncharged case. The
+    two intermdiary curves display the characteristic ``swallow tail''
+    behaviour. For the grand canonical ensemble, we have again reproduced three
+    curves at fixed potential ($\Phi = 0.7$, $\Phi = 1.0$ and $\Phi = 1.2$) over the
+    uncharged plot. These figures have all been reproduced for $\ell = 1$.}
+\end{figure}
+
+\begin{center}
+  * * *
+\end{center}
+
+The framework of black hole thermodynamics is undoubtedly a facinating one. The
+ability to breathe life back into as old a subject as thermodynamics by applying
+it to modern and exotic solutions of gravitational physics is certainly
+exciting. The rich phase structure black holes possess presented in the last
+section are an example of the utility of thermodynamics.
+
+\placehold{examples of applications of black hole thermo
+  \begin{itemize}
+  \item geometrothermodynamics
+  \item black hole chemistry
+  \end{itemize}
+}
+ 
 \chapter{Acceleration and the C-metric}
 \label{chap:cmet}
 
@@ -1763,6 +1935,10 @@ and the expressions needed to regularise either pole are
 \begin{align}
 L_\pm=1\pm 2mA + \bigg[A^2(a^2+e^2)-\frac{a^2}{\ell^2}\bigg].
 \end{align}
+
+\begin{center}
+  * * *
+\end{center}
 
 This brings our analysis of the C-metric to an end. See Dias and Lemos for
 analyses of the coordinate ranges/parameter restrictions on the C-metric in AdS
