@@ -8,6 +8,7 @@ frontopenright
 
 \usepackage{setspace}
 \doublespacing
+
 \usepackage{todonotes}
 \usepackage{cleveref}
 \usepackage[numbers,sort&compress]{natbib}
@@ -43,8 +44,33 @@ frontopenright
 \maketitlepage*
 
 \begin{abstract*}
-%
-  This is some abstract about this thesis.
+  %
+  We address a long-standing problem of describing the thermodynamics of an
+  accelerating black hole. We derive a standard first law of black hole
+  thermodynamics, with the usual identification of entropy proportional to the
+  area of the event horizon---even though the event horizon contains a conical
+  singularity. We show how to generalise this result, formulating thermodynamics
+  for black holes with varying conical deficits. We derive a new potential for
+  the varying tension defects: the thermodynamic length, both for accelerating
+  and static black holes. We discuss possible physical processes in which the
+  tension of a string ending on a black hole might vary, and also map out the
+  thermodynamic phase space of accelerating black holes and explore their
+  critical phenomena. We then revisit the critical limit in which
+  asymptotically-AdS black holes develop maximal conical deficits, first for a
+  stationary rotating black hole, and then for an accelerated black hole, by
+  taking various upper bounds for the parameters in the spacetimes presented. We
+  explore the thermodynamics of these geometries and evaluate the reverse
+  isoperimetric inequality, and argue that the ultra-spinning black hole only
+  violates this condition when it is non-accelerating. Finally, we return to
+  some of our earlier findings and adjust them in light of new results; a new
+  expression for the mass is obtained by computing the dual stress-energy tensor
+  for the spacetime and finding that it corresponds to a relativistic fluid with
+  a non-trivial viscous shear tensor. We compare the holographic computation
+  with the method of conformal completion showing it yields the same result for
+  the mass. This result not only extends the applicability of black hole
+  thermodynamics to realms previously not anticipated, it also opens a
+  possibility for studying novel properties of an important class of exact
+  radiative solutions of Einstein equations describing accelerated objects.
 %
 \end{abstract*}
 
@@ -56,11 +82,11 @@ frontopenright
   \begin{itemize}
   \item \bibentry{Appels:2016uha}
   \item \bibentry{Appels:2017xoe}
+  \item \bibentry{Anabalon:2018aa}
   \end{itemize}
   Any section reproduced from these articles has been done so with the full
   consent and permission from the relevant collaborators. No part of this thesis
   has been submitted elsewhere for any degree or qualification.
-
 %
 \end{declaration*}
 
@@ -92,7 +118,7 @@ frontopenright
 %\dedicationtext{This thesis is dedicated to}
 \begin{dedication*}
 %
-  The Appels/Allan family.
+  Mum \& Dad,\\ Grandpa Ian \& Granny Liz,\\ Grandpa Bob \& Granny Anne.
 %
 \end{dedication*}
 
@@ -111,18 +137,72 @@ frontopenright
 \chapter*{Preface}
 \addcontentsline{toc}{chapter}{Preface}
 
-\todoruth[inline]{Need to prioritise the research material presentation. What is
-  the narrative? Suggest: 1st step is deriving \emph{a} first law and defining
-  thermo tension. How do we know what M is? Then turn to holographic work. Last
-  bit the tedious solution stuff! Remember: Done is better than perfect!} 
+The 1970s brought in a new era for research into black holes by drawing
+parallels between the classical theory of thermodynamics and these gravitational
+solutions. This newly found application for century old machinery opened many
+avenues for this research. Indeed, black holes have been discovered to possess a
+rich and diverse catalogue phenomena. Even more recently, this has provided
+string theorists with many avenues to explore via the AdS/CFT correspondence.
 
-\begin{itemize}
-\item General contention of the thesis
-\item brief overview of research that was carried out
-\item outline of thesis.
-\end{itemize}
+In this thesis we seek to ascertain the validity of this framework when applied
+to exotic solutions discovered around the same time to describe accelerating
+black holes. The work was initially motivated by the discovery that rotating
+black holes in asymptotically anti-de Sitter space, in a special limit, exhibit
+extraordinary thermodynamic behaviour. These solutions are unique in particular
+as they possess two severe conical defects at each pole. Conical defects are an
+inherent feature to accelerating black holes, hence the desire to investigate
+the thermodynamics of accelerating black holes in a similar limit. To do so, we
+needed to first develop a rigid framework for thermodynamics of these black
+holes.
+
+As we will demonstrate, we have been able to propose a consistent set of
+thermodynamic relations and quantities for static non-rotating charged accelerating
+black holes. The situation is somewhat more problematic with the inclusion of
+rotation and while we are unable to provide a full picture, we are able to form
+a sufficient picture to investigate the aforementioned limit.
+
+The layout is as follows. We will begin by reviewing aspects of black hole
+thermodynamics in \cref{chap:BHTD}, covering some of the important more
+historical discoveries as well as more recent developments that we have used
+elsewhere. In \cref{chap:cmet}, we similarly review the C-metric, which
+describes a uniformly accelerating black hole, its history as well as certain
+derivations leading to the metrics we use further. We also outline certain
+constraints that must be taken into consideration when working with these
+solutions. In \cref{chap:td-conical}, we develop the thermodynamical framework
+for the accelerating black hole, and include the tensions of cosmic strings as
+new extensive variables of our ensemble. This introduces a new potential, the
+thermodynamic length and finally we also explore the thermodynamic phase
+structure of the solution. We attempt to extend this framework in
+\cref{chap:crit-bh} to include rotating solutions and investigate the
+thermodynamic properties of critical accelerating solutions, which possess the
+aforementioned severe conical defects. Finally, in \cref{chap:holoTD}, we
+revisit some of our original conclusions and alter some of our results in light
+of new calculations that use different techniques.
+
+\placehold{talk about unfinished work and correcting earlier work}
+
+\todoruth[inline]{Need to prioritise the research
+  material presentation. What is the narrative? Suggest: 1st step is deriving
+  \emph{a} first law and defining thermo tension. How do we know what M is? Then
+  turn to holographic work. Last bit the tedious solution stuff! Remember: Done
+  is better than perfect!}
 
 \section*{Conventions}
+\addcontentsline{toc}{section}{Conventions}
+Throughout this thesis we have used the mostly plus convention for metric
+signatures. These metrics are expressed as the line element $ds^2 =
+g_{ab}dx^adx^b$ in most cases. Unless stated otherwise, we are working in 3+1
+spacetime dimensions.
+
+Quantities are expressed in Planck units such that
+$c = G = 4\pi\varepsilon_0 = k_\mathrm{B} = 1$, where $c$ is the speed of light
+in a vacuum, $G$ is Newton's gravitational constant in four dimensions,
+$\varepsilon_0$ is the permittivity of free space and $k_\mathrm{B}$ is
+Boltzmann's constant, and $\hbar = \ell_p^2$, Planck's constant, is the only
+dimensionful fundamental constant. This implies that physical quantities of
+length, time, mass and charge have the same dimensions, and temperatures have
+dimensions $L^{-1}$.
+
 When a coordinate transformation is used, or any general transformation or
 relabelling, it will be represented in either one of the following manners. In
 going from the coordinates/parameters $\{x^i\}$ to the coordinates/parameters
@@ -145,10 +225,6 @@ variable. Explicitly,
 where we have introduced a commonly used shorthand in the second expression
 signifying simply that ``$\to$'' is to be interpreted as meaning
 ``$\to x'^i =$''.
-
-\begin{itemize}
-\item signatures, units
-\end{itemize}
 
 \chapter{Black Hole Thermodynamics/ Mechanics}
 \label{chap:BHTD}
@@ -1141,12 +1217,8 @@ it to modern and exotic solutions of gravitational physics is certainly
 exciting. The rich phase structure black holes possess presented in the last
 section are an example of the utility of thermodynamics.
 
-\placehold{examples of applications of black hole thermo
-  \begin{itemize}
-  \item geometrothermodynamics
-  \item black hole chemistry
-  \end{itemize}
-}
+\placehold{examples of applications of black hole thermo:
+  geometrothermodynamics, black hole chemistry}
  
 \chapter{Acceleration and the C-metric}
 \label{chap:cmet}
@@ -1157,7 +1229,7 @@ section are an example of the utility of thermodynamics.
 The first non-trivial solution to the Einstein field equations of General
 Relativity appeared in January 1916, little over a month of their initial
 publication in late November 1915~\cite{Einstein:1915aa,Einstein:1916aa}. It was
-Karl Schwarszchild who initially discovered the spacetime and presented it as
+Karl Schwarzschild who initially discovered the spacetime and presented it as
 the most general solution to describe a spherically-symmetric solution to the
 vacuum field equations~\cite{Schwarzschild:1916ab, Schwarzschild:1916aa,
   Schwarzschild:1916ea}. This solution went largely misunderstood for the next
