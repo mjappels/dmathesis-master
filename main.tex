@@ -2261,6 +2261,231 @@ mass due to the capture of a length of cosmic string.
 \todoruth[inline]{still think this could be a distinct chapter with the
   rotational part included here. Very little work required.}
 
+\section{The Thermodynamic Length}
+
+To recap, we have shown that allowing for a varying conical deficit
+in black hole spacetimes, the first law of thermodynamics becomes
+\begin{align}
+\delta M = T \delta S + V\delta P + \Phi \delta Q - \lambda_+ \delta \mu_+
+- \lambda_- \delta \mu_-
+\end{align}
+where the relevant thermodynamical variables are given in~\eqref{TDparams}.
+In order to accommodate varying 
+tension, we have to define a {\it thermodynamic length},
+\begin{align}
+\lambda_\pm = \frac{r_+}{1\pm Ar_+} - \frac{m(1-e^2A^2)}{(1+e^2 A^2)^2} 
+\mp \frac{e^2A}{(1+e^2 A^2)}
+\end{align}
+for each conical deficit emerging from each pole. This length consists of 
+a direct geometrical part, a mass dependent correction, and finally, a shift
+in the presence of charge.
+
+It is interesting to compare this mass-dependent shift of the thermodynamic
+length to the correction of the thermodynamic volume for a rotating black
+hole \cite{Cvetic:2010jb,Dolan:2011jm}:
+\begin{align}
+V = \frac{4\pi}{3} \left( \frac{r_+(r_+^2+a^2)}{K} + a^2 M \right)
+\end{align}
+In this case, the first term is the expected geometric volume of the interior of
+the black hole, the second term being a rotation dependent correction. It is
+with this appropriately shifted thermodynamic volume, that the black hole always
+satisfies the reverse isoperimetric inequality~\cite{Cvetic:2010jb}.
+
+Notice that the correction term for this thermodynamic volume is always
+positive, whereas the correction term for thermodynamic length is actually
+negative.  This means that for large enough mass, the thermodynamic length
+itself becomes negative, as shown in \cref{fig:TDlength} for an uncharged black
+hole. The picture for a charged black hole is similar, although the critical
+value of $M$ for which $\lambda_-$ becomes negative is larger. Comparing this
+with thermodynamic volume, we see that analogous to $V$, the first term is a
+length - that of the string from the pole to $r=0$, and the second term is a
+mass-dependent correction that normalises this thermodynamic length.  It can be
+understood by thinking of the two ways in which a cosmic string can affect the
+black hole: First, by introducing a conical deficit, the relation between the
+mass of the black hole and the solution mass parameter $m$ is corrected, since
+the internal energy of the black hole will be reduced by a factor of $4\mu$ if a
+conical deficit is present.  The second effect comes from the energy of the
+string behind the event horizon - although this does not formally seem to
+contribute to the mass of the black hole - if the deficit increases, then the
+black hole must give some ``extra mass'' to the string inside the event horizon,
+commensurate with the increased deficit.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{TDlength.pdf}
+  \caption{\label{fig:TDlength}A plot of thermodynamic length of the south
+    pole tension for regular north pole, $\mu_+=0$. The limit of the
+    Schwarzschild-AdS black hole is shown in pink ($\mu_-=0$). The slowly
+    accelerating r\'egime, $A<A_\mathrm{crit}$, is shown as a solid line, and
+    $A>A_\mathrm{crit}$ is shown dashed.}
+\end{figure}
+
+
+From \cref{fig:TDlength}, we see that the thermodynamic length becomes negative
+for `large' black holes, i.e.\ those for which the thermodynamic mass is of
+similar order (or higher) than the AdS scale. Setting this in the context of the
+`cosmic string' capture process considered in \cref{sec:singlemu} for the vacuum
+black hole, this would mean that the thermodynamic mass must increase during a
+capture, as entropy cannot decrease. This seems at first counter to the notion
+that the string itself does not carry `ADM' mass, however, the heuristic
+argument of \cref{sec:singlemu} relies somewhat on the notion that a cosmic
+string and black hole can be sufficiently separated so that one can consider
+their thermodynamical (and other) properties independently. For large black
+holes in AdS this is manifestly not the case.
+
+\section{Thermodynamic length for the rotating black hole}
+\label{sec:therm-length-rotat}
+
+An interesting feature of the ultra-spinning black hole lies in its
+thermodynamic description. As alluded to in the introduction to this chapter,
+this spacetime seems to have more entropy than it should by violating the
+reverse isoperimetric inequality, which caps entropy based on the thermodynamic
+volume of a black hole spacetime. Before going into more detail, it will be
+useful to remind ourselves of some of the subtleties introduced when discussing
+the thermodynamics of a rotating black hole in asymptotically AdS space,
+initially discussed by Hawking, Hunter and Taylor-Robinson (HHT)
+in~\cite{Hawking:1998kw}, which we covered in \cref{sec:BHTDlambda}. These
+subtleties were pointed out in~\cite{Caldarelli:1999xj,Gibbons:2004ai}, where it
+was shown that with a non-zero cosmological constant, the boundary is actually
+rotating with angular velocity
+\begin{align}
+\Omega_\infty = \lim_{r\to\infty} -\frac{g_{t\phi}}{g_{\phi\phi}} = aK
+  \frac{r^2/\ell^2}{a^2 r^2 \sin^2\theta/\ell^2- r^2 g(\theta)} = -
+  \frac{a}{\ell^2} \frac{K}{\Xi}, \qquad \Xi = 1-\frac{a^2}{\ell^2}
+\end{align}
+implying that the angular velocity ought to be re-normalised and that
+$\Omega = \Omega_\mathrm{H} - \Omega_\infty$ is the true total angular
+velocity. The mass was then found to be given by $M=m/\Xi^2$ as opposed $m/\Xi$,
+the expression originally given by HHT, which is obtained using the Komar method
+when a normalisation of the timelike killing vector is omitted.
+
+In \cref{chap:td-conical}, we used the principle of correction terms such as
+this to derive a first law for the non-rotating accelerating black hole,
+allowing for varying cosmic string tensions. Employing similar ideas we can
+actually show that these corrections to the thermodynamic mass and angular
+velocity are required to satisfy the first law while simultaneously obtaining
+these expressions for arbitrary and potentially varying string tensions.
+
+The first step is to vary $f(r_+)=0$ to establish an initial thermodynamic
+relation. Identifying $S$ as a quarter of the horizon area and $T$ as the
+temperature given by the euclideanisation procedure,
+\begin{align} \label{eq:SandT-al}
+S = \frac{\pi}{K}(r_+^2+a^2) \qquad
+  T=\frac{1}{2\pi(r_{+}^{2}+a^{2})}
+  \bigg[m-\frac{a^{2}}{r_{+}}+\frac{r_{+}^{3}}{\ell^{2}}\bigg], 
+\end{align}
+will lead to the following statement:
+\begin{align}\label{eq:master-al}
+\delta\left(\frac{m}{K}\right)=T\delta S +V_0\delta P + \Omega_0\delta J -
+  2r_+\delta\mu + \frac{m\delta K}{2K^2},
+\end{align}
+where we have written $V_0$ and $\Omega_0$ in anticipation of correction terms,
+however it is worth noting that $\Omega_0=\Omega_H$ is the angular velocity at
+the horizon and that $V_0$ satisfies a ``reduced'' Smarr relation given by
+$m/K = 2(TS-PV_0+\Omega_0 J)$. These quantities are given by the following relations:
+\begin{align} \label{eq:horpotentials-al}
+\Omega_0 =  \frac{a K}{r_{+}^{2}+a^{2}}, \qquad J=\frac{ma}{K^2}, \qquad V_0 =
+  \frac{4\pi}{3K}r_+(r_+^2+a^2), \qquad P = \frac{3}{8\pi\ell^2}, 
+\end{align}
+where the expression for the angular momentum $J$ is obtained unambiguously via the
+Komar method using background ($m=0$) subtraction.
+
+While this looks like a first law, it is necessary to remember that $K$
+parametrises the tension and can therefore not appear as a standalone term. The
+aim of this derivation is precisely to find such a first law. Let us introduce a
+function $\gamma = \gamma(a,\ell)$ in our expression for the mass, as we did in
+\cref{sec:cmet-TD-der}. We know that $\gamma$ will need to depend on $a$ and
+$\ell$ from the relation between $K$ and $\mu$. Using this ansatz for mass and
+then perturbing it, we have  
+\begin{align}  
+  M&=\frac{m}{K}\gamma(a,\ell),\\
+  \qquad \delta M &= \delta \left(\frac{m}{K}\right) +\frac{m}{K}(\gamma_{,a}
+                    \delta a + \gamma_{,\ell}\delta\ell)\nn\\
+   &= (\gamma - a\gamma_{,a})\delta \left(\frac{m}{K}\right) +
+     \gamma_{,a}K\delta J + \frac{m a \gamma_{,a}}{K^{2}}\delta K +
+     \frac{m}{K}\gamma_{,\ell}\delta \ell.
+     \label{eq:varm-al}
+\end{align}
+Now, we if we rewrite \cref{eq:master-al} using $\Omega = \Omega_0+\Omega_1$, $V =
+V_0 + V_1$ as
+\begin{align}
+  \label{eq:flt-al}
+  &T\delta S + V\delta P + \Omega \delta J - 2\lambda \delta \mu\nn\\
+  &\hspace{7em}= \delta
+  \left(\frac{m}{K}\right) + \Omega_1\delta J -\frac{3V_1}{4\pi \ell^3}\delta
+  \ell + 2(r_+-\lambda)\delta\mu -\frac{m}{2K^2}\delta K,
+\end{align}
+we may require that \cref{eq:varm-al,eq:flt-al} be equal to find constraints on
+$\gamma$. Using \cref{eq:deficit-al} and $\mu=\delta/8\pi$ to express $\delta K$
+in terms of $\delta \mu$, we can infer a differential equation that $\gamma$
+ought to satisfy,
+\begin{align}\label{eq:eq1al}
+\left(1+\frac{a^2}{\ell^2}\right)\gamma-
+  \left(1-\frac{a^{2}}{\ell^{2}}\right)a\gamma_{,a}-1=0 
+\end{align}
+as well as the following expressions for the correction terms, defining them in
+terms of $\gamma$. 
+\begin{gather}
+V_1=-\frac{4\pi}{3K}\frac{m
+  \ell^2}{1+a^2/\ell^2}\left(\left(1+\frac{a^2}{\ell^2}\right)
+  \ell\gamma_{,\ell}+2\frac{a^2}{\ell^2}a
+  \gamma_{a}+\frac{a^2}{\ell^2}\right),\nn\\  
+\Omega_1=K\gamma_{,a}\left(1-2\frac{a^2}{\ell^2}\frac{1}{1+a^2/\ell^2}\right)-
+\frac{aK}{\ell^2}\frac{1}{1+a^2/\ell^2},\nn\\ 
+\lambda=r_+-\frac{m}{1+a^2/\ell^2}\left(2a\gamma_{,a}+1\right). 
+\end{gather}
+We also require that the Smarr/Euler scaling relation, which follows from the
+scaling properties of the system, also be satisfied. Inserting the above
+expressions into
+\begin{align}
+M = 2(TS-PV+\Omega J),
+\end{align}
+we obtain another differential equation for $\gamma$,
+\begin{align}\label{eq:eq2al}
+\left(1+\frac{a^2}{\ell^2}\right)(\gamma-\ell\gamma_{,\ell})-2a\gamma_{,a}-1=0.
+\end{align}
+It is then straightforward to solve \cref{eq:eq1al,eq:eq2al} and one obtains
+\begin{gather}
+\gamma = \frac{1}{L}\left(1+\frac{a}{\ell}\zeta\right),\qquad \lambda = r_+ -
+\frac{m}{L^2}\left(1+\frac{a^2}{\ell^2}+\frac{2a}{\ell}\zeta\right), \nn\\  
+\Omega_1 = \frac{aK}{\ell^2 L}\left(1+\frac{\ell}{a}\zeta\right), \qquad V_1 =
+\frac{4\pi}{3}\frac{ma^2}{KL}\left(1+\frac{\ell}{a}\zeta\right), 
+\end{gather}
+where $\zeta$ is an integration constant. We can fix it by identifying $\Omega_1
+= -\Omega_\infty$ provided $\zeta = 0$, which also assures that the angular
+velocity of the boundary vanishes for $a=0$.\todoopt{provide explanation with
+  parity argument}
+\footnote{
+  One can repeat this derivation with the inclusion of charge $Q=e/K$ and
+introduce a correction term to the potential $\Phi=\Phi_0+\Phi_1$. This leads to
+a similar expression for $\gamma$, with $\zeta$ now a function of charge
+\begin{align}
+  \gamma =
+\frac{1}{L}\left[1+\frac{a}{l}\zeta\left(\frac{e^{2}}{l^{2}}\frac{1}{L^{2}}\right)\right].
+\end{align}
+Substituting this in for the following correction terms satisfies
+the first law for a charged, rotating black hole with potentially varying
+tensions.
+\begin{gather}
+  V_1=-\frac{4\pi}{3}\frac{m a^2}{K(1+a^{2}/\ell^{2})}\left[2a\gamma_{,a}+2e
+\gamma_{,e}-\left(1+\frac{\ell^2}{a^2}\right)\ell\gamma_{,\ell}+1\right], \qquad
+\lambda = r_+-\frac{m}{1+a^2/\ell^2}(2a\gamma_{,a}+2e\gamma_{,e}+1), \nn\\
+\Phi_1 = m\gamma_{,e},\qquad \Omega_1=-\frac{aK}{\ell^2(1+a^2/\ell^2)}
+\left[a\gamma_{,a}\left(1-\frac{\ell^2}{a^2}\right)+2e\gamma_{,e}+1\right]
+=\frac{aK}{\ell^2
+L}\left[1+\frac{\ell}{a}\zeta\left(\frac{e^{2}}{l^{2}}\frac{1}{L^{2}}\right)\right].
+\end{gather}
+The same argument as above can be used to set $\zeta=0$.
+}
+
+\chapter{Thermodynamics of accelerating black holes}
+\label{cha:therm-accel-black}
+
+\placehold{introduction could be the story of motivation, how it had not been
+  done before, and how one could posit thermo to begin with using physical
+  intuition of holding tension fixed}
+
+\placehold{in other words, could bring in first paper here}
+
 \section{Thermodynamics of the C-metric}
 
 We would now like to turn to the more general case where the deficits emerging
@@ -2276,12 +2501,12 @@ geometry is called the \emph{slowly accelerating C-metric}
 \cite{Podolsky:2002nk}. For convenience, we shall rewrite the metric and
 corresponding gauge potential here:
 \begin{align}
-ds^2=\frac{1}{\Omega^2}\left[ -
-f(r) dt^2
-+\frac{dr^2}{f(r)} + r^2 \Big( \frac{d\theta^2}{g(\theta)} 
-+ g(\theta)\sin^2\theta \frac{d\phi^2}{K^2}\Big)\right], \qquad
-{B}= -\frac{e}{r} dt,
-\label{eq:cmetric3}
+  ds^2=\frac{1}{\Omega^2}\left[ -
+  f(r) dt^2
+  +\frac{dr^2}{f(r)} + r^2 \Big( \frac{d\theta^2}{g(\theta)} 
+  + g(\theta)\sin^2\theta \frac{d\phi^2}{K^2}\Big)\right], \qquad
+  {B}= -\frac{e}{r} dt,
+  \label{eq:cmetric3}
 \end{align}
 and
 \begin{align}
@@ -2312,11 +2537,11 @@ defined slightly differently. In order to check this, consider the Komar
 integral for the mass using the
 method described in \cite{Magnon:1985sc} \todoruth{ Is this true? Thought Komar
   did not work.}
-\begin{equation}
-M_K = \frac{1}{8\pi} \int_{S^2} \star d\xi - \frac{1}{4\pi}
-\int n_a R^a_b \xi^b \sqrt{h} d^3x = \frac{m}{K}
-\label{komar}
-\end{equation}
+\begin{align}
+  M_K = \frac{1}{8\pi} \int_{S^2} \star d\xi - \frac{1}{4\pi}
+  \int n_a R^a_b \xi^b \sqrt{h} d^3x = \frac{m}{K}
+  \label{komar}
+\end{align}
 where $\xi = \partial_t$ is a timelike Killing vector field, the first integral
 is performed over a $\{\theta,\phi\}$ surface of topology $S^2$ considered to be
 near infinity, and the second integral is performed throughout the interior of
@@ -2580,76 +2805,7 @@ $V$ and \cref{eq:TSNR} for $\mathcal{A}$, we find
 Thus these slowly accelerating black holes do indeed satisfy the
 reverse isoperimetric inequality.
 
-\section{The Thermodynamic Length}
 
-To recap, we have shown that allowing for a varying conical deficit
-in black hole spacetimes, the first law of thermodynamics becomes
-\begin{align}
-\delta M = T \delta S + V\delta P + \Phi \delta Q - \lambda_+ \delta \mu_+
-- \lambda_- \delta \mu_-
-\end{align}
-where the relevant thermodynamical variables are given in~\eqref{TDparams}.
-In order to accommodate varying 
-tension, we have to define a {\it thermodynamic length},
-\begin{align}
-\lambda_\pm = \frac{r_+}{1\pm Ar_+} - \frac{m(1-e^2A^2)}{(1+e^2 A^2)^2} 
-\mp \frac{e^2A}{(1+e^2 A^2)}
-\end{align}
-for each conical deficit emerging from each pole. This length consists of 
-a direct geometrical part, a mass dependent correction, and finally, a shift
-in the presence of charge.
-
-It is interesting to compare this mass-dependent shift of the thermodynamic
-length to the correction of the thermodynamic volume for a rotating black
-hole \cite{Cvetic:2010jb,Dolan:2011jm}:
-\begin{align}
-V = \frac{4\pi}{3} \left( \frac{r_+(r_+^2+a^2)}{K} + a^2 M \right)
-\end{align}
-In this case, the first term is the expected geometric volume of the interior of
-the black hole, the second term being a rotation dependent correction. It is
-with this appropriately shifted thermodynamic volume, that the black hole always
-satisfies the reverse isoperimetric inequality~\cite{Cvetic:2010jb}.
-
-Notice that the correction term for this thermodynamic volume is always
-positive, whereas the correction term for thermodynamic length is actually
-negative.  This means that for large enough mass, the thermodynamic length
-itself becomes negative, as shown in \cref{fig:TDlength} for an uncharged black
-hole. The picture for a charged black hole is similar, although the critical
-value of $M$ for which $\lambda_-$ becomes negative is larger. Comparing this
-with thermodynamic volume, we see that analogous to $V$, the first term is a
-length - that of the string from the pole to $r=0$, and the second term is a
-mass-dependent correction that normalises this thermodynamic length.  It can be
-understood by thinking of the two ways in which a cosmic string can affect the
-black hole: First, by introducing a conical deficit, the relation between the
-mass of the black hole and the solution mass parameter $m$ is corrected, since
-the internal energy of the black hole will be reduced by a factor of $4\mu$ if a
-conical deficit is present.  The second effect comes from the energy of the
-string behind the event horizon - although this does not formally seem to
-contribute to the mass of the black hole - if the deficit increases, then the
-black hole must give some ``extra mass'' to the string inside the event horizon,
-commensurate with the increased deficit.
-\begin{figure}
-  \centering
-  \includegraphics[width=0.7\textwidth]{TDlength.pdf}
-  \caption{\label{fig:TDlength}A plot of thermodynamic length of the south
-    pole tension for regular north pole, $\mu_+=0$. The limit of the
-    Schwarzschild-AdS black hole is shown in pink ($\mu_-=0$). The slowly
-    accelerating r\'egime, $A<A_\mathrm{crit}$, is shown as a solid line, and
-    $A>A_\mathrm{crit}$ is shown dashed.}
-\end{figure}
-
-
-From \cref{fig:TDlength}, we see that the thermodynamic length becomes negative
-for `large' black holes, i.e.\ those for which the thermodynamic mass is of
-similar order (or higher) than the AdS scale. Setting this in the context of the
-`cosmic string' capture process considered in \cref{sec:singlemu} for the vacuum
-black hole, this would mean that the thermodynamic mass must increase during a
-capture, as entropy cannot decrease. This seems at first counter to the notion
-that the string itself does not carry `ADM' mass, however, the heuristic
-argument of \cref{sec:singlemu} relies somewhat on the notion that a cosmic
-string and black hole can be sufficiently separated so that one can consider
-their thermodynamical (and other) properties independently. For large black
-holes in AdS this is manifestly not the case.
 
 It is also interesting to compare these results for varying tension to some of
 our early work~\cite{Appels:2016uha}, where $K$ and $\mu_\pm$ were held fixed.
@@ -2915,87 +3071,8 @@ holes are allowed, varies with tension.
     the tension.}
 \end{figure}
 
-\section{Conclusion}
 
-To sum up: we have shown how to allow for a varying conical deficit
-in black hole spacetimes, and found the relevant thermodynamical 
-variables to describe the system. The appropriate first law has a 
-varying tension term, with a thermodynamic length as its potential. 
-This length consists of a direct geometrical part, a mass dependent correction, 
-and finally, a shift in the presence of charge. The thermodynamic phases of
-accelerating black holes exhibit similar behaviour to their non-accelerating 
-AdS cousins, however, the impact of acceleration is to improve the thermodynamic
-stability of the black holes.
-
-It is interesting to note that the first law indicates that if the tension of a
-defect is fixed, then there is no contribution to the variation of $M$ coming
-from tension, yet, if the black hole increases its mass and hence its horizon
-radius, the horizon will now have consumed a portion of the string along each
-pole.  This does not appear in the thermodynamic relation. This reinforces the
-interpretation of $M$ as the {\it enthalpy} of the black hole
-\cite{Kastor:2009wy}.  Although the black hole increases its internal energy by
-swallowing some cosmic string, it has also displaced the exact same amount of
-energy from the environment, resulting in no net overall gain in the total
-energy of the thermodynamic system (other than the mass that was added to the
-black hole in the first place).
-
-It would be interesting to consider whether there are any holographic
-applications for these solutions. Typically, one avoids having such distorted
-boundaries, however, the fact that the thermodynamics of these systems is now
-well defined perhaps suggests this is worth a second look.
-
-Finally, we have not discussed rotating accelerating black holes here. Even for
-the non-accelerating rotating black hole, the thermodynamics are more subtle,
-requiring an adjustment of the angular velocity \cite{Gibbons:2004ai} in order
-to define it relative to a non-rotating frame at infinity. For a conical defect
-running through the black hole (though see
-\cite{Gregory:2013xca,Gregory:2014uca} for a full discussion of subtleties of
-replacing deficits by finite width defects) one can follow the method of
-\cref{sec:singlemu} to generalise the appropriate thermodynamical variables of
-Gibbons et al.\ \cite{Gibbons:2004ai} to:
-\begin{equation}
-  \begin{aligned}
-M &= \frac{m}{KL} \;\;\;; \;\;\;\;&
-V &= \frac{4\pi}{3} \left [ \frac{r_+(r_+^2+a^2)}{K} + a^2 M \right]\\
-J &= \frac{am}{K^2} \;\;\;; \;\;\;\;&
-\Omega &= \Omega_H-\Omega_\infty
-= \frac{aK}{r_+^2+a^2} + \frac{aK}{\ell^2 L} \;\;\;; \;\;\;\;\\
-Q &= \frac{e}{K} \;\;\;;\;\;\;\;& \Phi &= \frac{er_+}{r_+^2+a^2}
-\end{aligned}
-\end{equation}
-where $K$ is the (arbitrary) parameter determining the periodicity of the
-azimuthal angle as before, and $L$ is a new parameter due to black hole
-rotation:
-\begin{equation}
-L = 1 - \frac{a^2}{\ell^2}
-\end{equation}
-In \cite{Gibbons:2004ai}, $K=L$ was mandated by having no conical deficit on the
-rotation axis, however, here we are being more general. Allowing the tension of
-any deficit to vary leads to the thermodynamic length:
-\begin{equation}
-\lambda = \left ( r_+ - KM \frac{1+\frac{a^2}{\ell^2}}{1-\frac{a^2}{\ell^2}} \right)
-= \left ( r_+ - \frac{KM}{L}(2-L) \right)
-\end{equation}
-Thus our black hole obeys a standard first law, 
-\begin{equation}
-\delta M = T \delta S + V \delta P + \Omega \delta J + \Phi \delta Q
--2 \lambda \delta\mu
-\end{equation}
-as well as a conventional Smarr relation:
-\begin{equation}
-M
-= 2TS + \Phi Q - 2 PV + 2 \Omega J
-\end{equation}
-
-Once the black hole is accelerating, it is no longer possible to have a
-completely non-rotating frame at infinity due to the distortion of the
-boundary. The potential therefore has a more complicated adjustment involving
-not only a shift, but also a decision on which is the appropriate frame to use
-at infinity. Computing the relevant parameters for the rotating accelerating
-black hole is underway.
-
-\chapter{Critical Black Holes with Teardrop-Shaped Horizons}
-\chaptermark{Critical Black Holes}
+\section{Critical Black Holes with Teardrop-Shaped Horizons}
 \label{chap:crit-bh}
 
 In exploring possible black hole solutions in four-dimensional Fayet-Iliopoulos
@@ -3285,147 +3362,7 @@ limit while avoiding a naked singularity.
 \subsection{The Super-Entropic Black Hole}
 \label{sec:uskerr}
 
-An interesting feature of the ultra-spinning black hole lies in its
-thermodynamic description. As alluded to in the introduction to this chapter,
-this spacetime seems to have more entropy than it should by violating the
-reverse isoperimetric inequality, which caps entropy based on the thermodynamic
-volume of a black hole spacetime. Before going into more detail, it will be
-useful to remind ourselves of some of the subtleties introduced when discussing
-the thermodynamics of a rotating black hole in asymptotically AdS space,
-initially discussed by Hawking, Hunter and Taylor-Robinson (HHT)
-in~\cite{Hawking:1998kw}, which we covered in \cref{sec:BHTDlambda}. These
-subtleties were pointed out in~\cite{Caldarelli:1999xj,Gibbons:2004ai}, where it
-was shown that with a non-zero cosmological constant, the boundary is actually
-rotating with angular velocity
-\begin{align}
-\Omega_\infty = \lim_{r\to\infty} -\frac{g_{t\phi}}{g_{\phi\phi}} = aK
-  \frac{r^2/\ell^2}{a^2 r^2 \sin^2\theta/\ell^2- r^2 g(\theta)} = -
-  \frac{a}{\ell^2} \frac{K}{\Xi}, \qquad \Xi = 1-\frac{a^2}{\ell^2}
-\end{align}
-implying that the angular velocity ought to be re-normalised and that
-$\Omega = \Omega_\mathrm{H} - \Omega_\infty$ is the true total angular
-velocity. The mass was then found to be given by $M=m/\Xi^2$ as opposed $m/\Xi$,
-the expression originally given by HHT, which is obtained using the Komar method
-when a normalisation of the timelike killing vector is omitted.
 
-In \cref{chap:td-conical}, we used the principle of correction terms such as
-this to derive a first law for the non-rotating accelerating black hole,
-allowing for varying cosmic string tensions. Employing similar ideas we can
-actually show that these corrections to the thermodynamic mass and angular
-velocity are required to satisfy the first law while simultaneously obtaining
-these expressions for arbitrary and potentially varying string tensions.
-
-The first step is to vary $f(r_+)=0$ to establish an initial thermodynamic
-relation. Identifying $S$ as a quarter of the horizon area and $T$ as the
-temperature given by the euclideanisation procedure,
-\begin{align} \label{eq:SandT-al}
-S = \frac{\pi}{K}(r_+^2+a^2) \qquad
-  T=\frac{1}{2\pi(r_{+}^{2}+a^{2})}
-  \bigg[m-\frac{a^{2}}{r_{+}}+\frac{r_{+}^{3}}{\ell^{2}}\bigg], 
-\end{align}
-will lead to the following statement:
-\begin{align}\label{eq:master-al}
-\delta\left(\frac{m}{K}\right)=T\delta S +V_0\delta P + \Omega_0\delta J -
-  2r_+\delta\mu + \frac{m\delta K}{2K^2},
-\end{align}
-where we have written $V_0$ and $\Omega_0$ in anticipation of correction terms,
-however it is worth noting that $\Omega_0=\Omega_H$ is the angular velocity at
-the horizon and that $V_0$ satisfies a ``reduced'' Smarr relation given by
-$m/K = 2(TS-PV_0+\Omega_0 J)$. These quantities are given by the following relations:
-\begin{align} \label{eq:horpotentials-al}
-\Omega_0 =  \frac{a K}{r_{+}^{2}+a^{2}}, \qquad J=\frac{ma}{K^2}, \qquad V_0 =
-  \frac{4\pi}{3K}r_+(r_+^2+a^2), \qquad P = \frac{3}{8\pi\ell^2}, 
-\end{align}
-where the expression for the angular momentum $J$ is obtained unambiguously via the
-Komar method using background ($m=0$) subtraction.
-
-While this looks like a first law, it is necessary to remember that $K$
-parametrises the tension and can therefore not appear as a standalone term. The
-aim of this derivation is precisely to find such a first law. Let us introduce a
-function $\gamma = \gamma(a,\ell)$ in our expression for the mass, as we did in
-\cref{sec:cmet-TD-der}. We know that $\gamma$ will need to depend on $a$ and
-$\ell$ from the relation between $K$ and $\mu$. Using this ansatz for mass and
-then perturbing it, we have  
-\begin{align}  
-  M&=\frac{m}{K}\gamma(a,\ell),\\
-  \qquad \delta M &= \delta \left(\frac{m}{K}\right) +\frac{m}{K}(\gamma_{,a}
-                    \delta a + \gamma_{,\ell}\delta\ell)\nn\\
-   &= (\gamma - a\gamma_{,a})\delta \left(\frac{m}{K}\right) +
-     \gamma_{,a}K\delta J + \frac{m a \gamma_{,a}}{K^{2}}\delta K +
-     \frac{m}{K}\gamma_{,\ell}\delta \ell.
-     \label{eq:varm-al}
-\end{align}
-Now, we if we rewrite \cref{eq:master-al} using $\Omega = \Omega_0+\Omega_1$, $V =
-V_0 + V_1$ as
-\begin{align}
-  \label{eq:flt-al}
-  &T\delta S + V\delta P + \Omega \delta J - 2\lambda \delta \mu\nn\\
-  &\hspace{7em}= \delta
-  \left(\frac{m}{K}\right) + \Omega_1\delta J -\frac{3V_1}{4\pi \ell^3}\delta
-  \ell + 2(r_+-\lambda)\delta\mu -\frac{m}{2K^2}\delta K,
-\end{align}
-we may require that \cref{eq:varm-al,eq:flt-al} be equal to find constraints on
-$\gamma$. Using \cref{eq:deficit-al} and $\mu=\delta/8\pi$ to express $\delta K$
-in terms of $\delta \mu$, we can infer a differential equation that $\gamma$
-ought to satisfy,
-\begin{align}\label{eq:eq1al}
-\left(1+\frac{a^2}{\ell^2}\right)\gamma-
-  \left(1-\frac{a^{2}}{\ell^{2}}\right)a\gamma_{,a}-1=0 
-\end{align}
-as well as the following expressions for the correction terms, defining them in
-terms of $\gamma$. 
-\begin{gather}
-V_1=-\frac{4\pi}{3K}\frac{m
-  \ell^2}{1+a^2/\ell^2}\left(\left(1+\frac{a^2}{\ell^2}\right)
-  \ell\gamma_{,\ell}+2\frac{a^2}{\ell^2}a
-  \gamma_{a}+\frac{a^2}{\ell^2}\right),\nn\\  
-\Omega_1=K\gamma_{,a}\left(1-2\frac{a^2}{\ell^2}\frac{1}{1+a^2/\ell^2}\right)-
-\frac{aK}{\ell^2}\frac{1}{1+a^2/\ell^2},\nn\\ 
-\lambda=r_+-\frac{m}{1+a^2/\ell^2}\left(2a\gamma_{,a}+1\right). 
-\end{gather}
-We also require that the Smarr/Euler scaling relation, which follows from the
-scaling properties of the system, also be satisfied. Inserting the above
-expressions into
-\begin{align}
-M = 2(TS-PV+\Omega J),
-\end{align}
-we obtain another differential equation for $\gamma$,
-\begin{align}\label{eq:eq2al}
-\left(1+\frac{a^2}{\ell^2}\right)(\gamma-\ell\gamma_{,\ell})-2a\gamma_{,a}-1=0.
-\end{align}
-It is then straightforward to solve \cref{eq:eq1al,eq:eq2al} and one obtains
-\begin{gather}
-\gamma = \frac{1}{L}\left(1+\frac{a}{\ell}\zeta\right),\qquad \lambda = r_+ -
-\frac{m}{L^2}\left(1+\frac{a^2}{\ell^2}+\frac{2a}{\ell}\zeta\right), \nn\\  
-\Omega_1 = \frac{aK}{\ell^2 L}\left(1+\frac{\ell}{a}\zeta\right), \qquad V_1 =
-\frac{4\pi}{3}\frac{ma^2}{KL}\left(1+\frac{\ell}{a}\zeta\right), 
-\end{gather}
-where $\zeta$ is an integration constant. We can fix it by identifying $\Omega_1
-= -\Omega_\infty$ provided $\zeta = 0$, which also assures that the angular
-velocity of the boundary vanishes for $a=0$.\todoopt{provide explanation with
-  parity argument}
-\footnote{
-  One can repeat this derivation with the inclusion of charge $Q=e/K$ and
-introduce a correction term to the potential $\Phi=\Phi_0+\Phi_1$. This leads to
-a similar expression for $\gamma$, with $\zeta$ now a function of charge
-\begin{align}
-  \gamma =
-\frac{1}{L}\left[1+\frac{a}{l}\zeta\left(\frac{e^{2}}{l^{2}}\frac{1}{L^{2}}\right)\right].
-\end{align}
-Substituting this in for the following correction terms satisfies
-the first law for a charged, rotating black hole with potentially varying
-tensions.
-\begin{gather}
-  V_1=-\frac{4\pi}{3}\frac{m a^2}{K(1+a^{2}/\ell^{2})}\left[2a\gamma_{,a}+2e
-\gamma_{,e}-\left(1+\frac{\ell^2}{a^2}\right)\ell\gamma_{,\ell}+1\right], \qquad
-\lambda = r_+-\frac{m}{1+a^2/\ell^2}(2a\gamma_{,a}+2e\gamma_{,e}+1), \nn\\
-\Phi_1 = m\gamma_{,e},\qquad \Omega_1=-\frac{aK}{\ell^2(1+a^2/\ell^2)}
-\left[a\gamma_{,a}\left(1-\frac{\ell^2}{a^2}\right)+2e\gamma_{,e}+1\right]
-=\frac{aK}{\ell^2
-L}\left[1+\frac{\ell}{a}\zeta\left(\frac{e^{2}}{l^{2}}\frac{1}{L^{2}}\right)\right].
-\end{gather}
-The same argument as above can be used to set $\zeta=0$.
-}
 
 Let us consider now the $a\to\ell$ limit. As mentioned above, this causes the
 original, smooth, Kerr-AdS metric to diverge, and if precautionary measures are
@@ -3465,7 +3402,6 @@ logic. \todoopt{Implications for conjecture validity?}
 
 \subsection{The Critical Non-Rotating C-metric}
 \label{sec:critnrC}
-
 
 We return now to the non-rotating C-metric discussed in the previous chapter. We
 explored some of the conditions one must impose unto this solution in
@@ -3509,15 +3445,15 @@ Using the thermodynamic quantities we established in~\cref{sec:cmet-TD-der}, and
 turning off the electric charge, which doesn't add much qualitatively for now,
 we know therefore that the first law of black hole thermodynamics,
 \begin{align}\label{eq:firstlawnr}
-\delta M = T\delta S + V\delta P - \lambda_+ d\mu_+ - \lambda_- d\mu_-,
+  \delta M = T\delta S + V\delta P - \lambda_+ d\mu_+ - \lambda_- d\mu_-,
 \end{align}
 is satisfied with the following quantities,
 \begin{gather}
-M=\frac{m}{K},\qquad T=\frac{1}{2\pi
-  r_+^2}\bigg[m(1-A^2 r_+^2) + \frac{r_+^3}{\ell^2(1-A^2 r_+^2)}\bigg], \qquad
-S=\frac{\mathcal{A}}{4} = \frac{\pi r_+^2}{K(1- A^2 r_+^2)},\nn\\ 
-V=\frac{4 \pi  r_+^3}{3 K (1- A^2 r_+^2)^2}, \qquad P=\frac{3}{8\pi \ell^2},
-\qquad \lambda_\pm = \frac{r_+}{1\pm A r_+} - m,
+  M=\frac{m}{K},\qquad T=\frac{1}{2\pi
+    r_+^2}\bigg[m(1-A^2 r_+^2) + \frac{r_+^3}{\ell^2(1-A^2 r_+^2)}\bigg], \qquad
+  S=\frac{\mathcal{A}}{4} = \frac{\pi r_+^2}{K(1- A^2 r_+^2)},\nn\\ 
+  V=\frac{4 \pi  r_+^3}{3 K (1- A^2 r_+^2)^2}, \qquad P=\frac{3}{8\pi \ell^2},
+  \qquad \lambda_\pm = \frac{r_+}{1\pm A r_+} - m,
 \end{gather}
 
 From here we can safely take the critical limit $2mA = 1$. The last term in
@@ -3526,7 +3462,7 @@ seeing as $\mu_+$ is still related to $K$ and we therefore need not treat this
 particular limit any different, we expect the isoperimetric
 conjecture to be obeyed. The isoperimetric ratio is
 \begin{align}
-\mathcal{R} =\frac{1}{\sqrt[6~]{1-A^2r_+^2}} =
+  \mathcal{R} =\frac{1}{\sqrt[6~]{1-A^2r_+^2}} =
   \frac{1}{\sqrt[6~]{1-r_+^2/4m^2}}\geqslant 1. 
 \end{align}
 
@@ -3779,6 +3715,84 @@ expands to
 \Omega_1^{(A\ell\ll 1)}\Big|_{\mathrm{us}} = \frac{-K}{2\ell}+\frac{K}{2mA\ell}-\frac{A K\ell^3}{8m^3}\Big(1+\frac{e^2}{\ell^2}\Big)^2-\frac{A K}{4 m\ell}(m^2-e^2)+\mathcal{O}(A^2\ell^2).
 \end{align}
 \section{Conclusion}
+
+To sum up: we have shown how to allow for a varying conical deficit
+in black hole spacetimes, and found the relevant thermodynamical 
+variables to describe the system. The appropriate first law has a 
+varying tension term, with a thermodynamic length as its potential. 
+This length consists of a direct geometrical part, a mass dependent correction, 
+and finally, a shift in the presence of charge. The thermodynamic phases of
+accelerating black holes exhibit similar behaviour to their non-accelerating 
+AdS cousins, however, the impact of acceleration is to improve the thermodynamic
+stability of the black holes.
+
+It is interesting to note that the first law indicates that if the tension of a
+defect is fixed, then there is no contribution to the variation of $M$ coming
+from tension, yet, if the black hole increases its mass and hence its horizon
+radius, the horizon will now have consumed a portion of the string along each
+pole.  This does not appear in the thermodynamic relation. This reinforces the
+interpretation of $M$ as the {\it enthalpy} of the black hole
+\cite{Kastor:2009wy}.  Although the black hole increases its internal energy by
+swallowing some cosmic string, it has also displaced the exact same amount of
+energy from the environment, resulting in no net overall gain in the total
+energy of the thermodynamic system (other than the mass that was added to the
+black hole in the first place).
+
+It would be interesting to consider whether there are any holographic
+applications for these solutions. Typically, one avoids having such distorted
+boundaries, however, the fact that the thermodynamics of these systems is now
+well defined perhaps suggests this is worth a second look.
+
+Finally, we have not discussed rotating accelerating black holes here. Even for
+the non-accelerating rotating black hole, the thermodynamics are more subtle,
+requiring an adjustment of the angular velocity \cite{Gibbons:2004ai} in order
+to define it relative to a non-rotating frame at infinity. For a conical defect
+running through the black hole (though see
+\cite{Gregory:2013xca,Gregory:2014uca} for a full discussion of subtleties of
+replacing deficits by finite width defects) one can follow the method of
+\cref{sec:singlemu} to generalise the appropriate thermodynamical variables of
+Gibbons et al.\ \cite{Gibbons:2004ai} to:
+\begin{equation}
+  \begin{aligned}
+M &= \frac{m}{KL} \;\;\;; \;\;\;\;&
+V &= \frac{4\pi}{3} \left [ \frac{r_+(r_+^2+a^2)}{K} + a^2 M \right]\\
+J &= \frac{am}{K^2} \;\;\;; \;\;\;\;&
+\Omega &= \Omega_H-\Omega_\infty
+= \frac{aK}{r_+^2+a^2} + \frac{aK}{\ell^2 L} \;\;\;; \;\;\;\;\\
+Q &= \frac{e}{K} \;\;\;;\;\;\;\;& \Phi &= \frac{er_+}{r_+^2+a^2}
+\end{aligned}
+\end{equation}
+where $K$ is the (arbitrary) parameter determining the periodicity of the
+azimuthal angle as before, and $L$ is a new parameter due to black hole
+rotation:
+\begin{equation}
+L = 1 - \frac{a^2}{\ell^2}
+\end{equation}
+In \cite{Gibbons:2004ai}, $K=L$ was mandated by having no conical deficit on the
+rotation axis, however, here we are being more general. Allowing the tension of
+any deficit to vary leads to the thermodynamic length:
+\begin{equation}
+\lambda = \left ( r_+ - KM \frac{1+\frac{a^2}{\ell^2}}{1-\frac{a^2}{\ell^2}} \right)
+= \left ( r_+ - \frac{KM}{L}(2-L) \right)
+\end{equation}
+Thus our black hole obeys a standard first law, 
+\begin{equation}
+\delta M = T \delta S + V \delta P + \Omega \delta J + \Phi \delta Q
+-2 \lambda \delta\mu
+\end{equation}
+as well as a conventional Smarr relation:
+\begin{equation}
+M
+= 2TS + \Phi Q - 2 PV + 2 \Omega J
+\end{equation}
+
+Once the black hole is accelerating, it is no longer possible to have a
+completely non-rotating frame at infinity due to the distortion of the
+boundary. The potential therefore has a more complicated adjustment involving
+not only a shift, but also a decision on which is the appropriate frame to use
+at infinity. Computing the relevant parameters for the rotating accelerating
+black hole is underway.
+
 
 \chapter{Holographic Thermodynamics of Accelerating Black Holes}
 \chaptermark{Holographic Thermodynamics}
