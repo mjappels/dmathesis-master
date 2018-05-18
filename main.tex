@@ -2325,11 +2325,11 @@ relation between $K$ and $\mu$. Using this ansatz for mass and then perturbing
 it, we have
 \begin{align}  
   M&=\frac{m}{K}\gamma(a,\ell),\\
-  \qquad \delta M &= \delta \left(\frac{m}{K}\right) +\frac{m}{K}(\gamma_{,a}
-                    \delta a + \gamma_{,\ell}\delta\ell)\nn\\
-   &= (\gamma - a\gamma_{,a})\delta \left(\frac{m}{K}\right) +
-     \gamma_{,a}K\delta J + \frac{m a \gamma_{,a}}{K^{2}}\delta K +
-     \frac{m}{K}\gamma_{,\ell}\delta \ell.
+  \qquad \delta M &= \delta \left(\frac{m}{K}\right) +\frac{m}{K}(\gamma_{a}
+                    \delta a + \gamma_{\ell}\delta\ell)\nn\\
+   &= (\gamma - a\gamma_{a})\delta \left(\frac{m}{K}\right) +
+     \gamma_{a}K\delta J + \frac{m a \gamma_{a}}{K^{2}}\delta K +
+     \frac{m}{K}\gamma_{\ell}\delta \ell.
      \label{eq:varm-al}
 \end{align}
 Now, if we rewrite \cref{eq:master-al} using $\Omega = \Omega_0+\Omega_1$,
@@ -2347,18 +2347,18 @@ in terms of $\delta \mu$, we can infer a differential equation that $\gamma$
 ought to satisfy,
 \begin{align}\label{eq:eq1al}
 \left(1+\frac{a^2}{\ell^2}\right)\gamma-
-  \left(1-\frac{a^{2}}{\ell^{2}}\right)a\gamma_{,a}-1=0 
+  \left(1-\frac{a^{2}}{\ell^{2}}\right)a\gamma_{a}-1=0 
 \end{align}
 as well as the following expressions for the correction terms, defining them in
 terms of $\gamma$:
 \begin{gather}
 V_1=-\frac{4\pi}{3K}\frac{m
   \ell^2}{1+a^2/\ell^2}\left(\left(1+\frac{a^2}{\ell^2}\right)
-  \ell\gamma_{,\ell}+2\frac{a^2}{\ell^2}a
+  \ell\gamma_{\ell}+2\frac{a^2}{\ell^2}a
   \gamma_{a}+\frac{a^2}{\ell^2}\right),\nn\\  
-\Omega_1=K\gamma_{,a}\left(1-2\frac{a^2}{\ell^2}\frac{1}{1+a^2/\ell^2}\right)-
+\Omega_1=K\gamma_{a}\left(1-2\frac{a^2}{\ell^2}\frac{1}{1+a^2/\ell^2}\right)-
 \frac{aK}{\ell^2}\frac{1}{1+a^2/\ell^2},\nn\\ 
-\lambda=r_+-\frac{m}{1+a^2/\ell^2}\left(2a\gamma_{,a}+1\right). 
+\lambda=r_+-\frac{m}{1+a^2/\ell^2}\left(2a\gamma_{a}+1\right). 
 \end{gather}
 We also require that the Smarr relation, which follows from the
 scaling properties of the system, also be satisfied. Inserting the above
@@ -2368,7 +2368,7 @@ M = 2(TS-PV+\Omega J),
 \end{align}
 we obtain another differential equation for $\gamma$,
 \begin{align}\label{eq:eq2al}
-\left(1+\frac{a^2}{\ell^2}\right)(\gamma-\ell\gamma_{,\ell})-2a\gamma_{,a}-1=0.
+\left(1+\frac{a^2}{\ell^2}\right)(\gamma-\ell\gamma_{\ell})-2a\gamma_{a}-1=0.
 \end{align}
 It is then straightforward to solve \cref{eq:eq1al,eq:eq2al} and one obtains
 \begin{gather}
@@ -2393,11 +2393,11 @@ Substituting this in for the following correction terms satisfies
 the first law for a charged, rotating black hole with potentially varying
 tensions.
 \begin{gather}
-  V_1=-\frac{4\pi}{3}\frac{m a^2}{K(1+a^{2}/\ell^{2})}\left[2a\gamma_{,a}+2e
-\gamma_{,e}-\left(1+\frac{\ell^2}{a^2}\right)\ell\gamma_{,\ell}+1\right], \qquad
-\lambda = r_+-\frac{m}{1+a^2/\ell^2}(2a\gamma_{,a}+2e\gamma_{,e}+1), \nn\\
-\Phi_1 = m\gamma_{,e},\qquad \Omega_1=-\frac{aK}{\ell^2(1+a^2/\ell^2)}
-\left[a\gamma_{,a}\left(1-\frac{\ell^2}{a^2}\right)+2e\gamma_{,e}+1\right]
+  V_1=-\frac{4\pi}{3}\frac{m a^2}{K(1+a^{2}/\ell^{2})}\left[2a\gamma_{a}+2e
+\gamma_{e}-\left(1+\frac{\ell^2}{a^2}\right)\ell\gamma_{\ell}+1\right], \qquad
+\lambda = r_+-\frac{m}{1+a^2/\ell^2}(2a\gamma_{a}+2e\gamma_{e}+1), \nn\\
+\Phi_1 = m\gamma_{e},\qquad \Omega_1=-\frac{aK}{\ell^2(1+a^2/\ell^2)}
+\left[a\gamma_{a}\left(1-\frac{\ell^2}{a^2}\right)+2e\gamma_{e}+1\right]
 =\frac{aK}{\ell^2
 \Xi}\left[1+\frac{\ell}{a}\zeta\left(\frac{e^{2}}{l^{2}}\frac{1}{\Xi^{2}}\right)\right].
 \end{gather}
@@ -3611,12 +3611,12 @@ in terms of the same quantities as those above. For this we can use variations
 $Q$ and $J$ (\cref{eq:QJP}) as well as those for $K$ and $A$ outlined above in
 \cref{eq:dKdA} to eventually obtain 
 \begin{align}
-\delta M = &~\delta\frac{m}{K}\bigg((\gamma-A\gamma_{,A}+a\gamma_{,a}\Big(\frac{2}{\Delta}(1+a^2A^2+\Delta)-1\Big)+\frac{2e}{\Delta}\gamma_{,e}(1+a^2A^2+\Delta)\bigg) \nn\\
-&+K\delta J\bigg(\gamma_{,a}\Big(1-\frac{2a^2}{\Delta}\Big(A^2-\frac{1}{\ell^2}\Big)\Big)-\frac{2ea}{\Delta}\gamma_{,e}\Big(A^2-\frac{1}{\ell^2}\Big)\bigg) \nn\\
-&+m\delta Q\bigg(-\frac{2eaA^2}{\Delta}\gamma_{,a}+\gamma_{,e}\Big(1-\frac{2e^2A^2}{\Delta}\Big)\bigg) \nn\\
-&+\frac{m}{K}\delta\ell\Big(\gamma_{,\ell}-\frac{2a^3}{\ell^3\Delta}\gamma_{,a}-\frac{2ea^2}{\ell^3\Delta}\gamma_{,e}\Big) \nn\\
-&+\delta \mu_+\Big( -\gamma_{,A}-\frac{2a}{\Delta}\big(m-A(a^2+e^2)\big)-\frac{2e}{\Delta}\gamma_{,e}\big(m-A(a^2+e^2)\big)\Big) \nn\\
-&+\delta \mu_-\Big( \gamma_{,A}-\frac{2a}{\Delta}\big(m+A(a^2+e^2)\big)-\frac{2e}{\Delta}\gamma_{,e}\big(m+A(a^2+e^2)\big)\Big).
+\delta M = &~\delta\frac{m}{K}\bigg((\gamma-A\gamma_{A}+a\gamma_{a}\Big(\frac{2}{\Delta}(1+a^2A^2+\Delta)-1\Big)+\frac{2e}{\Delta}\gamma_{e}(1+a^2A^2+\Delta)\bigg) \nn\\
+&+K\delta J\bigg(\gamma_{a}\Big(1-\frac{2a^2}{\Delta}\Big(A^2-\frac{1}{\ell^2}\Big)\Big)-\frac{2ea}{\Delta}\gamma_{e}\Big(A^2-\frac{1}{\ell^2}\Big)\bigg) \nn\\
+&+m\delta Q\bigg(-\frac{2eaA^2}{\Delta}\gamma_{a}+\gamma_{e}\Big(1-\frac{2e^2A^2}{\Delta}\Big)\bigg) \nn\\
+&+\frac{m}{K}\delta\ell\Big(\gamma_{\ell}-\frac{2a^3}{\ell^3\Delta}\gamma_{a}-\frac{2ea^2}{\ell^3\Delta}\gamma_{e}\Big) \nn\\
+&+\delta \mu_+\Big( -\gamma_{A}-\frac{2a}{\Delta}\big(m-A(a^2+e^2)\big)-\frac{2e}{\Delta}\gamma_{e}\big(m-A(a^2+e^2)\big)\Big) \nn\\
+&+\delta \mu_-\Big( \gamma_{A}-\frac{2a}{\Delta}\big(m+A(a^2+e^2)\big)-\frac{2e}{\Delta}\gamma_{e}\big(m+A(a^2+e^2)\big)\Big).
 \label{eq:dM2}
 \end{align}
 
@@ -3627,15 +3627,15 @@ obtain a set of thermodynamic quantities for this geometry that obey the first
 law.  Doing so yields a set of differential equations which can be separated out
 into five equations that determine correction terms from $\gamma$
 \begin{align}
-\Omega_1 &= K \gamma_{,a} \bigg(\frac{2 a^2}{\Delta} \Big(\frac{1}{\ell^2}-A^2\Big)+1\bigg) + \frac{2 a e K}{\Delta}\gamma_{,e} \Big(\frac{1}{\ell^2}-A^2\Big)+\frac{a K}{\Delta} \Big(\frac{1}{\ell^2}-A^2 \Big),\nn\\
-\Phi_1 &= \frac{m}{\Delta}\Big(-2 e a A^2\gamma_{,a}+(\Delta-2 e^2 A^2)\gamma_{,e}-eA^2\Big) ,\nn\\
-V_1 &= \frac{4 \pi  m }{3 \Delta K}(-\Delta l^3 \gamma_{,\ell}+2 a^3 \gamma_{,a}+2 a^2 e \gamma_{,e}+a^2),\nn\\
-\lambda_\pm &= \frac{r_+}{1\pm Ar_+}\pm \gamma_{A} + \frac{1}{\Delta}(2a\gamma_{,a} + 2e \gamma_{,e} + 1)\big(m\mp A(a^2+e^2)\big) ,
+\Omega_1 &= K \gamma_{a} \bigg(\frac{2 a^2}{\Delta} \Big(\frac{1}{\ell^2}-A^2\Big)+1\bigg) + \frac{2 a e K}{\Delta}\gamma_{e} \Big(\frac{1}{\ell^2}-A^2\Big)+\frac{a K}{\Delta} \Big(\frac{1}{\ell^2}-A^2 \Big),\nn\\
+\Phi_1 &= \frac{m}{\Delta}\Big(-2 e a A^2\gamma_{a}+(\Delta-2 e^2 A^2)\gamma_{e}-eA^2\Big) ,\nn\\
+V_1 &= \frac{4 \pi  m }{3 \Delta K}(-\Delta l^3 \gamma_{\ell}+2 a^3 \gamma_{a}+2 a^2 e \gamma_{e}+a^2),\nn\\
+\lambda_\pm &= \frac{r_+}{1\pm Ar_+}\pm \gamma_{A} + \frac{1}{\Delta}(2a\gamma_{a} + 2e \gamma_{e} + 1)\big(m\mp A(a^2+e^2)\big) ,
 \label{eq:corrTermsWithGamma}
 \end{align}
 and a differential equation for $\gamma$, 
 \begin{align}\label{eq:diffg1}
-\Delta(\gamma-A\gamma_{,A})+2e\gamma_{,e}(1+a^2A^2+\Delta))+a\gamma_{,a}(2+2a^2A^2+\Delta)+1+a^2A^2=0.
+\Delta(\gamma-A\gamma_{A})+2e\gamma_{e}(1+a^2A^2+\Delta))+a\gamma_{a}(2+2a^2A^2+\Delta)+1+a^2A^2=0.
 \end{align}
 We also need these quantities to satisfy the Smarr relation
 \begin{align}
@@ -3644,19 +3644,19 @@ M=2(TS-PV+\Omega J) + \Phi Q.
 We can use \cref{eq:QJP,eq:X,eq:OP0,eq:Smarr0,eq:V0,eq:defM} together to reduce
 the Smarr relation above into another differential equation for $\gamma$, 
 \begin{align}\label{eq:diffg2}
-\Delta(\gamma - \ell\gamma_{,\ell}) + e\gamma_{,e}(2+2a^2A^2+\Delta)+2a\gamma_{,a}(1+a^2A^2)+1+a^2A^2 = 0.
+\Delta(\gamma - \ell\gamma_{\ell}) + e\gamma_{e}(2+2a^2A^2+\Delta)+2a\gamma_{a}(1+a^2A^2)+1+a^2A^2 = 0.
 \end{align}
 
 With these two differential equations, we can discuss solving them. Subtracting
 one from the other provides a first hint at the form of $\gamma$, which is so
 familiar it could have been guessed at. We infer 
 \begin{align}
-a\gamma_{,a} + e\gamma_{,e} + \ell\gamma_{,\ell} - A \gamma_{,A} = 0 \qquad \Longleftrightarrow \qquad \gamma(A,a,e,\ell) = \phi\Big(\frac{a}{\ell}, \frac{e}{\ell}, A\ell\Big).
+a\gamma_{a} + e\gamma_{e} + \ell\gamma_{\ell} - A \gamma_{A} = 0 \qquad \Longleftrightarrow \qquad \gamma(A,a,e,\ell) = \phi\Big(\frac{a}{\ell}, \frac{e}{\ell}, A\ell\Big).
 \end{align}
 We re-write \cref{eq:diffg1} in terms of new unitless parameters $x=
 a^2/\ell^2$, $y=e^2/\ell^2$ and $z=A^2\ell^2$, 
 \begin{multline}
-\phi(1+x-z(x+y))-2x \phi_{,x}(1-x+z(3x+y))-4y\phi_{,y}(-x+z(2x+y))\\-2z\phi_{,z}(1+x-z(x+y))-1-zx=0.
+\phi(1+x-z(x+y))-2x \phi_{x}(1-x+z(3x+y))-4y\phi_{y}(-x+z(2x+y))\\-2z\phi_{z}(1+x-z(x+y))-1-zx=0.
 \end{multline}
 
 This equation has exact solutions for $x=0$ and $z=0$, either the non-rotating
@@ -3667,8 +3667,8 @@ shall only keep next-to-leading order terms, and set integration constants to
 $0$. For example, writing $\phi = \phi^{(0)}+z\phi^{(1)}+\mathcal{O}(z^2)$, we
 may use the zeroth order solution to solve the equation at first order, given by
 \begin{align}
-&x+\phi^{(0)}(x+y)+2x\phi^{(0)}_{,x}(3x+y)+4y\phi^{(0)}_{,y}(2x+y)+\phi^{(1)}(1+x)+2x\phi^{(1)}_{,x}(1-x)-4xy\phi^{(1)}_{,y}\nn\\
-&\qquad= \frac{(1+x)(x^2+2x+y^2)}{(1-x)^2}+\phi^{(1)}(1+x)+2x\phi^{(1)}_{,x}(1-x)-4xy\phi^{(1)}_{,y} = 0.
+&x+\phi^{(0)}(x+y)+2x\phi^{(0)}_{x}(3x+y)+4y\phi^{(0)}_{y}(2x+y)+\phi^{(1)}(1+x)+2x\phi^{(1)}_{x}(1-x)-4xy\phi^{(1)}_{y}\nn\\
+&\qquad= \frac{(1+x)(x^2+2x+y^2)}{(1-x)^2}+\phi^{(1)}(1+x)+2x\phi^{(1)}_{x}(1-x)-4xy\phi^{(1)}_{y} = 0.
 \end{align}
 To second order in $A$ (first order in $z$), $\gamma$ is given by
 \begin{align}
