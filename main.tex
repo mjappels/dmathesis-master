@@ -2374,12 +2374,13 @@ It is then straightforward to solve \cref{eq:eq1al,eq:eq2al} and one obtains
 \begin{gather}
 \gamma = \frac{1}{\Xi}\left(1+\frac{a}{\ell}\zeta\right),\qquad \lambda = r_+ -
 \frac{m}{\Xi^2}\left(1+\frac{a^2}{\ell^2}+\frac{2a}{\ell}\zeta\right), \nn\\  
-\Omega_1 = \frac{aK}{\ell^2 \Xi}\left(1+\frac{\ell}{a}\zeta\right), \qquad V_1 =
+\Omega_1 = \frac{a}{\ell^2}\frac{K}{\Xi}\left(1+\frac{\ell}{a}\zeta\right), \qquad V_1 =
 \frac{4\pi}{3}\frac{ma^2}{K\Xi}\left(1+\frac{\ell}{a}\zeta\right), 
 \end{gather}
 where $\zeta$ is an integration constant. We can fix it by identifying $\Omega_1
 = -\Omega_\infty$ provided $\zeta = 0$, which also assures that the angular
-velocity of the boundary vanishes for $a=0$.\todoopt{provide explanation with
+velocity of the boundary vanishes for $a=0$. Similarly, we obtain the correct
+expression for thermodynamic volume if $\zeta = 0$. \todoopt{provide explanation with
   parity argument}
 
 Finally, one can repeat this derivation with the inclusion of charge $Q=e/K$ and
@@ -2391,36 +2392,29 @@ a similar expression for $\gamma$, with $\zeta$ now a function of charge
 \end{align}
 Substituting this in for the following correction terms satisfies
 the first law for a charged, rotating black hole with potentially varying
-tensions.
-\begin{gather}
-  V_1=-\frac{4\pi}{3}\frac{m a^2}{K(1+a^{2}/\ell^{2})}\left[2a\gamma_{a}+2e
-\gamma_{e}-\left(1+\frac{\ell^2}{a^2}\right)\ell\gamma_{\ell}+1\right], \qquad
-\lambda = r_+-\frac{m}{1+a^2/\ell^2}(2a\gamma_{a}+2e\gamma_{e}+1), \nn\\
-\Phi_1 = m\gamma_{e},\qquad \Omega_1=-\frac{aK}{\ell^2(1+a^2/\ell^2)}
+tensions.\todoopt{insert expressions without $\zeta$}
+\begin{align}
+  V_1&=-\frac{4\pi}{3}\frac{m a^2}{K(1+a^{2}/\ell^{2})}\left[2a\gamma_{a}+2e
+\gamma_{e}-\left(1+\frac{\ell^2}{a^2}\right)\ell\gamma_{\ell}+1\right],
+ \nn\\
+  \lambda &= r_+-\frac{m}{1+a^2/\ell^2}(2a\gamma_{a}+2e\gamma_{e}+1),\nn\\
+  \Phi_1 &= m\gamma_{e}, \nn\\
+\Omega_1&=-\frac{aK}{\ell^2(1+a^2/\ell^2)}
 \left[a\gamma_{a}\left(1-\frac{\ell^2}{a^2}\right)+2e\gamma_{e}+1\right]
-=\frac{aK}{\ell^2
-\Xi}\left[1+\frac{\ell}{a}\zeta\left(\frac{e^{2}}{l^{2}}\frac{1}{\Xi^{2}}\right)\right].
-\end{gather}
+=\frac{a}{\ell^2} \frac{K}{\Xi} \left[1+\frac{\ell}{a}\zeta\left(\frac{e^{2}}{l^{2}}\frac{1}{\Xi^{2}}\right)\right].
+\end{align}
 The same argument as above can be used to set $\zeta=0$.
 
 \section{The thermodynamic length}
 
-
-Surprisingly perhaps, this thermodynamic length is not simply the geometric
-length $r_+$ of the string from pole to singularity.  Instead, the
-mass-dependent adjustment emphasises this is a potential, rather than just an
-internal energy term that might more appropriately be placed on the left hand
-side of the equation.
-
 To recap, we have shown that allowing for a varying conical deficit
 in black hole spacetimes, the first law of thermodynamics becomes
 \begin{align}
-\delta M = T \delta S + V\delta P + \Phi \delta Q - \lambda_+ \delta \mu_+
-- \lambda_- \delta \mu_-
+\delta M = T \delta S + V\delta P + \Phi \delta Q +\Omega\delta J - 2\lambda \delta \mu,
 \end{align}
 where the relevant thermodynamical variables are given in~\eqref{TDparams}.
 In order to accommodate varying 
-tension, we have to define a {\it thermodynamic length},
+tension, we have to define a \emph{thermodynamic length},\todoopt{formula}
 \begin{align}
 \lambda_\pm = \frac{r_+}{1\pm Ar_+} - \frac{m(1-e^2A^2)}{(1+e^2 A^2)^2} 
 \mp \frac{e^2A}{(1+e^2 A^2)}
@@ -2429,6 +2423,12 @@ for each conical deficit emerging from each pole. This length consists of
 a direct geometrical part, a mass dependent correction, and finally, a shift
 in the presence of charge.
 
+Surprisingly perhaps, this thermodynamic length is not simply the geometric
+length $r_+$ of the string from pole to singularity.  Instead, the
+mass-dependent adjustment emphasises this is a potential, rather than just an
+internal energy term that might more appropriately be placed on the left hand
+side of the equation. \todoopt{detail regarding distance between horizons, etc.}
+
 It is interesting to compare this mass-dependent shift of the thermodynamic
 length to the correction of the thermodynamic volume for a rotating black
 hole \cite{Cvetic:2010jb,Dolan:2011jm}:
@@ -2436,7 +2436,7 @@ hole \cite{Cvetic:2010jb,Dolan:2011jm}:
 V = \frac{4\pi}{3} \left( \frac{r_+(r_+^2+a^2)}{K} + a^2 M \right)
 \end{align}
 In this case, the first term is the expected geometric volume of the interior of
-the black hole, the second term being a rotation dependent correction. It is
+the black hole, the second term being a rotation-dependent correction. It is
 with this appropriately shifted thermodynamic volume, that the black hole always
 satisfies the reverse isoperimetric inequality~\cite{Cvetic:2010jb}.
 
@@ -2457,7 +2457,7 @@ conical deficit is present.  The second effect comes from the energy of the
 string behind the event horizon - although this does not formally seem to
 contribute to the mass of the black hole - if the deficit increases, then the
 black hole must give some ``extra mass'' to the string inside the event horizon,
-commensurate with the increased deficit.
+commensurate with the increased deficit.\todoopt{correct figure}
 \begin{figure}
   \centering
   \includegraphics[width=0.7\textwidth]{TDlength.pdf}
