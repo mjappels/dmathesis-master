@@ -2518,90 +2518,89 @@ representing acceleration, whose variations, together with those for $K$, may be
 re-cast as independent variations in the north and south string tensions,
 $\mu_\pm$.
 
-We will begin by developing this framework for the simplest case possible, the
-uncharged nonrotating accelerated black hole.
-
-
-
-\placehold{introduction could be the story of motivation, how it had not been
-  done before, and how one could posit thermo to begin with using physical
-  intuition of holding tension fixed}
-
-\placehold{in other words, could bring in first paper here}
+We will first begin to develop this framework with the simplest case, the
+uncharged nonrotating accelerating black hole and use the insight gained from
+the previous chapter to choose to fix the tensions. This will be physically
+motivated, and allows us to make initial assertions as to the necessary
+conditions to formulate consistent thermodynamics. We will then extend this
+to include the aforementioned generalisation of independently varying conical
+deficits, at least for charged nonrotating accelerating black holes, deriving
+the thermodynamic lengths for these solutions along the way.
 
 \section{Thermodynamics of the C-metric}
 
-We would now like to turn to the more general case where the deficits emerging
-from each pole are no longer equal. The disparity in the size of the deficit
-produces an overall force in the direction of the largest conical
-\emph{deficit}, and the geometry is described by the
-C-metric~\cite{Kinnersley:1970zw, Plebanski:1976gy, Dias:2002mi,
-  Griffiths:2005qp, Podolsky:2002nk}, introduced in \cref{chap:cmet}. Typically,
-C-metrics have both black hole and acceleration horizons, however, for
-simplicity we wish to restrict ourselves to having only the black hole horizon,
-in order that we have a well-defined temperature for the space-time. Such a
-geometry is called the \emph{slowly accelerating C-metric}
-\cite{Podolsky:2002nk}. For convenience, we shall rewrite the metric and
-corresponding gauge potential here:
+\subsection{For fixed tensions}
+
+For a general black hole spacetime containing conical defects, any disparity in
+the sizes of the deficits produces an overall force in the direction of the
+largest conical \emph{deficit}, and the geometry is described by the
+C-metric~\cite{Kinnersley:1970zw}, introduced in \cref{chap:cmet}. Typically,
+C-metrics have both black hole and acceleration horizons. In order to have any
+chance at constructing a thermodynamic description, we would like to be able to
+eliminate the acceleration horizon which has its own temperature, different to
+that of the black hole's. This is possible in asymptotically anti-de Sitter
+soace and for that reason we shall be studying accelerating black holes in
+negative cosmological constant universes. More specifically, we must restrict
+ourselves to the so-called \emph{slowly accelerating C-metric}
+\cite{Podolsky:2002nk}, for which the acceleration is small enough that the
+negative curvature prevents the existence of an acceleration horizon. For
+convenience, we shall rewrite the metric here:
 \begin{align}
   ds^2=\frac{1}{\Omega^2}\left[ -
   f(r) dt^2
   +\frac{dr^2}{f(r)} + r^2 \Big( \frac{d\theta^2}{g(\theta)} 
-  + g(\theta)\sin^2\theta \frac{d\phi^2}{K^2}\Big)\right], \qquad
-  {B}= -\frac{e}{r} dt,
+  + g(\theta)\sin^2\theta \frac{d\phi^2}{K^2}\Big)\right],
   \label{eq:cmetric3}
 \end{align}
 and
 \begin{align}
-f(r)&=(1-A^2r^2)\Bigl(1-\frac{2 m}{r}+\frac{e^2}{r^2}\Bigr)
+f(r)&=(1-A^2r^2)\Bigl(1-\frac{2 m}{r}\Bigr)
 +\frac{r^2}{\ell^2},\\
-  g(\theta)&=1+2mA \cos\theta+ e^2A^2 \cos^2\theta,\nn\\
+  g(\theta)&=1+2mA \cos\theta,\nn\\
   \Omega&=1+Ar\cos\theta.
 \label{eq:cmetric3-fun}
 \end{align}
 The conical deficits this spacetime exhibits correspond to cosmic strings with
-tensions given by
+tensions given by (see \cref{eq:deficitsNR})
 \begin{align}
   \label{eq:tensionsNR}
   \mu_\pm=\frac14\bigg[1-\frac{g(\theta_\pm)}{K}\bigg] = \frac14\bigg[1-\frac{1\pm
-  2mA + e^2A^2}{K}\bigg]. 
+  2mA}{K}\bigg]. 
 \end{align} 
 Further details concerning the spacetime and its subtleties can be found by
 referring back to \cref{sec:cmet-review}. 
 
-\todoruth[inline]{? Why not begin by fixing $\mu$ --- a la PRL?}
-
-
-In order to understand the structure of this accelerating black hole, 
-it is useful to consider the effects of the various parameters. 
-Although we suspect $m$ and $e$ play the roles of mass and charge
-for the black hole, the original form of the C-metric has these variables
-defined slightly differently. In order to check this, consider the Komar 
-integral for the mass using the
-method described in \cite{Magnon:1985sc} \todoruth{ Is this true? Thought Komar
-  did not work.}
+In order to understand the structure of this accelerating black hole, it is
+useful to consider the effects of the various parameters.  We suspect $m$ to be
+related to the mass of the black hole, however the computation required to
+obtain such an expression is rather tricky. The awkward asymptotics do not lend
+themselves well to a Komar approach. Instead, we used the method of conformal
+completion \cite{Ashtekar:1984zz, Ashtekar:1999jx, Das:2000cu}. This takes the
+electric part of the Weyl tensor projected along the timelike conformal Killing
+vector, and integrates over a sphere at conformal infinity. The calculation
+gives\footnote{More details regarding this computation are provided in
+  \cref{sec:ashtekar-das}. Though it should be noted that the result stated here
+was later discovered to be incorrect. \Cref{chap:holoTD} addresses the issue,
+however these details were discovered in the later stages of the production of
+this thesis. The results stated in this chapter hold despite this inconsistency.}
 \begin{align}
-  M_K = \frac{1}{8\pi} \int_{S^2} \star d\xi - \frac{1}{4\pi}
-  \int n_a R^a_b \xi^b \sqrt{h} d^3x = \frac{m}{K}
-  \label{komar}
+  M = \frac{m}{K},
+  \label{eq:massAcc}
 \end{align}
-where $\xi = \partial_t$ is a timelike Killing vector field, the first integral
-is performed over a $\{\theta,\phi\}$ surface of topology $S^2$ considered to be
-near infinity, and the second integral is performed throughout the interior of
-this surface at constant `time' (as defined by $\xi$).  Note this integral is
-actually independent of $A$, hence we can associate $m$ with the bare mass of
-the black hole, whether accelerating or not.  Similarly, $e$ is related to the
-charge of the black hole:
-\begin{equation}
-Q = \frac{1}{4\pi} \int_{S^2} \star dB = \frac{e}{K}
-\label{Qdef}
-\end{equation}
+thus $m$ gives the mass of the black hole. Note that unlike the rapidly
+accelerating black hole, this is a genuine ADM-style mass, and not a
+``rearrangement'' of dipoles as discussed in \cite{Dutta:2005iy}, where a boost
+mass was introduced for the C-metric.
 
-We have already seen how the parameter $K$ is related to the conical
-deficits, thus the only remaining parameter to explore is $A$. In order
-to understand the structure of the spacetime and the relevance of $A$,
-first consider the Rindler space found by
-setting $m=e=0$ in \cref{eq:cmetric3}:
+We have already seen how the parameter $K$ is related to the conical deficits in
+\cref{chap:td-conical}, thus the only remaining parameter is $A$, which was
+identified as the acceleration in \cref{sec:cmet-history} for the asymptotically
+flat solution by studying the weak field limit $m\to 0$ and relating it to
+the Rindler spacetime.
+
+In order to understand the structure of the spacetime and the
+relevance of $A$, first consider the Rindler space found by setting $m=e=0$ in
+\cref{eq:cmetric3}:
 \begin{equation}
 ds^2=\frac{1}{\Omega^2}\Biggl[ -
 \left ( 1 + \frac{r^2}{\ell^2} (1-A^2 \ell^2) \right) dt^2
