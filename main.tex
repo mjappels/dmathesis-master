@@ -2543,8 +2543,13 @@ soace and for that reason we shall be studying accelerating black holes in
 negative cosmological constant universes. More specifically, we must restrict
 ourselves to the so-called \emph{slowly accelerating C-metric}
 \cite{Podolsky:2002nk}, for which the acceleration is small enough that the
-negative curvature prevents the existence of an acceleration horizon. For
-convenience, we shall rewrite the metric here:
+negative curvature prevents the existence of an acceleration horizon. With this
+geometry, we may consider the entire spacetime, black hole and string(s)
+combined, as forming a thermodynamic equilibrium. In the absence of an
+acceleration horizon, the spacetime can be interpreted as having a black hole
+maintained a finite distance from the centre of AdS by the cosmic string. We
+will revisit this shortly, for now let us rewrite the metric here, for
+convenience. We have
 \begin{align}
   ds^2=\frac{1}{\Omega^2}\left[ -
   f(r) dt^2
@@ -2570,61 +2575,37 @@ tensions given by (see \cref{eq:deficitsNR})
 Further details concerning the spacetime and its subtleties can be found by
 referring back to \cref{sec:cmet-review}. 
 
-In order to understand the structure of this accelerating black hole, it is
-useful to consider the effects of the various parameters.  We suspect $m$ to be
-related to the mass of the black hole, however the computation required to
-obtain such an expression is rather tricky. The awkward asymptotics do not lend
-themselves well to a Komar approach. Instead, we used the method of conformal
-completion \cite{Ashtekar:1984zz, Ashtekar:1999jx, Das:2000cu}. This takes the
-electric part of the Weyl tensor projected along the timelike conformal Killing
-vector, and integrates over a sphere at conformal infinity. The calculation
-gives\footnote{More details regarding this computation are provided in
-  \cref{sec:ashtekar-das}. Though it should be noted that the result stated here
-was later discovered to be incorrect. \Cref{chap:holoTD} addresses the issue,
-however these details were discovered in the later stages of the production of
-this thesis. The results stated in this chapter hold despite this inconsistency.}
-\begin{align}
-  M = \frac{m}{K},
-  \label{eq:massAcc}
-\end{align}
-thus $m$ gives the mass of the black hole. Note that unlike the rapidly
-accelerating black hole, this is a genuine ADM-style mass, and not a
-``rearrangement'' of dipoles as discussed in \cite{Dutta:2005iy}, where a boost
-mass was introduced for the C-metric.
-
 We have already seen how the parameter $K$ is related to the conical deficits in
-\cref{chap:td-conical}, thus the only remaining parameter is $A$, which was
-identified as the acceleration in \cref{sec:cmet-history} for the asymptotically
-flat solution by studying the weak field limit $m\to 0$ and relating it to
-the Rindler spacetime.
-
-In order to understand the structure of the spacetime and the
-relevance of $A$, first consider the Rindler space found by setting $m=e=0$ in
-\cref{eq:cmetric3}:
-\begin{equation}
-ds^2=\frac{1}{\Omega^2}\Biggl[ -
-\left ( 1 + \frac{r^2}{\ell^2} (1-A^2 \ell^2) \right) dt^2
-+\frac{dr^2}{1 + \frac{r^2}{\ell^2}(1-A^2\ell^2)} + r^2 \left ( d\theta^2
-+ \sin^2 \theta d\phi^2\right)\Biggr]\\
-\end{equation}
+\cref{chap:td-conical}, however we would like to give some interpretation of the
+parameter $A$, which was identified as the acceleration in
+\cref{sec:cmet-history} for the asymptotically flat solution by studying the
+weak field limit $m=0$ and exposing it as a a reparametrisation of Rindler
+spacetime. In the presence of a cosmological constant it may be more helpful to
+view it as the acceleration required to maintain the black hole some distance
+away from the centre of AdS, as we alluded to previously. Setting $m=0$ and
+$K=1$ to eliminate the conical deficit in \cref{eq:cmetric3} gives
+\begin{align}
+ds^2=\frac{1}{\Omega^2}\left[ -
+\Big( 1 + \frac{r^2}{\ell^2} (1-A^2 \ell^2) \Big) dt^2
++\frac{dr^2}{1 + \frac{r^2}{\ell^2}(1-A^2\ell^2)} + r^2 ( d\theta^2
++ \sin^2 d\phi^2)\right].
+\end{align}
 This spacetime no longer has a conical singularity and is locally pure AdS,
 however in these coordinates the boundary of AdS is not at $r=\infty$, but at
 $r = -1/(A\cos\theta)$. For $\theta$ in the southern hemisphere, this occurs at
-{\it finite} $r$, but in the northern hemisphere $r=\infty$ actually lies within
-the AdS spacetime (see figure \ref{fig:accbh}). To transform to global AdS
+\emph{finite} $r$, but in the northern hemisphere $r=\infty$ actually lies
+within the AdS spacetime (see \cref{fig:accbh}). To transform to global AdS
 coordinates $\{R,\Theta\}$, one takes \cite{Podolsky:2002nk}\todoruth{And these
-  are? This section feels incomplete.}
+  are? This section feels incomplete.}\todoopt{not sure what is meant by comment}
 \begin{equation}
 1 + \frac{R^2}{\ell^2} = \frac{1 + (1-A^2\ell^2)r^2/\ell^2}{(1-A^2\ell^2)\Omega^2}
 ~,\qquad
 R \sin\Theta = \frac{r\sin\theta}{\Omega}.
 \end{equation}
-
-
-The boundary, $R\to\infty$ now clearly corresponds to $\Omega\to 0$, 
-and the origin of Rindler coordinates corresponds to
-$R_0 = A \ell^2/\sqrt{1-A^2\ell^2}$, i.e.\ the Rindler coordinates represent
-those of an observer displaced from the origin of AdS.
+The boundary, $R\to\infty$ now clearly corresponds to $\Omega\to 0$, and the
+origin of Rindler coordinates corresponds to
+$R_0 = A \ell^2/\sqrt{1-A^2\ell^2}$, in other words, the Rindler coordinates
+represent those of an observer displaced from the origin of AdS.
 \begin{figure}
   \centering
   \begin{subfigure}[b]{0.5\textwidth}
@@ -2646,8 +2627,58 @@ those of an observer displaced from the origin of AdS.
     again static, and a cross section is shown.}
 \end{figure}
 
-A comprehensive exploration of the structure of AdS C-metric spacetimes, 
-including their distortion of the boundary, was given in \cite{Krtous:2005ej}.
+Let us now define an important thermodynamic quantity. We suspect $m$ to be
+related to the mass of the black hole, however the computation required to
+obtain such an expression is rather tricky. The awkward asymptotics do not lend
+themselves well to a Komar approach. Instead, we used the method of conformal
+completion \cite{Ashtekar:1984zz, Ashtekar:1999jx, Das:2000cu}. This takes the
+electric part of the Weyl tensor projected along the timelike conformal Killing
+vector, and integrates over a sphere at conformal infinity. The calculation
+gives\footnote{More details regarding this computation are provided in
+  \cref{sec:ashtekar-das}. Though it should be noted that the result stated here
+  was later discovered to be incorrect. In particular, this is related to an
+  issue with the somewhat ambiguous normalisation of the timelike killing vector
+  which affects the computation by an overall scale factor. \Cref{chap:holoTD}
+  addresses the issue, however these details were discovered in the later stages
+  of the production of this thesis. The results stated in this chapter hold
+  despite this inconsistency.}
+\begin{align}
+  M = \frac{m}{K},
+  \label{eq:massAcc}
+\end{align}
+thus $m$ gives the mass of the black hole. Note that unlike the rapidly
+accelerating black hole, this is a genuine ADM-style mass, and not a
+``rearrangement'' of dipoles as discussed in \cite{Dutta:2005iy}, where a boost
+mass was introduced for the C-metric.
+
+Meanwhile, we identify the entropy with a quarter of the horizon 
+area 
+\begin{align}
+S=\frac{\cal A}{4}=\frac{\pi r_+^2}{K(1-A^2r_+^2)}\,,
+\end{align}
+and calculate the temperature via the usual Euclidean method (see
+\cref{sec:euclidean}) to obtain
+\begin{align}
+T=\frac{f'(r_+)}{4\pi} = \frac{1}{2\pi r_+}\left(\frac{m}{r_+}\left(1+A^2r_+^2
+\right) + \frac{r_+^2}{\ell^2} - A^2 r_+^2\right).
+\end{align}
+We now identify $P$ with the pressure associated to the cosmological constant
+according to $P=\frac{3}{8\pi \ell^2}$, which allows us to rewrite the
+temperature as
+\begin{align}
+TS = \frac{M}{2}+ P \frac{4\pi}{3K}
+\frac{r_+^3}{(1-A^2r_+^2)^2},
+\end{align}
+which is nothing other than the Smarr relation $M= 2(TS - PV)$ provided we
+identify the black hole thermodynamic volume as
+\begin{align}
+V=\frac{4\pi}{3K}\frac{r_+^3}{(1-A^2r_+^2)^2}.
+\end{align}
+
+
+
+
+
 
 \subsection{Thermodynamics of the slowly accelerating C-metric}
 \label{sec:cmet-TD-der}
