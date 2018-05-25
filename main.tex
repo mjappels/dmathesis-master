@@ -7,7 +7,7 @@ frontopenright,
 \input{preamble}
 
 \usepackage{setspace}
-\doublespacing
+\onehalfspacing
 
 \usepackage{todonotes}
 \usepackage{cleveref}
@@ -2654,7 +2654,8 @@ mass was introduced for the C-metric.
 Meanwhile, we identify the entropy with a quarter of the horizon 
 area 
 \begin{align}
-S=\frac{\cal A}{4}=\frac{\pi r_+^2}{K(1-A^2r_+^2)}\,,
+  \label{eq:entropyFT}
+S=\frac{\mathcal{A}}{4}=\frac{\pi r_+^2}{K(1-A^2r_+^2)}\,,
 \end{align}
 and calculate the temperature via the usual Euclidean method (see
 \cref{sec:euclidean}) to obtain
@@ -2675,10 +2676,70 @@ identify the black hole thermodynamic volume as
 V=\frac{4\pi}{3K}\frac{r_+^3}{(1-A^2r_+^2)^2}.
 \end{align}
 
+So far, this is a rewriting of a relation for the temperature, having identified
+standard thermodynamic variables or charges for the solution. Now let us
+consider the first law by considering a variation due to some physical process.
+Typically, one derives the first law by observing the change in horizon radius
+during a physical process. The horizon radius is given by a root of $f(r_+)=0$,
+and thus depends on $m$, $A$ and $\ell$. The specific form of this
+algebraic root is not vital, what matters is how the mass varies in terms of the
+change in horizon area, thermodynamic volume, and charge.
 
+Originally, it was reasoned that during this process, the conical deficits (or
+lack thereof) could not change, as these corresponded to the physical objects
+causing the acceleration. Of course, as we have already shown by now, one could
+enviseage physical processes that would alter a conical defects on a black hole
+horizon, nonetheless it is simplest to restrain ourselves to the scenario where
+all tensions are held fixed. Thus we must consider a variation of $m$, $A$ and
+$K$ that preserves the cosmic string tensions, and it turns out that it is
+precisely through this physical restriction that we are able to derive a first
+law.
 
+To obtain the first law, we typically consider a perturbation of the equation
+that determines the location of the event horizon of the black hole:
+$f(r_+)=0$. If we allow our parameters to vary, this will typically result in a
+perturbation also of $r_+$, hence we can write
+\begin{align}
+\frac{\partial f}{\partial r_+} \delta r_+ +
+\frac{\partial f}{\partial m} \delta m +
+\frac{\partial f}{\partial A} \delta A +
+\frac{\partial f}{\partial \ell} \delta \ell =0
+\end{align}
+where everything is evaluated at $f(r_+, m,A, \ell)=0$.  Clearly we can replace
+$\delta m$ and $\delta \ell$ by variations of the thermodynamic parameters $M$
+and $P$, and $\delta r_+$ is expressible in terms of $\delta S$ and $\delta A$
+using \cref{eq:entropyFT}. Finally, we replace
+$\partial f /\partial r_+ = 4 \pi T$, and use $f(r_+)=0$ to simplify the terms
+multiplying $\delta A$ to obtain:
+\begin{align}
+(1-A^2 r_+^2) (T \delta S + V \delta P) - \delta M - \frac{m A r_+^2}{K} \delta
+  A + \left(\frac{r_+^2}{\ell^2}-(1+A^2r_+^2)\right)\frac{r_+\delta K}{4K^2}  =0,
+\label{eq:firstint}
+\end{align}
+where we have also allowed $K$ to vary for completeness.
 
+At the moment, it seems as if we have extra thermodynamic contributions, however,
+we now use the physical input from the cosmic string that the conical deficits
+on each axis must not change. To achieve this, we must require that both $\delta
+\mu_\pm = 0$. A quick look at the linear combinations
+\begin{align}
+  \mu_+ + \mu_- = \frac12\left[1-\frac{1}{K}\right] \qquad \mbox{and} \qquad \mu_+-\mu_- = -\frac{mA}{K}
+\end{align}
+reveals that this is achieved by the conditions $\delta K=0$ and
+$\delta (mA) = 0$, or $m\delta A = - A \delta m$.  Replacing $\delta A$ in
+\cref{eq:firstint} and rearranging, finally, indeed gives the first law:
+\begin{align}
+\delta M = T \delta S + V \delta P.
+\label{eq:firstlawFT}
+\end{align}
 
+Thus, this first pass at a thermodynamic construction for accelerating black
+holes is indeed promising. Despite a few intuitive barriers, we have succeeded
+in establishing a first law for this black hole solution, suggesting that it
+ought to display similar thermal behaviour to other known solutions. We will
+carry out a survey of its thermodynamic behaviour further on, however we must
+now generalise this result to include electric charge as well as investigate whether
+it is feasible to allow the string tensions to vary independently. 
 
 \subsection{Thermodynamics of the slowly accelerating C-metric}
 \label{sec:cmet-TD-der}
