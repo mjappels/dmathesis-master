@@ -2444,12 +2444,13 @@ conical deficit is present.  The second effect comes from the energy of the
 string behind the event horizon - although this does not formally seem to
 contribute to the mass of the black hole - if the deficit increases, then the
 black hole must give some ``extra mass'' to the string inside the event horizon,
-commensurate with the increased deficit.\todoopt{correct figure}
+commensurate with the increased deficit.
 \begin{figure}
   \centering
   \includegraphics[width=0.7\textwidth]{lengthplot.pdf}
-  \caption{\label{fig:TDlength}Thermodynamic length for black holes of different
-    mass and conical deficits.}
+  \caption{\label{fig:TDlength}Plot of the thermodynamic length for uncharged
+    nonrotating black holes in asymptotically AdS space. As the deficit is
+    increased, the effect on the length of adding mass is amplified.}
 \end{figure}
 
 
@@ -2486,7 +2487,7 @@ There is at least one of these aspects about which we might feel more
 confident. The previous chapter discussed how one could include the tension of
 cosmic strings attached to black hole horizons as a thermodynamic variable,
 introducing the concept of the thermodynamic length, the conjugate to the
-tension. Each of the configurations we have dealt with up until now ahd equal
+tension. Each of the configurations we have dealt with up until now had equal
 deficits between the north and south poles, however, as we reviewed in
 \cref{sec:conical}, the C-metric represents an accelerated black hole driven by
 an imbalance in the cosmic string tensions at each of the poles. What must then
@@ -2752,8 +2753,8 @@ We start by finding the temperature and entropy of the black hole, using
 the conventional relations
 \begin{align}
   \label{eq:TSNR}
-T &= \frac{f'(r_+)}{4\pi} = \frac{1}{2\pi r_+^2} \left [ (1-A^2 r_+^2) \left (
-m - \frac{e^2}{r_+}\right) + \frac{r_+^3}{\ell^2(1-A^2 r_+^2)} \right]\nn\\
+T &= \frac{f'(r_+)}{4\pi} = \frac{1}{2\pi r_+}\left(\frac{m}{r_+}\left(1+A^2r_+^2
+\right) + \frac{r_+^2}{\ell^2} - A^2 r_+^2-\frac{e^2}{r_+^2}\right).\nn\\
 S &= \frac{\mathcal{A}}{4} =\frac{\pi r_+^2}{K(1-A^2 r_+^2)}.
 \end{align}
 Checking the Smarr relation, we compute
@@ -2992,7 +2993,11 @@ $V$ and \cref{eq:TSNR} for $\mathcal{A}$, we find
 Thus these slowly accelerating black holes do indeed satisfy the
 reverse isoperimetric inequality.
 
-\placehold{something about rotation}
+From here, it would be most interesting to proceed onto rotating black holes,
+nicely tieing the bow on this study of thermodynamics. Alas, the computations
+involved have proved too tall an order. We shall, however, revisit the topic
+further in the chapter as we now take a turn to explore what these findings may
+teach us about accelerating black holes.
 
 \section{Critical behaviour of accelerating black holes}
 
@@ -3001,23 +3006,23 @@ is something analogous to a Hawking-Page phase transition \cite{Hawking:1982dh}
 for our accelerating black holes, although it is difficult to see how one could
 actually have a phase transition between a system with a conical deficit along
 one polar axis only, and a presumably totally regular radiation bath.  However,
-recall that a black hole in AdS behaves similarly to a black hole in a
-reflecting box, with the negative curvature of the AdS providing the qualitative
-reflection. For small black holes, the effect of the negative curvature is
-sub-dominant to the local curvature of the black hole, and the black hole has
-negative specific heat, as in the vacuum Schwarzschild case. For black holes
-larger than the AdS radius, the vacuum curvature dominates, and the black hole
-has positive specific heat, in particular, there is a minimum temperature for a
-black hole in AdS, below this temperature, only a radiation bath can be a
-solution to the Einstein equations at finite $T$. Plotting the Gibbs free energy
-as a function of temperature shows both the allowed states, as well as the
-preferred one for a given temperature.  At very low $T$, the only allowed state
-is a radiation bath. Above a critical temperature $T_c = \sqrt{3}/2\pi\ell$, one
-can have either a radiation bath, or a black hole (that may be either `small' or
-`large'). However for $T>1/\pi\ell$, the large black hole is not only
-thermodynamically stable (in the sense of positive specific heat) but
-thermodynamically preferred, and a radiation bath will spontaneously transition
-into a large black hole.
+recall, from \cref{sec:hawkingpage}, that a black hole in AdS behaves similarly
+to a black hole in a reflecting box, with the negative curvature of the AdS
+providing the qualitative reflection. For small black holes, the effect of the
+negative curvature is sub-dominant to the local curvature of the black hole, and
+the black hole has negative specific heat, as in the vacuum Schwarzschild
+case. For black holes larger than the AdS radius, the vacuum curvature
+dominates, and the black hole has positive specific heat, in particular, there
+is a minimum temperature for a black hole in AdS, below this temperature, only a
+radiation bath can be a solution to the Einstein equations at finite
+$T$. Plotting the Gibbs free energy as a function of temperature shows both the
+allowed states, as well as the preferred one for a given temperature.  At very
+low $T$, the only allowed state is a radiation bath. Above a critical
+temperature $T_c = \sqrt{3}/2\pi\ell$, one can have either a radiation bath, or
+a black hole (that may be either `small' or `large'). However for $T>1/\pi\ell$,
+the large black hole is not only thermodynamically stable (in the sense of
+positive specific heat) but thermodynamically preferred, and a radiation bath
+will spontaneously transition into a large black hole.
 
 First consider the situation where our accelerating black hole is
 uncharged.\footnote{ Note: in all explicit examples and figures in this section
@@ -3219,13 +3224,15 @@ An interesting feature of the ultra-spinning black hole lies in its
 thermodynamic description. As alluded to in the introduction to this chapter,
 this spacetime seems to have more entropy than it should by violating the
 reverse isoperimetric inequality, which caps entropy based on the thermodynamic
-volume of a black hole spacetime. 
+volume of a black hole spacetime.
 
-In exploring possible black hole solutions in four-dimensional Fayet-Iliopoulos
-gauged supergravities, Gnecchi et al.~\cite{Gnecchi:2013mja} briefly presented a
-noncompact black hole horizon with a finite area. It was later clarified in a
-letter by Klemm~\cite{Klemm:2014rda} that this solution can be interpreted as
-the \emph{ultra-spinning} limit of the Kerr-AdS solution, where the rotation
+Another area of interest recently has been to search for and discover spacetimes
+which do not satisfy the reverse isoperimetric inequality. In exploring possible
+black hole solutions in four-dimensional Fayet-Iliopoulos gauged supergravities,
+Gnecchi et al.~\cite{Gnecchi:2013mja} briefly presented a noncompact black hole
+horizon with a finite area. It was later clarified in a letter by
+Klemm~\cite{Klemm:2014rda} that this solution can be interpreted as the
+\emph{ultra-spinning} limit of the Kerr-AdS solution, where the rotation
 parameter is taken to be critically large. This limit only becomes sensible if
 one admits the existence of conical defects running along the main axis of
 revolution, which in turn become maximal in this limit. The result is a horizon
@@ -3235,14 +3242,11 @@ conical deficits at each pole that extrude to the boundary.
 From here, in a series of papers, Hennigar \emph{et
   al.}~\cite{Hennigar:2015gan,Hennigar:2014cfa,Hennigar:2015cja}, explored the
 thermodynamic implications of having such an extraordinary spacetime. If the
-nondiverging area of a noncompact horizon was the initial ``first of its
-kind'' for this solution, these papers established the second such instance. The
-\emph{reverse isoperimetric conjecture}~\cite{Dolan:2013ft,Cvetic:2010jb}
-establishes an upper bound on the entropy for any black hole given its
-thermodynamic volume, which is reached only for spherical black hole
-solutions. The ultraspinning black hole was the first solution found to violate
-this conjecture, leading the authors to impose more stringent conditions under
-which the bound might be valid.
+nondiverging area of a noncompact horizon was the initial ``first of its kind''
+for this solution, these papers established the second such instance. The
+ultraspinning black hole was the first solution found to violate this
+conjecture, leading the authors to impose more stringent conditions under which
+the bound might be valid.
 
 In this chapter, we seek to determine the uniqueness of this latter discovery. A
 curious feature of the ultraspinning spacetime is that it is seemingly isolated
