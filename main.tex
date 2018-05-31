@@ -2151,7 +2151,7 @@ thus
 = M - \Phi Q + 2PV
 \end{align}
 gives a Smarr formula \cite{Smarr:1972kt} for the black hole, where $M=m/K$ is
-the mass of the black hole, $Q = \frac{1}{4\pi}
+the mass of the black hole, $Q = (4\pi)^{-1}
 \int \star dB=e/K$ is the charge on the black hole, 
 $\Phi = e/r_+$ the potential at the horizon, and $P = 3/8\pi \ell^2$, 
 $V = 4\pi r_+^3/3$ the thermodynamic pressure and volume respectively 
@@ -2390,20 +2390,9 @@ a similar expression for $\gamma$, with $\zeta$ now a function of charge
   \gamma =
 \frac{1}{\Xi}\left[1+\frac{a}{\ell}\zeta\left(\frac{e^{2}}{\ell^{2}}\frac{1}{\Xi^{2}}\right)\right].
 \end{align}
-Substituting this in for the following correction terms satisfies
-the first law for a charged, rotating black hole with potentially varying
-tensions.\todoopt{insert expressions without $\zeta$}
-\begin{align}
-  V_1&=-\frac{4\pi}{3}\frac{m a^2}{K(1+a^{2}/\ell^{2})}\left[2a\gamma_{a}+2e
-\gamma_{e}-\left(1+\frac{\ell^2}{a^2}\right)\ell\gamma_{\ell}+1\right],
- \nn\\
-  \lambda &= r_+-\frac{m}{1+a^2/\ell^2}(2a\gamma_{a}+2e\gamma_{e}+1),\nn\\
-  \Phi_1 &= m\gamma_{e}, \nn\\
-\Omega_1&=-\frac{aK}{\ell^2(1+a^2/\ell^2)}
-\left[a\gamma_{a}\left(1-\frac{\ell^2}{a^2}\right)+2e\gamma_{e}+1\right]
-=\frac{a}{\ell^2} \frac{K}{\Xi} \left[1+\frac{\ell}{a}\zeta\left(\frac{e^{2}}{l^{2}}\frac{1}{\Xi^{2}}\right)\right].
-\end{align}
-The same argument as above can be used to set $\zeta=0$.
+Eliminating the integration through a similar line of reasoning as above leads
+to the correction terms already written above, with the additional proviso that
+the correction to the gauge potential $\Phi_1 = 0$.
 
 \section{The thermodynamic length}
 
@@ -2414,26 +2403,24 @@ in black hole spacetimes, the first law of thermodynamics becomes
 \end{align}
 where the relevant thermodynamical variables are given in~\eqref{TDparams}.
 In order to accommodate varying 
-tension, we have to define a \emph{thermodynamic length},\todoopt{formula}
-\begin{align}
-\lambda_\pm = \frac{r_+}{1\pm Ar_+} - \frac{m(1-e^2A^2)}{(1+e^2 A^2)^2} 
-\mp \frac{e^2A}{(1+e^2 A^2)}
+tension, we have to define a \emph{thermodynamic length},
+\begin{align}\lambda = r_+ -
+\frac{m}{\Xi^2}\left(1+\frac{a^2}{\ell^2}\right)
 \end{align}
-for each conical deficit emerging from each pole. This length consists of 
-a direct geometrical part, a mass dependent correction, and finally, a shift
-in the presence of charge.
-
-Surprisingly perhaps, this thermodynamic length is not simply the geometric
-length $r_+$ of the string from pole to singularity.  Instead, the
-mass-dependent adjustment emphasises this is a potential, rather than just an
-internal energy term that might more appropriately be placed on the left hand
-side of the equation. \todoopt{detail regarding distance between horizons, etc.}
+for each conical deficit emerging from each pole. Surprisingly perhaps, this
+thermodynamic length is not simply the geometric length $r_+$ of the string from
+pole to singularity.  Instead, the mass-dependent adjustment emphasises this is
+a potential, rather than just an internal energy term that might more
+appropriately be placed on the left hand side of the equation. Interestingly
+perhaps, in the absence of a cosmological constant, the thermodynamic length can
+actually be interpreted as half the distance betweent the inner and outer horizons,
+$\lambda = \frac{r_+ - r_-}{2}$, though this is not the case in AdS.
 
 It is interesting to compare this mass-dependent shift of the thermodynamic
 length to the correction of the thermodynamic volume for a rotating black
 hole \cite{Cvetic:2010jb,Dolan:2011jm}:
 \begin{align}
-V = \frac{4\pi}{3} \left( \frac{r_+(r_+^2+a^2)}{K} + a^2 M \right)
+V = \frac{4\pi}{3K} \left(r_+(r_+^2+a^2) + m a^2\right)
 \end{align}
 In this case, the first term is the expected geometric volume of the interior of
 the black hole, the second term being a rotation-dependent correction. It is
@@ -2460,12 +2447,9 @@ black hole must give some ``extra mass'' to the string inside the event horizon,
 commensurate with the increased deficit.\todoopt{correct figure}
 \begin{figure}
   \centering
-  \includegraphics[width=0.7\textwidth]{TDlength.pdf}
-  \caption{\label{fig:TDlength}A plot of thermodynamic length of the south
-    pole tension for regular north pole, $\mu_+=0$. The limit of the
-    Schwarzschild-AdS black hole is shown in pink ($\mu_-=0$). The slowly
-    accelerating r\'egime, $A<A_\mathrm{crit}$, is shown as a solid line, and
-    $A>A_\mathrm{crit}$ is shown dashed.}
+  \includegraphics[width=0.7\textwidth]{lengthplot.pdf}
+  \caption{\label{fig:TDlength}Thermodynamic length for black holes of different
+    mass and conical deficits.}
 \end{figure}
 
 
@@ -2752,7 +2736,7 @@ corresponding to each deficit. An example of a process which would involve a
 change in the string tensions could be the collision of two accelerating black
 holes\footnote{An unfortunate caveat of our model is that the two black holes
   would need to be accelerating along the same axis.}. Keeping the metric as in
-\cref{eq:cmetric3}, now with $f(r)$ defined to be \eqref{eq:NRrth-fn}:
+\cref{eq:cmetric3}, now with $f(r)$ defined to be \eqref{eq:NRrth-fn}
 \begin{align}
   f(r) = (1-A^2r^2)\left(1-\frac{2m}{r} + \frac{e^2}{r^2}\right)+\frac{r^2}{\ell^2},
 \end{align}
@@ -2919,7 +2903,7 @@ This equation is solvable, and we obtain
   \gamma = \frac{1}{1+e^2 A^2} + A\ell \zeta\left(\frac{\ell}{e}+A^2e \ell\right),
 \end{align}
 where requiring $\gamma$ be unity in the absence of charge eliminates the
-integrating function $\zeta$. This specifies our thermodynamic mass, and we
+integrating function $\zeta(x)$. This specifies our thermodynamic mass, and we
 determine $\Phi_1$ and $\lambda_\pm$ from \cref{eq:firstlawder1}:
 \begin{align}
 M &= \frac{m}{K(1+e^2 A^2)} \nn\\
@@ -3229,8 +3213,8 @@ holes are allowed, varies with tension.
 
 \section{Critical black holes with teardrop-shaped horizons}
 \label{chap:crit-bh}
-\todoopt{need to contextualise, maybe tone down intro a little}
 
+\todoopt{need to contextualise, maybe tone down intro a little}
 An interesting feature of the ultra-spinning black hole lies in its
 thermodynamic description. As alluded to in the introduction to this chapter,
 this spacetime seems to have more entropy than it should by violating the
@@ -3413,7 +3397,7 @@ for $\delta_- \to 2\pi$, since $\delta_-\geqslant \delta_+$. We read off, from
 our definition of the conical deficits~\eqref{eq:tensions}, that this occurs
 when $g(\theta_-)=0$. We have already determined this in
 \cref{sec:rotating-c-metric}, when investigating parametric restrictions on this
-metric. The case we are interested in actually corresponds, as long as $mA < 1$
+metric. The case we are interested in actually corresponds, as long as $mA < 1$,
 to the solid blue lines in \cref{fig:param-regions}, described by the relation
 \begin{align}\label{eq:us}
 a^2 = \ell^2 \frac{1-2mA+e^2A^2}{1-A^2\ell^2},
@@ -3436,8 +3420,8 @@ the condition for criticality.
 \caption{\label{fig:embed3Dus-Kbigger}}
 \end{subfigure}
 \caption{\label{fig:embed3Dus}Embeddings in $\mathbb{E}^3$ of the ultra-spinning
-  C-metric for $m=9\ell$, $A=0.04\ell$ and (a) $K=L_+$, (b) $K=1.2L_+$, (c)
-  $K=2L_+$.} 
+  C-metric for $m=9\ell$, $A=0.04\ell$ and (a) $K=\Xi$, (b) $K=1.2\Xi$, (c)
+  $K=2\Xi$.} 
 \end{figure}
 
 This relation, combined with \cref{eq:conditions} provides more stringent
@@ -3455,10 +3439,10 @@ A>\frac{1}{\ell}, \quad e^2A^2<1, \quad \mbox{and} \quad 1+e^2A^2<2mA<2.
 For this limit to be sensible physically, we must ensure that the singularity
 remain shielded by an event horizon. While for the general C-metric we are
 limited to numerical techniques in determining when a horizon is formed --- this
-was displayed in \cref{fig:param-regions} --- we are able to analytically
+was displayed in \cref{fig:param-regions}, we are able to analytically
 determine expressions for the horizons in the absence of charge\footnote{Again,
   we do not expect charge to dramatically alter the observations laid out in
-  this section, however it does mute our ability to perform this analysys
+  this section, however it does mute our ability to perform this analysis
   analytically}.
 
 We are interested in determining the relationship between the parameters $A$,
@@ -3529,17 +3513,17 @@ limit while avoiding a naked singularity.
 Let us consider now the $a\to\ell$ limit. As mentioned above, this causes the
 original, smooth, Kerr-AdS metric to diverge, and if precautionary measures are
 taken to allow for conical defects, it has the effect of freezing out the
-tension and decoupling $K$ as a physical parameter. This can be seen from
-\cref{eq:deficit-al}: in this limit, $K$ is no longer linked to the deficit, and
-therefore to the tension either. Now that we also have the thermodynamic
-quantities, we see that some of these also diverge, through their dependence on
-the function $\gamma\sim L^{-1}$. In particular, the angular velocity of the
-boundary diverges hence the `ultra-spinning' label attributed to this
-limit. That $\gamma$ diverges poses the main problem for resolving the first
-law.
+tension and decoupling $K$ as a physical parameter. This can be seen from the
+expression for conical deficits \eqref{eq:deficit-al}: in this limit, $K$ is no
+longer linked to the deficit, and therefore to the tension either. Now that we
+also have the thermodynamic quantities, we see that some of these also diverge,
+through their dependence on the function $\gamma\sim \Xi^{-1}$. In particular, the
+angular velocity of the boundary diverges hence the `ultra-spinning' label
+attributed to this limit. That $\gamma$ diverges poses the main problem for
+resolving the first law.
 
-This decoupling of $K$ from $\mu$, or rather that combined with the fact that
-$\mu$ is now seemingly constant does however hold interesting implications for
+This decoupling of $K$ from $\mu$, or rather, that, combined with the fact that
+$\mu$ is now seemingly constant, does however hold interesting implications for
 the primitive first law in \cref{eq:master-al}, which, itself, does not
 diverge. The $\delta \mu$ piece obviously vanishes, and we are free to set
 $\delta K=0$ too, since it is purely a gauge choice at this point, it no longer
@@ -3567,7 +3551,7 @@ logic. \todoopt{Implications for conjecture validity?}
 
 We return now to the nonrotating C-metric discussed in the previous chapter. We
 explored some of the conditions one must impose unto this solution in
-\cref{sec:parameters}. In particular, we have the condition
+\cref{sec:parameters}. In particular, we had the condition
 \eqref{eq:conditionsNR}:
 \begin{align}
   \label{eq:conditionsNR-2}
@@ -3590,22 +3574,22 @@ provided that $1-2mA + e^2 A^2 = 0$. This also prevents a maximal deficit from
 occurring at $\theta = 0$ as $\delta_+<\delta_-$. This corresponds to saturating
 the bound \eqref{eq:conditionsNR-2} for $mA \leqslant 1$. Saturating the bound
 for $mA > 1$ is a different type of limit in which a double root is introduced
-for $g(\theta)$ over $0<\theta\pi$, resulting in two separate positive regions
+for $g(\theta)$ over $0<\theta<\pi$, resulting in two separate positive regions
 over this domain, all the while preserving the signature. Once again, we see
 that the $2\pi$-deficit is clearly indpendant of $K$.
 
 This limit has already been mentioned in
-\cite{Chen:2015vma,Hubeny:2009ru}. Unlike \cref{sec:uskerr} however, we still
-have the possibility of a defect at $\theta = 0$. The tension of the string
-running from the north pole is $\mu_+ = (K-2)/4K$, and K does in fact still have
-a physical role in the spacetime. All this means is that this fact, combined
-with the absence of any divergences other than those at the horizons, implies
-that we do not need to treat this spacetime any different to its noncritical
-counterpart.
+\cite{Chen:2015vma,Hubeny:2009ru}. Unlike the nonaccelerating case however, we
+still have the possibility of a defect at $\theta = 0$. The tension of the
+string running from the north pole is $\mu_+ = (K-2)/4K$, and K does in fact
+still have a physical role in the spacetime. All this means is that this fact,
+combined with the absence of any divergences other than those at the horizons,
+implies that we do not need to treat this spacetime any different to its
+noncritical counterpart.
 
 Using the thermodynamic quantities we established in~\cref{sec:cmet-TD-der}, and
-turning off the electric charge, which doesn't add much qualitatively for now,
-we know therefore that the first law of black hole thermodynamics,
+turning off the electric charge, which doesn't add much qualitatively, we know
+therefore that the first law of black hole thermodynamics,
 \begin{align}\label{eq:firstlawnr}
   \delta M = T\delta S + V\delta P - \lambda_+ d\mu_+ - \lambda_- d\mu_-,
 \end{align}
@@ -3628,8 +3612,9 @@ conjecture to be obeyed. The isoperimetric ratio is
   \frac{1}{\sqrt[6~]{1-r_+^2/4m^2}}\geqslant 1. 
 \end{align}
 
-Therefore, despite the noncompact horizon, its entropy does fall below the
-bound imposed unto it by the isoperimetric inequality. 
+Therefore, despite the noncompact horizon, its entropy does fall below the bound
+imposed unto it by the isoperimetric inequality, and cannot be considered as
+``superentropic''.
 
 \subsection{Thermodynamics for the rotating C-metric}
 
@@ -3684,14 +3669,14 @@ in order to separate reasonably\footnote{By reasonably, we are referring to
   \emph{reasonable} choices.} well-defined quantities, denoted by $X_0$, and
 correction terms, $X_1$ whose existence is required to satisfy the first law,
 and whose explicit form left to be determined in what follows. We have, to
-begin with~\cite{Caldarelli:1999xj}
+begin with~\cite{Caldarelli:1999xj},
 \begin{gather}\label{eq:OP0}
 \Omega_0 = -\frac{g_{t\phi}}{g_{\phi\phi}}\bigg|_{r=r_+} = \frac{a
   K}{r_+^2+a^2}, \qquad \Phi_0 = \frac{e r_+^2}{r_+^2+a^2}. 
 \end{gather}
-Thermodynamic volume is usually determined through the Smarr/scaling Euler
-relation. We will take $V_0$ to be that which satisfies the reduced Smarr
-relation given as
+The thermodynamic volume is usually determined through the Smarr/scaling Euler
+relation. We will take $V_0$ to be that which satisfies the following
+``reduced'' Smarr relation given as
 \begin{align}\label{eq:Smarr0}
 \frac{m}{K} = 2(TS-PV_0+\Omega_0 J)+\Phi_0 Q.
 \end{align}
@@ -3720,7 +3705,7 @@ crucial part in this write-up. One eventually obtains
   +\frac{m\delta K}{2K^2}. 
 \end{align}
 One then combines \cref{eq:fullFLT} with \cref{eq:mKFLT} from which it follows that
-\begin{align}
+\begin{align}\label{eq:firstlawinter}
 \delta M = \delta \frac{m}{K} + \Omega_1 \delta J + \Phi_1 \delta Q + V_1 \delta
   P - \left(\lambda_\pm - \frac{r_+}{1\pm Ar_-}\right) \delta \mu_\pm -
   \frac{m}{2K^2}\delta K. 
@@ -3743,7 +3728,8 @@ $\delta K$ and, for good measure, $\delta A$ as
            -1+A^2(a^2+e^2)-\frac{a^2}{\ell^2}. 
 \label{eq:dKdA}
 \end{align}
-It immediately follows that
+It immediately follows, from substituting these into \cref{eq:firstlawinter},
+that
 \begin{multline}
 \delta M = \delta\frac{m}{K} \Big(1-\frac{1+a^2A^2+\Delta}{\Delta}\Big) 
 +\delta J \bigg(\Omega_1+\frac{aK}{\Delta}\Big(A^2-\frac{1}{\ell^2}\Big)\bigg) 
@@ -3848,10 +3834,10 @@ M=\frac{m}{K}\gamma.
 \subsubsection{Thermodynamics of the critical generalised C-metric}
 Let us now return to the critical limit introduced above and examine how this
 limit affects the thermodynamics of the system using the results from the
-previous section. While the perturbative techniques used constrain us in
-parameter space, the initial set-0 nature of the ultra-spinning case hints that
-either this behaviour extends continuously to other critical limits, or it truly
-is set-0 and remains disconnected from other geometries in physical parameter
+previously. While the perturbative techniques used constrain us in parameter
+space, the initial set-0 nature of the ultra-spinning case hints that either
+this behaviour extends continuously to other critical limits, or it truly is
+set-0 and remains disconnected from other geometries in physical parameter
 space.  A characteristic feature of the ultraspinning limit was that the angular
 velocity, $\Omega$, evaluated at the boundary, diverges. The angular velocity
 for the general C-metric is
