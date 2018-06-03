@@ -3784,6 +3784,8 @@ expands to
 \chaptermark{Holographic Thermodynamics}
 \label{chap:holoTD}
 
+
+
 The importance of black holes in advancing our understanding of physics cannot
 be underestimated.  They provide a setting for testing our most fundamental
 ideas about gravity under extreme conditions and offer us insight into the
@@ -3794,21 +3796,21 @@ end, and broad classes of black holes have been shown to exhibit a rich and
 varied range of thermodynamic behaviour, particularly in anti-de Sitter
 spacetime~\cite{Kubiznak:2016qmn}.
 
-\todoruth{Not appropriate in the context of this thesis} Within this framework,
-accelerating black holes have presented a unique challenge.  The idealized
-solution is described by the \emph{C-metric}~\cite{Kinnersley:1970zw,
-  Plebanski:1976gy,Dias:2002mi,Griffiths:2005qp}, whose spacetime has a
-string-like singularity along one polar axis attached to the black hole.  We can
-think of this conical singularity as a cosmic string (indeed, the conical
-singularity can be replaced by a finite width topological
-defect~\cite{Gregory:1995hd}, or a magnetic flux tube~\cite{Dowker:1993bt}) with
-the tension providing the force driving the acceleration.  Surprisingly, even
-though these black holes are not isolated because of the ``cosmic strings'' it
-is possible to derive sensible looking thermodynamics, although recent studies
-have apparently conflicting results
-\cite{Appels:2016uha,Appels:2017xoe,Gregory:2017ogk,Astorino:2016ybm}.
-\todoruth[inline]{Instead, note here inconsistency with astorino- maybe use wording
-  like put in one version of draft}
+The work we have presented so far ambitiously tackles the thermodynamics of
+accelerated black holes, a topic which had remained largely misunderstood. We
+were able to make progress by identifying the tension as the extensive property
+which is added with conical defects. Therefore, surprisingly, even though these
+black holes are not isolated because of the ``cosmic strings'' it is possible to
+derive sensible looking thermodynamics, although recent studies have apparently
+conflicting results
+\cite{Appels:2016uha,Appels:2017xoe,Gregory:2017ogk,Astorino:2016ybm}, in
+particular regarding our earlier definitions for the mass and temperature. Since
+this work failed to convince members of the community, we felt the need to
+re-examine our work from first principles. Eventually this led to the
+publication of~\cite{Anabalon:2018ydc}, which forms the basis of this chapter.
+
+\section{Mass of an accelerated black hole}
+\label{sec:mass-an-accelerated}
 
 We consider here the interpretation of an accelerating black hole in anti-de
 Sitter (AdS) spacetime, with a focus on a holographic interpretation of the
@@ -3887,37 +3889,8 @@ the ``time'' of an asymptotic observer. While this is potentially a slightly sli
 concept in AdS, taken together with the spherical asymptotic spatial coordinates,
 this scaling suggests that the correct time coordinate is not in fact $t$, but rather
 $\tau=\alpha t$, giving a rescaling of the time-coordinate in \eqref{AdSC}.
-If we now proceed with this metric, and compute the temperature
-associated with the black hole (also the temperature of the boundary
-field theory), then we obtain
-\begin{align}
-T =\frac{f'(r_+)}{4\pi\alpha}
-=\frac{1 + 3\frac{r_+^2}{\ell^2}
-- A^2r_+^2 \left (2+\frac{r_+^2}{\ell^2}-A^2r_+^2\right)}
-{4\pi \alpha r_+(1-A^2r_+^2)}\,,
-\label{temp}
-\end{align}
-where $f(r_+)=0$.
 
-It is worth pausing to reflect on this result. In past work
-\cite{Appels:2016uha,Appels:2017xoe,Gregory:2017ogk},
-%\cite{Hubeny:2009kz,Appels:2016uha,Appels:2017xoe,Gregory:2017ogk},
-the standard time coordinate appearing in the AdS C-metric was used to derive
-the temperature of the black hole horizon.
-%\tcr{\bf I am not sure with \cite{Hubeny:2009kz}---they rescaled the time coordinate w.r.t. preious studies and have $T$ given by (2.7) which looks almost as %what we have...has anybody checked?}
-This appeared to
-be a natural approach as the blackening factor of the metric was in its
-canonical form, however, as pointed out in \cite{Gibbons:2004ai}, normalising the
-time and timelike Killing vector is key to obtaining the correct
-thermodynamics, although the method of obtaining this correct
-normalisation was less transparent. Here, having uncovered this
-suggestive result, we now proceed carefully with considering
-thermodynamics of the accelerating black hole.
-As usual, we will take the entropy to be one quarter of the horizon area:
-\begin{align}
-S=\frac{\mathcal{A}}{4}=\frac{\pi r_+^2}{K(1-A^2r_+^2)}\,.
-\label{entropy}
-\end{align}
+
 The remaining task is to correctly identify the black hole mass, often the
 biggest challenge in studying thermodynamics of black holes with non-trivial
 asymptotics. In what follows, we will provide two independent arguments, %\tcr{\bf don't we actually have 3? also the calculation of the action?}
@@ -3930,6 +3903,9 @@ computing the holographic stress tensor of the boundary
 theory, thereby confirming our result.
 As an ancillary argument, we finally check consistency with
 a computation of the free energy.
+
+\subsection{The Ashtekar-Das mass}
+\label{sec:ashtekar-das-mass}
 
 The first argument uses the Ashtekar--Das definition of conformal
 mass \cite{Ashtekar:1999jx,Das:2000cu}, which extracts the mass
@@ -3967,27 +3943,8 @@ to previous results~\cite{Appels:2016uha,Astorino:2016ybm}.
 The absence of acceleration horizons ensures that  $M$ vanishes in the
 limit $A\ell\to 1$ only for $m=0$ and is positive otherwise.
 
-It is now straightforward to verify the first law and Smarr \cite{Smarr:1972kt}
-relation
-\begin{align}
-\delta M &=T\delta S+V\delta P-\lambda _{+}\delta \mu _{+}
--\lambda_{-}\delta \mu _{-}\,,  \nn \\
-M &=2TS-2PV\,,
-\end{align}
-using \eqref{temp}, \eqref{entropy}, and \eqref{confmass},
-provided
-\begin{align}\label{vol}
-V &= \frac{4}{3}\frac{\pi}{K \alpha}\left[\frac{r_+^3}{(1-A^2r_+^2)^2}
-+mA^2\ell^4\right]\,,\nn \\
-\lambda_\pm &= \frac{1}{\alpha}\left[\frac{r_+}{1-A^2r_+^2}
--m\left(1\pm\frac{2A\ell^2}{r_+}\right)\right]\,,
-\end{align}
-where $P = 3/8\pi \ell^2$ is the thermodynamic pressure associated with
-the cosmological constant  \cite{Kubiznak:2016qmn}, and $\lambda_\pm$
-are the thermodynamic lengths introduced in \cite{Appels:2017xoe,Gregory:2017ogk}.
-{Note, we have} included the possibility of the tensions varying, as otherwise
-the system is constrained and identifying the correct parameters can be
-misleading.
+\subsection{Holographic derivation of the mass}
+\label{sec:hologr-deriv-mass}
 
 We now turn to another method for deriving the thermodynamic mass,
 by computing the holographic stress tensor. This provides an alternate
@@ -4094,6 +4051,65 @@ The equation of state is that of a thermal gas of massless particles
 and the dual fluid is anisotropic,
 as expected from the strongly distorted boundary.
 
+\section{Thermodynamics}
+\label{sec:thermodynamics}
+
+\todoopt{pasted from above} 
+If we now proceed with this metric, and compute the temperature
+associated with the black hole (also the temperature of the boundary
+field theory), then we obtain
+\begin{align}
+T =\frac{f'(r_+)}{4\pi\alpha}
+=\frac{1 + 3\frac{r_+^2}{\ell^2}
+- A^2r_+^2 \left (2+\frac{r_+^2}{\ell^2}-A^2r_+^2\right)}
+{4\pi \alpha r_+(1-A^2r_+^2)}\,,
+\label{temp}
+\end{align}
+where $f(r_+)=0$.
+
+It is worth pausing to reflect on this result. In past work
+\cite{Appels:2016uha,Appels:2017xoe,Gregory:2017ogk},
+%\cite{Hubeny:2009kz,Appels:2016uha,Appels:2017xoe,Gregory:2017ogk},
+the standard time coordinate appearing in the AdS C-metric was used to derive
+the temperature of the black hole horizon.
+%\tcr{\bf I am not sure with \cite{Hubeny:2009kz}---they rescaled the time coordinate w.r.t. preious studies and have $T$ given by (2.7) which looks almost as %what we have...has anybody checked?}
+This appeared to
+be a natural approach as the blackening factor of the metric was in its
+canonical form, however, as pointed out in \cite{Gibbons:2004ai}, normalising the
+time and timelike Killing vector is key to obtaining the correct
+thermodynamics, although the method of obtaining this correct
+normalisation was less transparent. Here, having uncovered this
+suggestive result, we now proceed carefully with considering
+thermodynamics of the accelerating black hole.
+As usual, we will take the entropy to be one quarter of the horizon area:
+\begin{align}
+S=\frac{\mathcal{A}}{4}=\frac{\pi r_+^2}{K(1-A^2r_+^2)}\,.
+\label{entropy}
+\end{align}
+
+\todoopt{an other paste}
+It is now straightforward to verify the first law and Smarr \cite{Smarr:1972kt}
+relation
+\begin{align}
+\delta M &=T\delta S+V\delta P-\lambda _{+}\delta \mu _{+}
+-\lambda_{-}\delta \mu _{-}\,,  \nn \\
+M &=2TS-2PV\,,
+\end{align}
+using \eqref{temp}, \eqref{entropy}, and \eqref{confmass},
+provided
+\begin{align}\label{vol}
+V &= \frac{4}{3}\frac{\pi}{K \alpha}\left[\frac{r_+^3}{(1-A^2r_+^2)^2}
++mA^2\ell^4\right]\,,\nn \\
+\lambda_\pm &= \frac{1}{\alpha}\left[\frac{r_+}{1-A^2r_+^2}
+-m\left(1\pm\frac{2A\ell^2}{r_+}\right)\right]\,,
+\end{align}
+where $P = 3/8\pi \ell^2$ is the thermodynamic pressure associated with
+the cosmological constant  \cite{Kubiznak:2016qmn}, and $\lambda_\pm$
+are the thermodynamic lengths introduced in \cite{Appels:2017xoe,Gregory:2017ogk}.
+{Note, we have} included the possibility of the tensions varying, as otherwise
+the system is constrained and identifying the correct parameters can be
+misleading.
+
 Finally, let us return to the computation of the action \eqref{Caction}.
 We find
 \begin{align}
@@ -4192,21 +4208,6 @@ and $\gamma^{(0)}_{ab}$ yields the geometry of a wormhole when there are no
 horizons at the boundary.
 The $AdS_{2}\times S^{1}$ asymptotic geometry is supersymmetric
 and to our knowledge has been unnoticed so far in the literature.
-
-\section{Back to Basics}
-\label{sec:basics}
-
-\section{Computing the Mass}
-\label{sec:mass-comput}
-
-\subsection{The Ashtekar-Das Method}
-\label{sec:ashtekar-das}
-
-\subsection{The Holographic Approach}
-\label{sec:holo}
-
-\section{Thermodynamic Phenomena}
-\label{sec:phenomena}
 
 
 \chapter{Concluding Remarks}
