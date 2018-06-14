@@ -3954,7 +3954,7 @@ as
   \label{eq:bdymetric}
   ds^2% = \bar{g}_{\mu\nu}dx^\mu dx^\nu \Big|_{r=\frac{-1}{Ax}}
   =\ell^2\left( -\frac{A^2 F(-x)}{1-A^2\ell^2}d\tau^2 +
-  \frac{dx^2}{A^2\ell^2F(-x)G(x)} + \frac{G(x)}{K^2}d\phi^2\right),
+  \frac{dx^2}{A^2\ell^2F(-x)G(x)} + G(x)\frac{d\phi^2}{K^2}\right),
 \end{align}
 where we have written $x=\cos\theta$ and $F$ and $G$ are the
 Hong-Teo~\cite{Hong:2003gx} metric functions we introduced in \cref{chap:cmet},
@@ -3984,11 +3984,12 @@ normalised integral at the boundary
 Q(k)=\frac{\ell}{8\pi}\lim_{\bar{\Omega} \to 0}\oint
 \mathcal{E}^\nu{}_\mu k_{\nu }d\bar{S}^{\mu }.
 \end{align}
-finally yielding:
+finally leading to
 \begin{align}\label{confmass}
-M = Q(\partial _{\tau})= \frac{m}{K}\sqrt{1-A^2\ell^2}.
+M = Q(\partial _{\tau}) =
+  \int_{-1}^1\frac{m}{4K\alpha}\left(2-3A^2\ell^2G(x)\right) dx = \frac{m}{K}\sqrt{1-A^2\ell^2},
 \end{align}
-
+where we used the fact that $x^2 f(\frac{-1}{Ax}) = F(-x)$.
 
 This is the first result which contradicts both our earlier findings from
 \cref{chap:crit-bh} and results found
@@ -3999,14 +4000,13 @@ for $m=0$ and is positive otherwise.
 \subsection{Holographic derivation of the mass}
 \label{sec:hologr-deriv-mass}
 
-We now turn to another method for deriving the thermodynamic mass,
-by computing the holographic stress tensor. This provides an alternate
-and completely independent method of computation, and will reveal
-the dual interpretation of this system.  The idea here is to perform a
-Fefferman--Graham expansion of the metric~\cite{Fefferman:2007rka}, identifying the
-fall-off of sub-leading terms in the metric at the boundary. These are
-then used to compute the dual stress-energy tensor that can be integrated
-to give the mass of the system.
+We now turn to another method for deriving the thermodynamic mass, by computing
+the holographic stress tensor. This provides an alternate and completely
+independent method of computation, and will reveal the dual interpretation of
+this system.  The idea here is to perform a Fefferman-Graham expansion of the
+metric~\cite{Fefferman:2007rka}, identifying the fall-off of sub-leading terms
+in the metric at the boundary. These are then used to compute the dual
+stress-energy tensor that can be integrated to give the mass of the system.
 
 The action, including boundary counterterms
 \cite{Balasubramanian:1999re, Emparan:1999pm, Mann:1999pc}, is
@@ -4021,63 +4021,73 @@ where $\mathcal{K}_{ab}$ is the extrinsic curvature of the boundary
 metric, evaluated asymptotically in an appropriate coordinate system,
 defined presently. $h_{ab}$ is the intrinsic metric on
 $\partial {\cal M}$, and ${\cal R}$ its Ricci curvature. Varying
-the action gives the energy momentum tensor:
+the action gives the energy momentum tensor:\todoruth{Plot T?}\todoopt{not sure
+   thats a good idea, given conformal freedom in $\omega$.}
 \begin{align}
 8\pi \mathcal{T}_{ab} = \ell \mathcal{G}_{ab}\left(h\right)
 -\frac{2}{\ell}h_{ab}-\mathcal{K}_{ab}+h_{ab}\mathcal{K}\,.
 \end{align}%
-\todoruth{Plot T?}
 
 To compute these terms requires new coordinates near the boundary
-of AdS, typically parametrised by Fefferman--Graham
+of AdS, typically parametrised by Fefferman-Graham
 coordinates, in which
 \begin{align}
 ds^2= \frac{\ell^2}{\rho^2} d\rho^2 +
 \rho^2 \left ( \gamma_{ab}^{(0)} + \frac1{\rho^2} \gamma^{(2)}_{ab}
-+ ...\right )  dx^a dx^b\,.
++ ...\right )  dx^a dx^b,
 \label{FGmetric}
 \end{align}
-Although often one identifies a $\rho$ coordinate globally, due to the
-complexity of \eqref{AdSC}, we instead perform an asymptotic
-expansion for the coordinate transformation, writing
+placing the boundary now at $\rho=\infty$. Although often one identifies a
+$\rho$ coordinate globally, due to the complexity of \eqref{AdSC}, we instead
+perform an asymptotic expansion for the coordinate transformation, writing
 \begin{align}\label{FGt}
-\frac{1}{Ar}= -x-\sum F_{n}\left( x\right) \rho ^{-n}\,, \quad
-\cos \theta = x+\sum G_{n}\left( x\right) \rho ^{-n}\, .
+\frac{1}{Ar}= -\xi-\sum X_{n}\left( \xi \right) \rho ^{-n}, \qquad
+\cos \theta = \xi+\sum Y_{n}\left( \xi\right) \rho ^{-n},
 \end{align}
-The functions $F_n$ and $G_n$ are fixed by the required fall-off properties
-of \eqref{FGmetric}, apart from $F_1$, that we choose to write as\todoruth{more
-  detail here, maybe give Fs and Gs?}
-\begin{align}\label{F1}
-F_{1}(x) = - \frac{\left( 1-A^{2}\ell^{2}X\right) ^{3/2}}{A\omega(x) \alpha}\,,
+determining the functions $X_n$ and $Y_n$ by requiring the metric be of the form
+in \cref{FGmetric} up to $\mathcal{O}(\rho^{-2})$ (in the
+expansions)\todoopt{not sure how best to phrase here, I mean after taking out
+  relevant factors of $\rho$}; we find this to be achievable by truncating the
+expansion at $n=3$. Requiring there be no cross-terms $g_{\rho\xi}$ and then
+solving order by order, allows us to fix $X_1$, $X_2$, $X_3$ in terms of $Y_n$
+without having to solve differential equations. With these functions we also
+find that $g\rho\rho=\ell^2/\rho^2$ is automatically satisfied at leading order
+and we need only therefore eliminate the two subleading terms. This is most
+easily achieved from here by fixing $Y_2$ and $Y_3$, which can be done once
+again first at next-to-leading order for $Y_2$ and similarly at next order for
+$Y_3$. With only five of the six functions determined, we find that
+$\gamma_{ab}^{(1)}=0$ as required and we are left with one functional degree of
+freedom in $Y_1$, which we parametrise as
+\begin{align}
+  Y_1(\xi) = \frac{A^2\ell^3}{\omega(\xi)\alpha}G(\xi)\sqrt{F(-\xi)}
 \end{align}
 in order to elucidate the conformal degree of freedom in the boundary metric,
-$\omega$, with $ X = (1-x^{2})\left( 1+2mAx\right)$.
-Computing this boundary metric, $ds_{(0)}^2 = \gamma^{(0)}_{ab} dx^a dx^b$,
-we find it sufficient to truncate the series \eqref{FGt} at $n=4$ and find:
+$\omega$. The boundary metric is then given, in these coordinates, by:
 \begin{align}\label{bndymet}
-{ds_{(0)}^2}
+ds_{(0)}^2
 = -\frac{\omega^{2}d\tau^2}{\ell^{2}}
-+ \frac{X\omega^2\alpha^2 d\phi^2}{K^2(1-A^2\ell^2X)}
-+\frac{\omega^2\alpha^2 dx^2}{X(1-A^2\ell^2X)^2}\,.
++\frac{\omega^2\alpha^2 d\xi^2}{A^4\ell^4F(-\xi)^2G(\xi)}
++ \frac{\omega^2\alpha^2G(\xi)}{A^2\ell^2F(-\xi)}\frac{d\phi^2}{K^2},
 \end{align}
-Note that the  transformation \eqref{FGt} is valid in general only when
-$A^{2}\ell^{2}X<1$, but this is precisely the constraint that acceleration
-horizons are absent.
+which agrees with \cref{eq:bdymetric} up to an overall factor when
+$\rho\to\infty$, which $\omega(\xi)$ allows for.  Note that the transformation
+\eqref{FGt} is valid in general only when $F(-\xi)>0$, but this is precisely the
+constraint that acceleration horizons are absent.
 
-The expectation value of the energy momentum of the CFT$_{3}$
-can then be calculated,
-yielding a relativistic fluid with a non-trivial viscous-shear tensor
+The expectation value of the energy momentum of the $CFT_{3}$ can then be
+calculated, yielding a relativistic fluid with a non-trivial viscous-shear
+tensor
 \begin{align}
-\left\langle \mathcal{T}_{ab}\right\rangle =\lim_{\rho \longrightarrow
-\infty }\frac{\rho }{\ell}\mathcal{T}_{ab}= \frac32 \rho _{E}
-U_{a}U_{b}+\frac{\rho_E}2 \ell^{2} \gamma^{(0)} _{ab}+\pi _{ab}\,,
+\left\langle \mathcal{T}_{ab}\right\rangle =\lim_{\rho \to
+\infty }\frac{\rho }{\ell}\mathcal{T}_{ab}= \frac32 \rho _{\mathrm{E}}
+U_{a}U_{b}+\frac{\rho_\mathrm{E}}2 \ell^{2} \gamma^{(0)} _{ab}+\pi _{ab}\,,
 \end{align}
 with $U=\omega^{-1}\partial_\tau$, and boundary indices are
 raised and lowered with $\ell^{2}\gamma^{(0)}_{ab}$.
 The energy density is
 \begin{align}
-\rho _{E}= \frac{m}{8\pi\ell^2 \alpha^3\omega^3}(1-A^2\ell^2 X)^{3/2}
-(2-3A^{2}\ell^{2}X)\,,
+\rho _{\mathrm{E}}= \frac{mA^3\ell}{8\pi \alpha^3\omega^3}F(-\xi)^{3/2}
+(2-3A^{2}\ell^{2}G(\xi))\,,
 \end{align}
 %\tcr{\bf shouldn't this be:
 %\begin{equation}
@@ -4087,7 +4097,7 @@ The energy density is
 %Where does the $1/(8\pi)$ come from?}
 yielding the mass
 \begin{align}
-M= \int \rho _{E} \ell^3 \sqrt{\tcr{-}\gamma^{(0)}}~dxd\phi
+M= \int \rho _{\mathrm{E}} \ell^3 \sqrt{-\gamma^{(0)}}~dxd\phi
 =\frac{\alpha m}{K}\,,
 \end{align}
 %\tcr{\bf I agree with the arithmetic, however, isn't it strange to use the determinant of the 3-metric to calculate the 2d integral? What is the origin of $\omega$ in this integral, as written in terms of the 2-metric determinant $\sigma$?}
