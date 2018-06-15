@@ -4095,24 +4095,24 @@ The energy density is
 %(2-3A^{2}\ell^{2}X)\,,
 %\end{equation}
 %Where does the $1/(8\pi)$ come from?}
-yielding the mass\todoopt{add definition with stress tensor}
+yielding the mass
 \begin{align}
-M= \int \rho _{\mathrm{E}} \ell^3 \sqrt{-\gamma^{(0)}}~dxd\phi
+M= \int \left\langle T_{ab}\right\rangle k_\tau^a dS^b = \int \rho _{\mathrm{E}} \ell^3 \sqrt{-\gamma^{(0)}}~dxd\phi
 =\frac{\alpha m}{K}\,,
 \end{align}
 %\tcr{\bf I agree with the arithmetic, however, isn't it strange to use the determinant of the 3-metric to calculate the 2d integral? What is the origin of $\omega$ in this integral, as written in terms of the 2-metric determinant $\sigma$?}
-in agreement with \eqref{confmass}. Note that this calculation is independent
-of the conformal frame (the choice of $\omega$).
+where $k_\tau = \partial_\tau$. This result agrees with \cref{confmass} from the
+Ashtekar-Das method. Note that this calculation is independent of the conformal
+frame (the choice of $\omega$).
 
-The shear tensor is
+Finally, for completeness, we include that the shear tensor is
 \begin{align}
-\pi^x_x= \frac{3mA^{2}X}{16\pi \alpha^3\omega^{3}}\left(
-1-A^{2}\ell^{2}X\right) ^{\frac32}=-\pi^\phi_\phi\,,
+\pi^x_x= \frac{3mA^5\ell^3}{16\pi \alpha^3\omega^{3}}
+G(\xi)F(-\xi)^{3/2}=-\pi^\phi_\phi\,,
 \end{align}
-with all other components  vanishing.
-The equation of state is that of a thermal gas of massless particles
-and the dual fluid is anisotropic,
-as expected from the strongly distorted boundary.
+with all other components vanishing. The equation of state is that of a thermal
+gas of massless particles and the dual fluid is anisotropic, as expected from
+the strongly distorted boundary.
 
 \section{Thermodynamics}
 \label{sec:thermodynamics}
