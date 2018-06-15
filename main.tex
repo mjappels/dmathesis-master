@@ -1,3 +1,4 @@
+
 \documentclass[
 % thesisdraft,
 twoside,
@@ -296,7 +297,7 @@ statistical counterparts. Let us now summarise these laws as such:
   logical arguments. It had actually been shown that processes leading to such a
   configuration did exist if one allowed for infinite divisibility of matter and
   infinite time~\cite{Christodoulou:1970wf,Bardeen:1970zz}. Werner Israel proved
-  the third law a decade later~\cite{Israel:1986gqz} .
+  the third law a decade later~\cite{Israel:1986gqz}.
 \end{itemize} 
 
 The analogy between black hole mechanics and classical thermodynamics is
@@ -307,7 +308,7 @@ $T\delta S = \kappa \delta \mathcal{A} / 8\pi$. The authors
 of~\cite{Bardeen:1973gs} were initially reluctant to make this identification
 and emphasized that while the similarities existed, these quantities should not
 lead to the interpretation of the black hole as having either temperature or
-entropy, and understandably so---classically, the effective temperature of a
+entropy, and understandably so --- classically, the effective temperature of a
 black hole is absolute zero, as it is (or at least was thought to be) unable to
 emit any radiation. In fact, they point out that black holes transcend the
 second law in that one might in theory be able to add entropy to a black hole
@@ -3891,6 +3892,8 @@ hole solutions that accelerate would not, then, be super-entropic in general.
 \chaptermark{Holographic Thermodynamics}
 \label{chap:holoTD}
 
+
+
 The importance of black holes in advancing our understanding of physics cannot
 be underestimated.  They provide a setting for testing our most fundamental
 ideas about gravity under extreme conditions and offer us insight into the
@@ -3901,21 +3904,21 @@ end, and broad classes of black holes have been shown to exhibit a rich and
 varied range of thermodynamic behaviour, particularly in anti-de Sitter
 spacetime~\cite{Kubiznak:2016qmn}.
 
-\todoruth{Not appropriate in the context of this thesis} Within this framework,
-accelerating black holes have presented a unique challenge.  The idealized
-solution is described by the \emph{C-metric}~\cite{Kinnersley:1970zw,
-  Plebanski:1976gy,Dias:2002mi,Griffiths:2005qp}, whose spacetime has a
-string-like singularity along one polar axis attached to the black hole.  We can
-think of this conical singularity as a cosmic string (indeed, the conical
-singularity can be replaced by a finite width topological
-defect~\cite{Gregory:1995hd}, or a magnetic flux tube~\cite{Dowker:1993bt}) with
-the tension providing the force driving the acceleration.  Surprisingly, even
-though these black holes are not isolated because of the ``cosmic strings'' it
-is possible to derive sensible looking thermodynamics, although recent studies
-have apparently conflicting results
-\cite{Appels:2016uha,Appels:2017xoe,Gregory:2017ogk,Astorino:2016ybm}.
-\todoruth[inline]{Instead, note here inconsistency with astorino- maybe use wording
-  like put in one version of draft}
+The work we have presented so far ambitiously tackles the thermodynamics of
+accelerated black holes, a topic which had remained largely misunderstood. We
+were able to make progress by identifying the tension as the extensive property
+which is added with conical defects. Therefore, surprisingly, even though these
+black holes are not isolated because of the ``cosmic strings'' it is possible to
+derive sensible looking thermodynamics, although recent studies have apparently
+conflicting results
+\cite{Appels:2016uha,Appels:2017xoe,Gregory:2017ogk,Astorino:2016ybm}, in
+particular regarding our earlier definitions for the mass and temperature. Since
+this work failed to convince members of the community, we felt the need to
+re-examine our work from first principles. Eventually this led to the
+publication of~\cite{Anabalon:2018ydc}, which forms the basis of this chapter.
+
+\section{Mass of an accelerated black hole}
+\label{sec:mass-an-accelerated}
 
 We consider here the interpretation of an accelerating black hole in anti-de
 Sitter (AdS) spacetime, with a focus on a holographic interpretation of the
@@ -3930,42 +3933,48 @@ we discuss, the holographic computation and interpretation are also unambiguous
 and straightforward. We also comment on the cases when the acceleration horizons
 appear and provide a novel interpretation of the boundary geometry.
 
-An accelerating black hole in AdS can be described by the metric
-\cite{Hong:2003gx}
+Recall that the metric used to describe an accelerating black hole in AdS is the
+AdS C-metric, given by \eqref{eq:NRrth-metric}
 \begin{align}\label{AdSC}
-ds^2=\frac{1}{\Omega^2}\bigg[ -fdt^2+\frac{dr^2}{f}
-+r^2\Big(\frac{d\theta^2}{\Sigma}
-+\Sigma\sin^2\!\theta\frac{d\phi^2}{K^2}\Big)\bigg]\,,
+ds^2=\frac{1}{\Omega^2}\bigg[ -f(r)dt^2+\frac{dr^2}{f(r)}
++r^2\Big(\frac{d\theta^2}{g(\theta)}
++g(\theta)\sin^2\theta\frac{d\phi^2}{K^2}\Big)\bigg],
 \end{align}
 where
 \begin{align}
-\Omega&=1+Ar\cos\theta\,, \qquad  \Sigma= 1+2mA\cos\theta\,, \nn\\
-f(r)&=(1-A^2r^2)\bigg(1-\frac{2m}{r}\bigg)+\frac{r^2}{\ell^2}\,.
+  \label{eq:AdSCfn}
+\Omega&=1+Ar\cos\theta, \qquad  g(\theta)= 1+2mA\cos\theta, \nn\\
+f(r)&=(1-A^2r^2)\bigg(1-\frac{2m}{r}\bigg)+\frac{r^2}{\ell^2}.
 \end{align}
-The potential $f(r)$ shows clearly the black hole nature of the solution,
-as well as the effects of acceleration ($A$) and cosmological constant ($\ell$).
-Note that we require $2mA<1$ to preserve the
-metric signature.  The parameter $K$ encodes
-information about the conical deficits on the north and south
-poles that have tensions given by~\cite{Appels:2017xoe}
+The parameters $A$ and $\ell$ characterise the acceleration and cosmological
+constant respectively, $m$ is tied to the mass and $K$ controls the overall
+conical deficit at both poles (and, in a sense, $A$ controls the disparity of
+the defect at each pole). We also introduced conditions on these parameters in
+\cref{sec:parameters}, thus we require $2mA<1$ to preserve the metric
+signature. The absence of an acceleration horizon yields the constraint
+$f(-1/A\cos\theta) > 0$, in turn constraining the parameter space $(m,\ell)$ to
+the white region bounded by the blue and red lines in figure \ref{fig:f1}. It is
+straightforward to show via a linear transformation \cite{Hong:2003gx} on the
+coordinates $(x=\cos\theta,y=-1/Ar)$ that the latter bound is equivalent to the
+absence of black droplets \cite{Hubeny:2009kz}. Looking at \cref{eq:AdSCfn}, we
+see that such an acceleration horizon is indeed present for large values of
+$A$. At $A\ell=1$, the horizon is located precisely at $r=\infty$, intersecting
+the boundary at $\theta=\pi/2$. For smaller values of $A$, the horizon
+progresses beyond $r=\infty$ into largely negative values of $r$ until $A$
+reaches the aforementioned red line, at which point the acceleration horizon,
+intersecting the boundary at some value $0<\theta<\pi/2$, vanishes. Finally, the
+tensions at the poles are given by \eqref{eq:deficitsNR}
 \begin{align}
 \label{mueq}
 \mu_{\pm}=\frac{\delta_\pm}{8\pi}
-=\frac{1}{4}\Big(1-\frac{\Sigma(\theta_\pm)}{K}%
-\Big)=\frac{1}{4}\Big(1-\frac{1\pm 2mA}{K}\Big)\,.
+=\frac{1}{4}\Big(1-\frac{g(\theta_\pm)}{K}%
+\Big)=\frac{1}{4}\Big(1-\frac{1\pm 2mA}{K}\Big),
 \end{align}
-The absence of an acceleration horizon yields the constraint
-$f(-1/A\cos\theta) > 0$, in turn constraining the parameter space $(m,\ell)$ to
-the white region bounded by the blue and red lines in figure \ref{fig:f1}.  It
-is straightforward to show via a linear transformation \cite{Hong:2003gx} on the
-coordinates $(x=\cos\theta,y=-1/Ar)$ that the latter bound is equivalent to the
-absence of black droplets \cite{Hubeny:2009kz}.
-\begin{figure}[tbp]
+where $\theta_+=0$ and $\theta_-=\pi$ denote the poles.
+\begin{figure}
 \centering
-%\begin{tabular}{c}
 \includegraphics{regions.pdf}
-%\end{tabular}
-\caption{ \textbf{Parameter space.}  The blue and red lines denote the
+\caption{Parameter space for the AdS C-metric. The blue and red lines denote the
   boundaries in the parameter space $(mA,A\ell)$ for which the holographic
   computation is valid.  The hashed red region is where acceleration horizons
   are present and the hashed blue region is where the metric signature is not
@@ -3973,9 +3982,12 @@ absence of black droplets \cite{Hubeny:2009kz}.
 \label{fig:f1}
 \end{figure}
 
-As discussed in \cite{Appels:2017xoe,Gregory:2017ogk}, setting $m=0$ removes the
-black hole horizon, and leaves pure AdS spacetime in Rindler-type coordinates.
-Performing the coordinate transformation~\cite{Podolsky:2002nk}:
+An intriguing fact that we came across when studying this metric reveals itself
+when one examines the geometry obtained by setting $m=0$. As discussed in
+\cite{Appels:2017xoe,Gregory:2017ogk} as well as earlier in
+\cref{chap:crit-bh}\todoopt{need the right chapter reference}, setting $m=0$
+removes the black hole horizon, and leaves pure AdS spacetime in Rindler-type
+coordinates.  Performing the coordinate transformation~\cite{Podolsky:2002nk}:
 \begin{align}
 1+\frac{R^2}{\ell^2}=\frac{1+(1-A^2\ell^2)r^2/\ell^2}{(1-A^2\ell^2)\Omega^2}\,, \quad
 R\sin\vartheta=\frac{r\sin\theta}{\Omega}\,,
@@ -3989,14 +4001,237 @@ dt^2+\frac{dR^2}{1+\frac{R^2}{\ell^2}}  +R^2\Big(d\vartheta^2+\sin^2\vartheta
 \end{align}
 however, note that the time coordinate is not the expected AdS time, but is
 rescaled by a factor of $\alpha = \sqrt{1-A^2 \ell^2}$. Conventionally, we
-choose the normalisation of our time coordinate so that it corresponds to
-the ``time'' of an asymptotic observer. While this is potentially a slightly slippery
-concept in AdS, taken together with the spherical asymptotic spatial coordinates,
-this scaling suggests that the correct time coordinate is not in fact $t$, but rather
-$\tau=\alpha t$, giving a rescaling of the time-coordinate in \eqref{AdSC}.
-If we now proceed with this metric, and compute the temperature
-associated with the black hole (also the temperature of the boundary
-field theory), then we obtain
+choose the normalisation of our time coordinate so that it corresponds to the
+``time'' of an asymptotic observer. While this is potentially a slightly
+slippery concept in AdS, taken together with the spherical asymptotic spatial
+coordinates, this scaling suggests that the correct time coordinate is not in
+fact $t$, but rather $\tau=\alpha t$, giving a rescaling of the time-coordinate
+in \eqref{AdSC}. As we will see, this will inevitably have consequences for the
+thermodynamics of our spacetime, as the mass and temperature are both sensitive
+to the definition of the time coordinate. To emphasise the point we have made,
+let us re-write the metric that we ought to use henceforth, now with shifted
+time, as
+\begin{align}\label{eq:AdSC-tau}
+ds^2=\frac{1}{\Omega^2}\bigg[ -\frac{f(r)}{1-A^2\ell^2}d\tau^2+\frac{dr^2}{f(r)}
++r^2\Big(\frac{d\theta^2}{g(\theta)}
++g(\theta)\sin^2\theta\frac{d\phi^2}{K^2}\Big)\bigg],
+\end{align}
+where $f(r)$, $g(\theta)$ and $\Omega$ retain their earlier
+definitions.\todoopt{insert KW metric?}
+
+We now turn to correctly identifying the black hole mass, often the biggest
+challenge in studying thermodynamics of black holes with non-trivial
+asymptotics. In what follows, we will provide two independent
+arguments, %\tcr{\bf don't we actually have 3? also the calculation of the action?}
+beginning with the Ashtekar-Das method \cite{Ashtekar:1999jx,Das:2000cu} applied
+to the metric \eqref{eq:AdSC-tau}. However, although consistency of thermodynamical
+relations is a common method of deriving thermodynamics (used for {example in
+  \cite{Astorino:2016ybm}}), we do not consider this sufficient, hence return to
+our theme of holography, computing the holographic stress tensor of the boundary
+theory, thereby confirming our result.  As an ancillary argument, we finally
+check consistency with a computation of the free energy.
+
+\subsection{The Ashtekar-Das mass}
+\label{sec:ashtekar-das-mass}
+
+\todoruth{You have an opportunity to expand here --- write down weyl ---
+  explain conformal transformation, give calculation steps}The first argument
+uses the Ashtekar--Das definition of conformal mass
+\cite{Ashtekar:1999jx,Das:2000cu}, which extracts the mass via conformal
+regularisation of the AdS C-metric near the boundary.  The idea is to perform a
+conformal transformation on \eqref{eq:AdSC-tau},
+$\bar{g}_{\mu\nu} = {\bar{\Omega}}^{2}g_{\mu\nu}$, to remove the divergence near
+the boundary, which allows us to compute and extract the electric part of the
+Weyl tensor of the conformal metric
+\begin{align}\label{eq:weylelectric}
+  \mathcal{E}^\nu{}_\mu=\frac{\ell^{2}}{\bar{\Omega}}N^{\alpha }N^{\beta }
+\bar{C}^{\nu}{}_{\alpha \mu \beta },
+\end{align}
+composed from the Weyl tensor itself, $\bar{C}^{\mu }{}_{\alpha \nu \beta }$, and
+the normal to the boundary, $N_{\mu }=\partial _{\mu }{\bar{\Omega}}$. When
+contracted with a Killing vector, this forms a conserved current, providing us
+with a new way of obtaining a conserved charge.
+
+Even though the conformal completion is not unique, the charge thus obtained is
+independent of the choice of conformal completion.  We pick
+$\bar{\Omega}=\ell\Omega r^{-1} $, which provides a smooth conformal completion
+in the limit $A=0$. This allows us to write the conformal metric at the boundary
+as
+\begin{align}
+  \label{eq:bdymetric}
+  ds^2% = \bar{g}_{\mu\nu}dx^\mu dx^\nu \Big|_{r=\frac{-1}{Ax}}
+  =\ell^2\left( -\frac{A^2 F(-x)}{1-A^2\ell^2}d\tau^2 +
+  \frac{dx^2}{A^2\ell^2F(-x)G(x)} + G(x)\frac{d\phi^2}{K^2}\right),
+\end{align}
+where we have written $x=\cos\theta$ and $F$ and $G$ are the
+Hong-Teo~\cite{Hong:2003gx} metric functions we introduced in \cref{chap:cmet},
+explicitly given by~\eqref{eq:NRyx-fn}
+\begin{align}
+  G(x) = \frac{1}{A^2\ell^2} - F(-x) = (1-x^2)(1+2 m A x).
+\end{align}
+The spacelike surface element tangent to $ \bar{\Omega}=0$ needed to integrate
+out the current is then obtained by computing the determinant of this metric for
+a surface at constant $\tau$ and multiplying it with a timelike unit normal,
+yielding
+\begin{align}\label{surfel}
+d\bar{S}_{\mu }=\delta^{\tau }_{\mu }\frac{\ell^{2} dx d\phi}{\alpha K},
+\end{align}
+
+The nonvanishing components of the normal vector be given by $N_r = -\ell/r^2$
+and $N_x = A\ell$, meaning that the only relevant components of the Weyl tensor
+are
+\begin{align}
+  \bar{C}_{r\tau r\tau} = -\frac{2m \ell \bar{\Omega}}{r^4(1-A^2\ell^2)}, \qquad
+  \bar{C}_{x\tau x\tau} = \frac{m\ell f(r)\bar{\Omega}}{(1-A^2\ell^2) r^2G(x)},
+\end{align}
+provided we pick a suitable Killing vector for the mass, $k =
+\partial_\tau$. The mass is then obtained by performing the appropriately
+normalised integral at the boundary
+\begin{align}
+Q(k)=\frac{\ell}{8\pi}\lim_{\bar{\Omega} \to 0}\oint
+\mathcal{E}^\nu{}_\mu k_{\nu }d\bar{S}^{\mu }.
+\end{align}
+finally leading to
+\begin{align}\label{confmass}
+M = Q(\partial _{\tau}) =
+  \int_{-1}^1\frac{m}{4K\alpha}\left(2-3A^2\ell^2G(x)\right) dx = \frac{m}{K}\sqrt{1-A^2\ell^2},
+\end{align}
+where we used the fact that $x^2 f(\frac{-1}{Ax}) = F(-x)$.
+
+This is the first result which contradicts both our earlier findings from
+\cref{chap:crit-bh} and results found
+elsewhere~\cite{Appels:2016uha,Astorino:2016ybm,Appels:2017xoe}. The absence of
+acceleration horizons ensures that $M$ vanishes in the limit $A\ell\to 1$ only
+for $m=0$ and is positive otherwise.
+
+\subsection{Holographic derivation of the mass}
+\label{sec:hologr-deriv-mass}
+
+We now turn to another method for deriving the thermodynamic mass, by computing
+the holographic stress tensor. This provides an alternate and completely
+independent method of computation, and will reveal the dual interpretation of
+this system.  The idea here is to perform a Fefferman-Graham expansion of the
+metric~\cite{Fefferman:2007rka}, identifying the fall-off of sub-leading terms
+in the metric at the boundary. These are then used to compute the dual
+stress-energy tensor that can be integrated to give the mass of the system.
+
+The action, including boundary counterterms
+\cite{Balasubramanian:1999re, Emparan:1999pm, Mann:1999pc}, is
+\begin{align}
+I[g]=&\frac{1}{16\pi}\int_{M}d^{4}x\sqrt{-g}\left[ R+\frac{6}{\ell^{2}}\right]
++ \frac{1}{8\pi}\int_{\partial M}d^{3}x\sqrt{-h}\mathcal{K}\nn \\
+&- \frac{1}{8\pi}\int_{\partial M}d^{3}x\sqrt{-h}
+\left[ \frac{2}{\ell}+\frac{\ell}{2}\mathcal{R}\left( h\right) \right]\,,
+\label{action}
+\end{align}
+where $\mathcal{K}_{ab}$ is the extrinsic curvature of the boundary
+metric, evaluated asymptotically in an appropriate coordinate system,
+defined presently. $h_{ab}$ is the intrinsic metric on
+$\partial {\cal M}$, and ${\cal R}$ its Ricci curvature. Varying
+the action gives the energy momentum tensor:\todoruth{Plot T?}\todoopt{not sure
+   thats a good idea, given conformal freedom in $\omega$.}
+\begin{align}
+8\pi \mathcal{T}_{ab} = \ell \mathcal{G}_{ab}\left(h\right)
+-\frac{2}{\ell}h_{ab}-\mathcal{K}_{ab}+h_{ab}\mathcal{K}\,.
+\end{align}%
+
+To compute these terms requires new coordinates near the boundary
+of AdS, typically parametrised by Fefferman-Graham
+coordinates, in which
+\begin{align}
+ds^2= \frac{\ell^2}{\rho^2} d\rho^2 +
+\rho^2 \left ( \gamma_{ab}^{(0)} + \frac1{\rho^2} \gamma^{(2)}_{ab}
++ ...\right )  dx^a dx^b,
+\label{FGmetric}
+\end{align}
+placing the boundary now at $\rho=\infty$. Although often one identifies a
+$\rho$ coordinate globally, due to the complexity of \eqref{AdSC}, we instead
+perform an asymptotic expansion for the coordinate transformation, writing
+\begin{align}\label{FGt}
+\frac{1}{Ar}= -\xi-\sum X_{n}\left( \xi \right) \rho ^{-n}, \qquad
+\cos \theta = \xi+\sum Y_{n}\left( \xi\right) \rho ^{-n},
+\end{align}
+determining the functions $X_n$ and $Y_n$ by requiring the metric be of the form
+in \cref{FGmetric} up to $\mathcal{O}(\rho^{-2})$ (in the
+expansions)\todoopt{not sure how best to phrase here, I mean after taking out
+  relevant factors of $\rho$}; we find this to be achievable by truncating the
+expansion at $n=3$. Requiring there be no cross-terms $g_{\rho\xi}$ and then
+solving order by order, allows us to fix $X_1$, $X_2$, $X_3$ in terms of $Y_n$
+without having to solve differential equations. With these functions we also
+find that $g\rho\rho=\ell^2/\rho^2$ is automatically satisfied at leading order
+and we need only therefore eliminate the two subleading terms. This is most
+easily achieved from here by fixing $Y_2$ and $Y_3$, which can be done once
+again first at next-to-leading order for $Y_2$ and similarly at next order for
+$Y_3$. With only five of the six functions determined, we find that
+$\gamma_{ab}^{(1)}=0$ as required and we are left with one functional degree of
+freedom in $Y_1$, which we parametrise as
+\begin{align}
+  Y_1(\xi) = \frac{A^2\ell^3}{\omega(\xi)\alpha}G(\xi)\sqrt{F(-\xi)}
+\end{align}
+in order to elucidate the conformal degree of freedom in the boundary metric,
+$\omega$. The boundary metric is then given, in these coordinates, by:
+\begin{align}\label{bndymet}
+ds_{(0)}^2
+= -\frac{\omega^{2}d\tau^2}{\ell^{2}}
++\frac{\omega^2\alpha^2 d\xi^2}{A^4\ell^4F(-\xi)^2G(\xi)}
++ \frac{\omega^2\alpha^2G(\xi)}{A^2\ell^2F(-\xi)}\frac{d\phi^2}{K^2},
+\end{align}
+which agrees with \cref{eq:bdymetric} up to an overall factor when
+$\rho\to\infty$, which $\omega(\xi)$ allows for.  Note that the transformation
+\eqref{FGt} is valid in general only when $F(-\xi)>0$, but this is precisely the
+constraint that acceleration horizons are absent.
+
+The expectation value of the energy momentum of the $CFT_{3}$ can then be
+calculated, yielding a relativistic fluid with a non-trivial viscous-shear
+tensor
+\begin{align}
+\left\langle \mathcal{T}_{ab}\right\rangle =\lim_{\rho \to
+\infty }\frac{\rho }{\ell}\mathcal{T}_{ab}= \frac32 \rho _{\mathrm{E}}
+U_{a}U_{b}+\frac{\rho_\mathrm{E}}2 \ell^{2} \gamma^{(0)} _{ab}+\pi _{ab}\,,
+\end{align}
+with $U=\omega^{-1}\partial_\tau$, and boundary indices are
+raised and lowered with $\ell^{2}\gamma^{(0)}_{ab}$.
+The energy density is
+\begin{align}
+\rho _{\mathrm{E}}= \frac{mA^3\ell}{8\pi \alpha^3\omega^3}F(-\xi)^{3/2}
+(2-3A^{2}\ell^{2}G(\xi))\,,
+\end{align}
+%\tcr{\bf shouldn't this be:
+%\begin{equation}
+%\rho _{E}= \frac{m}{\ell^2 \alpha^3\omega^3}(1-A^2\ell^2 X)^{3/2}
+%(2-3A^{2}\ell^{2}X)\,,
+%\end{equation}
+%Where does the $1/(8\pi)$ come from?}
+yielding the mass
+\begin{align}
+M= \int \left\langle T_{ab}\right\rangle k_\tau^a dS^b = \int \rho _{\mathrm{E}} \ell^3 \sqrt{-\gamma^{(0)}}~dxd\phi
+=\frac{\alpha m}{K}\,,
+\end{align}
+%\tcr{\bf I agree with the arithmetic, however, isn't it strange to use the determinant of the 3-metric to calculate the 2d integral? What is the origin of $\omega$ in this integral, as written in terms of the 2-metric determinant $\sigma$?}
+where $k_\tau = \partial_\tau$. This result agrees with \cref{confmass} from the
+Ashtekar-Das method. Note that this calculation is independent of the conformal
+frame (the choice of $\omega$).
+
+Finally, for completeness, we include that the shear tensor is
+\begin{align}
+\pi^x_x= \frac{3mA^5\ell^3}{16\pi \alpha^3\omega^{3}}
+G(\xi)F(-\xi)^{3/2}=-\pi^\phi_\phi\,,
+\end{align}
+with all other components vanishing. The equation of state is that of a thermal
+gas of massless particles and the dual fluid is anisotropic, as expected from
+the strongly distorted boundary.
+
+\section{Thermodynamics}
+\label{sec:thermodynamics}
+
+The agreement from two indendent methods for determining the black hole mass
+hints strongly that our suggested rescaling of time by a factor of $\alpha =
+\sqrt{1-A^2\ell^2}$ is indeed correct, and the time coordinate we ought to use
+when determining thermodynamics is then in fact $\tau$ rather than the original
+coordinate $t$ which we employed in previous chapters. Of most relevance, we
+expect the temperature to be directly affected, and indeed, computing the
+temperature associated with the black hole (also the temperature of the boundary
+field theory) via the Euclidean method, we find:
 \begin{align}
 T =\frac{f'(r_+)}{4\pi\alpha}
 =\frac{1 + 3\frac{r_+^2}{\ell^2}
@@ -4025,55 +4260,8 @@ As usual, we will take the entropy to be one quarter of the horizon area:
 S=\frac{\mathcal{A}}{4}=\frac{\pi r_+^2}{K(1-A^2r_+^2)}\,.
 \label{entropy}
 \end{align}
-The remaining task is to correctly identify the black hole mass, often the
-biggest challenge in studying thermodynamics of black holes with non-trivial
-asymptotics. In what follows, we will provide two independent arguments, %\tcr{\bf don't we actually have 3? also the calculation of the action?}
-beginning with the {Ashtekar--Das} method \cite{Ashtekar:1999jx,Das:2000cu} to metric
-\eqref{AdSC}. However, although consistency
-of thermodynamical relations is a common method of deriving
-thermodynamics (used for {example in \cite{Astorino:2016ybm}}), we do not
-consider this sufficient, hence return to our theme of holography,
-computing the holographic stress tensor of the boundary
-theory, thereby confirming our result.
-As an ancillary argument, we finally check consistency with
-a computation of the free energy.
 
-The first argument uses the Ashtekar--Das definition of conformal
-mass \cite{Ashtekar:1999jx,Das:2000cu}, which extracts the mass
-via conformal regularisation of the AdS C-metric near the boundary.
-The idea is to perform a conformal transformation on \eqref{AdSC},
-$\bar{g}_{\mu\nu} = {\bar{\Omega}}^{2}g_{\mu\nu}$,
-to remove the divergence near the boundary, then to integrate a conserved
-current composed from the Weyl tensor of the conformal metric,
-$\bar{C}^{\mu }{}_{\alpha \nu \beta }$, the normal
-to the boundary, $N_{\mu }=\partial _{\mu }{\bar{\Omega}}$, and a
-suitable Killing vector for the mass, $\xi = \partial_\tau$ to obtain a
-conserved charge:\todoruth{You have an opportunity to expand here --- write down
-  weyl --- explainconformal transformation, give calculation steps}
-\begin{align}
-Q(\xi )=\frac{\ell}{8\pi}\lim_{\bar{\Omega} \rightarrow 0}\oint
-\frac{\ell^{2}}{\bar{\Omega}}N^{\alpha }N^{\beta }
-\bar{C}^{\nu}{}_{\alpha \mu \beta }
-\xi _{\nu }d\bar{S}^{\mu }\,.
-\end{align}
-Even though the conformal completion is not unique, the
-charge thus obtained is independent of the choice of conformal completion.
-We pick $\bar{\Omega}=\ell\Omega r^{-1} $, which provides a smooth
-conformal completion in the limit $A=0$. The spacelike surface element
-tangent to $ \bar{\Omega}=0$ is
-\begin{align}\label{surfel}
-d\bar{S}_{\mu }=\delta^{\tau }_{\mu }\frac{\ell^{2} (d\cos\theta) d\phi}{\alpha K}\,,
-\end{align}%
-obtained by inserting $Ar\cos\theta=-1$ into the metric  $\bar{g}_{\mu\nu}$
-and computing the relevant determinant.  This yields
-\begin{align}\label{confmass}
-M = Q(\partial _{\tau})=\alpha \frac{m}{K}
-\end{align}
-for the mass, in agreement with the  temperature \eqref{temp}, but in contrast
-to previous results~\cite{Appels:2016uha,Astorino:2016ybm}.
-The absence of acceleration horizons ensures that  $M$ vanishes in the
-limit $A\ell\to 1$ only for $m=0$ and is positive otherwise.
-
+\todoopt{an other paste}
 It is now straightforward to verify the first law and Smarr \cite{Smarr:1972kt}
 relation
 \begin{align}
@@ -4095,111 +4283,6 @@ are the thermodynamic lengths introduced in \cite{Appels:2017xoe,Gregory:2017ogk
 {Note, we have} included the possibility of the tensions varying, as otherwise
 the system is constrained and identifying the correct parameters can be
 misleading.
-
-We now turn to another method for deriving the thermodynamic mass,
-by computing the holographic stress tensor. This provides an alternate
-and completely independent method of computation, and will reveal
-the dual interpretation of this system.  The idea here is to perform a
-Fefferman--Graham expansion of the metric~\cite{Fefferman:2007rka}, identifying the
-fall-off of sub-leading terms in the metric at the boundary. These are
-then used to compute the dual stress-energy tensor that can be integrated
-to give the mass of the system.
-
-The action, including boundary counterterms
-\cite{Balasubramanian:1999re, Emparan:1999pm, Mann:1999pc}, is
-\begin{align}
-I[g]=&\frac{1}{16\pi}\int_{M}d^{4}x\sqrt{-g}\left[ R+\frac{6}{\ell^{2}}\right]
-+ \frac{1}{8\pi}\int_{\partial M}d^{3}x\sqrt{-h}\mathcal{K}\nn \\
-&- \frac{1}{8\pi}\int_{\partial M}d^{3}x\sqrt{-h}
-\left[ \frac{2}{\ell}+\frac{\ell}{2}\mathcal{R}\left( h\right) \right]\,,
-\label{action}
-\end{align}
-where $\mathcal{K}_{ab}$ is the extrinsic curvature of the boundary
-metric, evaluated asymptotically in an appropriate coordinate system,
-defined presently. $h_{ab}$ is the intrinsic metric on
-$\partial {\cal M}$, and ${\cal R}$ its Ricci curvature. Varying
-the action gives the energy momentum tensor:
-\begin{align}
-8\pi \mathcal{T}_{ab} = \ell \mathcal{G}_{ab}\left(h\right)
--\frac{2}{\ell}h_{ab}-\mathcal{K}_{ab}+h_{ab}\mathcal{K}\,.
-\end{align}%
-\todoruth{Plot T?}
-
-To compute these terms requires new coordinates near the boundary
-of AdS, typically parametrised by Fefferman--Graham
-coordinates, in which
-\begin{align}
-ds^2= \frac{\ell^2}{\rho^2} d\rho^2 +
-\rho^2 \left ( \gamma_{ab}^{(0)} + \frac1{\rho^2} \gamma^{(2)}_{ab}
-+ ...\right )  dx^a dx^b\,.
-\label{FGmetric}
-\end{align}
-Although often one identifies a $\rho$ coordinate globally, due to the
-complexity of \eqref{AdSC}, we instead perform an asymptotic
-expansion for the coordinate transformation, writing
-\begin{align}\label{FGt}
-\frac{1}{Ar}= -x-\sum F_{n}\left( x\right) \rho ^{-n}\,, \quad
-\cos \theta = x+\sum G_{n}\left( x\right) \rho ^{-n}\, .
-\end{align}
-The functions $F_n$ and $G_n$ are fixed by the required fall-off properties
-of \eqref{FGmetric}, apart from $F_1$, that we choose to write as\todoruth{more
-  detail here, maybe give Fs and Gs?}
-\begin{align}\label{F1}
-F_{1}(x) = - \frac{\left( 1-A^{2}\ell^{2}X\right) ^{3/2}}{A\omega(x) \alpha}\,,
-\end{align}
-in order to elucidate the conformal degree of freedom in the boundary metric,
-$\omega$, with $ X = (1-x^{2})\left( 1+2mAx\right)$.
-Computing this boundary metric, $ds_{(0)}^2 = \gamma^{(0)}_{ab} dx^a dx^b$,
-we find it sufficient to truncate the series \eqref{FGt} at $n=4$ and find:
-\begin{align}\label{bndymet}
-{ds_{(0)}^2}
-= -\frac{\omega^{2}d\tau^2}{\ell^{2}}
-+ \frac{X\omega^2\alpha^2 d\phi^2}{K^2(1-A^2\ell^2X)}
-+\frac{\omega^2\alpha^2 dx^2}{X(1-A^2\ell^2X)^2}\,.
-\end{align}
-Note that the  transformation \eqref{FGt} is valid in general only when
-$A^{2}\ell^{2}X<1$, but this is precisely the constraint that acceleration
-horizons are absent.
-
-The expectation value of the energy momentum of the CFT$_{3}$
-can then be calculated,
-yielding a relativistic fluid with a non-trivial viscous-shear tensor
-\begin{align}
-\left\langle \mathcal{T}_{ab}\right\rangle =\lim_{\rho \longrightarrow
-\infty }\frac{\rho }{\ell}\mathcal{T}_{ab}= \frac32 \rho _{E}
-U_{a}U_{b}+\frac{\rho_E}2 \ell^{2} \gamma^{(0)} _{ab}+\pi _{ab}\,,
-\end{align}
-with $U=\omega^{-1}\partial_\tau$, and boundary indices are
-raised and lowered with $\ell^{2}\gamma^{(0)}_{ab}$.
-The energy density is
-\begin{align}
-\rho _{E}= \frac{m}{8\pi\ell^2 \alpha^3\omega^3}(1-A^2\ell^2 X)^{3/2}
-(2-3A^{2}\ell^{2}X)\,,
-\end{align}
-%\tcr{\bf shouldn't this be:
-%\begin{equation}
-%\rho _{E}= \frac{m}{\ell^2 \alpha^3\omega^3}(1-A^2\ell^2 X)^{3/2}
-%(2-3A^{2}\ell^{2}X)\,,
-%\end{equation}
-%Where does the $1/(8\pi)$ come from?}
-yielding the mass
-\begin{align}
-M= \int \rho _{E} \ell^3 \sqrt{\tcr{-}\gamma^{(0)}}~dxd\phi
-=\frac{\alpha m}{K}\,,
-\end{align}
-%\tcr{\bf I agree with the arithmetic, however, isn't it strange to use the determinant of the 3-metric to calculate the 2d integral? What is the origin of $\omega$ in this integral, as written in terms of the 2-metric determinant $\sigma$?}
-in agreement with \eqref{confmass}. Note that this calculation is independent
-of the conformal frame (the choice of $\omega$).
-
-The shear tensor is
-\begin{align}
-\pi^x_x= \frac{3mA^{2}X}{16\pi \alpha^3\omega^{3}}\left(
-1-A^{2}\ell^{2}X\right) ^{\frac32}=-\pi^\phi_\phi\,,
-\end{align}
-with all other components  vanishing.
-The equation of state is that of a thermal gas of massless particles
-and the dual fluid is anisotropic,
-as expected from the strongly distorted boundary.
 
 Finally, let us return to the computation of the action \eqref{Caction}.
 We find
@@ -4299,21 +4382,6 @@ and $\gamma^{(0)}_{ab}$ yields the geometry of a wormhole when there are no
 horizons at the boundary.
 The $AdS_{2}\times S^{1}$ asymptotic geometry is supersymmetric
 and to our knowledge has been unnoticed so far in the literature.
-
-\section{Back to Basics}
-\label{sec:basics}
-
-\section{Computing the Mass}
-\label{sec:mass-comput}
-
-\subsection{The Ashtekar-Das Method}
-\label{sec:ashtekar-das}
-
-\subsection{The Holographic Approach}
-\label{sec:holo}
-
-\section{Thermodynamic Phenomena}
-\label{sec:phenomena}
 
 
 \chapter{Concluding Remarks}
