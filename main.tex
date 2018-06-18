@@ -4027,7 +4027,7 @@ ds^2=\frac{1}{\Omega^2}\bigg[ -\frac{f(r)}{1-A^2\ell^2}d\tau^2+\frac{dr^2}{f(r)}
 +g(\theta)\sin^2\theta\frac{d\phi^2}{K^2}\Big)\bigg],
 \end{align}
 where $f(r)$, $g(\theta)$ and $\Omega$ retain their earlier
-definitions.\todoopt{insert KW metric?}
+definitions.
 
 We now turn to correctly identifying the black hole mass, often the biggest
 challenge in studying thermodynamics of black holes with non-trivial
@@ -4044,9 +4044,7 @@ check consistency with a computation of the free energy.
 \subsection{The Ashtekar-Das mass}
 \label{sec:ashtekar-das-mass}
 
-\todoruth{You have an opportunity to expand here --- write down weyl ---
-  explain conformal transformation, give calculation steps}The first argument
-uses the Ashtekar--Das definition of conformal mass
+The first argument uses the Ashtekar-Das definition of conformal mass
 \cite{Ashtekar:1999jx,Das:2000cu}, which extracts the mass via conformal
 regularisation of the AdS C-metric near the boundary.  The idea is to perform a
 conformal transformation on \eqref{eq:AdSC-tau},
@@ -4077,6 +4075,7 @@ where we have written $x=\cos\theta$ and $F$ and $G$ are the
 Hong-Teo~\cite{Hong:2003gx} metric functions we introduced in \cref{chap:cmet},
 explicitly given by~\eqref{eq:NRyx-fn}
 \begin{align}
+  \label{eq:FGhongteore}
   G(x) = \frac{1}{A^2\ell^2} - F(-x) = (1-x^2)(1+2 m A x).
 \end{align}
 The spacelike surface element tangent to $ \bar{\Omega}=0$ needed to integrate
@@ -4179,7 +4178,8 @@ freedom in $Y_1$, which we parametrise as
   Y_1(\xi) = \frac{A^2\ell^3}{\omega(\xi)\alpha}G(\xi)\sqrt{F(-\xi)}
 \end{align}
 in order to elucidate the conformal degree of freedom in the boundary metric,
-$\omega$. The boundary metric is then given, in these coordinates, by:
+$\omega$, and where $F$ and $G$ are as in \cref{eq:FGhongteore}. The boundary
+metric is then given, in these coordinates, by:
 \begin{align}\label{bndymet}
 ds_{(0)}^2
 = -\frac{\omega^{2}d\tau^2}{\ell^{2}}
@@ -4349,14 +4349,14 @@ but terminate at the boundary given in figure
 \end{figure}
 
 Although similar in form, the behaviour of the free energy no longer indicates
-the presence of a standard Hawking--Page transition \cite{Hawking:1982dh}.
+the presence of a standard Hawking-Page transition \cite{Hawking:1982dh}.
 As the string tension is fixed for the curves in the plot, no transition to
 pure radiation (with zero tension) is possible. One may, however, speculate that
 a transition to a different type of spacetime (for example {that of the expanding spherical wave with an attached semi-infinite string of given tension, similar to} \cite{Podolsky:2004bk})
 %\sout{an Aichelburg--Sexl-like
 %solution} %\cite{Aichelburg:1970dh}
 %\sout{with an attached string of given tension)}
-may still be possible---such an investigation, however, remains to be carried out.
+may still be possible --- such an investigation, however, remains to be carried out.
 
 We can also verify the reverse isoperimetric inequality, discussed in \cref{sec:BHTDlambda}, or that the weighted ratio of volume to
 area $\mathcal{R}=\left( \frac{3{V}}{\omega _{2}}\right)^{\frac{1}{3}}
