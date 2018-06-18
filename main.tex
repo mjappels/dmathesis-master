@@ -1,4 +1,3 @@
-
 \documentclass[
 % thesisdraft,
 twoside,
@@ -8,7 +7,7 @@ frontopenright
 \input{preamble}
 
 \usepackage{setspace}
-\onehalfspacing
+\doublespacing
 
 \usepackage{todonotes}
 \usepackage{cleveref}
@@ -735,21 +734,36 @@ however it could equally be used to verify the converse.
 \section{Incorporating $\Lambda$}
 \label{sec:BHTDlambda}
 
+The story of Einstein reportedly calling his inclusion of a cosmological
+constant $\Lambda$ the ``biggest blunder of his career'' is an oft-repeated one
+(see~\cite{Weinstein:2013aa}). On the contrary, over the past two decades most
+gravitational research includes a cosmological constant. Of most relevance to
+astronomers was the discovery that our universe seems to be described by a
+cosmology with a small-but-nonzero cosmological constant (\emph{e.g.}
+ref.~\cite{Spergel:2006hy}). In the world of theoretical physics, arguably one
+of the most important discoveries, by Maldacena in 1997~\cite{Maldacena:1997re},
+was of the conjectured \emph{ADS/CFT correspondence}, or more generally, the
+\emph{gauge/gravity correspondence} between strongly coupled nongravitational
+field theories and weakly coupled gravitational theories with negative $\Lambda$
+of one dimension higher.
 
-\placehold{Generic intro to AdS and interest in it since Maldacena. remember AdS acronym}
-
-Early research concerning gravitational solutions which included a cosmological
-constant was seen as purely academic at the time.
-\begin{itemize}
-\item astronomical discovery
-\item diversifies landscape of solutions
-\item Cosmological motivations, research into inflation, bubbles?
-\item AdS/CFT and applications for studying qfts as well as condensed matter systems.
-\end{itemize}
+The sign of the cosmological constant separates gravitational theories into two
+camps: (asymptotically) de Sitter (dS) theories have $\Lambda > 0$ and
+(asymptotically) anti de-Sitter (AdS) theories have $\Lambda < 0$. A classical
+gravitational field theory with $\Lambda \neq 0$ then satisfies the 
+Einstein field equations (EFEs):
+\begin{align}
+  R_{ab} -\frac12 g_{ab} R + g_{ab} \Lambda = 8\pi T_{ab}.
+\end{align}
+Finally, in order to make a connection with dimensionality and scale, the
+cosmological constant of a D-dimenional theory is often parametrised in terms of
+the real-valued (A)dS length scale $\ell$ according to
 \begin{align}
   \label{eq:lambda}
-  \Lambda = -\frac{(D-1)(D-2)}{2\ell^2} = -\frac{3}{\ell^2}
+  \Lambda = \pm\frac{(D-1)(D-2)}{2\ell^2} \stackrel{D=4}{=} \pm\frac{3}{\ell^2}.
 \end{align}
+
+\placehold{could include success stories about AdS/CFT}
 
 \subsection{Thermodynamics of the Kerr-AdS Black Hole}
 
@@ -765,10 +779,10 @@ associated to cosmological horizons. In 1982, Hawking and Page presented a
 thermodynamic description of the Schwarzschild-AdS
 spacetime~\cite{Hawking:1982dh}. By computing the action using a regularisation
 scheme similar to the method presented in \cref{sec:euclidean}, adapted to an
-asymptotically-AdS spacetime, HP derive expressions for the temperature and
-entropy of the black hole in this background and in fact used these quantities
-to show that there existed a phase transition for black holes in an anti-de
-Sitter background, which we will review below.
+asymptotically-AdS spacetime, Hawking and Page derive expressions for the
+temperature and entropy of the black hole in this background and in fact used
+these quantities to show that there existed a phase transition for black holes
+in an anti-de Sitter background, which we will review below.
 
 While the Kerr-AdS metric has been known since the late
 1960s~\cite{Carter:1968ks}, its thermodynamics were only discussed near the turn
@@ -1224,9 +1238,6 @@ ability to breathe life back into as old a subject as thermodynamics by applying
 it to modern and exotic solutions of gravitational physics is certainly
 exciting. The rich phase structure black holes possess presented in the last
 section are an example of the utility of thermodynamics.
-
-\placehold{examples of applications of black hole thermo:
-  geometrothermodynamics, black hole chemistry}
  
 \chapter{Acceleration and the C-metric}
 \label{chap:cmet}
@@ -4278,10 +4289,10 @@ should be considered as a single system with a mass dipole is an open question.
 Note that our computation is independent of the conformal frame, hence
 we can compare to investigations of holographic C-metrics with an
 acceleration horizon. For example, by choosing $\omega^2 =
-(1-A^{2}\ell^{2}X)\alpha^{-2}$, we recover the form of the boundary metric
+A^2\ell^2F(-\xi)\alpha^{-2}$, we recover the form of the boundary metric
 employed in \cite{Hubeny:2009kz}, and our coordinate transformation
 \eqref{FGt} is now valid throughout $x\in[-1,1]$. However, if the condition
-$ A^{2}\ell^{2} X <1$ is violated, then a black droplet/black funnel is present,
+$ F(-\xi)>0$ is violated, then a black droplet/black funnel is present,
 and we no longer have an equilibrium temperature for the system in general.
 The boundary geometry corresponds to a black hole in a spatially compact
 universe, and so there is no spatial asymptotic region as pointed out
@@ -4296,17 +4307,48 @@ horizons at the boundary.
 The $AdS_{2}\times S^{1}$ asymptotic geometry is supersymmetric
 and to our knowledge has been unnoticed so far in the literature.
 
-\chapter{Concluding Remarks}
+\chapter{Concluding Remarks and Outlook}
 
-To sum up: we have shown how to allow for a varying conical deficit
-in black hole spacetimes, and found the relevant thermodynamical 
-variables to describe the system. The appropriate first law has a 
-varying tension term, with a thermodynamic length as its potential. 
-This length consists of a direct geometrical part, a mass dependent correction, 
-and finally, a shift in the presence of charge. The thermodynamic phases of
-accelerating black holes exhibit similar behaviour to their nonaccelerating 
-AdS cousins, however, the impact of acceleration is to improve the thermodynamic
-stability of the black holes.
+We began in \cref{chap:BHTD} by reviewing some of the remarkable
+discoveries~\cite{Hawking:1971tu,Hawking:1971vc,Bekenstein:1972tm,Bekenstein:1973ur,Bardeen:1973gs,Bekenstein:1973mi,Bekenstein:1974ax,Hawking:1974rv,Hawking:1974sw,Hawking:1976de}
+concerning black holes that lead to the inception of a new field of research in
+black hole thermodynamics. We saw how certain mathematical properties of black
+holes were indeed very reminiscent of behaviour observed in the study of
+classical thermodynamics, leading to the establishing of the \emph{four laws of
+  black hole mechanics}~\cite{Bardeen:1973gs}. The most important revelation in
+this process was undoubtedly Hawking's discovery that black holes emit
+spontaneous radiation and could therefore be considered thermal objects after
+all~\cite{Hawking:1974rv,Hawking:1974sw}. This, combined with Bekenstein's
+assertion that the area of the event horizon of a black hole directly
+corresponds to its
+entropy~\cite{Bekenstein:1972tm,Bekenstein:1973ur,Bekenstein:1974ax} form the
+basis of what we now call black hole thermodynamics.
+
+In \cref{chap:cmet}, we introduced the accelerating black hole and its
+geometrical description via the \emph{C-metric}. Most notably, the C-metric is
+an interesting geometry as it possesses a conical defect which is interpreted as
+a cosmic string with positive tension attached to the corresponding pole.
+
+One of our main goals was to establish adapt the thermodynamic framework to
+encorporate accelerating black holes. To that end, in \cref{chap:td-conical}, we
+showed how to allow for a varying conical deficit in black hole spacetimes, and
+found the relevant thermodynamical variables to describe the system. We
+introduced the thermodynamic length as the conjugate potential to the tension in
+the first law. This length consists of a direct geometrical part which can be
+interpreted loosely as the radius of the black hole and a mass-dependent
+shift. Having identified tension as the correct extensive variable introduced
+with conical defects, we then move on to acceleration.
+
+In \cref{cha:therm-accel-black}, we derive the first law for accelerating black
+holes, adding to the arsenal of solutions already shown to display thermodynamic
+characteristics. By considering only slowly accelerating asymptotically AdS
+solutions, we are able to form an equilibrium in the absence of horizons other
+than the event horizon. We derive the thermodynamic length for charged
+accelerating black holes as well as other thermodynamic potentials needed for
+the first law. Using this description, we explore the thermodynamic phases of
+accelerating black holes and find that they exhibit similar behaviour to their
+nonaccelerating AdS cousins, however, it does seem as though the impact of
+acceleration is to improve the thermodynamic stability of the black holes.
 
 It is interesting to note that the first law indicates that if the tension of a
 defect is fixed, then there is no contribution to the variation of $M$ coming
@@ -4320,76 +4362,38 @@ energy from the environment, resulting in no net overall gain in the total
 energy of the thermodynamic system (other than the mass that was added to the
 black hole in the first place).
 
-It would be interesting to consider whether there are any holographic
-applications for these solutions. Typically, one avoids having such distorted
-boundaries, however, the fact that the thermodynamics of these systems is now
-well defined perhaps suggests this is worth a second look.
+We also employ this thermodynamic description to explore black hole solutions
+with maximal deficits. The ultra-spinning black hole
+of~\cite{Klemm:2014rda,Gnecchi:2013mja,Hennigar:2014cfa} belongs to this class
+of black holes, as do the ``bottle-shaped'' black holes mentioned
+in~\cite{Hubeny:2009kz,Chen:2016rjt}. It was discovered that ultra-spinning
+black holes violate the reverse isoperimetric inequality, implying they exceed
+the maximal amount of entropy as allowed by a bound determined with respect to
+their thermodynamic volume. We find that ultra-spinning accelerating black holes
+are not ``super-entropic'' in this sense, although we were only able to do so by
+making use of an incomplete
+thermodynamic description of rotating accelerating black holes, obtained
+perturbatively in the neighbourhoods of either vanishing acceleration or
+vanishing rotation.
 
-Finally, we have not discussed rotating accelerating black holes here. Even for
-the nonaccelerating rotating black hole, the thermodynamics are more subtle,
-requiring an adjustment of the angular velocity \cite{Gibbons:2004ai} in order
-to define it relative to a nonrotating frame at infinity. For a conical defect
-running through the black hole (though see
-\cite{Gregory:2013xca,Gregory:2014uca} for a full discussion of subtleties of
-replacing deficits by finite width defects) one can follow the method of
-\cref{sec:singlemu} to generalise the appropriate thermodynamical variables of
-Gibbons et al.\ \cite{Gibbons:2004ai} to:
-\begin{equation}
-  \begin{aligned}
-M &= \frac{m}{KL} \;\;\;; \;\;\;\;&
-V &= \frac{4\pi}{3} \left [ \frac{r_+(r_+^2+a^2)}{K} + a^2 M \right]\\
-J &= \frac{am}{K^2} \;\;\;; \;\;\;\;&
-\Omega &= \Omega_H-\Omega_\infty
-= \frac{aK}{r_+^2+a^2} + \frac{aK}{\ell^2 L} \;\;\;; \;\;\;\;\\
-Q &= \frac{e}{K} \;\;\;;\;\;\;\;& \Phi &= \frac{er_+}{r_+^2+a^2}
-\end{aligned}
-\end{equation}
-where $K$ is the (arbitrary) parameter determining the periodicity of the
-azimuthal angle as before, and $L$ is a new parameter due to black hole
-rotation:
-\begin{equation}
-L = 1 - \frac{a^2}{\ell^2}
-\end{equation}
-In \cite{Gibbons:2004ai}, $K=L$ was mandated by having no conical deficit on the
-rotation axis, however, here we are being more general. Allowing the tension of
-any deficit to vary leads to the thermodynamic length:
-\begin{equation}
-\lambda = \left ( r_+ - KM \frac{1+\frac{a^2}{\ell^2}}{1-\frac{a^2}{\ell^2}} \right)
-= \left ( r_+ - \frac{KM}{L}(2-L) \right)
-\end{equation}
-Thus our black hole obeys a standard first law, 
-\begin{equation}
-\delta M = T \delta S + V \delta P + \Omega \delta J + \Phi \delta Q
--2 \lambda \delta\mu
-\end{equation}
-as well as a conventional Smarr relation:
-\begin{equation}
-M
-= 2TS + \Phi Q - 2 PV + 2 \Omega J
-\end{equation}
+Finally, in \cref{chap:holoTD}, we address some issues that were raised in our
+original models. We improve upon our thermodynamic definitions and verify the
+mass of the black hole using a holographic approach. We also found that the dual
+stress energy tensor for the accelerating black hole corresponds to a
+relativistic fluid with a non-trivial viscous shear tensor proportional to the
+acceleration parameter. Given that the acceleration parameter also determines
+the conical deficit, the source of this anisotropy is clearly due to the impact
+of the deficit of the fluid. It would be interesting to compare this to the weak
+coupling calculation of stress tensors in the presence of conical deficits
+\cite{Dowker:1977zj}.
 
-Once the black hole is accelerating, it is no longer possible to have a
-completely nonrotating frame at infinity due to the distortion of the
-boundary. The potential therefore has a more complicated adjustment involving
-not only a shift, but also a decision on which is the appropriate frame to use
-at infinity. Computing the relevant parameters for the rotating accelerating
-black hole is underway.
-
-We also found that the dual stress energy tensor for the accelerating
-black hole corresponds to a relativistic fluid with a non-trivial viscous
-shear tensor proportional to the acceleration parameter. Given that
-the acceleration parameter also determines the conical deficit via
-\eqref{mueq}, the source of this anisotropy is clearly due to the impact
-of the deficit of the fluid. It would be interesting to compare this to
-the weak coupling calculation of stress tensors in the presence of
-conical deficits \cite{Dowker:1977zj}.
-Future work will involve investigating accelerating black holes with rotation,
-scalar fields~\cite{Anabalon:2009qt, Anabalon:2012ta}, and charge. The latter
-system will be a challenge due to the asymptotic structure of the gauge field.
-
-
-
-
+A caveat of this description is that we have been unable to incorporate either
+charge or rotation in any way; in particular, forming a holographic description
+of a charged accelerating black hole is expected to be a challenge due to the
+asymptotic structure of the gauge field. In this sense then, a full description of
+the thermodynamics of acceleration, rotation and charge is still lacking,
+however, our hope is that some of the ideas presented here bring us that much
+closer its discovery.
 
 
 % \appendix
