@@ -2679,7 +2679,7 @@ S=\frac{\mathcal{A}}{4}=\frac{\pi r_+^2}{K(1-A^2r_+^2)}\,,
 \end{align}
 and calculate the temperature via the usual Euclidean method (see
 \cref{sec:euclidean}) to obtain
-\begin{align}
+\begin{align}\label{eq:Tuncharged}
 T=\frac{f'(r_+)}{4\pi} = \frac{1}{2\pi r_+}\left(\frac{m}{r_+}\left(1+A^2r_+^2
 \right) + \frac{r_+^2}{\ell^2} - A^2 r_+^2\right).
 \end{align}
@@ -2687,13 +2687,12 @@ We now identify $P$ with the pressure associated to the cosmological constant
 according to $P=\frac{3}{8\pi \ell^2}$, which allows us to rewrite the
 temperature as
 \begin{align}
-TS = \frac{M}{2}+ P \frac{4\pi}{3K}
-\frac{r_+^3}{(1-A^2r_+^2)^2},
+TS = \frac{M}{2}+ P \frac{4\pi r_+^3}{3K (1-A^2r_+^2)^2},
 \end{align}
 which is nothing other than the Smarr relation $M= 2(TS - PV)$ provided we
 identify the black hole thermodynamic volume as
-\begin{align}
-V=\frac{4\pi}{3K}\frac{r_+^3}{(1-A^2r_+^2)^2}.
+\begin{align}\label{eq:Vuncharged}
+V=\frac{4\pi r_+^3}{3K(1-A^2r_+^2)^2}.
 \end{align}
 
 So far, this is a rewriting of a relation for the temperature, having identified
@@ -2841,6 +2840,7 @@ For example, in relating $\delta r_+$ to $\delta S$, we have:
 \end{align}
 where our expressions for the tensions \cref{eq:tensionsNR} give
 \begin{equation}
+\label{eq:deltaAKuncharged}
 \frac{\delta K}{K^2} = 2 \left ( \delta \mu_+ + \delta \mu_- \right ), \qquad \frac{m}{K} \delta A = - \left [
 \delta \mu_+ - \delta \mu_- + A \delta \Big(\frac{m}{K}\Big) \right].
 \end{equation}
@@ -4293,15 +4293,20 @@ S=\frac{\mathcal{A}}{4}=\frac{\pi r_+^2}{K(1-A^2r_+^2)}, \qquad P=-\frac{3}{8\pi
 \end{align}
 
 To verify the first law, a simple approach is to recycle a relation we have used
-previously~\eqref{eq:minifirstlaw1}\todoopt{better ref}, which is obtained by
-varying the metric function $f(r_+)$, yielding:
+previously~\eqref{eq:minifirstlaw1}, which is obtained by varying the metric
+function $f(r_+)$, yielding:
 \begin{align}
   \label{eq:deltamK}
   \delta \Big(\frac{m}{K}\Big) = \bar{T} \delta S + \bar{V} \delta P -
   \frac{r_+}{1\pm Ar_+}\delta \mu_\pm + \frac{m}{2K^2}\delta K,
 \end{align}
 with $\bar{T}$ and $\bar{V}$ corresponding to our previous definitions of
-temperature and volume\todoopt{ref back to T and V}.
+temperature and volume given in \cref{eq:Tuncharged,eq:Vuncharged} as
+\begin{align}
+  \bar{T} &= \frac{1}{2\pi r_+}\left(\frac{m}{r_+}\left(1+A^2r_+^2
+\right) + \frac{r_+^2}{\ell^2} - A^2 r_+^2\right).\nn\\
+\bar{V} &= \frac{4\pi r_+^3}{3K(1-A^2r_+^2)^2}
+\end{align}
 
 The variation of the definition in \cref{confmass} for the mass can be written
 as
@@ -4311,7 +4316,7 @@ as
            &= \alpha \delta \Big(\frac{m}{K}\Big) - \frac{A\ell^2}{\alpha}\frac{m}{K}\delta A - \frac{4\pi}{3} \frac{mA^2\ell^4}{K\alpha} \delta P. 
 \end{align}
 The variations of $A$ and $K$ were also given earlier
-as~\eqref{deltaKcharge}\todoopt{better ref}:
+as~\eqref{eq:deltaAKuncharged}:
 \begin{align}
   \frac{\delta K}{K^2} = 2  ( \delta \mu_+ + \delta \mu_-  ), \qquad \frac{m}{K}
   \delta A = - A \delta \Big(\frac{m}{K}\Big)  
