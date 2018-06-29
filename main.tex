@@ -199,13 +199,13 @@ rotation and while we are unable to provide a full picture, we are able to form
 a sufficient picture to investigate the aforementioned limit.
 
 The outline is as follows. We will begin by reviewing aspects of black hole
-thermodynamics in \cref{chap:BHTD}, covering some of the important more
+thermodynamics in \cref{cha:BHTD}, covering some of the important more
 historical discoveries as well as more recent developments that we have used
-elsewhere. In \cref{chap:cmet}, we similarly review the C-metric, which
+elsewhere. In \cref{cha:cmet}, we similarly review the C-metric, which
 describes a uniformly accelerating black hole, its history as well as certain
 derivations leading to the metrics we use further. We also outline certain
 constraints that must be taken into consideration when working with these
-solutions. In \cref{chap:td-conical}, we develop the thermodynamical framework
+solutions. In \cref{cha:td-conical}, we develop the thermodynamical framework
 necessary to admit varying conical deficits, and include the tensions of cosmic
 strings as new extensive variables of our ensemble. This introduces a new
 potential, the thermodynamic length. In \cref{cha:therm-accel-black}, we extend
@@ -214,7 +214,7 @@ varying conical deficits at the north and south poles. With this framework in
 place, we explore the thermodynamic phase structure of the solution. We then
 attempt to generalise this work to include rotating solutions and investigate
 the thermodynamic properties of critical accelerating solutions, which possess
-the aforementioned severe conical defects. Finally, in \cref{chap:holoTD}, we
+the aforementioned severe conical defects. Finally, in \cref{cha:holoTD}, we
 revisit some of our original conclusions and alter some of our results in light
 of new calculations that use different techniques.
 
@@ -256,7 +256,7 @@ signifying simply that ``$\to$'' is to be interpreted as meaning
 ``$\to x'^i =$''.
 
 \chapter{Black hole thermodynamics/mechanics}
-\label{chap:BHTD}
+\label{cha:BHTD}
 
 \section{The laws of black hole mechanics}
 \label{sec:fourlaws}
@@ -1260,7 +1260,7 @@ holes that possess, presented in the last section, is a powerful example of the
 utility of thermodynamics.
  
 \chapter{Acceleration and the C-metric}
-\label{chap:cmet}
+\label{cha:cmet}
 
 \section{Origins of the C-metric}
 \label{sec:cmet-history}
@@ -2064,7 +2064,7 @@ parametric space of the rotating C-metric.
 
 
 \chapter{Thermodynamics of black holes with conical defects}
-\label{chap:td-conical}
+\label{cha:td-conical}
 
 As we have seen so far, the space of solutions which appear to obey the laws of
 thermodynamics is rich. Black hole solutions with various conserved charges, may
@@ -2526,11 +2526,11 @@ $\mu_\pm$.
 We will first begin to develop this framework with the simplest case, the
 uncharged nonrotating accelerating black hole and use the insight gained from
 the previous chapter to choose to fix the tensions. This will be physically
-motivated, and allows us to make initial assertions as to the necessary
-conditions to formulate consistent thermodynamics. We will then extend this
-to include the aforementioned generalisation of independently varying conical
-deficits, at least for charged nonrotating accelerating black holes, deriving
-the thermodynamic lengths for these solutions along the way.
+motivated in its own right, and allows us to make initial assertions as to the
+necessary conditions to formulate consistent thermodynamics. We will then extend
+this to include the aforementioned generalisation of independently varying
+conical deficits, at least for charged nonrotating accelerating black holes,
+deriving the thermodynamic lengths for these solutions along the way.
 
 \section{Thermodynamics of the C-metric}
 
@@ -2539,12 +2539,12 @@ the thermodynamic lengths for these solutions along the way.
 For a general black hole spacetime containing conical defects, any disparity in
 the sizes of the deficits produces an overall force in the direction of the
 largest conical \emph{deficit}, and the geometry is described by the
-C-metric~\cite{Kinnersley:1970zw}, introduced in \cref{chap:cmet}. Typically,
+C-metric~\cite{Kinnersley:1970zw}, introduced in \cref{cha:cmet}. Typically,
 C-metrics have both black hole and acceleration horizons. In order to have any
 chance at constructing a thermodynamic description, we would like to be able to
 eliminate the acceleration horizon which has its own temperature, different to
 that of the black hole's. This is possible in asymptotically anti-de Sitter
-soace and for that reason we shall be studying accelerating black holes in
+space and for that reason we shall be studying accelerating black holes in
 negative cosmological constant universes. More specifically, we must restrict
 ourselves to the so-called \emph{slowly accelerating C-metric}
 \cite{Podolsky:2002nk}, for which the acceleration is small enough that the
@@ -2571,7 +2571,7 @@ f(r)&=(1-A^2r^2)\Bigl(1-\frac{2 m}{r}\Bigr)
 \label{eq:cmetric3-fun}
 \end{align}
 The conical deficits this spacetime exhibits correspond to cosmic strings with
-tensions given by (see \cref{eq:deficitsNR})
+tensions given by~\eqref{eq:deficitsNR}
 \begin{align}
   \label{eq:tensionsNR}
   \mu_\pm=\frac14\bigg[1-\frac{g(\theta_\pm)}{K}\bigg] = \frac14\bigg[1-\frac{1\pm
@@ -2581,8 +2581,8 @@ Further details concerning the spacetime and its subtleties can be found by
 referring back to \cref{sec:cmet-review}. 
 
 We have already seen how the parameter $K$ is related to the conical deficits in
-\cref{chap:td-conical}, however we would like to give some interpretation of the
-parameter $A$, which was identified as the acceleration in
+\cref{cha:cmet,cha:td-conical}, however we would like to give some
+interpretation of the parameter $A$, which was identified as the acceleration in
 \cref{sec:cmet-history} for the asymptotically flat solution by studying the
 weak field limit $m=0$ and exposing it as a a reparametrisation of Rindler
 spacetime. In the presence of a cosmological constant it may be more helpful to
@@ -2600,8 +2600,7 @@ however in these coordinates the boundary of AdS is not at $r=\infty$, but at
 $r = -1/(A\cos\theta)$. For $\theta$ in the southern hemisphere, this occurs at
 \emph{finite} $r$, but in the northern hemisphere $r=\infty$ actually lies
 within the AdS spacetime (see \cref{fig:accbh}). To transform to global AdS
-coordinates $\{R,\Theta\}$, one takes \cite{Podolsky:2002nk}\todoruth{And these
-  are? This section feels incomplete.}\todoopt{not sure what is meant by comment}
+coordinates $\{R,\Theta\}$, one takes \cite{Podolsky:2002nk}
 \begin{equation}
 1 + \frac{R^2}{\ell^2} = \frac{1 + (1-A^2\ell^2)r^2/\ell^2}{(1-A^2\ell^2)\Omega^2}
 ~,\qquad
@@ -2640,13 +2639,13 @@ completion \cite{Ashtekar:1984zz, Ashtekar:1999jx, Das:2000cu}. This takes the
 electric part of the Weyl tensor projected along the timelike conformal Killing
 vector, and integrates over a sphere at conformal infinity. The calculation
 gives\footnote{More details regarding this computation are provided in
-  \cref{sec:ashtekar-das}. Though it should be noted that the result stated here
-  was later discovered to be incorrect. In particular, this is related to an
-  issue with the somewhat ambiguous normalisation of the timelike killing vector
-  which affects the computation by an overall scale factor. \Cref{chap:holoTD}
-  addresses the issue, however these details were discovered in the later stages
-  of the production of this thesis. The results stated in this chapter hold
-  despite this inconsistency.}
+  \cref{sec:ashtekar-das-mass}. Though it should be noted that the result stated
+  here was later discovered to be incorrect. In particular, this is related to
+  an issue with the somewhat ambiguous normalisation of the timelike killing
+  vector which affects the computation by an overall scale
+  factor. \Cref{cha:holoTD} addresses the issue, however these details were
+  discovered in the later stages of the production of this thesis. The results
+  stated in this chapter hold despite this inconsistency.}
 \begin{align}
   M = \frac{m}{K},
   \label{eq:massAcc}
@@ -2692,8 +2691,8 @@ change in horizon area, thermodynamic volume, and charge.
 Originally, it was reasoned that during this process, the conical deficits (or
 lack thereof) could not change, as these corresponded to the physical objects
 causing the acceleration. Of course, as we have already shown by now, one could
-enviseage physical processes that would alter a conical defects on a black hole
-horizon, nonetheless it is simplest to restrain ourselves to the scenario where
+envisage physical processes that would alter conical defects on a black hole
+horizon, nonetheless it is simplest to restrict ourselves to the scenario where
 all tensions are held fixed. Thus we must consider a variation of $m$, $A$ and
 $K$ that preserves the cosmic string tensions, and it turns out that it is
 precisely through this physical restriction that we are able to derive a first
@@ -3237,7 +3236,7 @@ holes are allowed, varies with tension.
 
 
 \section{Critical black holes with teardrop-shaped horizons}
-\label{chap:crit-bh}
+\label{cha:crit-bh}
 
 Another area of interest recently has been to search for and discover spacetimes
 which do not satisfy the reverse isoperimetric inequality. A little context is
@@ -3339,7 +3338,7 @@ g(\theta)&=1 - \frac{a^2}{\ell^2} \cos^2\theta, \nn\\
 \end{align}
 and $K$ is a parameter which we choose to leave unspecified. The parameters $m$
 and $a$ correspond to the mass and rotation of the spacetime and
-$\ell = \sqrt{-3/\Lambda}$ is the AdS length scale. In \cref{chap:BHTD}, we
+$\ell = \sqrt{-3/\Lambda}$ is the AdS length scale. In \cref{cha:BHTD}, we
 introduced the Kerr-AdS metric with $K = \Xi = 1-a^2/\ell^2$. This actually ensures
 the poles are regular; indeed, one may check that with $K$ undefined, this
 spacetime has a conical deficit given by
@@ -3543,7 +3542,7 @@ defects, it has the effect of freezing out the tension and decoupling $K$ as a
 physical parameter. This can be seen from the expression for conical deficits
 \eqref{eq:deficit-al}: in this limit, $K$ is no longer linked to the deficit,
 and therefore to the tension either. With the thermodynamic quantities derived
-in \cref{chap:td-conical}, we see that some of these, such as the mass
+in \cref{cha:td-conical}, we see that some of these, such as the mass
 $M=m/K \Xi$, also diverge, through their dependence on the function
 $\gamma\sim \Xi^{-1} = (1-a^2/\ell^2)^{-1}$ which was introduced as a function
 multiplying the ``naive'' mass $M' = m/K$ to satisfy the first law. In
@@ -3909,7 +3908,7 @@ hole solutions that accelerate would not, then, be super-entropic in general.
 
 \chapter{Holographic thermodynamics of accelerating black holes}
 \chaptermark{Holographic Thermodynamics}
-\label{chap:holoTD} 
+\label{cha:holoTD} 
 
 The importance of black holes in advancing our understanding of physics cannot
 be underestimated.  They provide a setting for testing our most fundamental
@@ -4002,7 +4001,7 @@ where $\theta_+=0$ and $\theta_-=\pi$ denote the poles.
 An intriguing fact that we came across when studying this metric reveals itself
 when one examines the geometry obtained by setting $m=0$. As discussed in
 \cite{Appels:2017xoe,Gregory:2017ogk} as well as earlier in
-\cref{chap:therm-accel-black}, setting $m=0$ removes the black hole horizon, and
+\cref{cha:therm-accel-black}, setting $m=0$ removes the black hole horizon, and
 leaves pure AdS spacetime in Rindler-type coordinates.  Performing the
 coordinate transformation~\cite{Podolsky:2002nk}:
 \begin{align}
@@ -4079,7 +4078,7 @@ as
   \frac{dx^2}{A^2\ell^2F(-x)G(x)} + G(x)\frac{d\phi^2}{K^2}\right),
 \end{align}
 where we have written $x=\cos\theta$ and $F$ and $G$ are the
-Hong-Teo~\cite{Hong:2003gx} metric functions we introduced in \cref{chap:cmet},
+Hong-Teo~\cite{Hong:2003gx} metric functions we introduced in \cref{cha:cmet},
 explicitly given by~\eqref{eq:NRyx-fn}
 \begin{align}
   \label{eq:FGhongteore}
@@ -4115,7 +4114,7 @@ M = Q(\partial _{\tau}) =
 where we used the fact that $x^2 f(\frac{-1}{Ax}) = F(-x)$.
 
 This is the first result which contradicts both our earlier findings from
-\cref{chap:crit-bh} and results found
+\cref{cha:crit-bh} and results found
 elsewhere~\cite{Appels:2016uha,Astorino:2016ybm,Appels:2017xoe}. The absence of
 acceleration horizons ensures that $M$ vanishes in the limit $A\ell\to 1$ only
 for $m=0$ and is positive otherwise.
@@ -4429,7 +4428,7 @@ and to our knowledge has been unnoticed so far in the literature.
 
 \chapter{Concluding remarks and outlook}
 
-We began in \cref{chap:BHTD} by reviewing some of the remarkable
+We began in \cref{cha:BHTD} by reviewing some of the remarkable
 discoveries~\cite{Hawking:1971tu,Hawking:1971vc,Bekenstein:1972tm,Bekenstein:1973ur,Bardeen:1973gs,Bekenstein:1973mi,Bekenstein:1974ax,Hawking:1974rv,Hawking:1974sw,Hawking:1976de}
 concerning black holes that lead to the inception of a new field of research in
 black hole thermodynamics. We saw how certain mathematical properties of black
@@ -4444,13 +4443,13 @@ corresponds to its
 entropy~\cite{Bekenstein:1972tm,Bekenstein:1973ur,Bekenstein:1974ax} form the
 basis of what we now call black hole thermodynamics.
 
-In \cref{chap:cmet}, we introduced the accelerating black hole and its
+In \cref{cha:cmet}, we introduced the accelerating black hole and its
 geometrical description via the \emph{C-metric}. Most notably, the C-metric is
 an interesting geometry as it possesses a conical defect which is interpreted as
 a cosmic string with positive tension attached to the corresponding pole.
 
 One of our main goals was to establish adapt the thermodynamic framework to
-encorporate accelerating black holes. To that end, in \cref{chap:td-conical}, we
+encorporate accelerating black holes. To that end, in \cref{cha:td-conical}, we
 showed how to allow for a varying conical deficit in black hole spacetimes, and
 found the relevant thermodynamical variables to describe the system. We
 introduced the thermodynamic length as the conjugate potential to the tension in
@@ -4496,7 +4495,7 @@ thermodynamic description of rotating accelerating black holes, obtained
 perturbatively in the neighbourhoods of either vanishing acceleration or
 vanishing rotation.
 
-Finally, in \cref{chap:holoTD}, we address some issues that were raised in our
+Finally, in \cref{cha:holoTD}, we address some issues that were raised in our
 original models. We improve upon our thermodynamic definitions and verify the
 mass of the black hole using a holographic approach. We also found that the dual
 stress energy tensor for the accelerating black hole corresponds to a
