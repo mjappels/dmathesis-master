@@ -304,9 +304,9 @@ statistical counterparts. Let us now summarise these laws as such:
   where $\Omega$ is the angular velocity of the black hole at its event horizon
   and $\Phi$ is the electrostatic potential. This relation was proved using a
   variational principle by BCH in the uncharged case, and Carter published the
-  proof for the charged case in the conference proceedings for the summer
-  school~\cite{Carter:1973rla} (repub. in~\cite{Carter2010}). We review this
-  work in \cref{sec:firstlaw}.
+  proof for the charged case in the conference proceedings for the same 1972
+  summer school~\cite{Carter:1973rla} (repub. in~\cite{Carter2010}). We review
+  this work in \cref{sec:firstlaw}.
 \item The \emph{second law} is the area theorem itself. Following the current
   theme, we re-express \cref{eq:areatheorem} simply as:
   \begin{align}
@@ -338,25 +338,25 @@ without changing its final state by much. The concept of horizon area as entropy
 was not, however, a new one.
 
 Little over half a year prior to \emph{The four laws of black hole mechanics}
-was received for publication, and only a couple of months before the
+being received for publication, and only a couple of months before the
 aforementioned summer school during which much of this work was conceived (but a
 year after Hawking's initial paper on the area theorem was published), Jacob
-Bekenstein wrote in a letter addressing this specific apparent violation of the
+Bekenstein wrote a letter addressing this specific apparent violation of the
 second law of thermodynamics~\cite{Bekenstein:1972tm}. In the letter, he
 proposes a generalised form of the second law of thermodynamics in which the
 quantity that is observed to never decrease is given by the sum of common
 entropy, the entropy of the spacetime outside the black hole and a new
 \emph{black hole entropy} proportional to the horizon area, ie.
-$S_{\mathrm{bh}}=\eta \mathcal{A}$, with $\eta$ an as-yet-undetermined
-proportionality constant. This choice of having entropy proportional to the
-horizon area was actually motivated by Hawking's work on the area
-theorem~\cite{Hawking:1971tu} as well as similar work by Christodoulou and
+$S_{\mathrm{bh}}=\eta \mathcal{A}$, with $\eta$ being at the time an
+undetermined proportionality constant. This choice of having entropy
+proportional to the horizon area was actually motivated by Hawking's work on the
+area theorem~\cite{Hawking:1971tu} as well as similar work by Christodoulou and
 Ruffini around the same time~\cite{Christodoulou:1970wf,Christodoulou:1972kt} on
 reversible and irreversible processes for black holes. In further
 works~\cite{Bekenstein:1973ur,Bekenstein:1974ax}, Bekenstein attempts to
 establish the proportionality factor on heuristic grounds and proposes a value
 for $\eta=\log(2)/8\pi$. In fact, by considering a differential formula akin to
-the first law (\cref{eq:firstlawBHM}), Bekenstein was actually able to postulate
+the first law~\eqref{eq:firstlawBHM}, Bekenstein was actually able to postulate
 a possible expression for the temperature, by considering the conjugate quantity
 to entropy; however he too warns against interpreting this as a true temperature
 in the thermal sense. That black holes could not seemingly have a nonzero
@@ -368,13 +368,13 @@ hole had been discovered, known as superradiance. It describes the amplification
 of waves in a special \emph{superradiant regime}, incident on a generic
 Kerr-Newman black hole. The easiest way to see this effect is by considering a
 wave packet of frequency $\omega$, axial quantum number $m$ and charge $e$,
-incident on a black hole. The first law (\cref{eq:firstlawBHM}) should hold
+incident on a black hole. The first law~\eqref{eq:firstlawBHM} should hold
 throughout the capture of this packet and one expects differentials in the
 ratios of $m:\omega$ and $e:\omega$. It therefore follows that
 \begin{align}
   \left(1-\Omega \frac{m}{\omega}-\Phi\frac{e}{\omega}\right) \delta M = \frac{\kappa}{8\pi}\delta\mathcal{A}.
 \end{align}
-Imposing the second law (\cref{eq:secondlaw}) allows for $\delta M \leqslant 0$
+Imposing the second law~\eqref{eq:secondlaw} allows for $\delta M \leqslant 0$
 for wave packets that satisfy
 \begin{align}
   \label{eq:superradiant}
@@ -393,11 +393,11 @@ Bekenstein~\cite{Bekenstein:1973mi}. While most of the work cited above concerns
 itself with the amplification of superradiant incident waves through stimulated
 emission, Zel'dovich also suggested that, taking into account quantum mechanical
 effects, one could in principle also expect spontaneous emission in superradiant
-modes as well. Writing in his thesis, Don Page describes how, oblivious to
-Zel'dovich's work, he and Larry Ford had at the time independently discovered
+modes as well. Writing in his doctoral thesis, Don Page describes how, oblivious
+to Zel'dovich's work, he and Larry Ford had at the time independently discovered
 this effect, eventually going on to have discussions with Feynman, Thorne, Press
-and Teukolsky, before being made aware of the
-above~\cite{Page:1976zz} (along with a few amusing anecdotes from the time in~\cite{Page:2006my}).
+and Teukolsky, before being made aware of the above~\cite{Page:1976zz} (along
+with a few amusing anecdotes from the time in~\cite{Page:2006my}).
 
 What is important to note here is that while it was universally accepted that a
 black hole could not radiate, a black hole emitting in superradiant modes would
@@ -503,12 +503,12 @@ the exact differential
 dM = \mathcal{T}d\mathcal{A} + \Omega dJ + \Phi dQ
 \end{align}
 could be used to obtain the invariant quantities
-$\mathcal{T} = (\partial M/\partial A)_{J,Q} = \kappa/8\pi$, referred to at the
-time as the effective surface tension, $\Omega=(\partial M/\partial J)_{A,Q}$,
-the angular velocity of the black hole, and
-$\Phi = (\partial M/\partial Q)_{A,J}$, the electromagnetic potential. Smarr
-then simply observed that with these quantities, \cref{eq:christodoulou-ruffini}
-could be rewritten nicely as
+$\mathcal{T} = (\partial M/\partial \mathcal{A})_{J,Q} = \kappa/8\pi$, referred
+to at the time as the effective surface tension,
+$\Omega=(\partial M/\partial J)_{\mathcal{A},Q}$, the angular velocity of the
+black hole, and $\Phi = (\partial M/\partial Q)_{\mathcal{A},J}$, the
+electromagnetic potential. Smarr then simply observed that with these
+quantities, \cref{eq:christodoulou-ruffini} could be rewritten nicely as
 \begin{align}
   \label{eq:smarrrelation}
   M = 2\mathcal{T}\mathcal{A} + 2\Omega J + \Phi Q.
@@ -544,12 +544,12 @@ as
 \end{align}
 where a normalisation is needed, which can be determined at a later stage, and
 $d\Sigma_{ab}$ is the volume element on $\partial \mathcal{S}$, to give a
-conserved charge $E_k$. One finds that for $k = k_t$ the timelike killing
+conserved charge $E_k$. One finds that for $k = k_t$, the timelike killing
 vector, and for $k = k_\phi$, the rotational killing vector, this integral, when
 evaluated at infinity $\partial \mathcal{S}_\infty$ and normalised, yields
 $M = m$ and $J = m a$ respectively, for the Kerr-Newman metric. One can
-construct a spacelike surface $S$ which ends only on the boundary and extends
-through the horizons to the singularity.
+construct a spacelike surface $\mathcal{S}$ which ends only on the boundary and
+extends through the horizons to the singularity.
 
 Bardeen, Carter and Hawking were able to prove Smarr's relation, for the
 uncharged case in a more general setting in~\cite{Bardeen:1973gs} and Carter
@@ -558,7 +558,7 @@ in~\cite{Carter:1973rla,Carter2010}. Both methods use this as an intermediary
 step to deriving the first law, showing how the aforementioned exact
 differential expression~\eqref{eq:exactdiff} is in fact fully
 self-consistent. We will now briefly review this calculation, omitting technical
-steps which can certainly all be found in the original works.
+steps which can all be found in the original works.
 
 Let us consider the Komar integrals for both killing vectors, evaluated over a
 surface $\mathcal{S}$ which now extends from the boundary
@@ -647,7 +647,7 @@ mass as a Komar integral, we are able to show why variations of this quantity
 are related to all the other variations present in the first law in the way that
 they are. Previously, it had been known that one could express variations in the
 mass in this way, as the exact differential~\eqref{eq:exactdiff}, however this
-was seen as more of an observation based on final expressions obtained using
+should be seen as more of an observation based on final expressions obtained using
 independent definitions for mass, area, surface gravity and other
 quantities. This elegant derivation shows not merely how all of these
 expressions are related, but how their \emph{definitions} are related.
@@ -712,7 +712,7 @@ itself has an $S^1$ symmetry centred around the point $r = r_\mathrm{h}$. One
 could then compute the action on a region bounded by the surface
 $r = r_\mathrm{b}$.
 
-In euclidean field theory, the periodicity of imaginary time ends up
+In Euclidean field theory, the periodicity of imaginary time ends up
 corresponding to the temperature of the system through $T=\beta^{-1}$. This is
 then used to express the partition function of such a field theory. In the grand
 canonical ensemble, such a system will have thermodynamically conserved
@@ -773,7 +773,7 @@ of one dimension higher.
 The sign of the cosmological constant separates gravitational theories into two
 camps: (asymptotically) de Sitter (dS) theories have $\Lambda > 0$ and
 (asymptotically) anti de-Sitter (AdS) theories have $\Lambda < 0$. A classical
-gravitational field theory with $\Lambda \neq 0$ then satisfies the 
+gravitational field theory with $\Lambda \neq 0$ then satisfies the following
 Einstein field equations (EFEs):
 \begin{align}
   R_{ab} -\frac12 g_{ab} R + g_{ab} \Lambda = 8\pi T_{ab}.
@@ -786,15 +786,13 @@ the real-valued (A)dS length scale $\ell$ according to
   \Lambda = \pm\frac{(D-1)(D-2)}{2\ell^2} \stackrel{D=4}{=} \pm\frac{3}{\ell^2}.
 \end{align}
 
-\placehold{could include success stories about AdS/CFT}
-
 \subsection{Thermodynamics of the Kerr-AdS black hole}
 
-The obvious starting point for introducing a cosmological constant is to review
+A natural starting point for introducing a cosmological constant is to review
 how this fits into the thermodynamic framework for studying black holes
 presented above. The thermodynamics of black holes in the context of a
 cosmological constant were actually first discussed in a paper by Gibbons and
-Hawking in 1976~\cite{Gibbons:1977mu}, in which they discuss hawking radiation
+Hawking in 1976~\cite{Gibbons:1977mu}, in which they consider hawking radiation
 and black hole temperature in a de Sitter ($\Lambda > 0)$ background, a delicate
 topic since de Sitter space also has a cosmological horizon. The original
 motivation of the paper was in fact to better define the hawking radiation
@@ -898,12 +896,12 @@ Kostelecky and Perry~\cite{Kostelecky:1995ei} a decade later for the charged
 case. They also show that the same expressions can be obtained using the
 Brown-York method~\cite{Brown:1992br}.
 
-Caldarelli \emph{et al.} then derived a Christodoulou-Ruffini-like formula for the
-mass, expressing it as a function $M=M(S, J, Q)$. They then reverse engineer the
-first law to verify the quantities conjugate to the entropy, angular momentum
-and charge by computing the relevant partial derivatives. The temperature is
-found to agree with the charged version of \cref{eq:kerrAdSTS}, and the
-electrostatic potential is found to agree with
+Caldarelli \emph{et al.} then derived a Christodoulou-Ruffini-like formula for
+the mass, expressing it as a function $M=M(S, J, Q)$. They then
+reverse-engineered the first law to verify the quantities conjugate to the
+entropy, angular momentum and charge by computing the relevant partial
+derivatives. The temperature is found to agree with the charged version of
+\cref{eq:kerrAdSTS}, and the electrostatic potential is found to agree with
 \begin{align}
   \label{eq:kerrAdSP-CCK}
   \Phi = B_\mu\chi^\mu\Big|^\infty_{r_+}=\frac{er_+}{r_+^2+a^2},
@@ -911,7 +909,7 @@ electrostatic potential is found to agree with
 where $B$ is the electric gauge potential from \cref{eq:kerrAdS-gauge} and
 $\chi=\partial_t+\Omega_\mathrm{H}\partial_\phi$ is the null generator of the
 horizon. Most significantly, however, they found that $\Omega = (\partial
-M/\partial J)_{S,Q}\neq \Omega_\mathrm{H}$ but rather that
+M/\partial J)_{S,Q}\neq \Omega_\mathrm{H}$, but rather that
 \begin{align}
   \label{eq:kerrAdSO-CCK}
   \Omega = \frac{a(1+r_+^2/\ell^2)}{r_+^2+a^2}=\Omega_\mathrm{H}+\frac{a}{\ell^2},
@@ -933,7 +931,8 @@ $\Theta = (\partial M/ \partial \Lambda)_{S,J,Q}$, and we have the first law
 \begin{align}
   \delta M = T\delta S + \Omega \delta J + \Phi \delta Q + \Theta \delta \Lambda.
 \end{align}
-This also allows us to rewrite the Christodoulou-Ruffini formula as
+This also allows us to rewrite the Christodoulou-Ruffini formula that Caldarelli
+\emph{et al.} had derived as
 \begin{align}
   \label{eq:smarrAdS1}
   \frac12 M= TS + \Omega J + \frac12 \Phi Q - \Theta \Lambda,
@@ -988,9 +987,9 @@ proposed in the mid 1980s, where, in a series of papers~\cite{Henneaux:1984ji,
   Henneaux:1989zc}, Brown, Henneaux and Teitelboim introduce the cosmological
 constant as an integration constant from a theory which has a 3-form gauge
 potential coupled to the gravitational field. In this theory, there is a bubble
-radiation process which is reduces the cosmological
+radiation process which reduces the cosmological
 constant. In~\cite{Kastor:2009wy}, it is argued that a change in the
-cosmological constant in the bulk is equivalent via the AdS/CFT correspondence
+cosmological constant in the bulk is equivalent, via the AdS/CFT correspondence,
 to a change in the number of colors in the non-abelian field theory on the
 boundary. Finally, in recent work, Gregory, Kastor and
 Traschen~\cite{Gregory:2017sor,Gregory:2018ghc} studied the thermodynamics of a
@@ -1002,8 +1001,8 @@ able to provide a derivation similar to the one we presented in
 \cref{sec:firstlaw}, making use of the killing potential, first introduced
 in~\cite{Bazanski:1990qd,Kastor:2008xb} to construct properly defined Komar
 integrals in asymptotically $\Lambda\neq 0$ geometries. The outcome of this
-derivation is that they obtained definition of the conjugate quantity
-$\Theta = (\partial M/\partial \Lambda)_{S,J,Q}$ that we introduced in
+derivation is that they obtained an explicit definition of the conjugate
+quantity $\Theta = (\partial M/\partial \Lambda)_{S,J,Q}$ that we introduced in
 \cref{eq:smarrAdS1}. The cosmological constant can be interpreted as a pressure
 \begin{align}
   P = -\frac{\Lambda}{8\pi}
@@ -1074,8 +1073,8 @@ violate this statement. When the volume they used was the thermodynamic volume
 $V$, they found that \emph{all} black hole spacetimes violated the inequality,
 with the Schwarzschild-AdS geometry saturating the bound. This led to the
 conjecture that all black holes satisfy the reverse isoperimetric inequality,
-which is usually re-expressed as the ratio (increasing the number of
-  dimensions by one relative to \cref{eq:euclidiso})
+which is usually re-expressed as the ratio (increasing the number of dimensions
+by one relative to \cref{eq:euclidiso} to accommodate for time)
 \begin{align}
   \mathcal{R} =
   \left(\frac{(D-1)V}{\omega_{D-2}}\right)^{\frac{1}{D-1}}
@@ -1124,45 +1123,46 @@ Schwarzschild-AdS line element is
 \end{gather}
 where $d\Omega_\mathrm{II}^2$ is the volume element on the two-sphere, and $M$
 is the mass of the black hole. If we then identify the temperature as the period
-of imaginary time required to regularise the euclidean section and the entropy
+of imaginary time required to regularise the Euclidean section and the entropy
 as a quarter of the area, we find
 \begin{align}
-  T = \frac{f'(r_+)}{4\pi} = \frac{1}{4\pi
-    r_+}\left(1+\frac{3r_+^2}{\ell^2}\right), \qquad S = \pi r_+^2,
+  T = \frac{f'(r_\mathrm{h})}{4\pi} = \frac{1}{4\pi
+    r_+}\left(1+\frac{3r_\mathrm{h}^2}{\ell^2}\right), \qquad S = \pi r_\mathrm{h}^2,
 \end{align}
-where $r_+$ is the location of the event horizon and we have used $f(r_+)=0$ to
-cast the mass in terms of this parameter, though it should be noted that mass
-monotonically increases with respect to $r_+$.
+where $r_\mathrm{h}$ is the location of the event horizon and we have used
+$f(r_\mathrm{h})=0$ to cast the mass in terms of this parameter, though it
+should be noted that the mass monotonically increases with respect to
+$r_\mathrm{h}$.
 
 Local stability in thermodynamics requires positivity of the specific heat,
 which is given by
 \begin{align}
   C_P = T \left(\frac{\partial S}{\partial T}\right)_P =
-  -\frac{2\pi r_+^2(1+3r_+^2/\ell^2)}{1-3r_+^2/\ell^2} .
+  -\frac{2\pi r_\mathrm{h}^2(1+3r_\mathrm{h}^2/\ell^2)}{1-3r_\mathrm{h}^2/\ell^2} .
 \end{align}
-We notice therefore that black holes larger than $r_+ = \ell/\sqrt{3}$ may be in
-a locally stable equilibrium, whereas for smaller black holes, equilibrium is
-unstable. This stable equilibrium is achieved for larger black holes as gaining
-mass increases temperature, thereby providing a higher rate of radiation for the
-horizon which may then lead back to equilibrium. This turning point actually
-corresponds to a minimal black hole temperature
+We notice therefore that black holes larger than $r_\mathrm{h} = \ell/\sqrt{3}$
+may be in a locally stable equilibrium, whereas for smaller black holes,
+equilibrium is unstable. This stable equilibrium is achieved for larger black
+holes as gaining mass increases temperature, thereby providing a higher rate of
+radiation for the horizon which may then lead back to equilibrium. This turning
+point actually corresponds to a minimal black hole temperature
 $T_\mathrm{c} = \sqrt{3}/2\pi\ell$.
 
 Another criteria for stability of a thermodynamical system is that its
 configuration be that of lowest free energy for the fixed intensive
 quantities. If more than one configuration is possible, then those of higher
-free energy will have a tendancy to decay to the state of lowest free
+free energy will have a tendency to decay to the state of lowest free
 energy. The previous section tells us that the quantity we are interested in is
 the Gibbs free energy potential given by
 \begin{align}
-  G = M - TS = \frac{r_+}{4}\left(1-\frac{r_+^2}{\ell^2}\right),
+  G = M - TS = \frac{r_\mathrm{h}}{4}\left(1-\frac{r_\mathrm{h}^2}{\ell^2}\right),
 \end{align}
 for the Schwarzschild-AdS black hole. There is, however, another possible
-thermal configuration that we may consider which is vacuum AdS filled with a
-thermal bath, which has negligible free energy, however is not able to sustain
-itself against gravitational collapse beyond some temperature $T_\mathrm{u} \sim
-s^{-\frac14} \ell^{-\frac12}$ where $s$ is the effective number of spin states
-of the radiation~\cite{Hawking:1982dh}. 
+thermal configuration that we may consider; vacuum AdS filled with a
+thermal bath has negligible free energy, however is not able to sustain
+itself against gravitational collapse beyond some temperature
+$T_\mathrm{u} \sim s^{-\frac14} \ell^{-\frac12}$ where $s$ is the effective
+number of spin states of the radiation~\cite{Hawking:1982dh}.
 
 \Cref{fig:hawkingpage} illustrates the situation we have described. For
 temperatures lower than $T_\mathrm{c}$, the only possible configuration is
@@ -1201,8 +1201,8 @@ This analysis may be extended to charged black holes. This was done by Chamblin
 \emph{et al.}~\cite{Chamblin:1999tk} in the early days of holography. The
 inclusion of charge allows us to consider either the canonical ensemble, where
 we fix charge itself or the grand canonical ensemble, where we fix the
-electrostatic potential $\Phi$ and allow charge to vary. In the latter case, the free
-energy potential we will be interested is given by
+electrostatic potential $\Phi$ and allow charge to vary. In the latter case, the
+free energy potential we will be interested is given by
 \begin{align}
   G' = M - TS - \Phi Q.
 \end{align}
@@ -1252,15 +1252,12 @@ always preferred.
     uncharged plot. These figures have all been reproduced for $\ell = 1$.}
 \end{figure}
 
-\begin{center}
-  * * *
-\end{center}
-
-The framework of black hole thermodynamics is undoubtedly a facinating one. The
-ability to breathe life back into as old a subject as thermodynamics by applying
-it to modern and exotic solutions of gravitational physics is certainly
-exciting. The rich phase structure black holes possess presented in the last
-section are an example of the utility of thermodynamics.
+In this chapter, we have seen how the framework of black hole thermodynamics is
+undoubtedly a fascinating one. The ability to breathe life back into as old a
+subject as thermodynamics by applying it to modern and exotic solutions of
+gravitational physics is certainly exciting. The rich phase structure black
+holes that possess, presented in the last section, is a powerful example of the
+utility of thermodynamics.
  
 \chapter{Acceleration and the C-metric}
 \label{chap:cmet}
