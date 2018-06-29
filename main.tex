@@ -2089,7 +2089,7 @@ We have shown, in the previous chapter, how acceleration is driven by the
 existence of a conical deficit corresponding to the influence of a cosmic string
 attached to the horizon. It will therefore be necessary for us to first
 investigate how one might formulate thermodynamics of spacetimes in the presence
-of conical defects, and to simplify that task we will restrict ourselves to
+of conical defects, and to simplify that task we restrict ourselves, for now, to
 nonaccelerating spacetimes.
 
 \section{Thermodynamics with conical deficits}\label{sec:singlemu}
@@ -2123,7 +2123,7 @@ f(r) = 1-\frac{2m}{r} + \frac{e^{2}}{r^{2}} + \frac{r^{2}}{\ell^2}\;, \qquad
 \end{equation}
 The parameters $m$ and $e$ are related to the black hole's mass and charge
 respectively, $B$ is the Maxwell potential, and we allow for a negative
-cosmological constant via $\ell = \sqrt{-\Lambda/3}$.
+cosmological constant via $\ell = \sqrt{-3/\Lambda}$.
 
 In order to treat varying tension we leave the parameter $K$ in \cref{afv}
 unspecified. As has already been explained, this parameter would typically
@@ -2155,9 +2155,9 @@ deficits balance each other out. This exercise provides insight into the role
 $K$ plays within a metric. Different values for this parameter determine the
 severity of an overall defect running through the black hole.
 
-Now let us consider the temperature and entropy (as defined earlier) of the
-black hole. We compute $T$ by demanding regularity of the Euclidean section of
-the black hole \cite{Gibbons:1976ue}, giving
+Now let us consider the temperature and entropy (as defined after \cref{afv}) of
+the black hole. We compute $T$ by demanding regularity of the Euclidean section
+of the black hole \cite{Gibbons:1976ue}, giving
 \begin{align}
 T = \frac{f'(r_+)}{4\pi} = \frac{1}{2\pi r_+^2} \left [
 m - \frac{e^2}{r_+} + \frac{r_+^3}{\ell^2}\right]
@@ -2209,13 +2209,13 @@ Rather than write a single $\lambda\delta\mu$ term, instead we write two such
 terms, referring to the deficits emerging from each pole. Although these are
 obviously equal in this case, one might envision situations where this is not
 the case. Indeed, our experience with accelerating solutions is that these are
-spacetimes where the conical configuration does just that; attributing a
+spacetimes where the axial configuration exhibits just that; attributing a
 $\lambda \delta \mu$ term per pole is therefore justified.
 
 \subsection{A concrete example --- capture of a cosmic string}
 
-Let us observe consider the following example to verify the first law in action:
-the capture, and subsequent escape, of a cosmic string by a black hole.  This
+Let us observe the following example to verify the first law in action: the
+capture, and subsequent escape, of a cosmic string by a black hole.  This
 example was first proposed in \cite{Bonjour:1998rf} in the case of a charged
 vacuum black hole.  The idea is that the string is moving and gets briefly
 captured by the black hole. In the capture process, the internal energy of the
@@ -2228,8 +2228,9 @@ would simply transit through, leaving the system. For the black hole however, we
 will see this is not the case, and we have the interpretation of a segment of
 string having been captured by the black hole, with the black hole increasing
 its mass accordingly. This process was considered in the probe limit in
-\cite{Lonsdale:1988xd,DeVilliers:1997nk}. We therefore consider the vacuum
-Reissner-Nordstr\"om (RN) metric which has the following structure function:
+\cite{Lonsdale:1988xd,DeVilliers:1997nk}. We therefore consider the
+asymptotically flat Reissner-Nordstr\"om (RN) metric which has the following
+structure function:
 \begin{align}
 f(r) = 1  - \frac{2m}{r} + \frac{e^2}{r^2}
 \end{align}
@@ -2249,7 +2250,7 @@ as required. Interestingly, because the internal energy has been fixed, the
 event horizon has to move outwards to compensate for the conical deficit. Since
 the entropy contains just one factor of $K$, but two of $r_+$, the net effect is
 an increase of entropy, indicating this is an irreversible thermodynamic
-process. The one interesting exception being an extremal black hole.
+process, the one interesting exception being an extremal black hole.
 
 In the second step, the string pulls off the black hole, so $\delta \mu = -\mu$,
 and since the string is uncharged, $\delta Q$ must remain zero, and $e$ 
@@ -2291,26 +2292,26 @@ velocity
 \end{align}
 implying that the angular velocity ought to be re-normalised and that
 $\Omega = \Omega_\mathrm{H} - \Omega_\infty$ is the true total angular
-velocity. The mass was then found to be given by $M=m/\Xi^2$ as opposed $m/\Xi$,
-the expression originally given by HHT, which is obtained using the Komar method
-when a normalisation of the timelike killing vector is omitted. Similarly, the
-expression for thermodynamic volume,
+velocity. The mass was then found to be given by $M=m/\Xi^2$ as opposed to
+$m/\Xi$, the expression originally given by HHT, which is obtained using the
+Komar method when a normalisation of the timelike killing vector is
+omitted. Similarly, the expression for thermodynamic volume,
 \begin{align}
   \label{eq:volKerrAdS}
 V = \frac{4\pi}{3K} \left( r_+(r_+^2+a^2) + ma^2 \right)
 \end{align}
 contains a second, rotation-dependent term which may also be viewed as a
-normalisation.
+re-normalising shift.
 
-Employing similar ideas and viewing thermodynamic potentials as having
-normalising terms, we can actually show that these corrections to the
+Employing similar ideas and viewing thermodynamic potentials as having extra
+regularising terms, we can actually show that these corrections to the
 thermodynamic mass and angular velocity are required to satisfy the first law
 while simultaneously obtaining these expressions for arbitrary and potentially
 varying string tensions.
 
 The first step is to vary $f(r_+)=0$ to establish an initial thermodynamic
 relation. Identifying $S$ as a quarter of the horizon area and $T$ as the
-temperature given by the euclideanisation procedure,
+temperature given by the Euclideanisation procedure,
 \begin{align} \label{eq:SandT-al}
 S = \frac{\pi}{K}(r_+^2+a^2) \qquad
   T=\frac{1}{2\pi(r_{+}^{2}+a^{2})}
@@ -2339,7 +2340,7 @@ that $K$ parametrises the tension and can therefore not appear as a standalone
 term. The aim of this derivation is precisely to find such a first law. Let us
 now introduce a function $\gamma = \gamma(a,\ell)$ in our expression for the
 mass. We know that $\gamma$ will need to depend on $a$ and $\ell$ from the
-relation between $K$ and $\mu$. Using this ansatz for mass and then perturbing
+relation between $K$ and $\mu$. Using this ansatz for the mass and then perturbing
 it, we have
 \begin{align}  
   M&=\frac{m}{K}\gamma(a,\ell),\\
@@ -2415,7 +2416,7 @@ the correction to the gauge potential $\Phi_1 = 0$.
 
 \section{The thermodynamic length}
 
-To recap, we have shown that allowing for a varying conical deficit
+To recap, we have shown that, allowing for a varying conical deficit
 in black hole spacetimes, the first law of thermodynamics becomes
 \begin{align}
 \delta M = T \delta S + V\delta P + \Phi \delta Q +\Omega\delta J - 2\lambda \delta \mu,
@@ -2432,7 +2433,7 @@ pole to singularity.  Instead, the mass-dependent adjustment emphasises this is
 a potential, rather than just an internal energy term that might more
 appropriately be placed on the left hand side of the equation. Interestingly
 perhaps, in the absence of a cosmological constant, the thermodynamic length can
-actually be interpreted as half the distance betweent the inner and outer horizons,
+actually be interpreted as half the distance between the inner and outer horizons,
 $\lambda = \frac{r_+ - r_-}{2}$, though this is not the case in AdS.
 
 It is interesting to compare this mass-dependent shift of the thermodynamic
@@ -2451,17 +2452,17 @@ positive, whereas the correction term for thermodynamic length is actually
 negative.  This means that for large enough mass, the thermodynamic length
 itself becomes negative, as shown in \cref{fig:TDlength} for an uncharged black
 hole. The picture for a charged black hole is similar, although the critical
-value of $M$ for which $\lambda_-$ becomes negative is larger. Comparing this
-with thermodynamic volume, we see that analogous to $V$, the first term is a
-length - that of the string from the pole to $r=0$, and the second term is a
+value of $M$ for which $\lambda$ becomes negative is larger. Comparing this
+with thermodynamic volume, we see that, analogous to $V$, the first term is a
+length --- that of the string from the pole to $r=0$, and the second term is a
 mass-dependent correction that normalises this thermodynamic length.  It can be
 understood by thinking of the two ways in which a cosmic string can affect the
 black hole: First, by introducing a conical deficit, the relation between the
 mass of the black hole and the solution mass parameter $m$ is corrected, since
 the internal energy of the black hole will be reduced by a factor of $4\mu$ if a
 conical deficit is present.  The second effect comes from the energy of the
-string behind the event horizon - although this does not formally seem to
-contribute to the mass of the black hole - if the deficit increases, then the
+string behind the event horizon --- although this does not formally seem to
+contribute to the mass of the black hole --- if the deficit increases, then the
 black hole must give some ``extra mass'' to the string inside the event horizon,
 commensurate with the increased deficit.
 \begin{figure}
