@@ -2710,16 +2710,15 @@ perturbation also of $r_+$, hence we can write
 \end{align}
 where everything is evaluated at $f(r_+, m,A, \ell)=0$.  Clearly we can replace
 $\delta m$ and $\delta \ell$ by variations of the thermodynamic parameters $M$
-and $P$, and $\delta r_+$ is expressible in terms of $\delta S$ and $\delta A$
-using \cref{eq:entropyFT}. Finally, we replace
+and $P$, and $\delta r_+$ is expressible in terms of $\delta S$, $\delta K$ and
+$\delta A$ using \cref{eq:entropyFT}. Finally, we replace
 $\partial f /\partial r_+ = 4 \pi T$, and use $f(r_+)=0$ to simplify the terms
 multiplying $\delta A$ to obtain:
 \begin{align}
 (1-A^2 r_+^2) (T \delta S + V \delta P) - \delta M - \frac{m A r_+^2}{K} \delta
-  A + \left(\frac{r_+^2}{\ell^2}-(1+A^2r_+^2)\right)\frac{r_+\delta K}{4K^2}  =0,
+  A + \left(\frac{r_+^2}{\ell^2}-(1+A^2r_+^2)\right)\frac{r_+\delta K}{4K^2}  =0.
 \label{eq:firstint}
 \end{align}
-where we have also allowed $K$ to vary for completeness.
 
 At the moment, it seems as if we have extra thermodynamic contributions, however,
 we now use the physical input from the cosmic string that the conical deficits
@@ -2749,13 +2748,14 @@ it is feasible to allow the string tensions to vary independently.
 
 Having shown that the C-metric appears to obey the laws of black hole
 thermodynamics, at least in the uncharged case when the cosmic string tensions
-are held fixed, we will now perform a similar analysis to establish verify this
-is the case for the charged black hole, while this time including terms
-corresponding to each deficit. An example of a process which would involve a
-change in the string tensions could be the collision of two accelerating black
-holes\footnote{An unfortunate caveat of our model is that the two black holes
-  would need to be accelerating along the same axis.}. Keeping the metric as in
-\cref{eq:cmetric3}, now with $f(r)$ defined to be \eqref{eq:NRrth-fn}
+are held fixed, we will now perform a similar analysis to verify this is the
+case for the charged black hole, while this time including terms corresponding
+to each deficit. While at first this might seem unnecessary, an example of a
+process which would involve a change in the string tensions could be the
+collision of two accelerating black holes\footnote{An unfortunate caveat of our
+  model is that the two black holes would need to be accelerating along the same
+  axis.}. Keeping the metric as in \cref{eq:cmetric3}, now with $f(r)$ defined
+to be \eqref{eq:NRrth-fn}
 \begin{align}
   f(r) = (1-A^2r^2)\left(1-\frac{2m}{r} + \frac{e^2}{r^2}\right)+\frac{r^2}{\ell^2},
 \end{align}
@@ -2772,7 +2772,7 @@ the conventional relations
 \begin{align}
   \label{eq:TSNR}
 T &= \frac{f'(r_+)}{4\pi} = \frac{1}{2\pi r_+}\left(\frac{m}{r_+}\left(1+A^2r_+^2
-\right) + \frac{r_+^2}{\ell^2} - A^2 r_+^2-\frac{e^2}{r_+^2}\right).\nn\\
+\right) + \frac{r_+^2}{\ell^2} - A^2 r_+^2-\frac{e^2}{r_+^2}\right),\nn\\
 S &= \frac{\mathcal{A}}{4} =\frac{\pi r_+^2}{K(1-A^2 r_+^2)}.
 \end{align}
 Checking the Smarr relation, we compute
@@ -2785,7 +2785,7 @@ potential given by $\Phi_\mathrm{H} = e/r_+$ and defining
   \label{eq:volNR}
 V  = \frac{4\pi r_+^3}{3K(1-A^2r_+^2)^2}
 \end{align}
-as the modified thermodynamic volume, we obtain
+as the thermodynamic volume, as it was in the previous section, we obtain
 \begin{align}\label{eq:smallsmarr}
 \frac{m}{K} = 2 TS  + Q\Phi_H - 2 PV.
 \end{align}
@@ -2889,11 +2889,11 @@ Next, we compare
 \end{align}
 to
 \begin{align}
-T \delta S + V \delta P + \Phi \delta Q -\lambda_+ \delta \mu_+ - \lambda_-\delta \mu_-
+&T \delta S + V \delta P + \Phi \delta Q -\lambda_+ \delta \mu_+ - \lambda_-\delta \mu_-
 = \delta \left ( \frac{m}{K} \right ) 
-- \Phi_0 \delta Q - \frac{m\delta K}{2K^2}&\nn\\
-+ \left [ \frac{r_+}{1+Ar_+} - \lambda _+ \right]\delta \mu_+
-+ \left [ \frac{r_+}{1-Ar_+} - \lambda _- \right]\delta \mu_-&
+- \Phi_0 \delta Q - \frac{m\delta K}{2K^2}\nn\\
+&\hspace{11em} + \left [ \frac{r_+}{1+Ar_+} - \lambda _+ \right]\delta \mu_+
++ \left [ \frac{r_+}{1-Ar_+} - \lambda _- \right]\delta \mu_-,
 \end{align}
 where $\lambda_\pm$ are to be determined. After some
 algebra, we obtain
@@ -2913,8 +2913,8 @@ algebra, we obtain
              +\frac{(2e\gamma_e+1)}{1-e^2 A^2} \left ( m + e^2A \right) \right]
              \delta \mu_- 
 \end{align}
-for our first law to hold, clearly the RHS of this equation must vanish, leading
-to a constraint for $\gamma$:
+for our first law to hold, clearly the right-hand side of this equation must
+vanish, leading to a constraint for $\gamma$:
 \begin{align}
 (1-e^2 A^2) \gamma-2 e^3A^2 \gamma_e - A(1-e^2 A^2) \gamma_A =1.
 \end{align}
@@ -3013,7 +3013,7 @@ Thus these slowly accelerating black holes do indeed satisfy the
 reverse isoperimetric inequality.
 
 From here, it would be most interesting to proceed onto rotating black holes,
-nicely tieing the bow on this study of thermodynamics. Alas, the computations
+nicely tying the bow on this study of thermodynamics. Alas, the computations
 involved have proved too tall an order. We shall, however, revisit the topic
 further in the chapter as we now take a turn to explore what these findings may
 teach us about accelerating black holes.
@@ -3028,23 +3028,23 @@ one polar axis only, and a presumably totally regular radiation bath.  However,
 recall, from \cref{sec:hawkingpage}, that a black hole in AdS behaves similarly
 to a black hole in a reflecting box, with the negative curvature of the AdS
 providing the qualitative reflection. For small black holes, the effect of the
-negative curvature is sub-dominant to the local curvature of the black hole, and
+negative curvature is subdominant to the local curvature of the black hole, and
 the black hole has negative specific heat, as in the vacuum Schwarzschild
 case. For black holes larger than the AdS radius, the vacuum curvature
-dominates, and the black hole has positive specific heat, in particular, there
-is a minimum temperature for a black hole in AdS, below this temperature, only a
+dominates, and the black hole has positive specific heat; in particular, there
+is a minimum temperature for a black hole in AdS. Below this temperature, only a
 radiation bath can be a solution to the Einstein equations at finite
 $T$. Plotting the Gibbs free energy as a function of temperature shows both the
 allowed states, as well as the preferred one for a given temperature.  At very
 low $T$, the only allowed state is a radiation bath. Above a critical
-temperature $T_c = \sqrt{3}/2\pi\ell$, one can have either a radiation bath, or
+temperature $T_\mathrm{c} = \sqrt{3}/2\pi\ell$, one can have either a radiation bath, or
 a black hole (that may be either `small' or `large'). However for $T>1/\pi\ell$,
 the large black hole is not only thermodynamically stable (in the sense of
 positive specific heat) but thermodynamically preferred, and a radiation bath
 will spontaneously transition into a large black hole.
 
 First consider the situation where our accelerating black hole is
-uncharged.\footnote{ Note: in all explicit examples and figures in this section
+uncharged.\footnote{In all explicit examples and figures in this section
   we take the $\theta=0$ axis to be regular ($\mu_+=0$). This is for simplicity,
   including a nonzero north pole tension does not alter the essential physics of
   what we present here.}  Fixing the tension of the string, we can plot the
@@ -3066,7 +3066,7 @@ occurs at lower temperatures as acceleration increases.
   \end{subfigure}
   \caption{\label{fig:TvMnocharge}(a) A plot of temperature as a
     function of mass (in units of $\ell$) for the uncharged black hole.  The
-    slowly accelerating r\'egime is shown as a solid line, and the inferred
+    slowly accelerating regime is shown as a solid line, and the inferred
     local horizon temperature for $A\ell>1$ is shown dashed. Note how for larger
     string tension (hence greater acceleration) the region of positive specific
     heat increases. (b) A similar plot, but now showing the Gibbs free
@@ -3090,7 +3090,7 @@ local tidal forces due to the black hole.  In fact, it is easy to compute the
 zero Gibbs energy from the expressions for $TS$ and $M$ in terms of $r_+$, $A$
 and $\ell$. A brief calculation gives
 \begin{align}
-T_{HP} (r_+, \ell, A) &= \frac{1}{4\pi r_+ }\left [
+T_\mathrm{HP} (r_+, \ell, A) &= \frac{1}{4\pi r_+ }\left [
 \frac{ 3r_+^2}{\ell^2 ( 1- A^2 r_+^2) } + 1 \right ]\nn\\
 & \simeq \frac{1}{2\pi \ell} \left ( 1 - \frac32 A^2 \ell^2 + {\cal{O}} (A^4 \ell^4) \right)
 \;.
@@ -3110,14 +3110,14 @@ the black hole, set by the extremal limit where the temperature vanishes.
 Increasing the mass of the black hole moves it away from extremality, thus
 increasing temperature, rendering the specific heat positive near this lower
 limit. For large mass black holes, we are also in a positive specific heat
-r\'egime where the local vacuum curvature is dominant in the near horizon
+regime where the local vacuum curvature is dominant in the near horizon
 geometry.  Depending on the size of the charge relative to the vacuum energy,
-there can be an additional negative specific heat r\'egime where the black hole
+there can be an additional negative specific heat regime where the black hole
 is small enough that its local curvature is dominant, but is far enough from
 extremality that the usual Schwarzschild negative specific heat type of
 behaviour pervades.  Given that for uncharged accelerating black holes,
 increasing tension lowers the critical temperature at which the transition to
-positive specific heat occurs, we expect this `swallowtail' behaviour to be
+positive specific heat occurs, we expect this ``swallow tail'' behaviour to be
 mitigated for charged accelerating black holes in the canonical ensemble, and
 indeed this is what is observed.
 \begin{figure}
@@ -3125,8 +3125,8 @@ indeed this is what is observed.
   \includegraphics[width=0.6\textwidth]{TvMcharge.pdf}
   \caption{\label{fig:TvMcharge}A plot of temperature as a function of mass for
     the charged black hole, with fixed $Q=0.05\ell$, and varying tension as
-    labelled. As before, the slowly accelerating r\'egime is shown as a solid
-    line, and $A>A_\mathrm{crit}$ is shown dashed.}
+    labelled. As before, the slowly accelerating regime is shown as a solid
+    line, and $A>A^*$ is shown dashed.}
 \end{figure}
 
 We first explore the accelerating black hole in the canonical ensemble, i.e.\
@@ -3149,9 +3149,10 @@ black hole.
     temperature for varying tension with $Q=0.05\ell$ on the left, and varying
     charge with $4\mu_-=0.3$ on the right.}
 \end{figure}
+
 \Cref{fig:GvTcharge} shows the variation of the free energy $F=M-TS$ with
 temperature for varying tension and charge. As tension is increased, the
-swallowtail becomes smaller, and eventually disappears, analogous to the
+swallow tail becomes smaller, and eventually disappears, analogous to the
 situation where the charge is gradually increased, shown on the right in
 \cref{fig:GvTcharge}. The free energy plot tells us that at low temperatures, we
 have the near extremal black hole, however as the mass of the black hole
@@ -3160,8 +3161,8 @@ to a larger black hole with positive specific heat. The existence of this
 transition relies on the presence of the intermediate region of negative
 specific heat for the charged black hole.  For large enough tension (or charge
 relative to $\ell$), there is a critical point at which this intermediate
-r\'egime disappears, and the phase transition along with it. \Cref{fig:coexist}
-shows the ``van der Waals'' like behaviour of this coexistence curve for varying
+regime disappears, and the phase transition along with it. \Cref{fig:coexist}
+shows the ``Van der Waals'' like behaviour of this coexistence curve for varying
 tension (in analogy to the varying potential plots of \cite{Chamblin:1999tk}),
 and cosmological constant (in analogy to \cite{Kubiznak:2012wp}).
 \begin{figure}
@@ -3177,8 +3178,8 @@ and cosmological constant (in analogy to \cite{Kubiznak:2012wp}).
   \caption{\label{fig:coexist}The coexistence line for the charged black hole
     shown for varying tension and cosmological constant with the black hole
     charge is fixed at $Q=0.05$. (a) $\ell=1$, and the value of tension
-    at the critical point is $\mu_c = 0.219$. (b) $4\mu_- = 0.3$, and
-    the critical value of the AdS radius is $\ell_c = 0.36$.}
+    at the critical point is $\mu_\mathrm{c} = 0.219$. (b) $4\mu_- = 0.3$, and
+    the critical value of the AdS radius is $\ell_\mathrm{c} = 0.36$.}
 \end{figure}
 
 Finally, for completeness we consider the thermodynamics of the accelerating
@@ -3229,7 +3230,7 @@ holes are allowed, varies with tension.
 \begin{figure} 
   \centering
   \includegraphics[width=0.6\textwidth]{phicritofmu.pdf}
-  \caption{\label{fig:phicrit}A plot of the critical value of $\Phi_c(\mu_-)$ at
+  \caption{\label{fig:phicrit}A plot of the critical value of $\Phi_\mathrm{c}(\mu_-)$ at
     which a black hole is always preferred for all temperatures as a function of
     the tension.}
 \end{figure}
@@ -3391,13 +3392,13 @@ string tensions:
   \mu_\pm = \frac{\delta_\pm}{8\pi}=\frac14\bigg[1-\frac{g(\theta_\pm)}{K}\bigg] =
   \frac14\bigg[1-\frac{1\pm 2mA + A^2(a^2+e^2)-a^2/\ell^2}{K}\bigg], 
 \end{align}
-from which we see that setting $K = \Xi \equiv 1 + 2mA + A^2(a^2 + e^2 -
-a^2/\ell^2)$ removes the conical deficit at the north pole, leaving a positive
-defect at the south pole. One could might also envisage removing the defect at
-the south pole by setting $K = \Xi' \equiv 1 - 2mA + A^2(a^2 + e^2 -
-a^2/\ell^2)$ which would leave an excess at the north pole. Generally, however,
-it is preferable to avoid conical excesses as these would have to be sourced by
-negative energy objects.
+from which we see that setting
+$K = \Xi \equiv 1 + 2mA + A^2(a^2 + e^2 - a^2/\ell^2)$ removes the conical
+deficit at the north pole, leaving a positive defect at the south pole. One
+might also envisage removing the defect at the south pole by setting
+$K = \Xi' \equiv 1 - 2mA + A^2(a^2 + e^2 - a^2/\ell^2)$ which would leave an
+excess at the north pole. Generally, however, it is preferable to avoid conical
+excesses as these would have to be sourced by negative energy objects.
 % \subsection{The critical limit for the generalised C-metric}
 % \label{sec:critC}
 
@@ -3439,7 +3440,7 @@ the condition for criticality.
 \caption{\label{fig:embed3Dus-Kbigger}}
 \end{subfigure}
 \caption{\label{fig:embed3Dus}Embeddings in $\mathbb{E}^3$ of the ultra-spinning
-  C-metric for $m=9\ell$, $A=0.04\ell$ and (a) $K=\Xi$, (b) $K=1.2\Xi$, (c)
+  C-metric for $m=9\ell$, $A=0.04\ell^{-1}$ and (a) $K=\Xi$, (b) $K=1.2\Xi$, (c)
   $K=2\Xi$.} 
 \end{figure}
 
@@ -3458,11 +3459,11 @@ A>\frac{1}{\ell}, \quad e^2A^2<1, \quad \mbox{and} \quad 1+e^2A^2<2mA<2.
 For this limit to be sensible physically, we must ensure that the singularity
 remain shielded by an event horizon. While for the general C-metric we are
 limited to numerical techniques in determining when a horizon is formed --- this
-was displayed in \cref{fig:param-regions}, we are able to analytically
+was displayed in \cref{fig:param-regions} --- we are able to analytically
 determine expressions for the horizons in the absence of charge\footnote{Again,
   we do not expect charge to dramatically alter the observations laid out in
   this section, however it does mute our ability to perform this analysis
-  analytically}.
+  analytically.}.
 
 We are interested in determining the relationship between the parameters $A$,
 $\ell$ and $m$ (with $a$ given by \cref{eq:us}) for which the function $f(r)$
@@ -3525,7 +3526,7 @@ limit while avoiding a naked singularity.
 \subsection{Thermodynamics of the critical C-metric}
 
 We are interested in determining whether these critical black holes violate the
-reverse isoperimetric inequality.  As alluded to in the introduction to this chapter,
+reverse isoperimetric inequality.  As alluded to in the introduction to this section,
 regular ultra-spinning black holes seem to have more entropy than they ought to
 by this upper bound. In order to consider this for the critical C-metric, we
 will need a thermodynamic description, which we have already provided in the
@@ -3541,9 +3542,9 @@ metric to diverge, and if precautionary measures are taken to allow for conical
 defects, it has the effect of freezing out the tension and decoupling $K$ as a
 physical parameter. This can be seen from the expression for conical deficits
 \eqref{eq:deficit-al}: in this limit, $K$ is no longer linked to the deficit,
-and therefore to the tension either. With the thermodynamic quantities derived
-in \cref{cha:td-conical}, we see that some of these, such as the mass
-$M=m/K \Xi$, also diverge, through their dependence on the function
+and, in turn, it is no longer linked to the tension. With the thermodynamic
+quantities derived in \cref{cha:td-conical}, we see that some of these, such as
+the mass $M=m/K \Xi$, also diverge, through their dependence on the function
 $\gamma\sim \Xi^{-1} = (1-a^2/\ell^2)^{-1}$ which was introduced as a function
 multiplying the ``naive'' mass $M' = m/K$ to satisfy the first law. In
 particular, the angular velocity of the boundary diverges hence the
@@ -3634,7 +3635,7 @@ implies that we do not need to treat this spacetime any different to its
 noncritical counterpart.
 
 Using the thermodynamic quantities we established in~\cref{sec:cmet-TD-der}, and
-turning off the electric charge, which doesn't add much qualitatively, we know
+turning off the electric charge, which adds little qualitatively, we know
 therefore that the first law of black hole thermodynamics,
 \begin{align}\label{eq:firstlawnr}
   \delta M = T\delta S + V\delta P - \lambda_+ d\mu_+ - \lambda_- d\mu_-,
@@ -3648,10 +3649,10 @@ is satisfied with the following quantities,
   \qquad \lambda_\pm = \frac{r_+}{1\pm A r_+} - m,
 \end{gather}
 
-From here we can safely take the critical limit $2mA = 1$. The last term in
+From here we can safely take the critical limit $2mA = 1$. The last two terms in
 \cref{eq:firstlawnr} vanishes and none of the quantities above diverge. Finally,
 seeing as $\mu_+$ is still related to $K$ and we therefore need not treat this
-particular limit any different, we expect the isoperimetric
+particular limit any differently, we expect the isoperimetric
 conjecture to be obeyed. The isoperimetric ratio is
 \begin{align}
   \mathcal{R} =\frac{1}{\sqrt[6~]{1-A^2r_+^2}} =
