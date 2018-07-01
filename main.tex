@@ -3914,7 +3914,7 @@ hole solutions that accelerate would not, then, be super-entropic in general.
 The importance of black holes in advancing our understanding of physics cannot
 be underestimated.  They provide a setting for testing our most fundamental
 ideas about gravity under extreme conditions and offer us insight into the
-underlying microscopic degrees of freedom that may associated with quantum
+underlying microscopic degrees of freedom that may be associated with quantum
 gravity.  The subject of black hole thermodynamics~\cite{Bekenstein:1973ur,
   Bekenstein:1974ax,Hawking:1974sw} has proven to be an invaluable tool to this
 end, and broad classes of black holes have been shown to exhibit a rich and
@@ -3925,7 +3925,7 @@ The work we have presented so far ambitiously tackles the thermodynamics of
 accelerated black holes, a topic which had remained largely misunderstood. We
 were able to make progress by identifying the tension as the extensive property
 which is added with conical defects. Therefore, surprisingly, even though these
-black holes are not isolated because of the ``cosmic strings'' it is possible to
+black holes are not isolated because of the cosmic strings it is possible to
 derive sensible looking thermodynamics, although recent studies have apparently
 conflicting results
 \cite{Appels:2016uha,Appels:2017xoe,Gregory:2017ogk,Astorino:2016ybm}, in
@@ -3971,7 +3971,7 @@ the defect at each pole). We also introduced conditions on these parameters in
 signature. The absence of an acceleration horizon yields the constraint
 $f(-1/A\cos\theta) > 0$, in turn constraining the parameter space $(m,\ell)$ to
 the white region bounded by the blue and red lines in figure \ref{fig:f1}. It is
-straightforward to show via a linear transformation \cite{Hong:2003gx} on the
+straightforward to show via a transformation \cite{Hong:2003gx} on the
 coordinates $(x=\cos\theta,y=-1/Ar)$ that the latter bound is equivalent to the
 absence of black droplets \cite{Hubeny:2009kz}. Looking at \cref{eq:AdSCfn}, we
 see that such an acceleration horizon is indeed present for large values of
@@ -3993,8 +3993,8 @@ where $\theta_+=0$ and $\theta_-=\pi$ denote the poles.
 \includegraphics{regions.pdf}
 \caption{Parameter space for the AdS C-metric. The blue and red lines denote the
   boundaries in the parameter space $(mA,A\ell)$ for which the holographic
-  computation is valid.  The hashed red region is where acceleration horizons
-  are present and the hashed blue region is where the metric signature is not
+  computation is valid.  The hatched red region is where acceleration horizons
+  are present and the hatched blue region is where the metric signature is not
   preserved, leaving the white region as the physical parameter space.}
 \label{fig:f1}
 \end{figure}
@@ -4012,7 +4012,7 @@ R\sin\vartheta=\frac{r\sin\theta}{\Omega}\,,
 recovers AdS in global coordinates:
 \begin{align}
 \label{gAdS}
- ds^2_{AdS}= -\Big(1+\frac{R^2}{\ell^2}\Big) \alpha^2
+ ds^2_\mathrm{AdS}= -\Big(1+\frac{R^2}{\ell^2}\Big) \alpha^2
 dt^2+\frac{dR^2}{1+\frac{R^2}{\ell^2}}  +R^2\Big(d\vartheta^2+\sin^2\vartheta
 \frac{d\phi^2}{K^2}\Big)\,,
 \end{align}
@@ -4026,7 +4026,7 @@ fact $t$, but rather $\tau=\alpha t$, giving a rescaling of the time-coordinate
 in \eqref{AdSC}. As we will see, this will inevitably have consequences for the
 thermodynamics of our spacetime, as the mass and temperature are both sensitive
 to the definition of the time coordinate. To emphasise the point we have made,
-let us re-write the metric that we ought to use henceforth, now with shifted
+let us re-write the metric that we ought to use henceforth, now with rescaled
 time, as
 \begin{align}\label{eq:AdSC-tau}
 ds^2=\frac{1}{\Omega^2}\bigg[ -\frac{f(r)}{1-A^2\ell^2}d\tau^2+\frac{dr^2}{f(r)}
@@ -4065,7 +4065,7 @@ Weyl tensor of the conformal metric
 composed from the Weyl tensor itself, $\bar{C}^{\mu }{}_{\alpha \nu \beta }$, and
 the normal to the boundary, $N_{\mu }=\partial _{\mu }{\bar{\Omega}}$. When
 contracted with a Killing vector, this forms a conserved current, providing us
-with a new way of obtaining a conserved charge.
+with a novel way of obtaining a conserved charge.
 
 Even though the conformal completion is not unique, the charge thus obtained is
 independent of the choice of conformal completion.  We pick
@@ -4093,7 +4093,7 @@ yielding
 d\bar{S}_{\mu }=\delta^{\tau }_{\mu }\frac{\ell^{2} dx d\phi}{\alpha K},
 \end{align}
 
-The nonvanishing components of the normal vector be given by $N_r = -\ell/r^2$
+The nonvanishing components of the normal vector are given by $N_r = -\ell/r^2$
 and $N_x = A\ell$, meaning that the only relevant components of the Weyl tensor
 are
 \begin{align}
@@ -4105,7 +4105,7 @@ provided we pick a suitable Killing vector for the mass, $k =
 normalised integral at the boundary
 \begin{align}
 Q(k)=\frac{\ell}{8\pi}\lim_{\bar{\Omega} \to 0}\oint
-\mathcal{E}^\nu{}_\mu k_{\nu }d\bar{S}^{\mu }.
+\mathcal{E}^\nu{}_\mu k_{\nu }d\bar{S}^{\mu },
 \end{align}
 finally leading to
 \begin{align}\label{confmass}
@@ -4127,7 +4127,7 @@ We now turn to another method for deriving the thermodynamic mass, by computing
 the holographic stress tensor. This provides an alternate and completely
 independent method of computation, and will reveal the dual interpretation of
 this system.  The idea here is to perform a Fefferman-Graham expansion of the
-metric~\cite{Fefferman:2007rka}, identifying the fall-off of sub-leading terms
+metric~\cite{Fefferman:2007rka}, identifying the fall-off of subleading terms
 in the metric at the boundary. These are then used to compute the dual
 stress-energy tensor that can be integrated to give the mass of the system.
 
@@ -4174,7 +4174,7 @@ expansions)\todoopt{not sure how best to phrase here, I mean after taking out
 expansion at $n=3$. Requiring there be no cross-terms $g_{\rho\xi}$ and then
 solving order by order, allows us to fix $X_1$, $X_2$, $X_3$ in terms of $Y_n$
 without having to solve differential equations. With these functions we also
-find that $g\rho\rho=\ell^2/\rho^2$ is automatically satisfied at leading order
+find that $g_{\rho\rho}=\ell^2/\rho^2$ is automatically satisfied at leading order
 and we need only therefore eliminate the two subleading terms. This is most
 easily achieved from here by fixing $Y_2$ and $Y_3$, which can be done once
 again first at next-to-leading order for $Y_2$ and similarly at next order for
@@ -4226,10 +4226,10 @@ M= \int \left\langle T_{ab}\right\rangle k_\tau^a dS^b = \int \rho _{\mathrm{E}}
 \end{align}
 %\tcr{\bf I agree with the arithmetic, however, isn't it strange to use the determinant of the 3-metric to calculate the 2d integral? What is the origin of $\omega$ in this integral, as written in terms of the 2-metric determinant $\sigma$?}
 where $k_\tau = \partial_\tau$. This result agrees with \cref{confmass} from the
-Ashtekar-Das method. Note that this calculation is independent of the conformal
-frame (the choice of $\omega$).
+Ashtekar-Das method in the previous section. Note that this calculation is
+independent of the conformal frame (the choice of $\omega$).
 
-Finally, for completeness, we include that the shear tensor is
+Finally, for completeness, we include the shear tensor is
 \begin{align}
 \pi^x_x= \frac{3mA^5\ell^3}{16\pi \alpha^3\omega^{3}}
 G(\xi)F(-\xi)^{3/2}=-\pi^\phi_\phi\,,
@@ -4254,7 +4254,7 @@ field theory) via the Euclidean method, we find:
 \right) + \frac{r_+^2}{\ell^2} - A^2 r_+^2\right),
   \label{temp}
 \end{align}
-where $f(r_+)=0$, which is indeed $\alpha$-shifted relative to our definition of
+which is indeed $\alpha$-shifted relative to our definition of
 temperature in \cref{cha:therm-accel-black}. It is worth pausing to reflect on
 this result. In some of our past
 work~\cite{Appels:2016uha,Appels:2017xoe,Gregory:2017ogk}, which formed the
@@ -4289,10 +4289,9 @@ with $\bar{T}$ and $\bar{V}$ corresponding to our previous definitions of
 temperature and volume given in \cref{eq:Tuncharged,eq:Vuncharged} as
 \begin{align}
   \bar{T} &= \frac{1}{2\pi r_+}\left(\frac{m}{r_+}\left(1+A^2r_+^2
-\right) + \frac{r_+^2}{\ell^2} - A^2 r_+^2\right).\nn\\
-\bar{V} &= \frac{4\pi r_+^3}{3K(1-A^2r_+^2)^2}
+\right) + \frac{r_+^2}{\ell^2} - A^2 r_+^2\right),\nn\\
+\bar{V} &= \frac{4\pi r_+^3}{3K(1-A^2r_+^2)^2}.
 \end{align}
-
 The variation of the definition in \cref{confmass} for the mass can be written
 as
 \begin{align}
@@ -4349,14 +4348,13 @@ for the free energy, which we plot in figure \ref{fig:FE}.
 %\begin{tabular}{c}
 \includegraphics[width=0.6\textwidth]{free-energy.pdf}
 %\end{tabular}
-\caption{\textbf{Free energy.}
-The red curve is the Schwarzschild-AdS case, illustrating the
-well-known Hawking--Page transition,  situated at a temperature
-given by the intersection of the red curve with $F=0$. We do
-not know of any such interpretation for all other curves with $\mu\neq 0$.
-The upper parts of these curves do not continue to arbitrarily large $M$
-but terminate at the boundary given in figure
-\ref{fig:f1}; this is visible in the above plot only for $4\mu_- =0.9$.   }
+\caption{\textbf{Free energy.}  The red curve is the Schwarzschild-AdS case,
+  illustrating the well-known Hawking-Page transition, situated at a temperature
+  given by the intersection of the red curve with $F=0$. We do not know of any
+  such interpretation for all other curves with $\mu_-\neq 0$.  The upper parts
+  of these curves do not continue to arbitrarily large $M$ but terminate at the
+  boundary given in figure \ref{fig:f1}; this is visible in the above plot only
+  for $4\mu_- =0.9$.  }
 \label{fig:FE}
 \end{figure}
 
@@ -4406,26 +4404,25 @@ be considering a single thermodynamic mass and first law with an additional
 horizon and black hole, or whether, as suggested in \cite{Dutta:2005iy}, this
 should be considered as a single system with a mass dipole is an open question.
 
-Note that our computation is independent of the conformal frame, hence
-we can compare to investigations of holographic C-metrics with an
-acceleration horizon. For example, by choosing $\omega^2 =
-A^2\ell^2F(-\xi)\alpha^{-2}$, we recover the form of the boundary metric
-employed in \cite{Hubeny:2009kz}, and our coordinate transformation
-\eqref{FGt} is now valid throughout $x\in[-1,1]$. However, if the condition
-$ F(-\xi)>0$ is violated, then a black droplet/black funnel is present,
-and we no longer have an equilibrium temperature for the system in general.
-The boundary geometry corresponds to a black hole in a spatially compact
-universe, and so there is no spatial asymptotic region as pointed out
-in \cite{Hubeny:2009kz}. However, with the full conformal degree of
-freedom present in our expression, we can easily remedy this shortcoming
-by, for example, multiplying the $\omega$ above by $\frac{1}{\sqrt{1-x}}$,
-giving an $AdS_{2}\times S^{1}$ asymptotic region at $x=1$ with the $AdS_{2}$
-and $S^{1}$ radius being equal. If we multiply by $\frac{1}{\sqrt{1-x^2}}$ then
-there are actually two $AdS_{2}\times S^{1}$ asymptotic regions at $x=\pm1$
-and $\gamma^{(0)}_{ab}$ yields the geometry of a wormhole when there are no
-horizons at the boundary.
-The $AdS_{2}\times S^{1}$ asymptotic geometry is supersymmetric
-and to our knowledge has been unnoticed so far in the literature.
+Note that our computation is independent of the conformal frame, hence we can
+compare to investigations of holographic C-metrics with an acceleration
+horizon. For example, by choosing $\omega^2 = A^2\ell^2F(-\xi)\alpha^{-2}$, we
+recover the form of the boundary metric employed in \cite{Hubeny:2009kz}, and
+our coordinate transformation \eqref{FGt} is now valid throughout
+$\xi\in[-1,1]$. However, if the condition $ F(-\xi)>0$ is violated, then a black
+droplet/black funnel is present, and we no longer have an equilibrium
+temperature for the system in general.  The boundary geometry corresponds to a
+black hole in a spatially compact universe, and so there is no spatial
+asymptotic region as pointed out in \cite{Hubeny:2009kz}. However, with the full
+conformal degree of freedom present in our expression, we can easily remedy this
+shortcoming by, for example, multiplying the $\omega$ above by
+$\frac{1}{\sqrt{1-\xi}}$, giving an $AdS_{2}\times S^{1}$ asymptotic region at
+$\xi=1$ with the $AdS_{2}$ and $S^{1}$ radius being equal. If we multiply by
+$\frac{1}{\sqrt{1-\xi^2}}$ then there are actually two $AdS_{2}\times S^{1}$
+asymptotic regions at $\xi=\pm1$ and $\gamma^{(0)}_{ab}$ yields the geometry of
+a wormhole when there are no horizons at the boundary.  The
+$AdS_{2}\times S^{1}$ asymptotic geometry is supersymmetric and to our knowledge
+has been unnoticed so far in the literature.
 
 \chapter{Concluding remarks and outlook}
 
