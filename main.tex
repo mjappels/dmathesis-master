@@ -967,16 +967,6 @@ Ashtekar-Das-Magnon~\cite{Ashtekar:1984zz,Ashtekar:1999jx}.
 \subsection{Pressure and volume of black hole spacetimes}
 \label{sec:press-volume-black}
 
-The scaling relation~\eqref{eq:smarrAdS1} suggests, as we mentioned above, that
-the cosmological constant should be treated as a thermodynamical variable. After
-the work above by Caldarelli \emph{et al.}~\cite{Caldarelli:1999xj}, this
-concept was revisited a few times
-in~\cite{Wang:2006eb,Sekiwa:2006qj,Wang:2006bn,LarranagaRubio:2007fly}, leading
-to a 2009 paper by Kastor, Ray and Traschen~\cite{Kastor:2009wy} in which some
-of the computations above were put on much firmer mathematical ground, and a
-new thermodynamic interpretation was presented, in an aim to reconnect with
-traditional statistical mechanics.
-
 While the entire discussion concerning having a dynamical cosmological constant
 may be somewhat controversial to some, the argument can be made that whether
 physical mechanisms allowing for $\Lambda$ to change exist or not, does not
@@ -995,6 +985,16 @@ boundary. Finally, in recent work, Gregory, Kastor and
 Traschen~\cite{Gregory:2017sor,Gregory:2018ghc} studied the thermodynamics of a
 black hole system in a background cosmology undergoing slow-roll inflation and
 confirmed that it changes according to a first law with variable $\Lambda$.
+
+The scaling relation~\eqref{eq:smarrAdS1} does, however, suggest that the
+cosmological constant should be treated as a thermodynamical variable. After
+this research by Brown \emph{et. al.} and the work above by Caldarelli \emph{et
+  al.}~\cite{Caldarelli:1999xj}, this concept was revisited a few times
+in~\cite{Wang:2006eb,Sekiwa:2006qj,Wang:2006bn,LarranagaRubio:2007fly}, leading
+to a 2009 paper by Kastor, Ray and Traschen~\cite{Kastor:2009wy} in which some
+of the computations from the previous section were put on much firmer
+mathematical ground, and a new thermodynamic interpretation was presented, in an
+aim to reconnect with traditional statistical mechanics.
 
 In order to prove the Smarr relation, the authors of~\cite{Kastor:2009wy} were
 able to provide a derivation similar to the one we presented in
@@ -1920,12 +1920,12 @@ the geometry of the spacetime; specifically, along with $A$, it will regulate
 the distribution of tensions along either axis. It is also worth mentioning that
 a negative deficit (corresponding to an excess) is possible, however this would
 be sourced by a negative energy object. We can remove one of the deficits for
-the C-metric by defining $K=L_\pm$ where
+the C-metric by defining $K=\Xi, \Xi'$ where
 \begin{align}
-L_\pm=1\pm 2mA + e^2A^2.
+\Xi, \Xi'=1\pm 2mA + e^2A^2.
 \end{align}
-Since having $K=L_-$ induces an excess at the other pole, it is generally the
-custom to have $K=L_+$, regularising the north pole, and only having a string at
+Since having $K=\Xi'$ induces an excess at the other pole, it is generally the
+custom to have $K=\Xi$, regularising the north pole, and only having a string at
 the south pole. In \cref{fig:embed3D} we illustrate how changing $K$ affects an
 embedding of the horizon in $\mathbb{E}^3$. 
 
@@ -2711,9 +2711,15 @@ perturbation also of $r_+$, hence we can write
 where everything is evaluated at $f(r_+, m,A, \ell)=0$.  Clearly we can replace
 $\delta m$ and $\delta \ell$ by variations of the thermodynamic parameters $M$
 and $P$, and $\delta r_+$ is expressible in terms of $\delta S$, $\delta K$ and
-$\delta A$ using \cref{eq:entropyFT}. Finally, we replace
-$\partial f /\partial r_+ = 4 \pi T$, and use $f(r_+)=0$ to simplify the terms
-multiplying $\delta A$ to obtain:
+$\delta A$ using the variation of \cref{eq:entropyFT},
+\begin{align}
+  \label{eq:varentropy}
+\delta S = \frac{2\pi r_+ \delta r_+}{K(1-A^2 r_+^2)^2} + 
+\frac{2 \pi r_+^4 A\delta A}{K (1-A^2 r_+^2)^2} - 
+\frac{\pi r_+^2}{(1-A^2 r_+^2)} \frac{\delta K}{K^2}.
+\end{align}
+Finally, we replace $(\partial f /\partial r_+)_{m, A, \ell} = 4 \pi T$, and use
+$f(r_+)=0$ to simplify the terms multiplying $\delta A$ to obtain:
 \begin{align}
 (1-A^2 r_+^2) (T \delta S + V \delta P) - \delta M - \frac{m A r_+^2}{K} \delta
   A + \left(\frac{r_+^2}{\ell^2}-(1+A^2r_+^2)\right)\frac{r_+\delta K}{4K^2}  =0.
@@ -2738,10 +2744,12 @@ $\delta (mA) = 0$, or $m\delta A = - A \delta m$.  Replacing $\delta A$ in
 Thus, this first pass at a thermodynamic construction for accelerating black
 holes is indeed promising. Despite a few intuitive barriers, we have succeeded
 in establishing a first law for this black hole solution, suggesting that it
-ought to display similar thermal behaviour to other known solutions. We will
-carry out a survey of its thermodynamic features further on, however we must now
-generalise this result to include electric charge as well as investigate whether
-it is feasible to allow the string tensions to vary independently.
+ought to display similar thermal behaviour to other known solutions. This was
+the result we first presented in \cite{Appels:2016uha}. We will carry out a
+survey of its thermodynamic features further on, however we must now generalise
+this result to include electric charge as well as investigate whether it is
+feasible to allow the string tensions to vary independently; this formed the
+core of our following publication~\cite{Appels:2017xoe}.
 
 \subsection{Thermodynamics of the charged C-metric}
 \label{sec:cmet-TD-der}
@@ -2802,32 +2810,39 @@ correct first law.
 Here, however, we cannot simply perform a similar electromagnetic
 gauge transformation. Our electrostatic potential no longer
 vanishes at infinity, and our boundary has an electric flux from pole to pole
+given by
 \begin{equation}
-F = eA \sin\theta \, dt \wedge d\theta
+F = eA \sin\theta\, dt \wedge d\theta,
 \end{equation}
-We obviously cannot subtract this charge, as that would be a physical change,
-but it does lead us to suspect that there may be a renormalization of
-electrostatic potential and thermodynamic mass. We will show how to do this
-shortly, but first consider just the uncharged black hole, and consider
-variations in the position of the horizon as in \cref{eq:firstint}:
+which, incidentally, also prevents us from carrying out an
+Ashtekar-Das~\cite{Ashtekar:1999jx} computation of the mass.
+
+We obviously cannot
+subtract this charge, as that would be a physical change, but it does lead us to
+suspect that there may be a renormalization of electrostatic potential and
+thermodynamic mass. We will show how to do this shortly, but first consider just
+the uncharged black hole, and consider variations in the position of the horizon
+as in \cref{eq:firstint}:
 \begin{equation}
 \delta f(r_+) = f_+' \delta r_+  - 2 \frac{\delta m}{r_+} (1-A^2r_+^2)
 - 2 A \delta A r_+ (r_+ - 2m) - 2 \frac{r_+^2}{\ell^3} \delta \ell = 0
 \end{equation}
 The procedure is similar to the previous section, but we now have
 more algebra involved in the variation of the thermodynamic parameters.
-For example, in relating $\delta r_+$ to $\delta S$, we have:
+For example, in relating $\delta r_+$ to $\delta S$, we had~\eqref{eq:varentropy}:
 \begin{align}
 \delta S = \frac{2\pi r_+ \delta r_+}{K(1-A^2 r_+^2)^2} + 
 \frac{2 \pi r_+^4 A\delta A}{K (1-A^2 r_+^2)^2} - 
 \frac{\pi r_+^2}{(1-A^2 r_+^2)} \frac{\delta K}{K^2}
 \end{align}
-where our expressions for the tensions \cref{eq:tensionsNR} give
+where, now, our expressions for the tensions \cref{eq:tensionsNR} give
 \begin{equation}
 \label{eq:deltaAKuncharged}
 \frac{\delta K}{K^2} = 2 \left ( \delta \mu_+ + \delta \mu_- \right ), \qquad \frac{m}{K} \delta A = - \left [
-\delta \mu_+ - \delta \mu_- + A \delta \Big(\frac{m}{K}\Big) \right].
+\delta \mu_+ - \delta \mu_- + A \delta \Big(\frac{m}{K}\Big) \right],
 \end{equation}
+which we can substitute back into the variation of entropy.
+
 As we are dealing with the uncharged black hole, we define $M=m/K$, and after some
 algebra one gets
 \begin{equation}
@@ -3589,9 +3604,9 @@ black holes however the physical discontinuity between this black hole and
 regular Kerr-AdS spacetimes prevents this train of
 logic. In~\cite{Hennigar:2014cfa}, new more stringent conditions on the validity
 of this inequality were proposed, stating that the inequality ought to be
-conjectured to only hold for compact horizons.
-
-Nonetheless, we press on.
+conjectured to only hold for compact horizons. We can verify these new
+additional conditions by exploring whether the reverse isoperimetric inequality
+is violated for noncompact accelerating black hole horizons.
 
 \subsubsection{The critical nonrotating C-metric}
 \label{sec:critnrC}
@@ -3623,7 +3638,7 @@ the bound \eqref{eq:conditionsNR-2} for $mA \leqslant 1$. Saturating the bound
 for $mA > 1$ is a different type of limit in which a double root is introduced
 for $g(\theta)$ over $0<\theta<\pi$, resulting in two separate positive regions
 over this domain, all the while preserving the signature. Once again, we see
-that the $2\pi$-deficit is clearly indpendant of $K$.
+that the $2\pi$-deficit is clearly independant of $K$.
 
 This limit has already been mentioned in
 \cite{Chen:2015vma,Hubeny:2009ru}. Unlike the nonaccelerating case however, we
@@ -4134,17 +4149,19 @@ stress-energy tensor that can be integrated to give the mass of the system.
 The action, including boundary counterterms
 \cite{Balasubramanian:1999re, Emparan:1999pm, Mann:1999pc}, is
 \begin{align}
-I[g]=&\frac{1}{16\pi}\int_{M}d^{4}x\sqrt{-g}\left[ R+\frac{6}{\ell^{2}}\right]
-+ \frac{1}{8\pi}\int_{\partial M}d^{3}x\sqrt{-h}\mathcal{K}\nn \\
-&- \frac{1}{8\pi}\int_{\partial M}d^{3}x\sqrt{-h}
+I[g]=&\frac{1}{16\pi}\int_{\mathcal{M}}d^{4}x\sqrt{-g}\left[ R+\frac{6}{\ell^{2}}\right]
++ \frac{1}{8\pi}\int_{\partial \mathcal{M}}d^{3}x\sqrt{-h}\mathcal{K}\nn \\
+&- \frac{1}{8\pi}\int_{\partial \mathcal{M}}d^{3}x\sqrt{-h}
 \left[ \frac{2}{\ell}+\frac{\ell}{2}\mathcal{R}\left( h\right) \right]\,,
 \label{action}
 \end{align}
-where $\mathcal{K}_{ab}$ is the extrinsic curvature of the boundary
+where $\mathcal{K}_{ab} = \nabla_a n_b$, with $n$ the unit normal to the surface
+$\partial \mathcal{M}$, is the extrinsic curvature of the boundary
 metric, evaluated asymptotically in an appropriate coordinate system,
-defined presently. $h_{ab}$ is the intrinsic metric on
+defined presently, and $\mathcal{K} = \mathcal{K}_{ab}h^{ab}$ is its trace on
+the boundary. $h_{ab}$ is the intrinsic metric on
 $\partial {\cal M}$, and ${\cal R}$ its Ricci curvature. Varying
-the action gives the energy momentum tensor:\todoruth{Plot T?}\todoopt{not sure
+the action gives the energy-momentum tensor:\todoruth{Plot T?}\todoopt{not sure
    thats a good idea, given conformal freedom in $\omega$.}
 \begin{align}
 8\pi \mathcal{T}_{ab} = \ell \mathcal{G}_{ab}\left(h\right)
