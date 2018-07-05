@@ -3792,44 +3792,41 @@ that all the variations are independent. In particular, using
 \cref{eq:tensions}, as well as variations of \cref{eq:QJP}, we can re-express
 $\delta K$ and, for good measure, $\delta A$ as
 \begin{align}
-\delta K &=\frac{2K^2}{m\Delta}(1+a^2A^2+\Delta) \delta \frac{m}{K} \nn -
-           \frac{2aK}{m\Delta}\Big(A^2-\frac{1}{\ell^2}\Big)\delta
-           J-\frac{2eA^2K^2}{\Delta}\delta Q-\frac{2a^2K}{\ell^3\Delta}\delta
-           \ell\\ 
-&\qquad\qquad\qquad -\frac{2K^2}{m\Delta}\big(m-A(a^2+e^2)\big)\delta\mu_+
-                     -\frac{2K^2}{m\Delta}\big(m+A(a^2+e^2)\big)\delta\mu_-,
+\delta K &=-\frac{2K^2}{m\Delta}(1+a^2A^2-\Delta) \delta \frac{m}{K} -
+           \frac{2aK}{m\ell^2\Delta}(1-A^2\ell^2)\delta
+           J+\frac{2eA^2K^2}{\Delta}\delta Q-\frac{8\pi a^2K}{3\Delta}\delta P \nn\\ 
+&\qquad\qquad\qquad +\frac{2K^2}{m\Delta}\big(m\mp A(a^2+e^2)\big)\delta\mu_\pm,
                      \nn\\ 
 \delta A &=-\frac{A K}{m}\delta\frac{m}{K}-\frac{K}{m}\delta\mu_+ +
            \frac{K}{m}\delta \mu_-,
 \label{eq:dKdA}
 \end{align}
-where $\Delta \equiv -1+A^2(a^2+e^2)-a^2/\ell^2 $. It immediately follows, from substituting these into \cref{eq:firstlawinter},
+where $\Delta \equiv 1-e^2A^2+\frac{a^2}{\ell^2}(1-A^2\ell^2) $. It immediately follows, from substituting these into \cref{eq:firstlawinter},
 that
 \begin{multline}
-\delta M = \delta\frac{m}{K} \Big(1-\frac{1+a^2A^2+\Delta}{\Delta}\Big) 
-+\delta J \bigg(\Omega_1+\frac{aK}{\Delta}\Big(A^2-\frac{1}{\ell^2}\Big)\bigg) 
-+\delta Q \bigg(\Phi_1+\frac{meA^2}{\Delta}\bigg) \\
-+\delta\ell \Big(-\frac{3}{4\pi\ell^3}+\frac{ma^2}{K\ell^3\Delta}\Big) 
-+\delta \mu_+\Big(\frac{r_+}{1+Ar_+}-\lambda_+
-+\frac{1}{\Delta}\big(m-A(a^2+e^2)\big)\Big)\\ 
-+\delta \mu_-\Big(\frac{r_+}{1-Ar_+}-\lambda_+
-+\frac{1}{\Delta}\big(m+A(a^2+e^2)\big)\Big). 
+\delta M = \delta\frac{m}{K} \frac{1+a^2A^2}{\Delta} 
++\delta J \bigg(\Omega_1+\frac{aK}{\ell^2\Delta}(1-A^2\ell^2)\bigg) 
++\delta Q \bigg(\Phi_1-\frac{meA^2}{\Delta}\bigg) \\
++\delta P \Big(V_1+\frac{4\pi ma^2}{3K\Delta}\Big) 
++\delta \mu_\pm \Big(\frac{r_+}{1\pm Ar_+}-\lambda_\pm
+-\frac{1}{\Delta}\big(m\mp A(a^2+e^2)\big)\Big).
 \label{eq:dM1}
 \end{multline}
 
 To perform the term-by-term comparison, we must write out perturbations of $M$
 in terms of the same quantities as those above. For this we can use variations
-$Q$ and $J$ (\cref{eq:QJP}) as well as those for $K$ and $A$ outlined above in
+$Q$ and $J$~\eqref{eq:QJP} as well as those for $K$ and $A$ outlined above in
 \cref{eq:dKdA} to eventually obtain 
 \begin{align}
-\delta M = &~\delta\frac{m}{K}\bigg((\gamma-A\gamma_{A}+a\gamma_{a}\Big(\frac{2}{\Delta}(1+a^2A^2+\Delta)-1\Big)+\frac{2e}{\Delta}\gamma_{e}(1+a^2A^2+\Delta)\bigg) \nn\\
-&+K\delta J\bigg(\gamma_{a}\Big(1-\frac{2a^2}{\Delta}\Big(A^2-\frac{1}{\ell^2}\Big)\Big)-\frac{2ea}{\Delta}\gamma_{e}\Big(A^2-\frac{1}{\ell^2}\Big)\bigg) \nn\\
-&+m\delta Q\bigg(-\frac{2eaA^2}{\Delta}\gamma_{a}+\gamma_{e}\Big(1-\frac{2e^2A^2}{\Delta}\Big)\bigg) \nn\\
-&+\frac{m}{K}\delta\ell\Big(\gamma_{\ell}-\frac{2a^3}{\ell^3\Delta}\gamma_{a}-\frac{2ea^2}{\ell^3\Delta}\gamma_{e}\Big) \nn\\
-&+\delta \mu_+\Big( -\gamma_{A}-\frac{2a}{\Delta}\big(m-A(a^2+e^2)\big)-\frac{2e}{\Delta}\gamma_{e}\big(m-A(a^2+e^2)\big)\Big) \nn\\
-&+\delta \mu_-\Big( \gamma_{A}-\frac{2a}{\Delta}\big(m+A(a^2+e^2)\big)-\frac{2e}{\Delta}\gamma_{e}\big(m+A(a^2+e^2)\big)\Big).
+\delta M = &~\delta\frac{m}{K}\bigg(\gamma-A\gamma_{A}-\frac{a\gamma_{a}}{\Delta}(2+2A^2a^2-\Delta)+\frac{2e}{\Delta}\gamma_{e}(1+a^2A^2-\Delta)\bigg) \nn\\
+&+\frac{K}{\Delta}\delta J\left(\Box\gamma_{a}-\frac{2ea}{\ell^2}(1-A^2\ell^2)\gamma_{e}\right) \nn\\
+&+\frac{m}{\Delta}\delta Q\left(\Delta \gamma_e-2eaA^2\gamma_a\right) \nn\\
+&-\frac{4\pi m\delta P}{3K\Delta} \left(\ell^3 \Delta\gamma_\ell + 2a^2 e \gamma_e
++2a^3  \gamma_a\right)\nn\\
+&-\delta \mu_\pm \left(\frac{2}{\Delta}\left(m\mp A(a^2+e^2)\right)(a\gamma_a + e\gamma_e) \mp \gamma_A\right),
 \label{eq:dM2}
 \end{align}
+where we have also introduced, for convenience, $\Box \equiv 1-A^2e^2 -\frac{a^2}{\ell^2}(1-A^2\ell^2)$.
 
 Now that we have obtained two expressions for the variation of $M$, one from its
 explicit definition, and one through its relation with the first law, we can
@@ -3838,15 +3835,18 @@ obtain a set of thermodynamic quantities for this geometry that obey the first
 law.  Doing so yields a set of differential equations which can be separated out
 into five equations that determine correction terms from $\gamma$
 \begin{align}
-\Omega_1 &= K \gamma_{a} \bigg(\frac{2 a^2}{\Delta} \Big(\frac{1}{\ell^2}-A^2\Big)+1\bigg) + \frac{2 a e K}{\Delta}\gamma_{e} \Big(\frac{1}{\ell^2}-A^2\Big)+\frac{a K}{\Delta} \Big(\frac{1}{\ell^2}-A^2 \Big),\nn\\
-\Phi_1 &= \frac{m}{\Delta}\Big(-2 e a A^2\gamma_{a}+(\Delta-2 e^2 A^2)\gamma_{e}-eA^2\Big) ,\nn\\
-V_1 &= \frac{4 \pi  m }{3 \Delta K}(-\Delta l^3 \gamma_{\ell}+2 a^3 \gamma_{a}+2 a^2 e \gamma_{e}+a^2),\nn\\
-\lambda_\pm &= \frac{r_+}{1\pm Ar_+}\pm \gamma_{A} + \frac{1}{\Delta}(2a\gamma_{a} + 2e \gamma_{e} + 1)\big(m\mp A(a^2+e^2)\big) ,
+\Omega_1 &= \frac{K\Box}{\Delta}\gamma_a + \frac{2 a e
+           K}{\ell^2\Delta}(1-A^2\ell^2)\gamma_{e} - \frac{a K}{\ell^2\Delta}
+           (1-A^2\ell^2),\nn\\ 
+\Phi_1 &= \frac{m}{\Delta} \Big(2 e a A^2\gamma_{a}+(\Delta+2
+         e^2A^2)\gamma_{e}+eA^2\Big), \nn\\
+V_1 &= -\frac{4 \pi  m }{3 \Delta K}(\Delta l^3 \gamma_{\ell}+2 a^3 \gamma_{a}+2 a^2 e \gamma_{e}+a^2),\nn\\
+\lambda_\pm &= \frac{r_+}{1\pm Ar_+}\pm \gamma_{A} - \frac{1}{\Delta}(2a\gamma_{a} + 2e \gamma_{e} + 1)\big(m\mp A(a^2+e^2)\big) ,
 \label{eq:corrTermsWithGamma}
 \end{align}
 and a differential equation for $\gamma$, 
 \begin{align}\label{eq:diffg1}
-\Delta(\gamma-A\gamma_{A})+2e\gamma_{e}(1+a^2A^2+\Delta))+a\gamma_{a}(2+2a^2A^2+\Delta)+1+a^2A^2=0.
+\Delta(\gamma-A\gamma_{A})-2e\gamma_{e}(1+a^2A^2-\Delta))-a\gamma_{a}(2+2a^2A^2-\Delta)-1-a^2A^2=0.
 \end{align}
 We also need these quantities to satisfy the Smarr relation
 \begin{align}
@@ -3855,7 +3855,7 @@ M=2(TS-PV+\Omega J) + \Phi Q.
 We can use \cref{eq:QJP,eq:X,eq:OP0,eq:Smarr0,eq:V0,eq:defM} together to reduce
 the Smarr relation above into another differential equation for $\gamma$, 
 \begin{align}\label{eq:diffg2}
-\Delta(\gamma - \ell\gamma_{\ell}) + e\gamma_{e}(2+2a^2A^2+\Delta)+2a\gamma_{a}(1+a^2A^2)+1+a^2A^2 = 0.
+\Delta(\gamma - \ell\gamma_{\ell}) - e\gamma_{e}(2+2a^2A^2-\Delta)-2a\gamma_{a}(1+a^2A^2)-1-a^2A^2 = 0.
 \end{align}
 
 With these two differential equations, we can discuss solving them. Subtracting
