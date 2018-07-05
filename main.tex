@@ -3679,6 +3679,7 @@ imposed unto it by the isoperimetric inequality, and cannot be considered as
 ``super-entropic''.
 
 \subsection{Thermodynamics for the rotating C-metric}
+\label{sec:therm-rotat-c}
 
 We have already alluded to the fact that unfortunately, the thermodynamics of
 rotating accelerated black holes are not well understood, despite recent
@@ -4523,14 +4524,111 @@ of the deficit of the fluid. It would be interesting to compare this to the weak
 coupling calculation of stress tensors in the presence of conical deficits
 \cite{Dowker:1977zj}.
 
-A caveat of this description is that we have been unable to incorporate either
-charge or rotation in any way; in particular, forming a holographic description
-of a charged accelerating black hole is expected to be a challenge due to the
-asymptotic structure of the gauge field. In this sense then, a full description of
-the thermodynamics of acceleration, rotation and charge is still lacking,
-however, our hope is that some of the ideas presented here bring us that much
-closer its discovery.
+A caveat of this description is that we have been unable to incorporate charge
+in any way; in particular, forming a holographic description of a charged
+accelerating black hole is expected to be a challenge due to the asymptotic
+structure of the gauge field. In this sense then, a full description of the
+thermodynamics of charged accelerated black holes is still lacking, however, our
+hope is that some of the ideas presented here bring us that much closer its
+discovery.
 
+\section{Thermodynamics of the rotating accelerating black hole}
+
+During the final stages of the production of this thesis, some of the authors
+of~\cite{Anabalon:2018ydc} have succeeded in obtaining a thermodynamic
+description of the accelerating black hole with
+rotation~\cite{Anabalon:2018aa}. The relevance to the work at hand is clear; we
+therefore deem it necessary to include these most recent results, appending some
+final comments. Although the work is not publicly available at the time of
+writing, the mass of a rotating accelerating black hole, described by the
+generalised C-metric given in \cref{eq:PDfactrth}, was successfully obtained by
+computing the holographic stress tensor of this geometry following approach as
+that presented in \cref{cha:holoTD}. The resulting mass is given as
+\begin{align}
+  \label{eq:rotMass}
+  M = \frac{m}{K} \frac{\sqrt{1-A^2\ell^2} (1+a^2A^2)}{1 - \frac{a^2}{\ell^2}
+  (1-A^2\ell^2)}.
+\end{align}
+
+By reworking the derivation presented in \cref{sec:therm-rotat-c} to account for
+the rescaling $t=\tau/\alpha = \tau/\sqrt{1-A^2\ell^2}$ of time, which we
+introduced in \cref{cha:holoTD}, we can show how this mass satisfies the first
+law along with other thermodynamic potentials we provide below. First, an
+expression for the variation of $m\alpha/K$ can be obtained simply by modifying
+\cref{eq:mKFLT} which describes the variation of $m/K$:
+\begin{align}
+  \label{eq:dmak}
+  \delta \frac{m\alpha}{K} &= \frac{\bar{T}}{\alpha}\delta S +
+  \frac{\bar{\Omega}_0}{\alpha} \delta J + \left(\frac{\bar{V}_0}{\alpha} +
+  \frac{4\pi mA^2\ell^4}{3K\alpha}\right)
+  \delta P - \left(\frac{r_+}{\alpha(1\pm Ar_+)} \mp
+  \frac{A\ell^2}{\alpha}\right) \delta \mu_\pm +\frac{m\delta K}{2\alpha
+                             K^2}\nn\\
+  &= T\delta S +
+  \Omega_0 \delta J + V_0 \delta P - \left(\frac{r_+}{\alpha(1\pm Ar_+)} \mp
+  \frac{A\ell^2}{\alpha}\right) \delta \mu_\pm +\frac{m\delta K}{2\alpha
+                             K^2},
+\end{align} 
+where the quantities
+\begin{gather}
+  S = \frac{\mathcal{A}}{4} = \frac{\pi(r_+^2+a^2)}{K(1-A^2 r_+^2)}, \qquad  J =
+  \frac{m a}{K^2}, \qquad P =
+  -\frac{\Lambda}{8\pi} = \frac{3}{8\pi \ell^2},\nn\\  
+  \bar{T}= \frac{f^\prime (r_+)}{4\pi} = \frac{1}{2\pi(r_+^2+a^2)}\left(m(1+A^2r_+^2)
+    - \frac{a^2}{r_+}+r_+^3\Big(\frac{1}{\ell^2}-A^2\Big)\right),\nn\\
+  \bar{\Omega}_0 = -\frac{g_{t\phi}}{g_{\phi\phi}}\bigg|_{r=r_+} = \frac{a
+    K}{r_+^2+a^2}, \qquad
+  \bar{V}_0 = \frac{4\pi r_+ (r_+^2+a^2)}{3 K (1-A^2 r_+^2)^2},
+\end{gather}
+are those which we derived in \cref{cha:therm-accel-black} and satisfy
+\begin{align}
+  \frac{m}{K} = 2\bar{T}S - 2P\bar{V}_0 + 2\bar{\Omega}_0J.
+\end{align}
+In turn, the relation above can also be rewritten as
+\begin{align}
+  \frac{m\alpha}{K} = 2TS-2PV_0+2\Omega_0J.
+\end{align}
+
+From here, we may introduce the function $\gamma=\gamma(A,a,\ell)$, and
+computing the variation of $m\alpha\gamma/K$, both directly and then indirectly using
+\cref{eq:dmak}, as we did in \cref{cha:therm-accel-black}, allows us to derive
+correction terms from $\gamma$ as follows:
+\begin{align}
+  V_1 &= \frac{4\pi
+        m}{3K\alpha\Delta}\left(\Delta(A^2\ell^4\gamma-\alpha^2\ell^3\gamma_\ell)
+        - 2\alpha^2 a^3 \gamma_a - a^2 - \Delta A^2\ell^4\right),\nn\\
+  \Omega_1 &= \frac{\alpha
+             K}{\Delta}\left(-\frac{a}{\ell^2}+\Box\gamma_a\right),\nn\\
+  \lambda_\pm &= \frac{r_+}{\alpha(1\pm Ar_+)}- \frac{m\mp a^2 A}{\alpha \Delta}
+                \mp \frac{A\ell^2\gamma}{\alpha} - \frac{2\alpha(m\mp a^2 A)
+                a\gamma_a}{\Delta} \pm \alpha \gamma_A,
+\end{align}
+where
+\begin{align}
+  \Delta = 1 + \frac{a^2\alpha^2}{\ell^2}, \qquad \Box = 1
+  - \frac{a^2\alpha^2}{\ell^2}.
+\end{align}
+In conjunction with the Smarr relation, we obtain a pair of differential
+equations, which, together, allow us to specify that $\gamma = \gamma(a^2/\ell^2,
+a^2A^2)$. Replacing $\gamma = (1+a^2A^2)/\Box$, as provided by~\cite{Anabalon:2018aa},
+solves the remaining equation, confirming that the first law is now satisfied.
+
+Thus, the first law for a rotating accelerating black hole,
+\begin{align}
+  \delta M = T\delta S + \Omega \delta J + V\delta P - \lambda_\pm\delta \mu_\pm,
+\end{align}
+is satisfied with the following quantities:
+\begin{align}
+  T &= \frac{1}{2\alpha\pi(r_+^2+a^2)}\left(m(1+A^2r_+^2)
+  - \frac{a^2}{r_+}+r_+^3\Big(\frac{1}{\ell^2}-A^2\Big)\right),\nn\\
+  \Omega &= \frac{a K}{\alpha(r_+^2+a^2)} + \frac{a}{\ell^2}\frac{K}{\alpha\Box},\nn\\
+  V &= \frac{4\pi}{3K\alpha}\left(\frac{r_+ (r_+^2+a^2)}{(1-A^2r_+^2)^2} + mA^2
+      \ell^4 + \frac{ma^2\alpha^2}{\Box}\right),\nn\\
+  \lambda_\pm &= \frac{r_+}{\alpha(1\pm Ar_+)}- m\frac{\Delta}{\alpha\Box^2} \mp
+                \frac{A\ell^2}{\alpha},
+\end{align}
+along with the previously defined expressions for the entropy $S$, angular momentum
+$J$, pressure $P$, tension $\mu_\pm$ and finally the mass, given above, $M$.
 
 % \appendix
 %\include{appendix1}
