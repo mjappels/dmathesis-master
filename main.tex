@@ -193,10 +193,14 @@ similar limit. To do so, we needed to first develop a rigid framework for
 thermodynamics of these black holes.
 
 As we will demonstrate, we have been able to propose a consistent set of
-thermodynamic relations and quantities for static nonrotating charged accelerating
-black holes. The situation is somewhat more problematic with the inclusion of
-rotation and while we are unable to provide a full picture, we are able to form
-a sufficient picture to investigate the aforementioned limit.
+thermodynamic relations and quantities for static nonrotating charged
+accelerating black holes. The situation is somewhat more problematic with the
+inclusion of rotation and while we are unable to provide a full picture, we are
+able to form a sufficient picture to investigate the aforementioned
+limit\footnote{A method for obtaining the thermodynamics of rotating
+  accelerating black holes was discovered in the later stages of production of
+  this thesis~\cite{Anabalon:2018aa}. These new results are summarised in the
+  concluding chapter.}.
 
 The outline is as follows. We will begin by reviewing aspects of black hole
 thermodynamics in \cref{cha:BHTD}, covering some of the important more
@@ -703,7 +707,7 @@ metric will take the form given by
   ds^2 = f'(r_\mathrm{h})(r-r_\mathrm{h})d\tau^2+
   \frac{dr^2}{f'(r_\mathrm{h})(r-r_\mathrm{h})}+r_\mathrm{h}^2 d\Omega^2.  
 \end{align}
-Introducing temporary coordinates $\rho = 2\sqrt{r-r_\mathrm{h}}$ and
+Introducing temporary coordinates $\rho = 2\sqrt{(r-r_\mathrm{h})/f'(r_\mathrm{h})}$ and
 $\varphi = f'(r_\mathrm{h})\tau/2$, it becomes clear that with
 $\beta = f'(r_\mathrm{h})/4\pi = 8\pi m$, these coordinates describe a spacetime
 of topology $S^1 \times S^2$. More precisely, each point in the $\tau-r$
@@ -2501,7 +2505,10 @@ no prior thermodynamic interpretation. Add to that the fact that the boundary is
 displaced from $r = \infty$ (in Boyer-Lindquist coordinates) resulting in
 awkward asymptotics to deal with and the existence of an acceleration horizon
 with its own temperature and it becomes clearer why such a formulation does not
-exist.
+exist\footnote{A method for obtaining the thermodynamics of rotating
+  accelerating black holes was discovered in the later stages of production of
+  this thesis~\cite{Anabalon:2018aa}. These new results are summarised in the
+  concluding chapter.}.
 
 There is at least one of these aspects about which we might feel more
 confident. The previous chapter discussed how one could include the tension of
@@ -2947,12 +2954,14 @@ M &= \frac{m}{K(1+e^2 A^2)} \nn\\
 \mp \frac{e^2A}{(1+e^2 A^2)}
 \label{TDparams}
 \end{align}
-This is a rather unusual set of relations, the offset of the electrostatic
+This is a rather unusual set of relations, derived in \cite{Appels:2017xoe},
+which gives consistent thermodynamics. The offset of the electrostatic
 potential depends on mass, and the thermodynamic mass depends on charge. We view
 this as a consequence of the fact that for the accelerating black hole, the
 electric potential cannot be gauged away at infinity --- there is a polar
 electric field at the AdS boundary, thus mass and charge are inextricably
-intertwined.
+intertwined. These results will be revisited in \cref{cha:holoTD}, in light of
+new studies on the subject.
 
 Finally, we have that
 \begin{align}
@@ -3683,13 +3692,16 @@ imposed unto it by the isoperimetric inequality, and cannot be considered as
 
 We have already alluded to the fact that unfortunately, the thermodynamics of
 rotating accelerated black holes are not well understood, despite recent
-attempts~\cite{Astorino:2016ybm}. Nonetheless, by taking a perturbative
-approach, one may hope to glance at these thermodynamics by taking an approach
-similar to what we have already been doing in previous sections, that is, to
-assume the first law be upheld, introduce correction terms to potentials for
-which this would not be unreasonable and then solve the ensuing equations. Using
-this line of analysis, we will attempt to make sufficient headway so as to draw
-certain conclusions concerning the critical limit.
+attempts~\cite{Astorino:2016ybm}\footnote{A method for obtaining the
+  thermodynamics of rotating accelerating black holes was discovered in the
+  later stages of production of this thesis~\cite{Anabalon:2018aa}. These new
+  results are summarised in the concluding chapter.}. Nonetheless, by taking a
+perturbative approach, one may hope to glance at these thermodynamics by taking
+an approach similar to what we have already been doing in previous sections,
+that is, to assume the first law be upheld, introduce correction terms to
+potentials for which this would not be unreasonable and then solve the ensuing
+equations. Using this line of analysis, we will attempt to make sufficient
+headway so as to draw certain conclusions concerning the critical limit.
 
 Once again, we seek to determine an expression for the mass of the black hole as
 well as other thermodynamic quantities by demanding that the first law,
@@ -4186,19 +4198,18 @@ perform an asymptotic expansion for the coordinate transformation, writing
 \cos \theta = \xi+\sum Y_{n}\left( \xi\right) \rho ^{-n},
 \end{align}
 determining the functions $X_n$ and $Y_n$ by requiring the metric be of the form
-in \cref{FGmetric} up to $\mathcal{O}(\rho^{-2})$ (in the
-expansions)\todoopt{not sure how best to phrase here, I mean after taking out
-  relevant factors of $\rho$}; we find this to be achievable by truncating the
-expansion at $n=3$. Requiring there be no cross-terms $g_{\rho\xi}$ and then
-solving order by order, allows us to fix $X_1$, $X_2$, $X_3$ in terms of $Y_n$
-without having to solve differential equations. With these functions we also
-find that $g_{\rho\rho}=\ell^2/\rho^2$ is automatically satisfied at leading order
-and we need only therefore eliminate the two subleading terms. This is most
-easily achieved from here by fixing $Y_2$ and $Y_3$, which can be done once
-again first at next-to-leading order for $Y_2$ and similarly at next order for
-$Y_3$. With only five of the six functions determined, we find that
-$\gamma_{ab}^{(1)}=0$ as required and we are left with one functional degree of
-freedom in $Y_1$, which we parametrise as
+in \cref{FGmetric} up to $\mathcal{O}(\rho^{-3})$; we find this to be achievable
+by truncating the expansion at $n=4$. Requiring there be no cross-terms
+$g_{\rho\xi}$ and then solving order by order, allows us to fix $X_1$, $X_2$,
+$X_3$ and $X_4$ (though $X_4$ is not needed) in terms of $Y_n$ without having to
+solve differential equations. With these functions we also find that
+$g_{\rho\rho}=\ell^2/\rho^2$ is automatically satisfied at leading order and we
+need only therefore eliminate the two subleading terms. This is most easily
+achieved from here by fixing $Y_2$, $Y_3$ and $Y_4$, which can be done once
+again first at next-to-leading order for $Y_2$, at next order for $Y_3$ and
+again similarly at next order for $Y_4$. With only seven of the eight functions
+determined, we find that $\gamma_{ab}^{(1)}=0$ as required and we are left with
+one functional degree of freedom in $Y_1$ which we parametrise as
 \begin{align}
   Y_1(\xi) = \frac{A^2\ell^3}{\omega(\xi)\alpha}G(\xi)\sqrt{F(-\xi)}
 \end{align}
