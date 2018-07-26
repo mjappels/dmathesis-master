@@ -2590,7 +2590,7 @@ We have already seen how the parameter $K$ is related to the conical deficits in
 \cref{cha:cmet,cha:td-conical}, however we would like to give some
 interpretation of the parameter $A$, which was identified as the acceleration in
 \cref{sec:cmet-history} for the asymptotically flat solution by studying the
-weak field limit $m=0$ and exposing it as a a reparametrisation of Rindler
+weak field limit $m=0$ and exposing it as a reparametrisation of Rindler
 spacetime. In the presence of a cosmological constant it may be more helpful to
 view it as the acceleration required to maintain the black hole some distance
 away from the centre of AdS, as we alluded to previously. Setting $m=0$ and
@@ -2599,7 +2599,7 @@ $K=1$ to eliminate the conical deficit in \cref{eq:cmetric3} gives
 ds^2=\frac{1}{\Omega^2}\left[ -
 \Big( 1 + \frac{r^2}{\ell^2} (1-A^2 \ell^2) \Big) dt^2
 +\frac{dr^2}{1 + \frac{r^2}{\ell^2}(1-A^2\ell^2)} + r^2 ( d\theta^2
-+ \sin^2 d\phi^2)\right].
++ \sin^2 \theta d\phi^2)\right].
 \end{align}
 This spacetime no longer has a conical singularity and is locally pure AdS,
 however in these coordinates the boundary of AdS is not at $r=\infty$, but at
@@ -2614,7 +2614,7 @@ R \sin\Theta = \frac{r\sin\theta}{\Omega},
 \end{align}
 resulting in the metric for anti-de Sitter space in global coordinates:
 \begin{align}
-   ds^2_\mathrm{AdS}= -(1-A^2\ell^2) \Big(1+\frac{R^2}{\ell^2}\Big) dt^2+\frac{dR^2}{1+\frac{R^2}{\ell^2}}  +R^2\Big(d\vartheta^2+\sin^2\vartheta
+   ds^2_\mathrm{AdS}= -(1-A^2\ell^2) \Big(1+\frac{R^2}{\ell^2}\Big) dt^2+\frac{dR^2}{1+\frac{R^2}{\ell^2}}  +R^2\Big(d\Theta^2+\sin^2\Theta
 \frac{d\phi^2}{K^2}\Big).
 \end{align}
 The boundary, $R\to\infty$ now clearly corresponds to $\Omega\to 0$, and the
@@ -3042,9 +3042,12 @@ reverse isoperimetric inequality.
 
 From here, it would be most interesting to proceed onto rotating black holes,
 nicely tying the bow on this study of thermodynamics. Alas, the computations
-involved have proved too tall an order. We shall, however, revisit the topic
-further in the chapter as we now take a turn to explore what these findings may
-teach us about accelerating black holes.
+involved have proved too tall an order\footnote{A method for obtaining the
+  thermodynamics of rotating accelerating black holes was discovered in the
+  later stages of production of this thesis~\cite{Anabalon:2018aa}. These new
+  results are summarised in the concluding chapter.}. We shall, however, revisit
+the topic further in the chapter as we now take a turn to explore what these
+findings may teach us about accelerating black holes.
 
 \section{Critical behaviour of accelerating black holes}
 
@@ -3190,7 +3193,7 @@ transition relies on the presence of the intermediate region of negative
 specific heat for the charged black hole.  For large enough tension (or charge
 relative to $\ell$), there is a critical point at which this intermediate
 regime disappears, and the phase transition along with it. \Cref{fig:coexist}
-shows the ``Van der Waals'' like behaviour of this coexistence curve for varying
+shows the ``Van der Waals''-like behaviour of this coexistence curve for varying
 tension (in analogy to the varying potential plots of \cite{Chamblin:1999tk}),
 and cosmological constant (in analogy to \cite{Kubiznak:2012wp}).
 \begin{figure}
@@ -3210,7 +3213,7 @@ and cosmological constant (in analogy to \cite{Kubiznak:2012wp}).
     the critical value of the AdS radius is $\ell_\mathrm{c} = 0.36$.}
 \end{figure}
 
-Finally, for completeness we consider the thermodynamics of the accelerating
+Finally, for completeness, we consider the thermodynamics of the accelerating
 charged black hole in the grand canonical ensemble, where we now allow charge to
 vary. The Gibbs potential is now $G=M-TS-Q\Phi$, with
 \begin{equation}
@@ -3270,11 +3273,11 @@ holes are allowed, varies with tension.
 Another area of interest recently has been to search for and discover spacetimes
 which do not satisfy the reverse isoperimetric inequality. A little context is
 needed. In exploring possible black hole solutions in four-dimensional
-Fayet-Iliopoulos gauged supergravities, Gnecchi et al.~\cite{Gnecchi:2013mja}
-briefly presented a noncompact black hole horizon with a finite area. It was
-later clarified in a letter by Klemm~\cite{Klemm:2014rda} that this solution can
-be interpreted as the \emph{ultra-spinning} limit of the Kerr-AdS solution,
-where the rotation parameter is taken to be critically large. This limit only
+Fayet-Iliopoulos gauged supergravities, Gnecchi \emph{et al.}  briefly presented
+a noncompact black hole horizon with a finite area~\cite{Gnecchi:2013mja}. It
+was later clarified in a letter by Klemm that this solution can be interpreted
+as the \emph{ultra-spinning} limit of the Kerr-AdS solution, where the rotation
+parameter is taken to be critically large~\cite{Klemm:2014rda}. This limit only
 becomes sensible if one admits the existence of conical defects running along
 the main axis of revolution, which in turn become maximal in this limit. The
 result is a horizon which could be described as roughly spherical near its
@@ -3282,12 +3285,14 @@ equator, with sharp conical deficits at each pole that extrude to the boundary.
 
 From here, in a series of papers, Hennigar \emph{et
   al.}~\cite{Hennigar:2015gan,Hennigar:2014cfa,Hennigar:2015cja}, explored the
-thermodynamic implications of having such an extraordinary spacetime. If the
-nondiverging area of a noncompact horizon was the initial ``first of its kind''
-for this solution, these papers established the second such instance. The
-ultra-spinning black hole was the first solution found to violate this
-conjecture, leading the authors to impose more stringent conditions under which
-the bound might be valid.
+thermodynamic implications of having such an extraordinary spacetime. In
+particular, they sought to verify the reverse isoperimetric inequality
+conjecture, which we first introduced back in \cref{sec:press-volume-black}, in
+the context of these solutions. If the nondiverging area of a noncompact horizon
+was the initial ``first of its kind'' for this solution, these papers
+established the second such instance. The ultra-spinning black hole was the
+first solution found to violate this conjecture, leading the authors to impose
+more stringent conditions under which the bound might be valid.
 
 Let us now seek to determine the uniqueness of this latter discovery. A curious
 feature of the ultra-spinning spacetime is that it is seemingly isolated from
@@ -3306,9 +3311,9 @@ defect. The term ``ultra-spinning'' to designate this class of solutions in the
 context of acceleration is misleading, for unlike inertial black holes, this
 state may be reached by maximising --- more appropriately, as will be explained
 in further sections, extremising --- not only rotation but either acceleration
-or even charge as well. The term \emph{critical}, for lack of an original word
-will therefore be used to designate any black hole solution which exhibits a
-single (or a pair of) $2\pi$-deficit(s).
+or even charge as well. The term \emph{critical}, for lack of an original word,
+will therefore be used to designate any black hole solution which exhibits
+either a single or a pair of $2\pi$-deficit(s).
 
 % In the context of thermodynamics, we observe these accelerated critical
 % solutions to behave differently to the original ultra-spinning black hole. The
@@ -3381,7 +3386,7 @@ deficit along the $\theta = 0$ and $\theta=\pi$ axes is maximal ($2\pi$). The
 $\phi\phi$-component of the traditional metric, with regular poles, diverges,
 and the workaround presented in~\cite{Hennigar:2014cfa} amounts to having
 $K\neq \Xi$. Part of the reasoning behind naming this spacetime as ultra-spinning
-is that the angular velocity evaluted on the boundary of the spacetime also
+is that the angular velocity evaluated on the boundary of the spacetime also
 diverges, despite the adjusted metric. \Cref{fig:embed3Dus-noA-tilted} shows an
 embedding of this spacetime.
 
@@ -3514,7 +3519,7 @@ r_\dr &= \pm\frac{\ell}{\sqrt{A^2\ell^2-1}}\qquad m =0
 \end{align}
 with the corresponding value of $m$ also given. The solutions to the cubic
 equation in the third factor may be parametrised using hyperbolic or
-trigonometric functions. To do so we treat $0\leqslant A\ell\leqslant 1$ and
+trigonometric functions. To do so, we treat $0\leqslant A\ell\leqslant 1$ and
 $A\ell>1$ separately as follows:
 
 \begin{itemize}
@@ -3651,7 +3656,7 @@ the bound \eqref{eq:conditionsNR-2} for $mA \leqslant 1$. Saturating the bound
 for $mA > 1$ is a different type of limit in which a double root is introduced
 for $g(\theta)$ over $0<\theta<\pi$, resulting in two separate positive regions
 over this domain, all the while preserving the signature. Once again, we see
-that the $2\pi$-deficit is clearly independant of $K$.
+that the $2\pi$-deficit is clearly independent of $K$.
 
 This limit has already been mentioned in
 \cite{Chen:2015vma,Hubeny:2009ru}. Unlike the nonaccelerating case however, we
@@ -3666,7 +3671,7 @@ Using the thermodynamic quantities we established in~\cref{sec:cmet-TD-der}, and
 turning off the electric charge, which adds little qualitatively, we know
 therefore that the first law of black hole thermodynamics,
 \begin{align}\label{eq:firstlawnr}
-  \delta M = T\delta S + V\delta P - \lambda_+ d\mu_+ - \lambda_- d\mu_-,
+  \delta M = T\delta S + V\delta P - \lambda_+ \delta\mu_+ - \lambda_- \delta\mu_-,
 \end{align}
 is satisfied with the following quantities,
 \begin{gather}
@@ -3677,7 +3682,7 @@ is satisfied with the following quantities,
   \qquad \lambda_\pm = \frac{r_+}{1\pm A r_+} - m,
 \end{gather}
 
-From here we can safely take the critical limit $2mA = 1$. The last two terms in
+From here we can safely take the critical limit $2mA = 1$. The last term in
 \cref{eq:firstlawnr} vanishes and none of the quantities above diverge. Finally,
 seeing as $\mu_+$ is still related to $K$ and we therefore need not treat this
 particular limit any differently, we expect the isoperimetric
@@ -3712,11 +3717,11 @@ well as other thermodynamic quantities by demanding that the first law,
 \begin{align}
   \label{eq:fullFLT}
   \delta M = T\delta S + \Omega \delta J + \Phi \delta Q + V \delta P  - \lambda_+
-  d\mu_+ - \lambda_- d\mu_-,
+  \delta\mu_+ - \lambda_- \delta\mu_-,
 \end{align}
 hold. To do so in an appropriate fashion, we will impose that entropy be a
 quarter of the outer horizon area, and that the temperature be that obtained by
-regularising the euclidean form of this metric. To clarify, we write out all
+regularising the Euclidean form of this metric. To clarify, we write out all
 expressions explicitly,
 \begin{gather}
   T= \frac{f^\prime (r_+)}{4\pi} = \frac{1}{2\pi(r_+^2+a^2)}\left(m(1+A^2r_+^2)
@@ -3743,7 +3748,7 @@ in order to separate reasonably\footnote{By reasonably, we are referring to
   quantities in question, but applying them to the current geometry. These are
   all well-motivated for more standard black holes and therefore are
   \emph{reasonable} choices.} well-defined quantities, denoted by $X_0$, and
-correction terms, $X_1$ whose existence is required to satisfy the first law,
+correction terms, $X_1$, whose existence is required to satisfy the first law,
 and whose explicit form left to be determined in what follows. As a reminder,
 our use of correction terms is justified by considering the precedent laid out
 by the thermodynamics of Kerr-AdS \cite{Caldarelli:1999xj,Gibbons:2004ai} which
@@ -3784,7 +3789,7 @@ crucial part in this write-up. One eventually obtains
   +\frac{m\delta K}{2K^2},
 \end{align}
 which generalises \cref{eq:master-al,eq:minifirstlaw1}. One then combines
-\cref{eq:fullFLT} with \cref{eq:mKFLT} from which it follows that
+\cref{eq:fullFLT} with \cref{eq:mKFLT}, from which it follows that
 \begin{align}\label{eq:firstlawinter}
 \delta M = \delta \frac{m}{K} + \Omega_1 \delta J + \Phi_1 \delta Q + V_1 \delta
   P - \left(\lambda_\pm - \frac{r_+}{1\pm Ar_-}\right) \delta \mu_\pm -
@@ -3877,7 +3882,7 @@ a^2/\ell^2$, $y=e^2/\ell^2$ and $z=A^2\ell^2$,
 This equation has exact solutions for $x=0$ and $z=0$, either the nonrotating
 case or the nonaccelerating case, as have been outlined in previous
 sections. It is possible to solve this equation perturbatively with respect to
-either variable at least up to order $x^2$ or $z^2$ however for brevity, we
+either variable at least up to order $x^2$ or $z^2$, however for brevity, we
 shall only keep next-to-leading order terms, and set integration constants to
 $0$. For example, writing $\phi = \phi^{(0)}+z\phi^{(1)}+\mathcal{O}(z^2)$, we
 may use the zeroth order solution to solve the equation at first order, given by
