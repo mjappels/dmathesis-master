@@ -1311,10 +1311,10 @@ seen as a metric that bridges the gap between the Schwarzschild metric and its
 charged counterpart (Reissner-Nordstr\"om), and the Weyl and Robinson-Trautman
 solutions~\cite{Kinnersley:1970zw}.
 
-Eventually, in 1970, Kinnersley and Walker (KW)~\cite{Kinnersley:1970zw} picked
-up the C-metric and finally provided the interpretation of this solution as an
-\emph{accelerated} black hole. Let us now review how KW obtained their version
-of the C-metric. The Levi-Civita solution is given in the form
+Eventually, in 1970, Kinnersley and Walker (KW) picked up the C-metric and
+finally provided the interpretation of this solution as an \emph{accelerated}
+black hole~\cite{Kinnersley:1970zw}. Let us now review how KW obtained their
+version of the C-metric. The Levi-Civita solution is given in the form
 \begin{align}
   \label{eq:levi-civita-metric}
   ds^2 = \frac{1}{(x+y)^2} \left(-F(y)dt^2 + \frac{dy^2}{F(y)} + \frac{dx^2}{G(x)}
@@ -1329,15 +1329,16 @@ a conformal transformation given by
 \begin{gather}
   \label{eq:cmet-transf}
   x\to \eta\beta x + \varepsilon, \quad y \to \eta\beta y - \varepsilon, \quad t \to \eta t \quad \mbox{and} \quad
-  z\to \eta z
+  z\to \eta z,
 \end{gather}
-as long as $G(x) \to q G(x)$, which imposes the following relations between the
-coefficients of $G$ before (denoted by a tilde $\tilde{}~$) and after the
-transformation:
+with $\eta$, $\beta$ and $\varepsilon$ serving as real-valued parameters for the
+transformation and as long as $G(x) \to \beta G(x)$, which imposes the following
+relations between the coefficients of $G$ before (denoted by a tilde
+$\tilde{}~$) and after the transformation:
 \begin{subequations}
   \label{eq:cmet-coef}
   \begin{align}
-    \beta a_0 &= \ta_0 + \ta_1 \varepsilon+ \ta_ 2 \delta^2 + \ta_3 \varepsilon^3, \label{eq:cmet-coef1}\\
+    \beta a_0 &= \ta_0 + \ta_1 \varepsilon+ \ta_ 2 \varepsilon^2 + \ta_3 \varepsilon^3, \label{eq:cmet-coef1}\\
     a_1 &= \eta \ta_1 + 2\eta\ta_2 \varepsilon + 3 \eta\ta_3 \varepsilon^2, \label{eq:cmet-coef2}\\
     a_2 &= \eta^2\beta\ta_2 + 3 \eta^2\beta\ta_3\varepsilon, \label{eq:cmet-coef3}\\
     a_3 &= \eta^3\beta^2\ta_3.\label{eq:cmet-coef4}
@@ -1362,7 +1363,7 @@ where
 This paper was published around the time Kinnersley published his doctoral
 thesis, in which he also shows that the charged C-metric is simply obtained by
 adding in the quartic term above, along with the gauge potential $B = -eAydt$.
-For now the parameters $m$ and $A$ can just be interpreted as the two remaining
+For now, the parameters $m$ and $A$ can just be interpreted as the two remaining
 degrees of freedom for this solution, however it will become apparent that these
 can be thought of as (being related to) the mass and the acceleration of a
 massive particle/black hole respectively. The Schwarzschild and
@@ -1371,7 +1372,7 @@ and $t\to At$, taking the limit as $A \to 0$ and then identifying
 $x = \cos\theta$ and $z = \phi$.
 
 In order to understand the accelerating nature of this solution, it will be
-useful to first briefly review Rindler coordinates, which are simply set of
+useful to first briefly review Rindler coordinates, which are simply a set of
 coordinates well-suited to uniformly accelerating trajectories. To see what this
 means, let us consider the path of an uniformly accelerating object in flat
 1+1-dimensional space. The accelerations as measured locally by the object,
@@ -1423,7 +1424,7 @@ Using the following nontrivial coordinate transformation:
   \xi = \frac{\sqrt{y^2-1}}{x + y}, \qquad \rho =
   \frac{1}{A}\frac{\sqrt{1-x^2}}{x+y}, \qquad t=A\tau, \qquad z=\varphi,
 \end{align}
-we are able to recover the Rindler metric in 3+1 dimsensional cylindrical
+we are able to recover the Rindler metric in 3+1-dimensional cylindrical
 coordinates:
 \begin{align}
   \label{eq:rindler}
@@ -1543,7 +1544,7 @@ work~\cite{Farhoosh:1980zz,Bicak:1999sa,Letelier:1998rx,Pravda:2002kj} showed
 that while not analytically pleasant, this metric displays characteristics of a
 rotating black hole while preserving its acceleratng nature.
 
-\subsection{From \PD{} to the Kerr-Newman Metric}
+\subsection{From \PD{} to the Kerr-Newman metric}
 \label{sec:PDtoKN}
 
 The rotating nature of the metric~\eqref{eq:PDrescaled} becomes apparent when we
@@ -1639,12 +1640,12 @@ initial set of relations:
 \end{subequations}
 As we show in \cref{sec:parameters}, there is an upper bound on $m A$ for this
 spacetime. In the Kinnersley-Walker parametrisation of the C-metric,
-$0\leqslant\tm\tA\leqslant 1/(3\sqrt{3})$ and in this regime, the above
-constraint~\eqref{eq:KWtoHT4} is only satisfied for one value of $\varepsilon$,
-which can in turn be used to resolve the remainder of the transformation. As it
-is unpleasantly apparent, there is a sense in which the complicated root
-structure of the KW parametrisation has been shifted and swept into the
-parameters themselves.
+$0\leqslant\tm\tA\leqslant 1/(3\sqrt{3})$, and in this regime, the above
+constraint~\eqref{eq:KWtoHT4} has only one solution for $\varepsilon$, which can
+in turn be used to fully determine the remainder of the transformation. As it is
+unpleasantly apparent, there is a sense in which the complicated root structure
+of the KW parametrisation has been shifted and swept into the parameters
+themselves.
 
 \subsubsection{With rotation}
 Following on from their work on the nonrotating C-metric, a year later, Hong
@@ -1730,7 +1731,7 @@ distribution of conical defects in the spacetime.
 \label{sec:cmet-review}
 
 So far, we have seen how the C-metric and its interpretation were developed and
-understood better. We will now dive in a little deeper and present some subtle
+better understood. We will now dive in a little deeper and present some subtle
 aspects of the solution, such as horizon structure, coordinate and parameter
 ranges as well as clarifying this idea of having a conical defect along one
 axis. We will begin with the nonrotating form for simplicity, before covering
@@ -1985,7 +1986,7 @@ identify $a$ as being a rotation parameter.
 With the inclusion of rotation, we have the following parametric restrictions:
 \begin{align}
   \label{eq:conditions}
-  A^2(a^2+e^2)-\frac{a^2}{\ell^2} <
+  A^2(a^2+e^2)-\frac{a^2}{\ell^2} >
   \begin{cases}
     2mA - 1 \qquad &\mbox{if} \quad mA \leqslant 1\\
     m^2A^2 \qquad &\mbox{if} \quad mA > 1
