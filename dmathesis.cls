@@ -378,7 +378,7 @@
   \vspace{\stretch{1}}
   {\large
     \setstretch{1.2}
-    A Thesis presented for the degree of \\
+    A thesis presented for the degree of \\
     Doctor of Philosophy\par
     \nointerlineskip
     \vspace{1.5em}
